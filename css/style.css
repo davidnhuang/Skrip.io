@@ -1,0 +1,360 @@
+/* Skrip IO */
+/* Copyright 2018, David Nai-Chun Huang*/
+/* DO NOT REPRODUCE */
+
+/* General */
+body {background-color: #1E1E1E; overflow-x: hidden; margin: 0;}
+button {background-color: transparent; border: none;}
+input:focus {outline: none;}
+@font-face {
+    font-family: 'SF-Pro-Text-Light';
+    src: url('/Users/david/Documents/GitHub/Skrip-IO/fonts/SF-Pro-Text-Light.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'SF-Pro-Text-Regular';
+    src: url('/Users/david/Documents/GitHub/Skrip-IO/fonts/SF-Pro-Text-Regular.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'SF-Pro-Text-Medium';
+    src: url('/Users/david/Documents/GitHub/Skrip-IO/fonts/SF-Pro-Text-Medium.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'SF-Pro-Text-Regular-Italic';
+    src: url('/Users/david/Documents/GitHub/Skrip-IO/fonts/SF-Pro-Text-RegularItalic.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Resources */
+.font {display: block; line-height: 1.6; letter-spacing: 0.25px;}
+
+.font-light {font-family: 'SF-Pro-Text-Light' !important;}
+.font-regular {font-family: 'SF-Pro-Text-Regular' !important;}
+.font-medium {font-family: 'SF-Pro-Text-Medium' !important;}
+.font-regular-italic {font-family: 'SF-Pro-Text-Regular-Italic' !important;}
+
+.font-size-9 {font-size: 9px;}
+.font-size-12 {font-size: 12px;}
+.font-size-15 {font-size: 15px;}
+.font-size-18 {font-size: 18px;}
+.font-size-20 {font-size: 20px;}
+
+.font-color-default {color: #F0EDED;}
+.font-color-lighter {color: #9B9B9B;}
+.font-color-lightest {color: #4D5052;}
+
+/* States */
+.active-g {
+  -webkit-box-shadow:inset 0px 0px 0px 2px #59D794;
+  -moz-box-shadow:inset 0px 0px 0px 2px #59D794;
+  box-shadow:inset 0px 0px 0px 2px #59D794;
+}
+.meeting-adjourned {color: #49FC9E;}
+.meeting-done {text-decoration: line-through;}
+
+/* Main Divs */
+#body--main {
+  width: 1360px;
+  height: 750px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 42px;
+}
+#body--sideNav {
+  width: 200px;
+  display: inline-block;
+  vertical-align: top;
+}
+#body--sideFeed {
+  width: 324px;
+  height: 100%;
+  display: inline-block;
+  vertical-align: top;
+}
+#body--dirList {
+  width: 744px;
+  display: inline-block;
+  vertical-align: top;
+  margin-left: 60px;
+  margin-right: 25px;
+}
+/* Side Navigation */
+/* drive */
+#body--sideNav .drive-selector {
+  width: 100%;
+  margin-bottom: 48px;
+}
+#body--sideNav .drive-selector .top-tag {padding-bottom: 16px;}
+#body--sideNav .drive-selector .drive-dropdown .drive-name {
+  display: inline-block;
+  vertical-align: top;
+  height: 20px;
+}
+#body--sideNav .drive-selector .drive-dropdown .dropdown-button {
+  display: inline-block;
+  float: right;
+  vertical-align: top;
+  width: 24px;
+  height: 24px;
+  border-radius: 12px;
+}
+/* advisor */
+#body--sideNav .advisor-selector {
+  width: 100%;
+  margin-bottom: 48px;
+}
+#body--sideNav .advisor-options {
+  padding-bottom: 24px;
+}
+#body--sideNav .advisor-selector .advisor-options .advisor-section-tag {
+  display: inline-block;
+  height: 20px;
+}
+#body--sideNav .option-icon, #body--sideNav .team-option-icon {
+  display: inline-block;
+  padding-top: 3px;
+  padding-right: 6px;
+  float: right;
+}
+#body--sideNav .advisor-selector .advisor-listing .advisor-profile {
+  display: inline-block;
+  vertical-align: middle;
+  width: 24px;
+  height: 24px;
+  border-radius: 12px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+#body--sideNav .advisor-selector .advisor-listing .advisor-name{
+  display: inline-block;
+  vertical-align: unset;
+  height: 24px;
+}
+.advisor-profile-pic {
+  background: url('/Users/david/Documents/GitHub/Skrip-IO/assets/data/profile/advisor-profile-picture.png');
+}
+/* teammates */
+#body--sideNav .team-selector {
+  width: 100%;
+}
+#body--sideNav .team-selector .team-section-tag {
+  display: inline-block;
+  padding-bottom: 24px;
+}
+#body--sideNav .team-selector .teammate-listing .teammate-profile {
+  display: inline-block;
+  vertical-align: middle;
+  width: 24px;
+  height: 24px;
+  border-radius: 15px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+#body--sideNav .team-selector .teammate-listing .teammate-name{
+  display: inline-block;
+  vertical-align: unset;
+  height: 24px;
+}
+.teammate-profile-pic-1 {
+  background: url('/Users/david/Documents/GitHub/Skrip-IO/assets/data/profile/team-profile-picture-1.png');
+}
+.teammate-profile-pic-2 {
+  background: url('/Users/david/Documents/GitHub/Skrip-IO/assets/data/profile/team-profile-picture-2.png');
+}
+/* me */
+#body--sideNav .me-selector {
+  width: 100%;
+  bottom: 40px;
+  position: absolute;
+}
+#body--sideNav .me-selector .my-section-tag {padding-bottom: 20px;}
+#body--sideNav .me-selector .my-account .my-profile {
+  display: inline-block;
+  vertical-align: middle;
+  width: 24px;
+  height: 24px;
+  border-radius: 15px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+#body--sideNav .me-selector .my-account .my-name{
+  display: inline-block;
+  vertical-align: unset;
+  height: 24px;
+}
+#body--sideNav .my-option-icon {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-left: 16px;
+}
+.my-profile-pic {
+  background: url('/Users/david/Documents/GitHub/Skrip-IO/assets/data/profile/team-profile-picture-3.png');
+}
+
+/* Main Directory */
+/* search */
+.dirList-main-search {
+  width: 724px;
+  height: 40px;
+  background-color: transparent;
+  border-bottom: 1px #9B9B9B;
+  border-style: solid;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+input[type=text] {
+  margin: 0 4px 52px 4px;
+  color: #F0EDED;
+  font-family: 'SF-Pro-Text-Regular' !important;
+  font-size: 15px;
+  background-image: url("/Users/david/Documents/GitHub/Skrip-IO/assets/buttons/global-search.png");
+  background-size: 18px 18px;
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-origin: content-box;
+}
+/* directory list */
+#body--dirList .directory-bounding {
+  height: 360px;
+  overflow-y: scroll;
+  margin-bottom: 60px;
+}
+#body--dirList .recent-documents-bounding {
+  height: 180px;
+  overflow-y: scroll;
+}
+#body--dirList .directory-listing, #body--dirList .directory-icon,
+#body--dirList .directory-name, #body--dirList .directory-creation-date,
+#body--dirList .directory-modified-date, #body--dirList .directory-collaborator,
+#body--dirList .directory-options {vertical-align: top;}
+#body--dirList .directory-listing, #body--dirList .directory-section-heading {
+  width: 100%;
+}
+#body--dirList .directory-listing {
+  height: 60px;
+  border-bottom: 1px #4D5052;
+  border-style: solid;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+}
+#body--dirList .directory-section-heading {height: 20px;}
+#body--dirList .directory-icon {
+  display: inline-block;
+  width: 60px;
+  height: 100%;
+}
+#body--dirList .directory-type {padding-left: 20px; display: inline-block;}
+#body--dirList .directory-name {
+  display: inline-block;
+  width: 200px;
+  height: 100%;
+}
+#body--dirList .directory-creation-date {
+  display: inline-block;
+  width: 80px;
+  height: 100%;
+  margin-left: 20px;
+}
+#body--dirList .directory-modified-date {
+  display: inline-block;
+  width: 80px;
+  height: 100%;
+  margin-left: 20px;
+}
+#body--dirList .directory-collaborator {
+  display: inline-block;
+  width: 180px;
+  height: 100%;
+  margin-left: 20px;
+}
+#body--dirList .directory-options {
+  display: inline-block;
+  width: 60px;
+  height: 100%;
+  float: right;
+}
+#body--dirList .directory-collaborator-profile {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  border-radius: 12px;
+  margin-top: 18px;
+  margin-right: 8px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+/* Side Feed */
+#body--sideFeed .skrip-comm-feed {
+  display: inline-block;
+  width: 278px;
+  height: 100%;
+}
+/* Open button */
+#body--sideFeed .calendar-open-button {
+  display: inline-block;
+  width: 40px;
+  height: 100%;
+  vertical-align: top;
+}
+#body--sideFeed .open-button-background {
+  width: 36px;
+  height: 36px;
+  border-radius: 18px;
+  margin-top: 340px;
+}
+#body--sideFeed .open-button-icon {
+  padding-top: 12px;
+  padding-left: 11px;
+}
+/* Meeting Scheduler */
+#body--sideFeed .meeting-schedule-feed {
+  width: 100%;
+  height: 500px;
+  margin-bottom: 30px;
+}
+#body--sideFeed .meeting-schedule-feed .feed-box {
+  width: 100%;
+  height: 400px;
+  overflow-y: scroll;
+}
+#body--sideFeed .meeting-feed-listing {
+  width: 100%;
+  margin-bottom: 10px;
+}
+#body--sideFeed .meeting-profile {
+  display: inline-block;
+  width: 28px;
+  height: 28px;
+  border-radius: 14px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+#body--sideFeed .meeting-detail {
+  display: inline-block;
+  vertical-align: top;
+  width: 234px;
+  margin-left: 10px;
+  padding-top: 6px;
+}
+/* File Update Feed */
+#body--sideFeed .update-feed {
+  width: 100%;
+  height: 200px;
+  background-color: red;
+}

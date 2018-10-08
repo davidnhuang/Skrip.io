@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<!--Skrip IO-->
+<!--Copyright 2018, David Nai-Chun Huang-->
+<!--DO NOT REPRODUCE-->
+<html>
+  <head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <title>2019 Cal-Tech - Skrip.io</title>
+    <link rel='stylesheet' href='/Users/david/Documents/GitHub/Skrip-IO/css/style.css'>
+  </head>
+  <body>
+    <!--Skrip starts-->
+    <div id='body--main'>
+      <!--Side navigation-->
+      <div id='body--sideNav'>
+        <!--drive section-->
+        <div class='drive-selector'>
+          <span class='top-tag font font-regular font-size-9 font-color-lighter'>
+            Team / Drive Name
+          </span>
+          <div class='drive-dropdown'>
+            <div class='drive-name'>
+              <span class='font font-regular font-size-15 font-color-default'>
+                2019 Cal-Tech
+              </span>
+            </div>
+            <button class='dropdown-button'>
+              <img
+                src='/Users/david/Documents/GitHub/Skrip-IO/assets/buttons/team-selector-dropdown.svg'
+                alt='drive selector dropdown arrow'
+                width='12px'
+                height='7px'
+              />
+            </button>
+          </div>
+        </div>
+        <!--advisor section-->
+        <div class='advisor-selector'>
+          <div class='advisor-options'>
+            <span class='advisor-section-tag font font-regular font-size-9 font-color-lighter'>
+              Advisors / Leads
+            </span>
+            <button class='option-icon'>
+              <img
+                src='/Users/david/Documents/GitHub/Skrip-IO/assets/buttons/global-options.svg'
+                alt='Advisor Option icon'
+                width='10px'
+                height='10px'
+              />
+            </button>
+          </div>
+          <div class='advisor-listing'>
+            <div class='advisor-profile advisor-profile-pic active-g'></div>
+            <div class='advisor-name'>
+              <span class='font font-regular font-size-12 font-color-default' style='display: inline; padding-right: 10px; padding-left: 20px;'>
+                Nelson Cooper
+              </span>
+            </div>
+          </div>
+        </div>
+        <!--teammate section-->
+        <div class='team-selector'>
+            <div class='team-options'>
+              <span class='team-section-tag font font-regular font-size-9 font-color-lighter'>
+                Teammates
+              </span>
+              <button class='team-option-icon'>
+                <img
+                  src='/Users/david/Documents/GitHub/Skrip-IO/assets/buttons/global-options.svg'
+                  alt='Team Option icon'
+                  width='10px'
+                  height='10px'
+                />
+              </button>
+            </div>
+            <div class='teammate-listing'>
+              <div style='margin-bottom: 15px;'>
+                <div class='teammate-profile teammate-profile-pic-2'></div>
+                <div class='teammate-name'>
+                  <span class='font font-regular font-size-12 font-color-default' style='display: inline; padding-right: 10px; padding-left: 20px;'>
+                    Mitchel Nagakoya
+                  </span>
+                </div>
+              </div>
+              <div class='teammate-listing'>
+                <div class='teammate-profile teammate-profile-pic-1 active-g'></div>
+                <div class='teammate-name'>
+                  <span class='font font-regular font-size-12 font-color-default' style='display: inline; padding-right: 10px; padding-left: 20px;'>
+                    Sarah Conway
+                  </span>
+                </div>
+            </div>
+          </div>
+        </div>
+        <div class='me-selector'>
+          <span class='my-section-tag font font-regular font-size-12 font-color-lighter'>
+            Signed in as:
+          </span>
+          <div class='my-account'>
+            <div class='my-profile my-profile-pic active-g'></div>
+            <div class='my-name'>
+              <span class='font font-regular font-size-12 font-color-default' style='display: inline-block; padding-right: 10px; padding-left: 20px;'>
+                Mellisa Gouterez
+              </span>
+              <button class='my-option-icon'>
+                <img
+                  src='/Users/david/Documents/GitHub/Skrip-IO/assets/buttons/my-selector-dropdown.svg'
+                  alt='Team Option icon'
+                  width='12px'
+                  height='7px'
+                />
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--Directory Lists-->
+      <div id='body--dirList'>
+        <!--search bar-->
+        <form>
+          <input class='dirList-main-search' type="text" id="fname" name="fname" placeholder="Search Team Drive">
+        </form>
+        <!--directory top-->
+        <div class='directory-section-heading'>
+          <div class='directory-icon'>
+            <span class='font font-regular font-size-9 font-color-lighter'>
+              Directory ↑
+            </span>
+          </div>
+          <div class='directory-name'>
+          </div>
+          <div class='directory-creation-date'>
+            <span class='font font-regular font-size-9 font-color-lighter'>
+              Date Created
+            </span>
+          </div>
+          <div class='directory-modified-date'>
+            <span class='font font-regular font-size-9 font-color-lighter'>
+              Last Modified
+            </span>
+          </div>
+          <div class='directory-collaborator'>
+            <span class='font font-regular font-size-9 font-color-lighter'>
+              Collaborator
+            </span>
+          </div>
+          <div class='directory-options'>
+            <img
+              src='/Users/david/Documents/GitHub/Skrip-IO/assets/buttons/global-options.svg'
+              width='14px'
+              height= '14px'
+              style='padding-left: 32px; padding-top: 2px;'
+            />
+          </div>
+        </div>
+        <!--directories-->
+        <div class='directory-bounding'>
+          <!--Flux-->
+          <div id='directory-1' class='directory-listing'>
+            <div class='directory-icon'>
+              <img
+                src='/Users/david/Documents/GitHub/Skrip-IO/assets/buttons/global-folder.svg'
+                width='20px'
+                height= '20px'
+                style='padding-left: 8px; padding-top: 19px;'
+              />
+            </div>
+            <div class='directory-name'>
+              <span class='font font-regular font-size-12 font-color-default' style='padding-top: 21px;'>
+                Flux
+                <span class='directory-type font font-regular-italic font-size-12 font-color-lightest'>
+                  Parent
+                </span>
+              </span>
+            </div>
+            <div class='directory-creation-date'>
+              <span class='font font-regular font-size-9 font-color-lighter' style='padding-top: 22px;'>
+                1/14/2019
+              </span>
+            </div>
+            <div class='directory-modified-date'>
+              <span class='font font-regular font-size-9 font-color-lighter' style='padding-top: 22px;'>
+                8/27/2019
+              </span>
+            </div>
+            <div class='directory-collaborator'>
+              <div class='directory-collaborator-profile advisor-profile-pic active-g'></div>
+              <div class='directory-collaborator-profile teammate-profile-pic-1 active-g'></div>
+              <div class='directory-collaborator-profile my-profile-pic active-g'></div>
+            </div>
+            <div class='directory-options'>
+              <img
+                src='/Users/david/Documents/GitHub/Skrip-IO/assets/buttons/global-vert-options.svg'
+                width='14px'
+                height= '14px'
+                style='padding-left: 32px; padding-top: 24px;'
+              />
+            </div>
+          </div>
+          <!--Lum-->
+          <div id='directory-2' class='directory-listing'>
+            <div class='directory-icon'>
+              <img
+                src='/Users/david/Documents/GitHub/Skrip-IO/assets/buttons/global-folder.svg'
+                width='20px'
+                height= '20px'
+                style='padding-left: 8px; padding-top: 19px;'
+              />
+            </div>
+            <div class='directory-name'>
+              <span class='font font-regular font-size-12 font-color-default' style='padding-top: 21px;'>
+                Luminosity
+                <span class='directory-type font font-regular-italic font-size-12 font-color-lightest'>
+                  Parent
+                </span>
+              </span>
+            </div>
+            <div class='directory-creation-date'>
+              <span class='font font-regular font-size-9 font-color-lighter' style='padding-top: 22px;'>
+                1/15/2019
+              </span>
+            </div>
+            <div class='directory-modified-date'>
+              <span class='font font-regular font-size-9 font-color-lighter' style='padding-top: 22px;'>
+                4/1/2019
+              </span>
+            </div>
+            <div class='directory-collaborator'>
+              <div class='directory-collaborator-profile advisor-profile-pic active-g'></div>
+              <div class='directory-collaborator-profile teammate-profile-pic-2'></div>
+            </div>
+            <div class='directory-options'>
+              <img
+                src='/Users/david/Documents/GitHub/Skrip-IO/assets/buttons/global-vert-options.svg'
+                width='14px'
+                height= '14px'
+                style='padding-left: 32px; padding-top: 24px;'
+              />
+            </div>
+          </div>
+          <!--Observatory-->
+          <div id='directory-3' class='directory-listing'>
+            <div class='directory-icon'>
+              <img
+                src='/Users/david/Documents/GitHub/Skrip-IO/assets/buttons/global-folder.svg'
+                width='20px'
+                height= '20px'
+                style='padding-left: 8px; padding-top: 19px;'
+              />
+            </div>
+            <div class='directory-name'>
+              <span class='font font-regular font-size-12 font-color-default' style='padding-top: 21px;'>
+                Observatory_Data
+                <span class='directory-type font font-regular-italic font-size-12 font-color-lightest'>
+                  Parent
+                </span>
+              </span>
+            </div>
+            <div class='directory-creation-date'>
+              <span class='font font-regular font-size-9 font-color-lighter' style='padding-top: 22px;'>
+                1/14/2019
+              </span>
+            </div>
+            <div class='directory-modified-date'>
+              <span class='font font-regular font-size-9 font-color-lighter' style='padding-top: 22px;'>
+                9/3/2019
+              </span>
+            </div>
+            <div class='directory-collaborator'>
+              <div class='directory-collaborator-profile advisor-profile-pic active-g'></div>
+              <div class='directory-collaborator-profile my-profile-pic active-g'></div>
+            </div>
+            <div class='directory-options'>
+              <img
+                src='/Users/david/Documents/GitHub/Skrip-IO/assets/buttons/global-vert-options.svg'
+                width='14px'
+                height= '14px'
+                style='padding-left: 32px; padding-top: 24px;'
+              />
+            </div>
+          </div>
+          <!--Python-->
+          <div id='directory-4' class='directory-listing'>
+            <div class='directory-icon'>
+              <img
+                src='/Users/david/Documents/GitHub/Skrip-IO/assets/buttons/global-folder.svg'
+                width='20px'
+                height= '20px'
+                style='padding-left: 8px; padding-top: 19px;'
+              />
+            </div>
+            <div class='directory-name'>
+              <span class='font font-regular font-size-12 font-color-default' style='padding-top: 21px;'>
+                Python_Repo
+                <span class='directory-type font font-regular-italic font-size-12 font-color-lightest'>
+                  Parent
+                </span>
+              </span>
+            </div>
+            <div class='directory-creation-date'>
+              <span class='font font-regular font-size-9 font-color-lighter' style='padding-top: 22px;'>
+                1/14/2019
+              </span>
+            </div>
+            <div class='directory-modified-date'>
+              <span class='font font-regular font-size-9 font-color-lighter' style='padding-top: 22px;'>
+                8/27/2019
+              </span>
+            </div>
+            <div class='directory-collaborator'>
+              <div class='directory-collaborator-profile advisor-profile-pic active-g'></div>
+              <div class='directory-collaborator-profile teammate-profile-pic-1 active-g'></div>
+              <div class='directory-collaborator-profile teammate-profile-pic-2'></div>
+              <div class='directory-collaborator-profile my-profile-pic active-g'></div>
+            </div>
+            <div class='directory-options'>
+              <img
+                src='/Users/david/Documents/GitHub/Skrip-IO/assets/buttons/global-vert-options.svg'
+                width='14px'
+                height= '14px'
+                style='padding-left: 32px; padding-top: 24px;'
+              />
+            </div>
+          </div>
+          <!--Reduction Pipelines-->
+          <div id='directory-5' class='directory-listing'>
+            <div class='directory-icon'>
+              <img
+                src='/Users/david/Documents/GitHub/Skrip-IO/assets/buttons/global-folder.svg'
+                width='20px'
+                height= '20px'
+                style='padding-left: 8px; padding-top: 19px;'
+              />
+            </div>
+            <div class='directory-name'>
+              <span class='font font-regular font-size-12 font-color-default' style='padding-top: 21px;'>
+                Reduction_Pipelines
+                <span class='directory-type font font-regular-italic font-size-12 font-color-lightest'>
+                  Parent
+                </span>
+              </span>
+            </div>
+            <div class='directory-creation-date'>
+              <span class='font font-regular font-size-9 font-color-lighter' style='padding-top: 22px;'>
+                1/14/2019
+              </span>
+            </div>
+            <div class='directory-modified-date'>
+              <span class='font font-regular font-size-9 font-color-lighter' style='padding-top: 22px;'>
+                8/27/2019
+              </span>
+            </div>
+            <div class='directory-collaborator'>
+              <div class='directory-collaborator-profile advisor-profile-pic active-g'></div>
+              <div class='directory-collaborator-profile teammate-profile-pic-1 active-g'></div>
+            </div>
+            <div class='directory-options'>
+              <img
+                src='/Users/david/Documents/GitHub/Skrip-IO/assets/buttons/global-vert-options.svg'
+                width='14px'
+                height= '14px'
+                style='padding-left: 32px; padding-top: 24px;'
+              />
+            </div>
+          </div>
+          <!--Scripts-->
+          <div id='directory-6' class='directory-listing'>
+            <div class='directory-icon'>
+              <img
+                src='/Users/david/Documents/GitHub/Skrip-IO/assets/buttons/global-folder.svg'
+                width='20px'
+                height= '20px'
+                style='padding-left: 8px; padding-top: 19px;'
+              />
+            </div>
+            <div class='directory-name'>
+              <span class='font font-regular font-size-12 font-color-default' style='padding-top: 21px;'>
+                Scripts
+                <span class='directory-type font font-regular-italic font-size-12 font-color-lightest'>
+                  Parent
+                </span>
+              </span>
+            </div>
+            <div class='directory-creation-date'>
+              <span class='font font-regular font-size-9 font-color-lighter' style='padding-top: 22px;'>
+                1/14/2019
+              </span>
+            </div>
+            <div class='directory-modified-date'>
+              <span class='font font-regular font-size-9 font-color-lighter' style='padding-top: 22px;'>
+                8/27/2019
+              </span>
+            </div>
+            <div class='directory-collaborator'>
+              <div class='directory-collaborator-profile advisor-profile-pic active-g'></div>
+              <div class='directory-collaborator-profile my-profile-pic active-g'></div>
+            </div>
+            <div class='directory-options'>
+              <img
+                src='/Users/david/Documents/GitHub/Skrip-IO/assets/buttons/global-vert-options.svg'
+                width='14px'
+                height= '14px'
+                style='padding-left: 32px; padding-top: 24px;'
+              />
+            </div>
+          </div>
+          <!--Wavelengths-->
+          <div id='directory-7' class='directory-listing'>
+            <div class='directory-icon'>
+              <img
+                src='/Users/david/Documents/GitHub/Skrip-IO/assets/buttons/global-folder.svg'
+                width='20px'
+                height= '20px'
+                style='padding-left: 8px; padding-top: 19px;'
+              />
+            </div>
+            <div class='directory-name'>
+              <span class='font font-regular font-size-12 font-color-default' style='padding-top: 21px;'>
+                Wavelengths
+                <span class='directory-type font font-regular-italic font-size-12 font-color-lightest'>
+                  Parent
+                </span>
+              </span>
+            </div>
+            <div class='directory-creation-date'>
+              <span class='font font-regular font-size-9 font-color-lighter' style='padding-top: 22px;'>
+                1/14/2019
+              </span>
+            </div>
+            <div class='directory-modified-date'>
+              <span class='font font-regular font-size-9 font-color-lighter' style='padding-top: 22px;'>
+                8/27/2019
+              </span>
+            </div>
+            <div class='directory-collaborator'>
+              <div class='directory-collaborator-profile advisor-profile-pic active-g'></div>
+              <div class='directory-collaborator-profile teammate-profile-pic-1 active-g'></div>
+              <div class='directory-collaborator-profile teammate-profile-pic-2'></div>
+              <div class='directory-collaborator-profile my-profile-pic active-g'></div>
+            </div>
+            <div class='directory-options'>
+              <img
+                src='/Users/david/Documents/GitHub/Skrip-IO/assets/buttons/global-vert-options.svg'
+                width='14px'
+                height= '14px'
+                style='padding-left: 32px; padding-top: 24px;'
+              />
+            </div>
+          </div>
+        </div>
+        <!--recent documents-->
+        <div class='directory-section-heading'>
+          <div class='directory-icon'>
+            <span class='font font-regular font-size-9 font-color-lighter' style='width: 120px;'>
+              General Documents ↑
+            </span>
+          </div>
+          <div class='directory-name'>
+          </div>
+          <div class='directory-creation-date'>
+            <span class='font font-regular font-size-9 font-color-lighter'>
+              Date Created
+            </span>
+          </div>
+          <div class='directory-modified-date'>
+            <span class='font font-regular font-size-9 font-color-lighter'>
+              Last Modified
+            </span>
+          </div>
+          <div class='directory-collaborator'></div>
+          <div class='directory-options'>
+            <img
+              src='/Users/david/Documents/GitHub/Skrip-IO/assets/buttons/global-options.svg'
+              width='14px'
+              height= '14px'
+              style='padding-left: 32px; padding-top: 2px;'
+            />
+          </div>
+        </div>
+        <!--documents-->
+        <div class='recent-documents-bounding'>
+          <!--project schedule-->
+          <div id='recent-doc-1' class='directory-listing'>
+            <div class='directory-icon'>
+              <img
+                src='/Users/david/Documents/GitHub/Skrip-IO/assets/icons/microsoft_excel.svg'
+                width='20px'
+                height= '20px'
+                style='padding-left: 8px; padding-top: 19px;'
+              />
+            </div>
+            <div class='directory-name'>
+              <span class='font font-regular font-size-12 font-color-default' style='padding-top: 21px;'>
+                General_2019_Milestones</span>
+            </div>
+            <div class='directory-creation-date'>
+              <span class='font font-regular font-size-9 font-color-lighter' style='padding-top: 22px;'>
+                1/14/2019
+              </span>
+            </div>
+            <div class='directory-modified-date'>
+              <span class='font font-regular font-size-9 font-color-lighter' style='padding-top: 22px;'>
+                3/10/2019
+              </span>
+            </div>
+            <div class='directory-options'>
+              <img
+                src='/Users/david/Documents/GitHub/Skrip-IO/assets/buttons/global-vert-options.svg'
+                width='14px'
+                height= '14px'
+                style='padding-left: 32px; padding-top: 24px;'
+              />
+            </div>
+          </div>
+          <!--project presentation-->
+          <div id='recent-doc-2' class='directory-listing'>
+            <div class='directory-icon'>
+              <img
+                src='/Users/david/Documents/GitHub/Skrip-IO/assets/icons/microsoft_ppt.svg'
+                width='20px'
+                height= '20px'
+                style='padding-left: 8px; padding-top: 19px;'
+              />
+            </div>
+            <div class='directory-name'>
+              <span class='font font-regular font-size-12 font-color-default' style='padding-top: 21px;'>
+                General_Deck_Format</span>
+            </div>
+            <div class='directory-creation-date'>
+              <span class='font font-regular font-size-9 font-color-lighter' style='padding-top: 22px;'>
+                1/14/2019
+              </span>
+            </div>
+            <div class='directory-modified-date'>
+              <span class='font font-regular font-size-9 font-color-lighter' style='padding-top: 22px;'>
+                3/10/2019
+              </span>
+            </div>
+            <div class='directory-options'>
+              <img
+                src='/Users/david/Documents/GitHub/Skrip-IO/assets/buttons/global-vert-options.svg'
+                width='14px'
+                height= '14px'
+                style='padding-left: 32px; padding-top: 24px;'
+              />
+            </div>
+          </div>
+          <!--project brief-->
+          <div id='recent-doc-3' class='directory-listing'>
+            <div class='directory-icon'>
+              <img
+                src='/Users/david/Documents/GitHub/Skrip-IO/assets/icons/microsoft_word.svg'
+                width='20px'
+                height= '20px'
+                style='padding-left: 8px; padding-top: 19px;'
+              />
+            </div>
+            <div class='directory-name'>
+              <span class='font font-regular font-size-12 font-color-default' style='padding-top: 21px;'>
+                General_Project_Brief</span>
+            </div>
+            <div class='directory-creation-date'>
+              <span class='font font-regular font-size-9 font-color-lighter' style='padding-top: 22px;'>
+                1/14/2019
+              </span>
+            </div>
+            <div class='directory-modified-date'>
+              <span class='font font-regular font-size-9 font-color-lighter' style='padding-top: 22px;'>
+                3/10/2019
+              </span>
+            </div>
+            <div class='directory-options'>
+              <img
+                src='/Users/david/Documents/GitHub/Skrip-IO/assets/buttons/global-vert-options.svg'
+                width='14px'
+                height= '14px'
+                style='padding-left: 32px; padding-top: 24px;'
+              />
+            </div>
+          </div>
+          <!--project brief-->
+          <div id='recent-doc-3' class='directory-listing'>
+            <div class='directory-icon'>
+              <img
+                src='/Users/david/Documents/GitHub/Skrip-IO/assets/icons/microsoft_excel.svg'
+                width='20px'
+                height= '20px'
+                style='padding-left: 8px; padding-top: 19px;'
+              />
+            </div>
+            <div class='directory-name'>
+              <span class='font font-regular font-size-12 font-color-default' style='padding-top: 21px;'>
+                General_Observatory_Schedule</span>
+            </div>
+            <div class='directory-creation-date'>
+              <span class='font font-regular font-size-9 font-color-lighter' style='padding-top: 22px;'>
+                1/14/2019
+              </span>
+            </div>
+            <div class='directory-modified-date'>
+              <span class='font font-regular font-size-9 font-color-lighter' style='padding-top: 22px;'>
+                3/10/2019
+              </span>
+            </div>
+            <div class='directory-options'>
+              <img
+                src='/Users/david/Documents/GitHub/Skrip-IO/assets/buttons/global-vert-options.svg'
+                width='14px'
+                height= '14px'
+                style='padding-left: 32px; padding-top: 24px;'
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--Site feed-->
+      <div id='body--sideFeed'>
+        <div class='calendar-open-button'>
+          <div class='open-button-background'>
+            <img
+              src='/Users/david/Documents/GitHub/Skrip-IO/assets/buttons/calendar-open-button.svg'
+              width='12px'
+              height='12px'
+              class='open-button-icon'
+            />
+          </div>
+        </div>
+        <div class='skrip-comm-feed'>
+          <div class='meeting-schedule-feed'>
+            <span class='font font-regular font-size-9 font-color-lighter' style='margin-bottom: 12px;'>
+              Meetings Schedules
+            </span>
+            <div class='feed-box'>
+              <div id='meetup-list-1' class='meeting-feed-listing'>
+                <span class='font font-light font-size-9 font-color-lighter' style='padding-bottom: 12px;'>
+                  12/5/2019
+                </span>
+                <div class='meeting-profile my-profile-pic active-g'></div>
+                <div class='meeting-detail'>
+                  <div class='meeting-status meeting-done font-color-default'>
+                    <span class='font font-regular font-size-9 font-color-lighter' style='padding-bottom: 10px'>
+                      You requested a meeting with Nelson
+                    </span>
+                    <span class='font font-light font-size-18 font-color-default' style='padding-bottom: 10px'>
+                      Questions about spectral reading on PKS-110
+                    </span>
+                    <span class='font font-regular font-size-9 font-color-default' style='padding-bottom: 10px'>
+                      at 12/6/2019 3:21PM GMT<br>
+                      Cal-Tech North Wing Room 204
+                    </span>
+                  </div>
+                  <span class='font font-light font-size-9 meeting-adjourned'>
+                    Meeting attended and adjourned!
+                  </span>
+                </div>
+              </div>
+              <div id='meetup-list-1' class='meeting-feed-listing'>
+                <span class='font font-light font-size-9 font-color-lighter' style='padding-bottom: 12px;'>
+                  12/5/2019
+                </span>
+                <div class='meeting-profile advisor-profile-pic active-g'></div>
+                <div class='meeting-detail'>
+                  <div class='meeting-status font-color-default'>
+                    <span class='font font-regular font-size-9 font-color-lighter' style='padding-bottom: 10px'>
+                      You requested a meeting with Nelson
+                    </span>
+                    <span class='font font-light font-size-18 font-color-default' style='padding-bottom: 10px'>
+                      Questions about spectral reading on PKS-110
+                    </span>
+                    <span class='font font-regular font-size-9 font-color-default' style='padding-bottom: 10px'>
+                      at 12/6/2019 3:21PM GMT<br>
+                      Cal-Tech North Wing Room 204
+                    </span>
+                  </div>
+                  <span class='font font-light font-size-9 meeting-adjourned'>
+                    Meeting attended and adjourned!
+                  </span>
+                </div>
+              </div>
+              <div id='meetup-list-1' class='meeting-feed-listing'>
+                <span class='font font-light font-size-9 font-color-lighter' style='padding-bottom: 12px;'>
+                  12/5/2019
+                </span>
+                <div class='meeting-profile my-profile-pic active-g'></div>
+                <div class='meeting-detail'>
+                  <div class='meeting-status font-color-default'>
+                    <span class='font font-regular font-size-9 font-color-lighter' style='padding-bottom: 10px'>
+                      You requested a meeting with Nelson
+                    </span>
+                    <span class='font font-light font-size-18 font-color-default' style='padding-bottom: 10px'>
+                      Questions about spectral reading on PKS-110
+                    </span>
+                    <span class='font font-regular font-size-9 font-color-default' style='padding-bottom: 10px'>
+                      at 12/6/2019 3:21PM GMT<br>
+                      Cal-Tech North Wing Room 204
+                    </span>
+                  </div>
+                  <span class='font font-light font-size-9 meeting-adjourned'>
+                    Meeting attended and adjourned!
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class='update-feed'></div>
+        </div>
+      </div>
+    </div>
+    <!--Skrip ends-->
+    <footer>
+      <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+      <script src='/Users/david/Documents/GitHub/Skrip-IO/js/script.js'></script>
+    </footer>
+  </body>
+</html>
