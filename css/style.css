@@ -8,25 +8,25 @@ button {background-color: transparent; border: none;}
 input:focus {outline: none;}
 @font-face {
     font-family: 'SF-Pro-Text-Light';
-    src: url('/Users/david/Documents/GitHub/Skrip-IO/fonts/SF-Pro-Text-Light.otf');
+    src: url('/Users/david/Documents/GitHub/Skrip.io/fonts/SF-Pro-Text-Light.otf');
     font-weight: normal;
     font-style: normal;
 }
 @font-face {
     font-family: 'SF-Pro-Text-Regular';
-    src: url('/Users/david/Documents/GitHub/Skrip-IO/fonts/SF-Pro-Text-Regular.otf');
+    src: url('/Users/david/Documents/GitHub/Skrip.io/fonts/SF-Pro-Text-Regular.otf');
     font-weight: normal;
     font-style: normal;
 }
 @font-face {
     font-family: 'SF-Pro-Text-Medium';
-    src: url('/Users/david/Documents/GitHub/Skrip-IO/fonts/SF-Pro-Text-Medium.otf');
+    src: url('/Users/david/Documents/GitHub/Skrip.io/fonts/SF-Pro-Text-Medium.otf');
     font-weight: normal;
     font-style: normal;
 }
 @font-face {
     font-family: 'SF-Pro-Text-Regular-Italic';
-    src: url('/Users/david/Documents/GitHub/Skrip-IO/fonts/SF-Pro-Text-RegularItalic.otf');
+    src: url('/Users/david/Documents/GitHub/Skrip.io/fonts/SF-Pro-Text-RegularItalic.otf');
     font-weight: normal;
     font-style: normal;
 }
@@ -138,7 +138,7 @@ input:focus {outline: none;}
   height: 24px;
 }
 .advisor-profile-pic {
-  background: url('/Users/david/Documents/GitHub/Skrip-IO/assets/data/profile/advisor-profile-picture.png');
+  background: url('/Users/david/Documents/GitHub/Skrip.io/assets/data/profile/advisor-profile-picture.png');
 }
 /* teammates */
 #body--sideNav .team-selector {
@@ -164,10 +164,10 @@ input:focus {outline: none;}
   height: 24px;
 }
 .teammate-profile-pic-1 {
-  background: url('/Users/david/Documents/GitHub/Skrip-IO/assets/data/profile/team-profile-picture-1.png');
+  background: url('/Users/david/Documents/GitHub/Skrip.io/assets/data/profile/team-profile-picture-1.png');
 }
 .teammate-profile-pic-2 {
-  background: url('/Users/david/Documents/GitHub/Skrip-IO/assets/data/profile/team-profile-picture-2.png');
+  background: url('/Users/david/Documents/GitHub/Skrip.io/assets/data/profile/team-profile-picture-2.png');
 }
 /* me */
 #body--sideNav .me-selector {
@@ -198,7 +198,7 @@ input:focus {outline: none;}
   margin-left: 16px;
 }
 .my-profile-pic {
-  background: url('/Users/david/Documents/GitHub/Skrip-IO/assets/data/profile/team-profile-picture-3.png');
+  background: url('/Users/david/Documents/GitHub/Skrip.io/assets/data/profile/team-profile-picture-3.png');
 }
 
 /* Main Directory */
@@ -220,7 +220,7 @@ input[type=text] {
   color: #F0EDED;
   font-family: 'SF-Pro-Text-Regular' !important;
   font-size: 15px;
-  background-image: url("/Users/david/Documents/GitHub/Skrip-IO/assets/buttons/global-search.png");
+  background-image: url("/Users/david/Documents/GitHub/Skrip.io/assets/buttons/global-search.png");
   background-size: 18px 18px;
   background-repeat: no-repeat;
   background-position: right center;
