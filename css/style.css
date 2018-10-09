@@ -45,9 +45,12 @@ input:focus {outline: none;}
 .font-size-18 {font-size: 18px;}
 .font-size-20 {font-size: 20px;}
 
+.font-color-dark {color: #1E1E1E;}
 .font-color-default {color: #F0EDED;}
 .font-color-lighter {color: #9B9B9B;}
 .font-color-lightest {color: #4D5052;}
+.font-color-decline {color: #FC4949;}
+.font-color-accept {color: #49FC9E;}
 
 /* States */
 .active-g {
@@ -56,6 +59,7 @@ input:focus {outline: none;}
   box-shadow:inset 0px 0px 0px 2px #59D794;
 }
 .meeting-adjourned {color: #49FC9E;}
+.meeting-declined {color: #FC4949;}
 .meeting-done {text-decoration: line-through;}
 
 /* Main Divs */
@@ -257,7 +261,6 @@ input[type=text] {
   width: 60px;
   height: 100%;
 }
-#body--dirList .directory-type {padding-left: 20px; display: inline-block;}
 #body--dirList .directory-name {
   display: inline-block;
   width: 200px;
@@ -327,14 +330,14 @@ input[type=text] {
   height: 500px;
   margin-bottom: 30px;
 }
-#body--sideFeed .meeting-schedule-feed .feed-box {
+#feed-box {
   width: 100%;
-  height: 400px;
+  height: 420px;
   overflow-y: scroll;
 }
 #body--sideFeed .meeting-feed-listing {
   width: 100%;
-  margin-bottom: 10px;
+  margin-bottom: 16px;
 }
 #body--sideFeed .meeting-profile {
   display: inline-block;
@@ -352,9 +355,49 @@ input[type=text] {
   margin-left: 10px;
   padding-top: 6px;
 }
+#body--sideFeed .meeting-agreement {display: inline-block; padding-top: 4px;}
+#body--sideFeed .meeting-individual-profile {
+  display: inline-block;
+  vertical-align: top;
+  width: 24px;
+  height: 24px;
+  border-radius: 12px;
+  margin-right: 8px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+#body--sideFeed .meeting-agreement-details {margin-top: 8px;}
+#body--sideFeed .scheduler-input-buttons {margin-top: 8px;}
+#body--sideFeed .meeting-button {
+  display: inline-block;
+  width: 48px;
+  padding: 4px 6px;
+  border-radius: 6px;
+  text-align: center;
+}
+.meeting-button-confirm {background-color: #59D794; margin-right: 6px;}
+.meeting-button-decline {background-color: #9B9B9B;}
+#body--sideFeed .start-meeting-button {
+  width: 100%;
+  margin-top: 8px;
+  padding: 6px;
+  border-radius: 6px;
+  text-align: center;
+  background-color: #4D5052;
+}
 /* File Update Feed */
 #body--sideFeed .update-feed {
   width: 100%;
-  height: 200px;
-  background-color: red;
+  height: 208px;
+  overflow-y: scroll;
+}
+#body--sideFeed .file-update-listing {
+  padding-bottom: 8px;
+}
+#body--sideFeed .file-update-listing .file-icon {
+  display: inline-block;
+  vertical-align: top;
+  width: 36px;
+  height: 36px;
 }
