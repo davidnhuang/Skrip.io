@@ -3,7 +3,7 @@
 /* DO NOT REPRODUCE */
 
 /* General */
-body {background-color: #1E1E1E; overflow-x: hidden; margin: 0;}
+body {background-color: #1E1E1E; overflow-x: hidden; overflow-y: hidden; margin: 0;}
 button {background-color: transparent; border: none;}
 input:focus {outline: none;}
 @font-face {
@@ -327,12 +327,12 @@ input[type=text] {
 /* Meeting Scheduler */
 #body--sideFeed .meeting-schedule-feed {
   width: 100%;
-  height: 500px;
-  margin-bottom: 30px;
+  height: 480px;
+  margin-bottom: 20px;
 }
 #feed-box {
   width: 100%;
-  height: 420px;
+  height: 400px;
   overflow-y: scroll;
 }
 #body--sideFeed .meeting-feed-listing {
@@ -389,15 +389,39 @@ input[type=text] {
 /* File Update Feed */
 #body--sideFeed .update-feed {
   width: 100%;
-  height: 208px;
+  height: 200px;
   overflow-y: scroll;
 }
 #body--sideFeed .file-update-listing {
-  padding-bottom: 8px;
+  padding-bottom: 16px;
 }
-#body--sideFeed .file-update-listing .file-icon {
+#body--sideFeed .file-icon {
   display: inline-block;
   vertical-align: top;
   width: 36px;
   height: 36px;
 }
+#body--sideFeed .file-feed-collaborator-metadata {
+  margin-top: 8px;
+}
+#body--sideFeed .file-data {
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 4px;
+}
+#body--sideFeed .file-data-collaborator {
+  display: inline-block;
+  vertical-align: top;
+  width: 24px;
+  height: 24px;
+  border-radius: 12px;
+  margin-right: 8px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+#body--sideFeed .file-edit-metadata {
+  display: inline-block;
+  margin-left: 4px;
+}
+.file-update-versioning {float: right;}
