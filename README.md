@@ -9,4 +9,5 @@ Visit [Abstract](https://app.goabstract.com/projects/d4f126c0-bec8-11e7-b108-7d8
 ###### Projected start date: August 28th 2017.
 ###### Language: HTML, CSS, PHP, JavaScript
 ###### Abstract Link: [here](https://app.goabstract.com/projects/d4f126c0-bec8-11e7-b108-7d84fb31ecb9/)
-####### Copyright 2017 - 2018. David Nai-Chun Huang
+---
+###### Copyright 2017 - 2018. David Nai-Chun Huang
