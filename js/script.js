@@ -26,6 +26,21 @@ $(document).ready(function(){
   //Opening subdirectory 7
   $("#directory-7").click(function(event){$("#subdirectory-list-7").slideToggle()});
 
+  //Opening sub subdirectory 1
+  $("#sub-sub-directory-listing-1").click(function(event){$("#sub-subdirectory-1").slideToggle()});
+  //Opening sub subdirectory 2
+  $("#sub-sub-directory-listing-2").click(function(event){$("#sub-subdirectory-2").slideToggle()});
+  //Opening sub subdirectory 3
+  $("#sub-sub-directory-listing-3").click(function(event){$("#sub-subdirectory-3").slideToggle()});
+  //Opening sub subdirectory 4
+  $("#sub-sub-directory-listing-4").click(function(event){$("#sub-subdirectory-4").slideToggle()});
+  //Opening sub subdirectory 5
+  $("#sub-sub-directory-listing-5").click(function(event){$("#sub-subdirectory-5").slideToggle()});
+  //Opening sub subdirectory 6
+  $("#sub-sub-directory-listing-6").click(function(event){$("#sub-subdirectory-6").slideToggle()});
+  //Opening sub subdirectory 7
+  $("#sub-sub-directory-listing-7").click(function(event){$("#sub-subdirectory-7").slideToggle()});
+
   /*
   $("#...").bind("contextmenu", function (event) {
 

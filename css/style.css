@@ -249,9 +249,12 @@ input[type=text] {
   width: 100%;
 }
 #subdirectory-list-1, #subdirectory-list-2, #subdirectory-list-3, #subdirectory-list-4,
-#subdirectory-list-5, #subdirectory-list-6, #subdirectory-list-7 {display: none;}
+#subdirectory-list-5, #subdirectory-list-6, #subdirectory-list-7, #sub-subdirectory-1,
+#sub-subdirectory-2, #sub-subdirectory-3, #sub-subdirectory-4, #sub-subdirectory-5,
+#sub-subdirectory-6, #sub-subdirectory-7 {display: none;}
 .subdirectory-listing {width: 700px; margin-left: 60px;}
-#body--dirList .directory-listing, .subdirectory-listing {
+.sub-subdirectory-listing {width: 616px; margin-left: 125px;}
+#body--dirList .directory-listing, .subdirectory-listing, .sub-subdirectory-listing {
   height: 60px;
   border-bottom: 1px #4D5052;
   border-style: solid;
@@ -274,14 +277,15 @@ input[type=text] {
   display: inline-block;
   width: 242px;
   height: 100%;
+  vertical-align: top;
 }
-#body--dirList .directory-creation-date {
+#body--dirList .sub-subdirectory-name {
   display: inline-block;
-  width: 80px;
+  width: 177px;
   height: 100%;
-  margin-left: 20px;
+  vertical-align: top;
 }
-#body--dirList .directory-modified-date {
+#body--dirList .directory-creation-date, #body--dirList .directory-modified-date {
   display: inline-block;
   width: 80px;
   height: 100%;
