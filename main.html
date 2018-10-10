@@ -11,6 +11,7 @@
     <link rel="shortcut icon" type="image/png" href="/Users/david/Documents/GitHub/Skrip.io/assets/icons/favicon.png"/>
   </head>
   <body>
+    <div id='overlay'></div>
     <!--Skrip starts-->
     <div id='body--main'>
       <!--Side navigation-->
@@ -26,15 +27,33 @@
                 2019 Cal-Tech
               </span>
             </div>
-            <button class='dropdown-button'>
+            <div class='dropdown-button'>
               <img
                 src='/Users/david/Documents/GitHub/Skrip.io/assets/buttons/team-selector-dropdown.svg'
                 alt='drive selector dropdown arrow'
                 width='12px'
                 height='7px'
+                style='padding-left: 8px;'
               />
-            </button>
+            </div>
           </div>
+        </div>
+        <div class='drive-dropdown-menu'>
+          <span class='dropdown-menu-option font font-regular font-size-15 font-color-lighter'>
+            Administration
+          </span>
+          <span class='dropdown-menu-option font font-regular font-size-15 font-color-lighter'>
+            Preferences
+          </span>
+          <span class='dropdown-menu-option font font-regular font-size-15 font-color-lighter'>
+            Switch Drives
+          </span>
+          <span class='dropdown-menu-option font font-regular font-size-15 font-color-lighter'>
+            Customize Skrip
+          </span>
+          <span class='dropdown-menu-option font font-regular font-size-15 font-color-lighter'>
+            Adjust teams
+          </span>
         </div>
         <!--advisor section-->
         <div class='advisor-selector'>
@@ -1914,9 +1933,18 @@
             <div id='feed-box'>
               <!--Meeting 4-->
               <div id='meetup-list-4' class='meeting-feed-listing'>
-                <span class='font font-light font-size-9 font-color-lighter' style='padding-bottom: 12px;'>
-                  12/5/2019
-                </span>
+                <div class='meeting-timestamp-option'>
+                  <span class='meeting-timestamp font font-light font-size-9 font-color-lighter' style='padding-bottom: 12px;'>
+                    12/5/2019
+                  </span>
+                  <div class='meeting-scheduler-option'>
+                    <img
+                      src='/Users/david/Documents/GitHub/Skrip.io/assets/buttons/global-vert-options.svg'
+                      width='14px'
+                      height='14px'
+                    />
+                  </div>
+                </div>
                 <div class='meeting-profile teammate-profile-pic-1 active-g'></div>
                 <div class='meeting-detail'>
                   <div class='meeting-status meeting-done font-color-default'>
@@ -1944,9 +1972,18 @@
               </div>
               <!--Meeting 3-->
               <div id='meetup-list-3' class='meeting-feed-listing'>
-                <span class='font font-light font-size-9 font-color-lighter' style='padding-bottom: 12px;'>
-                  12/5/2019
-                </span>
+                <div class='meeting-timestamp-option'>
+                  <span class='meeting-timestamp font font-light font-size-9 font-color-lighter' style='padding-bottom: 12px;'>
+                    12/5/2019
+                  </span>
+                  <div class='meeting-scheduler-option'>
+                    <img
+                      src='/Users/david/Documents/GitHub/Skrip.io/assets/buttons/global-vert-options.svg'
+                      width='14px'
+                      height='14px'
+                    />
+                  </div>
+                </div>
                 <div class='meeting-profile my-profile-pic active-g'></div>
                 <div class='meeting-detail'>
                   <div class='meeting-status meeting-done font-color-default'>
@@ -1971,9 +2008,18 @@
               </div>
               <!--Meeting 2-->
               <div id='meetup-list-2' class='meeting-feed-listing'>
-                <span class='font font-light font-size-9 font-color-lighter' style='padding-bottom: 12px;'>
-                  12/7/2019
-                </span>
+                <div class='meeting-timestamp-option'>
+                  <span class='meeting-timestamp font font-light font-size-9 font-color-lighter' style='padding-bottom: 12px;'>
+                    12/7/2019
+                  </span>
+                  <div class='meeting-scheduler-option'>
+                    <img
+                      src='/Users/david/Documents/GitHub/Skrip.io/assets/buttons/global-vert-options.svg'
+                      width='14px'
+                      height='14px'
+                    />
+                  </div>
+                </div>
                 <div class='meeting-profile my-profile-pic active-g'></div>
                 <div class='meeting-detail'>
                   <div class='meeting-status font-color-default'>
@@ -1998,12 +2044,21 @@
               </div>
               <!--Meeting 1-->
               <div id='meetup-list-1' class='meeting-feed-listing'>
-                <span class='font font-light font-size-9 font-color-lighter' style='padding-bottom: 12px;'>
-                  12/7/2019
-                </span>
+                <div class='meeting-timestamp-option'>
+                  <span class='meeting-timestamp font font-light font-size-9 font-color-lighter' style='padding-bottom: 12px;'>
+                    12/7/2019
+                  </span>
+                  <div class='meeting-scheduler-option'>
+                    <img
+                      src='/Users/david/Documents/GitHub/Skrip.io/assets/buttons/global-vert-options.svg'
+                      width='14px'
+                      height='14px'
+                    />
+                  </div>
+                </div>
                 <div class='meeting-profile teammate-profile-pic-2'></div>
                 <div class='meeting-detail'>
-                  <div class='meeting-status font-color-default'>
+                  <div id='requested-meeting-scheduling' class='meeting-status font-color-default'>
                     <span class='font font-regular font-size-9 font-color-lighter' style='padding-bottom: 10px'>
                       Mitchel requested a meeting with you
                     </span>
@@ -2026,6 +2081,18 @@
                         Decline
                       </span>
                     </div>
+                  </div>
+                  <div class='my-agreement-details'>
+                    <div class='meeting-individual-profile my-profile-pic active-g'></div>
+                    <span class='meeting-agreement font font-light font-size-9 meeting-adjourned'>
+                      You agreed to meet!
+                    </span>
+                  </div>
+                  <div class='my-declined-details'>
+                    <div class='meeting-individual-profile my-profile-pic active-g'></div>
+                    <span class='meeting-declined font font-light font-size-9 meeting-agreement'>
+                      You declined this meeting
+                    </span>
                   </div>
                 </div>
               </div>
@@ -2189,6 +2256,7 @@
     <footer>
       <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
       <script src='/Users/david/Documents/GitHub/Skrip.io/js/script.js'></script>
+      <script src='/Users/david/Documents/GitHub/Skrip.io/js/js.cookie.js'></script>
     </footer>
   </body>
 </html>
