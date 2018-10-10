@@ -6,6 +6,7 @@
 body {background-color: #1E1E1E; overflow-x: hidden; overflow-y: hidden; margin: 0;}
 button {background-color: transparent; border: none;}
 input:focus {outline: none;}
+li {text-decoration: none;}
 @font-face {
     font-family: 'SF-Pro-Text-Light';
     src: url('/Users/david/Documents/GitHub/Skrip.io/fonts/SF-Pro-Text-Light.otf');
@@ -90,7 +91,7 @@ input:focus {outline: none;}
   vertical-align: top;
 }
 #body--sideFeed {
-  width: 300px;
+  width: 289px;
   height: 100%;
   display: inline-block;
   vertical-align: top;
@@ -100,7 +101,7 @@ input:focus {outline: none;}
   display: inline-block;
   vertical-align: top;
   margin-left: 60px;
-  margin-right: 48px;
+  margin-right: 60px;
 }
 /* Side Navigation */
 /* drive */
@@ -427,6 +428,7 @@ input[type=text] {
   text-align: center;
   background-color: #4D5052;
 }
+#body--sideFeed .start-meeting-button:hover {cursor: pointer;}
 .my-agreement-details, .my-declined-details {display: none; margin-bottom: 4px;}
 /* File Update Feed */
 #body--sideFeed .update-feed {
@@ -467,3 +469,22 @@ input[type=text] {
   margin-left: 4px;
 }
 .file-update-versioning {float: right;}
+/* Context Menu */
+.meeting-post-options {
+  display: none;
+  z-index: 1000;
+  position: absolute;
+  overflow: hidden;
+  white-space: nowrap;
+  color: white;
+  background-color: black;
+  border-radius: 5px;
+}
+
+.meeting-post-options li {
+  cursor: pointer;
+}
+
+.meeting-post-options li:hover {
+  background-color: ;
+}
