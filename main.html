@@ -11,7 +11,65 @@
     <link rel="shortcut icon" type="image/png" href="/Users/david/Documents/GitHub/Skrip.io/assets/icons/favicon.png"/>
   </head>
   <body>
-    <div id='overlay'></div>
+    <div id='overlay'>
+      <div class='overlay-dialogue-bg'>
+        <!--schedule meeting dialogue-->
+        <div id='schedule-meeting-dialogue'>
+          <div class='dialogue-title'>
+            <span class='font font-light font-size-15 font-color-default' style='padding-bottom: 32px;'>
+              What are we meeting for?
+            </span>
+          </div>
+          <!--input name here-->
+          <form>
+            <input class='schedule-meeting-name-input' type="text" id="fname" name="fname" placeholder="Reviewing latest spreadsheet">
+          </form>
+          <span class='font font-regular-italic font-size-9 font-color-lighter' style='padding-bottom: 48px;'>
+            Make sure your meeting names are specific.
+          </span>
+          <form style='padding-bottom: 48px;'>
+            <span class='font font-light font-size-15 font-color-default' style='padding-right: 16px; display: inline-block'>
+              Mark as unavailable?
+            </span>
+            <input style='display: inline-block; vertical-align: middle;' type="checkbox" name="unavailable-mark" value="unavailable">
+          </form>
+          <div style='padding-bottom: 48px;'>
+            <span class='font font-light font-size-15 font-color-default' style='padding-bottom: 16px;'>
+              When are we meeting?
+            </span>
+            <form style='display: inline-block;'>
+              <input class='schedule-meeting-start-time-input' type="text" id="fname" name="fname" placeholder="12 / 8 / 2019 4:00PM">
+            </form>
+            <span class='font font-light font-size-12 font-color-default' style='display: inline-block; vertical-align: middle; padding: 0px 16px;'>
+              to
+            </span>
+            <form style='display: inline-block;'>
+              <input class='schedule-meeting-end-time-input' type="text" id="fname" name="fname" placeholder="12 / 8 / 2019 4:30PM">
+            </form>
+          </div>
+          <div class='dialogue-title'>
+            <span class='font font-light font-size-15 font-color-default' style='padding-bottom: 16px;'>
+              Who are we meeting with?
+            </span>
+          </div>
+          <!--input team name here-->
+          <form>
+            <input class='schedule-meeting-name-input' type="text" id="fname" name="fname" placeholder="Nelson Cooper">
+          </form>
+          <span class='font font-regular-italic font-size-9 font-color-lighter' style='padding-bottom: 56px;'>
+            You can also type keywords like @all or @advisors.
+          </span>
+          <div>
+            <div class='submit-action-button submit-action-confirm'>
+              <span class='font font-regular font-size-12 font-color-lightest' style='text-align: center;'>Submit</span>
+            </div>
+            <div class='submit-action-button submit-action-cancel'>
+              <span class='font font-regular font-size-12 font-color-lightest' style='text-align: center;'>Cancel</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <!--Skrip starts-->
     <div id='body--main'>
       <!--Side navigation-->
@@ -1887,7 +1945,7 @@
             </div>
           </div>
           <!--project brief-->
-          <div id='recent-doc-3' class='directory-listing'>
+          <div id='recent-doc-4' class='directory-listing'>
             <div class='directory-icon'>
               <img
                 src='/Users/david/Documents/GitHub/Skrip.io/assets/icons/microsoft_word.svg'
@@ -2012,7 +2070,7 @@
                   <span class='meeting-timestamp font font-light font-size-9 font-color-lighter' style='padding-bottom: 12px;'>
                     12/7/2019
                   </span>
-                  <div class='meeting-scheduler-option'>
+                  <div id='sent-meeting-response-option' class='meeting-scheduler-option'>
                     <img
                       src='/Users/david/Documents/GitHub/Skrip.io/assets/buttons/global-vert-options.svg'
                       width='14px'
@@ -2253,13 +2311,41 @@
       </div>
     </div>
     <!--context menues-->
-    <!--Meeting context menu-->
+    <!--view meeting 4 details-->
+    <ul class='meeting-4-options'>
+      <li id='view-meeting-4-details' class='font font-regular font-size-12 font-color-default' style='padding: 8px 16px;'>
+        Meeting details
+      </li>
+    </ul>
+    <!--view meeting 3 details-->
+    <ul class='meeting-3-options'>
+      <li id='view-meeting-3-details' class='font font-regular font-size-12 font-color-default' style='padding: 8px 16px;'>
+        Meeting details
+      </li>
+    </ul>
+    <!--cancel meeting-->
+    <ul class='cancel-meeting-sent-option'>
+      <li id='last-minute-cancel-agreed' class='font font-regular font-size-12 font-color-default' style='padding: 8px 16px;'>
+        Cancel Meeting
+      </li>
+      <li id='view-meeting-1-details' class='font font-regular font-size-12 font-color-default' style='padding: 8px 16px;'>
+        Meeting details
+      </li>
+    </ul>
+    <!--Meeting editing decision menu-->
     <ul class='meeting-post-options'>
-      <li class='first-context-option font font-regular font-size-12 font-color-default' style='padding: 8px 16px;'>Attend</li>
-      <li id='last-minute-cancel' class='font font-regular font-size-12 font-color-default' style='padding: 8px 16px;'>Miss</li>
-      <li class='font font-regular font-size-12 font-color-default' style='padding: 8px 16px;'>Rescind</li>
-      <li class='font font-regular font-size-12 font-color-default' style='padding: 8px 16px;'>View details</li>
-      <li id='meeting-post-option-cancel' class='last-context-option font font-regular font-size-12 font-color-default' style='padding: 8px 16px;'>Cancel</li>
+      <li id='last-minute-accept' class='font font-regular font-size-12 font-color-default' style='padding: 8px 16px;'>
+        Attend
+      </li>
+      <li id='last-minute-cancel' class='font font-regular font-size-12 font-color-default' style='padding: 8px 16px;'>
+        Miss
+      </li>
+      <li id='meeting-rescinded' class='font font-regular font-size-12 font-color-default' style='padding: 8px 16px;'>
+        Rescind
+      </li>
+      <li id='view-meeting-2-details' class='font font-regular font-size-12 font-color-default' style='padding: 8px 16px;'>
+        Meeting details
+      </li>
     </ul>
     <!--Skrip ends-->
     <footer>

@@ -3,12 +3,14 @@ $(document).ready(function(){
   //Scroll feedbox to bottom
   var height = 0;
 
+  //Calculat feedback scroll
   $("#feed-box .meeting-feed-listing").each(function(i, value){
       height += parseInt($(this).height());
     });
 
   height += '';
 
+  //Scroll to bottom of feed
   $("#feed-box").animate({scrollTop: height});
 
   //Opening subdirectory 1
@@ -59,52 +61,80 @@ $(document).ready(function(){
 
   //Schedule meeting
   $(".start-meeting-button").click(function(event){
-    $("#overlay").fadeIn(500)
-  });
-
-  //ESC key
-  $(document).keyup(function(e) {
-    if (e.keyCode === 27) $('#overlay').fadeOut(250);
+    $("#overlay").fadeIn(200)
+    $(".overlay-dialogue-bg").fadeIn(360)
+    $("#schedule-meeting-dialogue").toggle("drop")
   });
 
   //Context menues
   // Scheduler Menus
   // Trigger action when the contexmenu is about to be shown
-  $("#meeting-confirmation-option").click("contextmenu", function (event) {
-
-      // Avoid the real one
-      event.preventDefault();
-
-      // Show contextmenu
-      $(".meeting-post-options").finish().toggle(100).
-
-      // In the right position (the mouse)
-      css({
-        top: (event.pageY-=20) + "px",
-        left: (event.pageX -= 120) + "px"
-      });
+  $("#meeting-confirmation-option").click("contextmenu", function(event) {
+    // Avoid the real one
+    event.preventDefault();
+    // Show contextmenu
+    $(".meeting-post-options").finish().toggle(100).
+    // In the right position (the mouse)
+    css({
+      top: (event.pageY-=20) + "px",
+      left: (event.pageX -= 120) + "px"
+    });
   });
 
-  $(document).bind("mousedown", function (e) {
+  $("#sent-meeting-response-option").click("contextmenu", function(event){
+    // Avoid the real one
+    event.preventDefault();
+    // Show contextmenu
+    $(".cancel-meeting-sent-option").finish().toggle(100).
+    // In the right position (the mouse)
+    css({
+      top: (event.pageY-=20) + "px",
+      left: (event.pageX -= 120) + "px"
+    });
+  });
 
-      // If the clicked element is not the menu
-      if (!$(e.target).parents(".meeting-post-options").length > 0) {
-          // Hide it
-          $(".meeting-post-options").hide(100);
-      }
+  // Dismiss menu after click out
+  $(document).bind("mousedown", function (e) {
+    // If the clicked element is not the menu
+    if (!$(e.target).parents(".meeting-post-options").length > 0) {
+      // Hide it
+      $(".meeting-post-options").hide(100);
+    }
+  });
+  // Dismiss menu after click out
+  $(document).bind("mousedown", function (e) {
+    // If the clicked element is not the menu
+    if (!$(e.target).parents(".cancel-meeting-sent-option").length > 0) {
+      // Hide it
+      $(".cancel-meeting-sent-option").hide(100);
+    }
   });
 
   /* last minute cancel*/
   //Team meeting declined
   $("#last-minute-cancel").click(function(event){
-    $(".my-declined-details").toggle("drop")
+    $(".my-declined-details").fadeIn(300)
     $("#requested-meeting-scheduling").addClass("meeting-done")
     $(".scheduler-input-buttons").css("display", "none")
-    $(".my-agreement-details").fadeOut()
+    $(".my-agreement-details").fadeOut(50)
     $(".meeting-post-options").hide(100)
   });
 
-  $("#meeting-post-option-cancel").click(function(event){
+  //Team meeting accepted
+  $("#last-minute-accept").click(function(event){
+    $(".my-agreement-details").fadeIn(300)
+    $("#requested-meeting-scheduling").removeClass("meeting-done")
+    $(".scheduler-input-buttons").css("display", "none")
+    $(".my-declined-details").fadeOut(50)
+    $(".meeting-post-options").hide(100)
+  });
+
+  //Rescind meeting decision
+  $("#meeting-rescinded").click(function(event){
+    $(".scheduler-input-buttons").fadeIn()
+    $(".my-declined-details").fadeOut(50)
+    $(".my-agreement-details").fadeOut(50)
+    $("#requested-meeting-scheduling").removeClass("meeting-done")
     $(".meeting-post-options").hide(100)
   });
 

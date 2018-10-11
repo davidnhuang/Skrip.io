@@ -68,7 +68,7 @@ ul {padding: 0; list-style-type: none;}
   display: none;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.8);
   position: absolute;
   top: 0;
   bottom: 0;
@@ -76,7 +76,43 @@ ul {padding: 0; list-style-type: none;}
   right: 0;
   z-index: 90;
 }
-
+.overlay-dialogue-bg {
+  background-color: #4A4A4A;
+  z-index: 91;
+  margin: 60px auto;
+  width: 380px;
+  border-radius: 6px;
+  display: none;
+  padding: 48px 40px;
+}
+#schedule-meeting-dialogue {display: none;}
+.schedule-meeting-name-input {
+  width: 100%;
+  height: 40px;
+  background-color: transparent;
+  border-bottom: 1px #9B9B9B;
+  border-style: solid;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  color: #F0EDED;
+  font-family: 'SF-Pro-Text-Regular' !important;
+  font-size: 15px;
+  margin-bottom: 8px;
+}
+.schedule-meeting-start-time-input, .schedule-meeting-end-time-input {
+  display: inline-block;
+  height: 28px;
+  background-color: transparent;
+  border-bottom: 1px #9B9B9B;
+  border-style: solid;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  color: #F0EDED;
+  font-family: 'SF-Pro-Text-Regular' !important;
+  font-size: 12px;
+}
 /* Main Divs */
 #body--main {
   width: 1360px;
@@ -250,8 +286,6 @@ ul {padding: 0; list-style-type: none;}
   border-top: none;
   padding-left: 8px;
   padding-right: 8px;
-}
-input[type=text] {
   margin: 0 4px 52px 4px;
   color: #F0EDED;
   font-family: 'SF-Pro-Text-Regular' !important;
@@ -394,6 +428,7 @@ input[type=text] {
   vertical-align: top;
   float: right;
   padding-top: 4px;
+  cursor: pointer;
 }
 #body--sideFeed .meeting-timestamp {display: inline-block;}
 #body--sideFeed .meeting-agreement {display: inline-block; padding-top: 4px;}
@@ -417,9 +452,18 @@ input[type=text] {
   border-radius: 6px;
   text-align: center;
 }
-#body--sideFeed .meeting-button:hover {cursor: pointer;}
-.meeting-button-confirm {background-color: #59D794; margin-right: 6px;}
-.meeting-button-decline {background-color: #9B9B9B;}
+#overlay .submit-action-button {
+  display: inline-block;
+  width: 80px;
+  padding: 8px 6px;
+  border-radius: 6px;
+  text-align: center;
+}
+#body--sideFeed .meeting-button:hover, #overlay .submit-action-button {cursor: pointer;}
+.meeting-button-confirm, .submit-action-confirm {background-color: #59D794; margin-right: 6px;}
+.meeting-button-confirm:hover, .submit-action-confirm:hover {background-color: #22f097;}
+.meeting-button-decline, .submit-action-cancel {background-color: #9B9B9B;}
+.meeting-button-decline:hover, .submit-action-cancel:hover {background-color: #c4c4c4;}
 #body--sideFeed .start-meeting-button {
   width: 100%;
   margin-top: 8px;
@@ -428,7 +472,7 @@ input[type=text] {
   text-align: center;
   background-color: #4D5052;
 }
-#body--sideFeed .start-meeting-button:hover {cursor: pointer;}
+#body--sideFeed .start-meeting-button:hover {cursor: pointer; background-color: #6c6e70;}
 .my-agreement-details, .my-declined-details {display: none; margin-bottom: 4px;}
 /* File Update Feed */
 #body--sideFeed .update-feed {
@@ -470,7 +514,7 @@ input[type=text] {
 }
 .file-update-versioning {float: right;}
 /* Context Menu */
-.meeting-post-options {
+.meeting-post-options, .cancel-meeting-sent-option {
   display: none;
   z-index: 1000;
   position: absolute;
@@ -478,19 +522,14 @@ input[type=text] {
   color: white;
   border-radius: 6px;
   background-color: #4D5052;
+  box-shadow: 0px 4px 12px 4px rgb(0,0,0,0.3);
+  padding-top: 6px;
+  padding-bottom: 6px;
 }
-.meeting-post-options li {
+.meeting-post-options li, .cancel-meeting-sent-option li {
   cursor: pointer;
   width: 100px;
 }
-.meeting-post-options li:hover {
+.meeting-post-options li:hover, .cancel-meeting-sent-option li:hover {
   background-color: #9B9B9B;
-}
-.first-context-option:hover {
-  border-top-left-radius: 6px;
-  border-top-right-radius: 6px;
-}
-.last-context-option:hover {
-  border-bottom-left-radius: 6px;
-  border-bottom-right-radius: 6px;
 }
