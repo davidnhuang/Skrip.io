@@ -110,7 +110,7 @@ $(document).ready(function(){
     }
   });
 
-  /* last minute cancel*/
+  /* last minute cancel */
   //Team meeting declined
   $("#last-minute-cancel").click(function(event){
     $(".my-declined-details").fadeIn(300)
@@ -136,6 +136,41 @@ $(document).ready(function(){
     $(".my-agreement-details").fadeOut(50)
     $("#requested-meeting-scheduling").removeClass("meeting-done")
     $(".meeting-post-options").hide(100)
+  });
+
+  //Cancel meeting submission
+  $("#cancel-meeting-appointment").click(function(event){
+    $("#popup-overlay").fadeIn(100)
+    $(".popup-dialogue-discard-changes").fadeIn(100)
+  });
+
+  //Don't cancel meeting submission dialogue
+  $("#popup-keep-changes").click(function(event){
+    $("#popup-overlay").fadeOut(100)
+    $(".popup-dialogue-discard-changes").fadeOut(100)
+  });
+
+  //Cancel meeting submission dialogue
+  $("#popup-discard-changes").click(function(event){
+    $("#popup-overlay").fadeOut(100)
+    $(".popup-dialogue-discard-changes").fadeOut(100)
+    $("#overlay").fadeOut(100)
+    $(".overlay-dialogue-bg").fadeOut(100)
+    $("#schedule-meeting-dialogue").fadeOut(100)
+  });
+
+  // Schedule meeting spawning beta warning
+  $("#submit-meeting-appointment").click(function(event){
+    $("#popup-overlay").fadeIn(200)
+    $(".beta-warning").fadeIn(200)
+    $("#overlay").fadeOut(100)
+    $("#schedule-meeting-dialogue").toggle(100)
+  });
+
+  //return to main menu after beta warning
+  $("#return-back-to-main").click(function(event){
+    $("#popup-overlay").fadeOut(100)
+    $(".beta-warning").fadeOut(100)
   });
 
 });

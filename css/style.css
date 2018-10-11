@@ -76,14 +76,35 @@ ul {padding: 0; list-style-type: none;}
   right: 0;
   z-index: 90;
 }
+#popup-overlay {
+  display: none;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 93;
+}
 .overlay-dialogue-bg {
+  display: none;
   background-color: #4A4A4A;
-  z-index: 91;
-  margin: 60px auto;
+  z-index: 92;
+  margin: 80px auto;
   width: 380px;
   border-radius: 6px;
+  padding: 40px 40px;
+}
+.popup-dialogue-discard-changes, .beta-warning {
   display: none;
-  padding: 48px 40px;
+  background-color: #4A4A4A;
+  z-index: 94;
+  margin: 20% auto;
+  width: 200px;
+  border-radius: 6px;
+  padding: 24px 30px;
 }
 #schedule-meeting-dialogue {display: none;}
 .schedule-meeting-name-input {
@@ -426,8 +447,8 @@ ul {padding: 0; list-style-type: none;}
 #body--sideFeed .meeting-scheduler-option {
   display: inline-block;
   vertical-align: top;
-  float: right;
   padding-top: 4px;
+  padding-left: 74%;
   cursor: pointer;
 }
 #body--sideFeed .meeting-timestamp {display: inline-block;}
@@ -452,14 +473,14 @@ ul {padding: 0; list-style-type: none;}
   border-radius: 6px;
   text-align: center;
 }
-#overlay .submit-action-button {
+.submit-action-button {
   display: inline-block;
   width: 80px;
   padding: 8px 6px;
   border-radius: 6px;
   text-align: center;
 }
-#body--sideFeed .meeting-button:hover, #overlay .submit-action-button {cursor: pointer;}
+#body--sideFeed .meeting-button:hover, .submit-action-button {cursor: pointer;}
 .meeting-button-confirm, .submit-action-confirm {background-color: #59D794; margin-right: 6px;}
 .meeting-button-confirm:hover, .submit-action-confirm:hover {background-color: #22f097;}
 .meeting-button-decline, .submit-action-cancel {background-color: #9B9B9B;}

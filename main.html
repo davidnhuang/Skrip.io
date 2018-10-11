@@ -11,6 +11,39 @@
     <link rel="shortcut icon" type="image/png" href="/Users/david/Documents/GitHub/Skrip.io/assets/icons/favicon.png"/>
   </head>
   <body>
+    <div id='popup-overlay'>
+      <!--discard changes-->
+      <div class='popup-dialogue-discard-changes'>
+        <span class='font font-light font-size-15 font-color-default' style='text-align: center; padding-bottom: 20px;'>
+          Discard Changes
+        </span>
+        <span class='font font-light font-size-12 font-color-lighter'>
+          Are you sure you want to discard this meeting submission?
+        </span>
+        <div style='margin-top: 24px; margin-left: auto; margin-right: auto;'>
+          <div id='popup-keep-changes' class='submit-action-button submit-action-confirm'>
+            <span class='font font-regular font-size-12 font-color-lightest' style='text-align: center;'>No</span>
+          </div>
+          <div id='popup-discard-changes' class='submit-action-button submit-action-cancel'>
+            <span class='font font-regular font-size-12 font-color-lightest' style='text-align: center;'>Yes</span>
+          </div>
+        </div>
+      </div>
+      <!--beta permission-->
+      <div class='beta-warning'>
+        <span class='font font-light font-size-15 font-color-default' style='text-align: center; padding-bottom: 20px;'>
+          Coming Soon 👍
+        </span>
+        <span class='font font-light font-size-12 font-color-lighter'>
+          This feature is not supported in beta yet! Stay tuned for more!
+        </span>
+        <div style='margin-top: 32px; margin-left: 52px;'>
+          <div id='return-back-to-main' class='submit-action-button submit-action-cancel'>
+            <span class='font font-regular font-size-12 font-color-lightest' style='text-align: center;'>Ok</span>
+          </div>
+        </div>
+      </div>
+    </div>
     <div id='overlay'>
       <div class='overlay-dialogue-bg'>
         <!--schedule meeting dialogue-->
@@ -60,14 +93,15 @@
             You can also type keywords like @all or @advisors.
           </span>
           <div>
-            <div class='submit-action-button submit-action-confirm'>
+            <div id='submit-meeting-appointment' class='submit-action-button submit-action-confirm'>
               <span class='font font-regular font-size-12 font-color-lightest' style='text-align: center;'>Submit</span>
             </div>
-            <div class='submit-action-button submit-action-cancel'>
+            <div id='cancel-meeting-appointment' class='submit-action-button submit-action-cancel'>
               <span class='font font-regular font-size-12 font-color-lightest' style='text-align: center;'>Cancel</span>
             </div>
           </div>
         </div>
+        <!--uploading file-->
       </div>
     </div>
     <!--Skrip starts-->
