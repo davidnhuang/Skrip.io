@@ -6,7 +6,7 @@
 body {background-color: #1E1E1E; overflow-x: hidden; overflow-y: hidden; margin: 0;}
 button {background-color: transparent; border: none;}
 input:focus {outline: none;}
-li {text-decoration: none;}
+ul {padding: 0; list-style-type: none;}
 @font-face {
     font-family: 'SF-Pro-Text-Light';
     src: url('/Users/david/Documents/GitHub/Skrip.io/fonts/SF-Pro-Text-Light.otf');
@@ -474,17 +474,23 @@ input[type=text] {
   display: none;
   z-index: 1000;
   position: absolute;
-  overflow: hidden;
   white-space: nowrap;
   color: white;
-  background-color: black;
-  border-radius: 5px;
+  border-radius: 6px;
+  background-color: #4D5052;
 }
-
 .meeting-post-options li {
   cursor: pointer;
+  width: 100px;
 }
-
 .meeting-post-options li:hover {
-  background-color: ;
+  background-color: #9B9B9B;
+}
+.first-context-option:hover {
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+}
+.last-context-option:hover {
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
 }

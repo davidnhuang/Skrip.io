@@ -49,6 +49,8 @@ $(document).ready(function(){
     $(".scheduler-input-buttons").toggle()
     $(".my-agreement-details").toggle("drop")
   });
+
+  //Team meeting declined
   $(".meeting-button-decline").click(function(event){
     $(".scheduler-input-buttons").toggle()
     $(".my-declined-details").toggle("drop")
@@ -78,35 +80,32 @@ $(document).ready(function(){
 
       // In the right position (the mouse)
       css({
-        top: event.pageY + "px",
+        top: (event.pageY-=20) + "px",
         left: (event.pageX -= 120) + "px"
       });
   });
 
-  // If the document is clicked somewhere
   $(document).bind("mousedown", function (e) {
 
       // If the clicked element is not the menu
-      if (!$(e.target).parents(".custom-menu").length > 0) {
+      if (!$(e.target).parents(".meeting-post-options").length > 0) {
           // Hide it
           $(".meeting-post-options").hide(100);
       }
   });
 
+  /* last minute cancel*/
+  //Team meeting declined
+  $("#last-minute-cancel").click(function(event){
+    $(".my-declined-details").toggle("drop")
+    $("#requested-meeting-scheduling").addClass("meeting-done")
+    $(".scheduler-input-buttons").css("display", "none")
+    $(".my-agreement-details").fadeOut()
+    $(".meeting-post-options").hide(100)
+  });
 
-  // If the menu element is clicked
-  $(".meeting-post-options li").click(function(){
+  $("#meeting-post-option-cancel").click(function(event){
+    $(".meeting-post-options").hide(100)
+  });
 
-      // This is the triggered action name
-      switch($(this).attr("data-action")) {
-
-          // A case for each action. Your actions here
-          case "first": alert("first"); break;
-          case "second": alert("second"); break;
-          case "third": alert("third"); break;
-      }
-
-      // Hide it AFTER the action was triggered
-      $(".custom-menu").hide(100);
-    });
 });
