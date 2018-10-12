@@ -5,8 +5,8 @@ $(document).ready(function(){
 
   //Calculat feedback scroll
   $("#feed-box .meeting-feed-listing").each(function(i, value){
-      height += parseInt($(this).height());
-    });
+    height += parseInt($(this).height());
+  });
 
   height += '';
 
@@ -93,6 +93,18 @@ $(document).ready(function(){
     });
   });
 
+  $("#meeting-list-3-options").click("contextmenu", function(event){
+    // Avoid the real one
+    event.preventDefault();
+    // Show contextmenu
+    $(".meeting-3-context-menu").finish().toggle(100).
+    // In the right position (the mouse)
+    css({
+      top: (event.pageY-=20) + "px",
+      left: (event.pageX -= 120) + "px"
+    });
+  });
+
   // Dismiss menu after click out
   $(document).bind("mousedown", function (e) {
     // If the clicked element is not the menu
@@ -101,12 +113,22 @@ $(document).ready(function(){
       $(".meeting-post-options").hide(100);
     }
   });
+
   // Dismiss menu after click out
   $(document).bind("mousedown", function (e) {
     // If the clicked element is not the menu
     if (!$(e.target).parents(".cancel-meeting-sent-option").length > 0) {
       // Hide it
       $(".cancel-meeting-sent-option").hide(100);
+    }
+  });
+
+  // Dismiss menu after click out
+  $(document).bind("mousedown", function (e) {
+    // If the clicked element is not the menu
+    if (!$(e.target).parents(".meeting-3-context-menu").length > 0) {
+      // Hide it
+      $(".meeting-3-context-menu").hide(100);
     }
   });
 
@@ -171,6 +193,24 @@ $(document).ready(function(){
   $("#return-back-to-main").click(function(event){
     $("#popup-overlay").fadeOut(100)
     $(".beta-warning").fadeOut(100)
+  });
+
+  //toggle calendar view
+  $("#toggle-calendar-view").click(function(event){
+    $("#body--dirList").toggle("slide")
+    $("#body--sideFeed-calendar-view").toggle(function() {
+        if ($(this).is(':visible'))
+        $(this).css('display','inline-block');
+    })
+  });
+
+  //exit out calendar view
+  $(".exit-out-calendar-feedbox").click(function(event){
+    $("#body--dirList").toggle("slide")
+    $("#body--sideFeed-calendar-view").toggle(function() {
+        if ($(this).is(':visible'))
+        $(this).css('display','inline-block');
+      });
   });
 
 });

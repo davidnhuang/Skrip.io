@@ -101,7 +101,7 @@
             </div>
           </div>
         </div>
-        <!--uploading file-->
+        <!--uploading file at root-->
       </div>
     </div>
     <!--Skrip starts-->
@@ -2019,9 +2019,16 @@
         <div class='skrip-comm-feed'>
           <!--Meeting scheduler-->
           <div class='meeting-schedule-feed'>
-            <span class='font font-regular font-size-9 font-color-lighter' style='margin-bottom: 12px;'>
+            <span class='font font-regular font-size-9 font-color-lighter' style='margin-bottom: 12px; display: inline-block;'>
               Meeting Schedules
             </span>
+            <div id='toggle-calendar-view' class='view-calendar-options'>
+              <img
+                src='/Users/david/Documents/GitHub/Skrip.io/assets/buttons/calendar-open-button.svg'
+                width='14px'
+                height='14px'
+              />
+            </div>
             <div id='feed-box'>
               <!--Meeting 4-->
               <div id='meetup-list-4' class='meeting-feed-listing'>
@@ -2029,7 +2036,7 @@
                   <span class='meeting-timestamp font font-light font-size-9 font-color-lighter' style='padding-bottom: 12px;'>
                     12/5/2019
                   </span>
-                  <div class='meeting-scheduler-option'>
+                  <div id='meetup-list-4-open-option' class='meeting-scheduler-option'>
                     <img
                       src='/Users/david/Documents/GitHub/Skrip.io/assets/buttons/global-vert-options.svg'
                       width='14px'
@@ -2068,7 +2075,7 @@
                   <span class='meeting-timestamp font font-light font-size-9 font-color-lighter' style='padding-bottom: 12px;'>
                     12/5/2019
                   </span>
-                  <div class='meeting-scheduler-option'>
+                  <div id='meeting-list-3-options' class='meeting-scheduler-option'>
                     <img
                       src='/Users/david/Documents/GitHub/Skrip.io/assets/buttons/global-vert-options.svg'
                       width='14px'
@@ -2196,7 +2203,7 @@
             </div>
           </div>
           <!--File update feed-->
-          <span class='font font-regular font-size-9 font-color-lighter' style='margin-bottom: 20px;'>
+          <span class='font font-regular font-size-9 font-color-lighter' style='margin-bottom: 20px; display: inline-block;'>
             File Updates
           </span>
           <div class='update-feed'>
@@ -2343,6 +2350,391 @@
           </div>
         </div>
       </div>
+      <!--Calendar view-->
+      <div id='body--sideFeed-calendar-view'>
+        <div class='calendar-view-header'>
+          <span class='font font-regular font-size-9 font-color-default' style='display: inline-block;'>
+            Your meetings this week
+          </span>
+          <div class='exit-out-calendar-feedbox'>
+            <img
+              src='/Users/david/Documents/GitHub/Skrip.io/assets/buttons/close-button.svg'
+              width='15px'
+              height='15px'
+              style='margin-left: 16px; margin-top: 8px;'
+            />
+            <span class='font font-light font-size-9 font-color-accept' style='padding-left: 15px;'>
+              esc
+            </span>
+          </div>
+        </div>
+        <div class='calendar-week-view-box'>
+          <!--Mon-->
+          <div class='calendar-day-view-box'>
+            <span class='font font-regular font-size-15 font-color-default'>
+              MON
+            </span>
+            <span class='font font-light font-size-12 font-color-default' style='padding-bottom: 20px;'>
+              12 / 5
+            </span>
+            <div class='calendar-day-meeting-listings calendar-today'>
+              <div class='calendar-meeting-upcoming-listing'>
+                <span class='font font-regular font-size-9 font-color-lighter' style='padding-bottom: 16px;'>
+                  Upcoming
+                </span>
+                <!--meeting-->
+                <div style='display: block; padding-bottom: 8px;'>
+                  <div class='meeting-profile teammate-profile-pic-2'></div>
+                  <div class='calendar-meeting-listing-detail'>
+                    <span class='font font-light font-size-12 font-color-default' style='padding-bottom: 16px;'>
+                      12:00PM ~ 12:30PM<br>
+                      Questions about ...
+                    </span>
+                  </div>
+                </div>
+                <!--meeting-->
+                <div style='display: block;'>
+                  <div class='meeting-profile my-profile-pic active-g'></div>
+                  <div class='calendar-meeting-listing-detail'>
+                    <span class='font font-light font-size-12 font-color-default' style='padding-bottom: 16px;'>
+                      1:00PM ~ 1:30PM<br>
+                      Review new plot ...
+                    </span>
+                  </div>
+                </div>
+                <!--meeting-->
+                <div style='display: block;'>
+                  <div class='meeting-profile teammate-profile-pic-1 active-g'></div>
+                  <div class='calendar-meeting-listing-detail'>
+                    <span class='font font-light font-size-12 font-color-default' style='padding-bottom: 16px;'>
+                      4:00PM ~ 5:30PM<br>
+                      Looking at obser...
+                    </span>
+                  </div>
+                </div>
+                <!--DND-->
+                <div style='display: block;'>
+                  <div class='meeting-profile teammate-profile-pic-1 active-g'></div>
+                  <div class='calendar-meeting-listing-detail'>
+                    <span class='font font-regular-italic font-size-12 font-color-lighter' style='padding-bottom: 16px;'>
+                      6:00PM ~ 6:30PM<br>
+                      On a call
+                    </span>
+                  </div>
+                </div>
+                <!--DND-->
+                <div style='display: block;'>
+                  <div class='meeting-profile teammate-profile-pic-1 active-g'></div>
+                  <div class='calendar-meeting-listing-detail'>
+                    <span class='font font-regular-italic font-size-12 font-color-lighter' style='padding-bottom: 16px;'>
+                      6:30PM ~ 7:30PM<br>
+                      DND
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <!--Adjourned-->
+              <div class='calendar-meeting-adjourned-listing'>
+                <span class='font font-regular font-size-9 font-color-lighter' style='padding-bottom: 16px;'>
+                  Adjourned
+                </span>
+                <!--meeting-->
+                <div style='display: block; padding-bottom: 8px;'>
+                  <div class='meeting-profile advisor-profile-pic active-g'></div>
+                  <div class='calendar-meeting-listing-detail'>
+                    <span class='font font-light font-size-12 font-color-default' style='padding-bottom: 16px;'>
+                      12:00PM ~ 12:30PM<br>
+                      Questions about ...
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--Tue-->
+          <div class='calendar-day-view-box'>
+            <span class='font font-regular font-size-15 font-color-default'>
+              TUE
+            </span>
+            <span class='font font-light font-size-12 font-color-default' style='padding-bottom: 20px;'>
+              12 / 6
+            </span>
+            <div class='calendar-day-meeting-listings'>
+              <!--Upcoming-->
+              <div class='calendar-meeting-upcoming-listing' style='padding-top: 10px;'>
+                <span class='font font-regular font-size-9 font-color-lighter' style='padding-bottom: 16px;'>
+                  Upcoming
+                </span>
+                <!--meeting-->
+                <div style='display: block; padding-bottom: 8px;'>
+                  <div class='meeting-profile teammate-profile-pic-2'></div>
+                  <div class='calendar-meeting-listing-detail'>
+                    <span class='font font-light font-size-12 font-color-default' style='padding-bottom: 16px;'>
+                      12:00PM ~ 12:30PM<br>
+                      Questions about ...
+                    </span>
+                  </div>
+                </div>
+                <!--DND-->
+                <div style='display: block;'>
+                  <div class='meeting-profile teammate-profile-pic-1 active-g'></div>
+                  <div class='calendar-meeting-listing-detail'>
+                    <span class='font font-regular-italic font-size-12 font-color-lighter'>
+                      6:00PM ~ 6:30PM<br>
+                      DND
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <!--Adjourned-->
+              <div class='calendar-meeting-adjourned-listing'>
+                <span class='font font-regular font-size-9 font-color-lighter' style='padding-bottom: 16px;'>
+                  Adjourned
+                </span>
+                <!--meeting-->
+              </div>
+            </div>
+          </div>
+          <!--Wed-->
+          <div class='calendar-day-view-box'>
+            <span class='font font-regular font-size-15 font-color-default'>
+              WED
+            </span>
+            <span class='font font-light font-size-12 font-color-default' style='padding-bottom: 20px;'>
+              12 / 7
+            </span>
+            <div class='calendar-day-meeting-listings'>
+              <!--Upcoming-->
+              <div class='calendar-meeting-upcoming-listing' style='padding-top: 10px;'>
+                <span class='font font-regular font-size-9 font-color-lighter' style='padding-bottom: 16px;'>
+                  Upcoming
+                </span>
+                <!--meeting-->
+                <div style='display: block; padding-bottom: 8px;'>
+                  <div class='meeting-profile teammate-profile-pic-2'></div>
+                  <div class='calendar-meeting-listing-detail'>
+                    <span class='font font-light font-size-12 font-color-default' style='padding-bottom: 16px;'>
+                      12:00PM ~ 12:30PM<br>
+                      Questions about ...
+                    </span>
+                  </div>
+                </div>
+                <!--DND-->
+                <div style='display: block;'>
+                  <div class='meeting-profile teammate-profile-pic-1 active-g'></div>
+                  <div class='calendar-meeting-listing-detail'>
+                    <span class='font font-regular-italic font-size-12 font-color-lighter'  style='padding-bottom: 16px;'>
+                      6:00PM ~ 6:30PM<br>
+                      DND
+                    </span>
+                  </div>
+                </div>
+                <!--Meeting-->
+                <div style='display: block;'>
+                  <div class='meeting-profile teammate-profile-pic-1 active-g'></div>
+                  <div class='calendar-meeting-listing-detail'>
+                    <span class='font font-light font-size-12 font-color-default'>
+                      6:00PM ~ 6:30PM<br>
+                      Rerunning v2 of ...
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <!--Adjourned-->
+              <div class='calendar-meeting-adjourned-listing'>
+                <span class='font font-regular font-size-9 font-color-lighter' style='padding-bottom: 16px;'>
+                  Adjourned
+                </span>
+                <!--meeting-->
+              </div>
+            </div>
+          </div>
+          <!--Thu-->
+          <div class='calendar-day-view-box'>
+            <span class='font font-regular font-size-15 font-color-default'>
+              THU
+            </span>
+            <span class='font font-light font-size-12 font-color-default' style='padding-bottom: 20px;'>
+              12 / 8
+            </span>
+            <div class='calendar-day-meeting-listings'>
+              <!--Upcoming-->
+              <div class='calendar-meeting-upcoming-listing' style='padding-top: 10px;'>
+                <span class='font font-regular font-size-9 font-color-lighter' style='padding-bottom: 16px;'>
+                  Upcoming
+                </span>
+                <!--meeting-->
+                <div style='display: block; padding-bottom: 8px;'>
+                  <div class='meeting-profile advisor-profile-pic active-g'></div>
+                  <div class='calendar-meeting-listing-detail'>
+                    <span class='font font-light font-size-12 font-color-default' style='padding-bottom: 16px;'>
+                      12:00PM ~ 12:30PM<br>
+                      Questions about ...
+                    </span>
+                  </div>
+                </div>
+                <!--DND-->
+                <div style='display: block;'>
+                  <div class='meeting-profile advisor-profile-pic active-g'></div>
+                  <div class='calendar-meeting-listing-detail'>
+                    <span class='font font-regular-italic font-size-12 font-color-lighter'  style='padding-bottom: 16px;'>
+                      6:00PM ~ 6:30PM<br>
+                      DND
+                    </span>
+                  </div>
+                </div>
+                <!--Meeting-->
+                <div style='display: block;'>
+                  <div class='meeting-profile my-profile-pic active-g'></div>
+                  <div class='calendar-meeting-listing-detail'>
+                    <span class='font font-light font-size-12 font-color-default' style='padding-bottom: 16px;'>
+                      6:00PM ~ 6:30PM<br>
+                      Rerunning v2 of ...
+                    </span>
+                  </div>
+                </div>
+                <!--DND-->
+                <div style='display: block;'>
+                  <div class='meeting-profile teammate-profile-pic-1 active-g'></div>
+                  <div class='calendar-meeting-listing-detail'>
+                    <span class='font font-regular-italic font-size-12 font-color-lighter' style='padding-bottom: 16px;'>
+                      5:00PM ~ 7:30PM<br>
+                      DND
+                    </span>
+                  </div>
+                </div>
+                <!--DND-->
+                <div style='display: block;'>
+                  <div class='meeting-profile advisor-profile-pic active-g'></div>
+                  <div class='calendar-meeting-listing-detail'>
+                    <span class='font font-regular-italic font-size-12 font-color-lighter' style='padding-bottom: 16px;'>
+                      6:00PM ~ 6:30PM<br>
+                      DND
+                    </span>
+                  </div>
+                </div>
+                <!--DND-->
+                <div style='display: block;'>
+                  <div class='meeting-profile advisor-profile-pic active-g'></div>
+                  <div class='calendar-meeting-listing-detail'>
+                    <span class='font font-regular-italic font-size-12 font-color-lighter' style='padding-bottom: 16px;'>
+                      8:00PM ~ 8:30PM<br>
+                      DND
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <!--Adjourned-->
+              <div class='calendar-meeting-adjourned-listing'>
+                <span class='font font-regular font-size-9 font-color-lighter' style='padding-bottom: 16px;'>
+                  Adjourned
+                </span>
+                <!--meeting-->
+              </div>
+            </div>
+          </div>
+          <!--Fri-->
+          <div class='calendar-day-view-box'>
+            <span class='font font-regular font-size-15 font-color-default'>
+              FRI
+            </span>
+            <span class='font font-light font-size-12 font-color-default' style='padding-bottom: 20px;'>
+              12 / 9
+            </span>
+            <div class='calendar-day-meeting-listings'>
+              <!--Upcoming-->
+              <div class='calendar-meeting-upcoming-listing' style='padding-top: 10px;'>
+                <span class='font font-regular font-size-9 font-color-lighter' style='padding-bottom: 16px;'>
+                  Upcoming
+                </span>
+                <!--meeting-->
+                <!--DND-->
+                <div style='display: block;'>
+                  <div class='meeting-profile teammate-profile-pic-1 active-g'></div>
+                  <div class='calendar-meeting-listing-detail'>
+                    <span class='font font-regular-italic font-size-12 font-color-lighter'  style='padding-bottom: 16px;'>
+                      6:00PM ~ 6:30PM<br>
+                      OOF
+                    </span>
+                  </div>
+                </div>
+                <!--DND-->
+                <div style='display: block;'>
+                  <div class='meeting-profile teammate-profile-pic-2'></div>
+                  <div class='calendar-meeting-listing-detail'>
+                    <span class='font font-regular-italic font-size-12 font-color-lighter'  style='padding-bottom: 16px;'>
+                      6:00PM ~ 6:30PM<br>
+                      OOF
+                    </span>
+                  </div>
+                </div>
+                <!--DND-->
+                <div style='display: block;'>
+                  <div class='meeting-profile my-profile-pic active-g'></div>
+                  <div class='calendar-meeting-listing-detail'>
+                    <span class='font font-regular-italic font-size-12 font-color-lighter'  style='padding-bottom: 16px;'>
+                      6:00PM ~ 6:30PM<br>
+                      OOF
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <!--Adjourned-->
+              <div class='calendar-meeting-adjourned-listing'>
+                <span class='font font-regular font-size-9 font-color-lighter' style='padding-bottom: 16px;'>
+                  Adjourned
+                </span>
+              </div>
+            </div>
+          </div>
+          <!--Sat-->
+          <div class='calendar-day-view-box'>
+            <span class='font font-regular font-size-15 font-color-lighter'>
+              SAT
+            </span>
+            <span class='font font-light font-size-12 font-color-lighter' style='padding-bottom: 20px;'>
+              12 / 10
+            </span>
+            <div class='calendar-day-meeting-listings'>
+              <!--Upcoming-->
+              <div class='calendar-meeting-upcoming-listing' style='padding-top: 10px;'>
+                <span class='font font-regular font-size-9 font-color-lighter' style='padding-bottom: 16px;'>
+                  Upcoming
+                </span>
+              </div>
+              <!--Adjourned-->
+              <div class='calendar-meeting-adjourned-listing'>
+                <span class='font font-regular font-size-9 font-color-lighter' style='padding-bottom: 16px;'>
+                  Adjourned
+                </span>
+              </div>
+            </div>
+          </div>
+          <!--SUN-->
+          <div class='calendar-day-view-box'>
+            <span class='font font-regular font-size-15 font-color-lighter'>
+              SUN
+            </span>
+            <span class='font font-light font-size-12 font-color-lighter' style='padding-bottom: 20px;'>
+              12 / 11
+            </span>
+            <div class='calendar-day-meeting-listings'>
+              <!--Upcoming-->
+              <div class='calendar-meeting-upcoming-listing' style='padding-top: 10px;'>
+                <span class='font font-regular font-size-9 font-color-lighter' style='padding-bottom: 16px;'>
+                  Upcoming
+                </span>
+              </div>
+              <!--Adjourned-->
+              <div class='calendar-meeting-adjourned-listing'>
+                <span class='font font-regular font-size-9 font-color-lighter' style='padding-bottom: 16px;'>
+                  Adjourned
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <!--context menues-->
     <!--view meeting 4 details-->
@@ -2352,7 +2744,7 @@
       </li>
     </ul>
     <!--view meeting 3 details-->
-    <ul class='meeting-3-options'>
+    <ul class='meeting-3-context-menu'>
       <li id='view-meeting-3-details' class='font font-regular font-size-12 font-color-default' style='padding: 8px 16px;'>
         Meeting details
       </li>
