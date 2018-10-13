@@ -11,6 +11,147 @@
     <link rel="shortcut icon" type="image/png" href="/Users/david/Documents/GitHub/Skrip.io/assets/icons/favicon.png"/>
   </head>
   <body>
+    <!--pop up dialogues-->
+    <div id='popup-overlay'>
+      <!--root permission-->
+      <div class='no-permission-warning'>
+        <span class='font font-light font-size-15 font-color-default' style='text-align: center; padding-bottom: 20px;'>
+          Whoops 😩
+        </span>
+        <span class='font font-light font-size-12 font-color-lighter'>
+          Sorry, this is a protected directory. As a beta user, you do not have permission to upload files to this directory.
+        </span>
+        <div style='margin-top: 32px; margin-left: 52px;'>
+          <div id='return-back-to-main-2' class='submit-action-button submit-action-cancel'>
+            <span class='font font-regular font-size-12 font-color-lightest' style='text-align: center;'>Back</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--overlay-->
+    <div id='overlay'>
+      <div class='overlay-dialogue-bg'>
+        <div id='naming-help-tips'>
+          <div class='dialogue-title'>
+            <span class='font font-light font-size-18 font-color-default' style='padding-bottom: 32px;'>
+              Naming nodes shortcuts
+            </span>
+          </div>
+          <span class='font font-light font-size-12 font-color-lighter' style='padding-bottom: 32px;'>
+            Check out shortkeys and functions when designing / adjusting your naming conventions.
+          </span>
+          <div class='shortkey-tips-bounding'>
+            <span class='font font-regular font-size-12 font-color-lighter' style='padding-bottom: 12px;'>
+              <span class='font-code font-color-default'>parent -</span>
+              refers to the parent directory of the path
+            </span>
+            <span class='font font-regular font-size-12 font-color-lighter' style='padding-bottom: 12px;'>
+              <span class='font-code font-color-default'>child -</span>
+              refers to the immediate child directory of the path
+            </span>
+            <span class='font font-regular font-size-12 font-color-lighter' style='padding-bottom: 12px;'>
+              <span class='font-code font-color-default'>parent-directory -</span>
+              refers a parent directory
+            </span>
+            <span class='font font-regular font-size-12 font-color-lighter' style='padding-bottom: 12px;'>
+              <span class='font-code font-color-default'>child-directory -</span>
+              refers a child directory
+            </span>
+            <span class='font font-regular font-size-12 font-color-lighter' style='padding-bottom: 12px;'>
+              <span class='font-code font-color-default'>filename -</span>
+              returns the filename of the object
+            </span>
+            <span class='font font-regular font-size-12 font-color-lighter' style='padding-bottom: 12px;'>
+              <span class='font-code font-color-default'>version -</span>
+              refers to the version of the object
+            </span>
+            <span class='font font-regular font-size-12 font-color-lighter' style='padding-bottom: 12px;'>
+              <span class='font-code font-color-default'>ver# -</span>
+              shorthand for the version of the object
+            </span>
+            <span class='font font-regular font-size-12 font-color-lighter' style='padding-bottom: 12px;'>
+              <span class='font-code font-color-default'>gParent -</span>
+              refers to the top level directory of the path
+            </span>
+            <span class='font font-regular font-size-12 font-color-lighter' style='padding-bottom: 12px;'>
+              <span class='font-code font-color-default'>gChild -</span>
+              refers to the lowest level directory of the path
+            </span>
+            <span class='font font-regular font-size-12 font-color-lighter' style='padding-bottom: 12px;'>
+              <span class='font-code font-color-default'>#all -</span>
+              returns the full path without spaces
+            </span>
+            <span class='font font-regular font-size-12 font-color-lighter' style='padding-bottom: 12px;'>
+              <span class='font-code font-color-default'>& -</span>
+              combines nodes into a single string
+            </span>
+            <span class='font font-regular font-size-12 font-color-lighter' style='padding-bottom: 12px;'>
+              <span class='font-code font-color-default'>$ -</span>
+              allows for multiple selector nodes be refered
+            </span>
+            <span class='font font-regular font-size-12 font-color-lighter' style='padding-bottom: 12px;'>
+              <span class='font-code font-color-default'># -</span>
+              returns the immediate ID of the file / directory
+            </span>
+            <span class='font font-regular font-size-12 font-color-lighter' style='padding-bottom: 12px;'>
+              <span class='font-code font-color-default'>dir -</span>
+              immediately creates a child directory
+            </span>
+            <span class='font font-regular font-size-12 font-color-lighter' style='padding-bottom: 12px;'>
+              <span class='font-code font-color-default'>!dir -</span>
+              immediately creates an enclosing directory
+            </span>
+            <span class='font font-regular font-size-12 font-color-lighter' style='padding-bottom: 12px;'>
+              <span class='font-code font-color-default'>empDir -</span>
+              creates an empty directory - requires a location path
+            </span>
+            <span class='font font-regular font-size-12 font-color-lighter' style='padding-bottom: 12px;'>
+              <span class='font-code font-color-default'>/ -</span>
+              a directory seperator
+            </span>
+            <span class='font font-regular font-size-12 font-color-lighter' style='padding-bottom: 12px;'>
+              <span class='font-code font-color-default'>_ -</span>
+              a directory seperator
+            </span>
+            <span class='font font-regular font-size-12 font-color-lighter' style='padding-bottom: 12px;'>
+              <span class='font-code font-color-default'>- -</span>
+              another directory seperator
+            </span>
+            <span class='font font-regular font-size-12 font-color-lighter' style='padding-bottom: 12px;'>
+              <span class='font-code font-color-default'>-- -</span>
+              a parent directory seperator
+            </span>
+            <span class='font font-regular font-size-12 font-color-lighter' style='padding-bottom: 12px;'>
+              <span class='font-code font-color-default'>--- -</span>
+              a grand-parent directory seperator
+            </span>
+            <span class='font font-regular font-size-12 font-color-lighter' style='padding-bottom: 12px;'>
+              <span class='font-code font-color-default'>$$ -</span>
+              combining directories into a single node
+            </span>
+            <span class='font font-regular font-size-12 font-color-lighter' style='padding-bottom: 12px;'>
+              <span class='font-code font-color-default'>{ -</span>
+              creates a protected node - requires advisor access
+            </span>
+            <span class='font font-regular font-size-12 font-color-lighter' style='padding-bottom: 12px;'>
+              <span class='font-code font-color-default'>// -</span>
+              creates two child directory nodes
+            </span>
+            <span class='font font-regular font-size-12 font-color-lighter' style='padding-bottom: 12px;'>
+              <span class='font-code font-color-default'>\CUSTOM -</span>
+              type whatever to create a custom node
+            </span>
+          </div>
+          <div style='margin-top: 20px; margin-left: 38%;'>
+            <div id='close-help-tips' class='submit-action-button submit-action-confirm'>
+              <span class='font font-regular font-size-12 font-color-lightest' style='text-align: center;'>
+                Ok
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <!--main starts-->
     <div id='body--main'>
       <!--Side navigation-->
@@ -116,6 +257,97 @@
           </div>
         </div>
       </div>
+      <!--Main admin-->
+      <div id='body--admin-naming-change' class='fadingIn'>
+        <span class='font font-light font-size-28 font-color-default' style='padding-top: 90px; padding-bottom: 16px'>
+           Editing naming convention
+        </span>
+        <span class='font font-light font-size-15 font-color-lighter' style='padding-bottom: 80px'>
+           Type into the different nodes to give them attributes.
+        </span>
+        <!--parent node-->
+        <div class='naming-node' contenteditable="true">
+          <span class='font font-light font-size-20 font-color-lighter'>
+            parent-directory
+          </span>
+        </div>
+        <!--seperation node-->
+        <div class='naming-node' contenteditable="true">
+          <span class='font font-light font-size-20 font-color-lighter'>
+            _
+          </span>
+        </div>
+        <!--child node-->
+        <div class='naming-node' contenteditable="true">
+          <span class='font font-light font-size-20 font-color-lighter'>
+            child-directory
+          </span>
+        </div>
+        <!--seperation node-->
+        <div class='naming-node' contenteditable="true">
+          <span class='font font-light font-size-20 font-color-lighter'>
+            _
+          </span>
+        </div>
+        <!--child node-->
+        <div class='naming-node' contenteditable="true">
+          <span class='font font-light font-size-20 font-color-lighter'>
+            filename
+          </span>
+        </div>
+        <!--seperation node-->
+        <div class='naming-node' contenteditable="true">
+          <span class='font font-light font-size-20 font-color-lighter'>
+            _
+          </span>
+        </div>
+        <!--version node-->
+        <div class='naming-node' contenteditable="true">
+          <span class='font font-light font-size-20 font-color-lighter'>
+            version
+          </span>
+        </div>
+        <!--add node-->
+        <div style='display: inline-block; margin-left: 12px;'>
+          <img
+            src='/Users/david/Documents/GitHub/Skrip.io/assets/buttons/add.svg'
+            width='18px'
+            height='18px'
+          />
+        </div>
+        <!--filename sampler-->
+        <span class='font font-light font-size-12 font-color-lighter' style='margin-top: 160px; margin-bottom: 20px;'>
+          filename preview
+        </span>
+        <span class='font font-light font-size-20 font-color-default' style='margin-bottom: 124px;'>
+          Python_ReductionPipielines_FluxModel_<span class='font-color-lighter'>version5.py</span>
+        </span>
+        <div id='commiting-new-convention' class='commit-button meeting-button-confirm'>
+          <span class='font font-light font-size-12 font-color-dark'>
+            Commit
+          </span>
+        </div>
+        <div class='commit-button meeting-button-decline'>
+          <a href='/Users/david/Documents/GitHub/Skrip.io/main.html'>
+            <span class='font font-light font-size-12 font-color-dark'>
+              Discard
+            </span>
+          </a>
+        </div>
+        <span class='font font-regular-italic font-size-12 font-color-lighter' style='display: inline-block; margin-left: 20px;'>
+          All files and directories will be renamed after you commit this convention.
+        </span>
+      </div>
+      <!--help-->
+      <div id='body--naming-help'>
+        <img
+          src='/Users/david/Documents/GitHub/Skrip.io/assets/buttons/help.svg'
+          width='14px'
+          height='14px'
+          style='margin-left: 13px; margin-top: 13px;'
+        />
+      </div>
+    </div>
     <footer>
       <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
       <script src='/Users/david/Documents/GitHub/Skrip.io/js/script.js'></script>

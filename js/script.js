@@ -399,4 +399,22 @@ $(document).ready(function(){
     $("#overlay, #meeting-4-detail, .overlay-dialogue-bg, .meeting-post-options").fadeOut(200)
   });
 
+  //open node help
+  $("#body--naming-help").click(function(event){
+    $("#overlay").fadeIn(100)
+    $(".overlay-dialogue-bg").fadeIn(200)
+    $("#naming-help-tips").fadeIn(250)
+  });
+
+  //open node help
+  $("#close-help-tips").click(function(event){
+    $("#overlay, .overlay-dialogue-bg, #naming-help-tips").fadeOut(100)
+  });
+
+  //commit name conventions
+  $("#commiting-new-convention").click(function(event){
+    $("#popup-overlay").fadeIn(100)
+    $(".no-permission-warning").fadeIn(200)
+  });
+
 });
