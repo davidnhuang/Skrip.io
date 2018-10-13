@@ -11,6 +11,8 @@
     <link rel="shortcut icon" type="image/png" href="/Users/david/Documents/GitHub/Skrip.io/assets/icons/favicon.png"/>
   </head>
   <body>
+    <!--Skrip starts-->
+    <!--pop up dialogues-->
     <div id='popup-overlay'>
       <!--discard changes-->
       <div class='popup-dialogue-discard-changes'>
@@ -75,7 +77,26 @@
           </div>
         </div>
       </div>
+      <!--cancel meeting-->
+      <div class='cancel-meeting-warning' style='width: 220px;'>
+        <span class='font font-light font-size-15 font-color-default' style='text-align: center; padding-bottom: 20px;'>
+          Cancel Meeting
+        </span>
+        <span class='font font-light font-size-12 font-color-lighter'>
+          Are you sure you want to cancel this meeting permantly? Your teammates have already
+          agreed to meet and it is very rude.
+        </span>
+        <div style='margin-top: 32px; margin-left: 16px;'>
+          <div id='do-not-cancel-meeting' class='submit-action-button submit-action-confirm'>
+            <span class='font font-regular font-size-12 font-color-lightest' style='text-align: center;'>No</span>
+          </div>
+          <div id='do-cancel-meeting' class='submit-action-button submit-action-cancel'>
+            <span class='font font-regular font-size-12 font-color-lightest' style='text-align: center;'>Yes</span>
+          </div>
+        </div>
+      </div>
     </div>
+    <!--overlay dialogues-->
     <div id='overlay'>
       <div class='overlay-dialogue-bg'>
         <!--schedule meeting dialogue-->
@@ -584,7 +605,7 @@
         </div>
       </div>
     </div>
-    <!--Skrip starts-->
+    <!--main starts-->
     <div id='body--main'>
       <!--Side navigation-->
       <div id='body--sideNav'>
@@ -595,9 +616,11 @@
           </span>
           <div class='drive-dropdown'>
             <div class='drive-name'>
-              <span class='font font-regular font-size-15 font-color-default'>
-                2019 Cal-Tech
-              </span>
+              <a href='/Users/david/Documents/GitHub/Skrip.io/main.html'>
+                <span class='font font-regular font-size-15 font-color-default'>
+                  2019 Cal-Tech
+                </span>
+              </a>
             </div>
             <div class='dropdown-button'>
               <img
@@ -615,16 +638,15 @@
             Administration
           </span>
           <span class='dropdown-menu-option font font-regular font-size-15 font-color-lighter'>
-            Preferences
-          </span>
-          <span class='dropdown-menu-option font font-regular font-size-15 font-color-lighter'>
             Switch Drives
           </span>
+          <a href='/Users/david/Documents/GitHub/Skrip.io/admin/skrip-config.html'>
+            <span class='dropdown-menu-option font font-regular font-size-15 font-color-lighter'>
+              Naming Convention
+            </span>
+          </a>
           <span class='dropdown-menu-option font font-regular font-size-15 font-color-lighter'>
-            Customize Skrip
-          </span>
-          <span class='dropdown-menu-option font font-regular font-size-15 font-color-lighter'>
-            Adjust teams
+            Preferences
           </span>
         </div>
         <!--advisor section-->
@@ -2582,7 +2604,7 @@
                 </div>
                 <div class='meeting-profile my-profile-pic active-g'></div>
                 <div class='meeting-detail'>
-                  <div class='meeting-status font-color-default'>
+                  <div id='meeting-2-cancel-requested' class='meeting-status font-color-default'>
                     <span class='font font-regular font-size-9 font-color-lighter' style='padding-bottom: 10px'>
                       You requested a meeting with Nelson
                     </span>

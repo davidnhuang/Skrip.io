@@ -278,6 +278,23 @@ $(document).ready(function(){
     $("#popup-overlay, .beta-warning").fadeOut(100)
   });
 
+  // Cancel meeting dialogue
+  $("#last-minute-cancel-agreed").click(function(event){
+    $("#popup-overlay, .cancel-meeting-warning").fadeIn(200)
+    $(".cancel-meeting-sent-option").hide(100)
+  });
+
+  //Dismiss
+  $("#do-not-cancel-meeting").click(function(event){
+    $("#popup-overlay, .cancel-meeting-warning").fadeOut(100)
+  });
+
+  //Cancel meeting
+  $("#do-cancel-meeting").click(function(event){
+    $("#popup-overlay, .cancel-meeting-warning").fadeOut(100)
+    $("#meeting-2-cancel-requested").addClass("meeting-done")
+  });
+
   //toggle calendar view
   $("#toggle-calendar-view").click(function(event){
     $("#body--dirList").toggle("slide")
@@ -379,7 +396,7 @@ $(document).ready(function(){
 
   //close meeting 2 details
   $("#close-meeting-4-details").click(function(event){
-    $("#overlay, #meeting-3-detail, .overlay-dialogue-bg, .meeting-post-options").fadeOut(200)
+    $("#overlay, #meeting-4-detail, .overlay-dialogue-bg, .meeting-post-options").fadeOut(200)
   });
 
 });
