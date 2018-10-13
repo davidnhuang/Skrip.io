@@ -159,7 +159,7 @@ $(document).ready(function(){
     // Avoid the real one
     event.preventDefault();
     // Show contextmenu
-    $(".directory-3-context-menu").finish().toggle(100).
+    $(".directory-4-context-menu").finish().toggle(100).
     // In the right position (the mouse)
     css({
       top: (event.pageY-=20) + "px",
@@ -171,7 +171,7 @@ $(document).ready(function(){
     // Avoid the real one
     event.preventDefault();
     // Show contextmenu
-    $(".directory-3-context-menu").finish().toggle(100).
+    $(".directory-5-context-menu").finish().toggle(100).
     // In the right position (the mouse)
     css({
       top: (event.pageY-=20) + "px",
@@ -183,7 +183,7 @@ $(document).ready(function(){
     // Avoid the real one
     event.preventDefault();
     // Show contextmenu
-    $(".directory-3-context-menu").finish().toggle(100).
+    $(".directory-6-context-menu").finish().toggle(100).
     // In the right position (the mouse)
     css({
       top: (event.pageY-=20) + "px",
@@ -195,7 +195,7 @@ $(document).ready(function(){
     // Avoid the real one
     event.preventDefault();
     // Show contextmenu
-    $(".directory-3-context-menu").finish().toggle(100).
+    $(".directory-7-context-menu").finish().toggle(100).
     // In the right position (the mouse)
     css({
       top: (event.pageY-=20) + "px",
@@ -414,7 +414,12 @@ $(document).ready(function(){
   //commit name conventions
   $("#commiting-new-convention").click(function(event){
     $("#popup-overlay").fadeIn(100)
-    $(".no-permission-warning").fadeIn(200)
+    $(".naming-danger-zone").fadeIn(200)
   });
 
+  //no permission popup
+  $("#submit-dangerous-name-action").click(function(event){
+    $(".naming-danger-zone").fadeOut(100)
+    $(".no-permission-warning").fadeIn(200)
+  });
 });

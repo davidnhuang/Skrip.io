@@ -113,7 +113,7 @@ a:visited {text-decoration: none;}
   box-shadow: 0px 4px 12px 4px rgb(0,0,0,0.3);
 }
 .popup-dialogue-discard-changes, .beta-warning,
-.no-permission-warning, .danger-zone, .cancel-meeting-warning {
+.no-permission-warning, .danger-zone, .cancel-meeting-warning, .naming-danger-zone {
   display: none;
   background-color: #4A4A4A;
   z-index: 94;
@@ -395,6 +395,12 @@ a:visited {text-decoration: none;}
 /* directory list */
 #body--dirList .directory-bounding {
   height: 360px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  margin-bottom: 60px;
+}
+.step-into-directory-bounding {
+  height: 700px;
   overflow-y: scroll;
   overflow-x: hidden;
   margin-bottom: 60px;

@@ -6,7 +6,7 @@
   <head>
     <meta charset='UTF-8'>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <title>2019 Cal-Tech - Skrip.io - Beta version</title>
+    <title>2019 Cal-Tech - ESO - Skrip.io - Beta version</title>
     <link rel='stylesheet' href='/Users/david/Documents/GitHub/Skrip.io/css/style.css'>
     <link rel="shortcut icon" type="image/png" href="/Users/david/Documents/GitHub/Skrip.io/assets/icons/favicon.png"/>
   </head>
@@ -19,11 +19,32 @@
           Whoops 😩
         </span>
         <span class='font font-light font-size-12 font-color-lighter'>
-          Sorry, this is a protected directory. As a beta user, you do not have permission to upload files to this directory.
+          Sorry, you do not have permission to change this Skrip drive's
+          naming conventions.
         </span>
         <div style='margin-top: 32px; margin-left: 52px;'>
           <div id='return-back-to-main-2' class='submit-action-button submit-action-cancel'>
-            <span class='font font-regular font-size-12 font-color-lightest' style='text-align: center;'>Back</span>
+            <span class='font font-regular font-size-12 font-color-lightest' style='text-align: center;'>Ok</span>
+          </div>
+        </div>
+      </div>
+      <!--naming warning permission-->
+      <div class='naming-danger-zone' style='width: 300px;'>
+        <span class='font font-light font-size-15 font-color-default' style='text-align: center; padding-bottom: 28px;'>
+          Committing Naming Convention
+        </span>
+        <span class='font font-light font-size-12 font-color-lighter' style='padding-bottom: 16px;'>
+          You are about to rename this Skrip drive's naming convention. This can
+          potentially override files, wipe team directories, and destroy the universe.
+          Please be absolutely sure that your naming conventions do not conflict with
+          your current one. Type in your team drive name to continue.
+        </span>
+        <form>
+          <input class='confirmation-input-field' type="text" id="fname" name="fname">
+        </form>
+        <div style='margin-top: 32px; margin-left: 52px;'>
+          <div id='submit-dangerous-name-action' class='submit-action-button submit-action-cancel' style='margin-left: 50px;'>
+            <span class='font font-regular font-size-12 font-color-lightest' style='text-align: center;'>Submit</span>
           </div>
         </div>
       </div>
@@ -41,6 +62,14 @@
             Check out shortkeys and functions when designing / adjusting your naming conventions.
           </span>
           <div class='shortkey-tips-bounding'>
+            <span class='font font-regular font-size-12 font-color-lighter' style='padding-bottom: 12px;'>
+              <span class='font-code font-color-default'>source -</span>
+              returns the source of Skrip directory
+            </span>
+            <span class='font font-regular font-size-12 font-color-lighter' style='padding-bottom: 12px;'>
+              <span class='font-code font-color-default'>master -</span>
+              refers to the master Skrip directory
+            </span>
             <span class='font font-regular font-size-12 font-color-lighter' style='padding-bottom: 12px;'>
               <span class='font-code font-color-default'>parent -</span>
               refers to the parent directory of the path
@@ -165,7 +194,7 @@
             <div class='drive-name'>
               <a href='/Users/david/Documents/GitHub/Skrip.io/main.html'>
                 <span class='font font-regular font-size-15 font-color-default'>
-                  2019 Cal-Tech
+                  2019 Cal-Tech - ESO
                 </span>
               </a>
             </div>
@@ -308,7 +337,7 @@
           </span>
         </div>
         <!--add node-->
-        <div style='display: inline-block; margin-left: 12px;'>
+        <div id='append-naming-node' style='display: inline-block; margin-left: 12px;'>
           <img
             src='/Users/david/Documents/GitHub/Skrip.io/assets/buttons/add.svg'
             width='18px'
