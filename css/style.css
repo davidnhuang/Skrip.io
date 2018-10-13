@@ -96,18 +96,22 @@ ul {padding: 0; list-style-type: none;}
   width: 380px;
   border-radius: 6px;
   padding: 40px 40px;
+  box-shadow: 0px 4px 12px 4px rgb(0,0,0,0.3);
 }
-.popup-dialogue-discard-changes, .beta-warning {
+.popup-dialogue-discard-changes, .beta-warning,
+.no-permission-warning, .danger-zone {
   display: none;
   background-color: #4A4A4A;
   z-index: 94;
-  margin: 20% auto;
+  margin: 15% auto;
   width: 200px;
   border-radius: 6px;
   padding: 24px 30px;
+  box-shadow: 0px 4px 12px 4px rgb(0,0,0,0.3);
 }
-#schedule-meeting-dialogue {display: none;}
-.schedule-meeting-name-input {
+#schedule-meeting-dialogue, #uploading-to-root, #meeting-1-detail, #meeting-2-detail,
+#meeting-3-detail, #meeting-4-detail {display: none;}
+.schedule-meeting-name-input, .confirmation-input-field {
   width: 100%;
   height: 40px;
   background-color: transparent;
@@ -133,6 +137,12 @@ ul {padding: 0; list-style-type: none;}
   color: #F0EDED;
   font-family: 'SF-Pro-Text-Regular' !important;
   font-size: 12px;
+}
+.meeting-detail-bounding {
+  width: 100%;
+  height: 330px;
+  margin-bottom: 30px;
+  overflow-y: scroll;
 }
 /* Main Divs */
 #body--main {
@@ -165,6 +175,7 @@ ul {padding: 0; list-style-type: none;}
   vertical-align: top;
   margin-left: 60px;
 }
+#upload-general-document, #upload-root-directory {cursor: pointer;}
 /* header for calendar view */
 .calendar-view-header {
   width: 744px;
@@ -178,9 +189,6 @@ ul {padding: 0; list-style-type: none;}
   float: right;
   cursor: pointer;
   border-radius: 24px;
-}
-.exit-out-calendar-feedbox:hover {
-  background-color: #4D5052;
 }
 .calendar-week-view-box {
   width: 744px;
@@ -251,18 +259,10 @@ ul {padding: 0; list-style-type: none;}
   width: 100%;
   margin-bottom: 48px;
 }
-#body--sideNav .advisor-options {
-  padding-bottom: 24px;
-}
+.advisor-options {padding-bottom: 24px;}
 #body--sideNav .advisor-selector .advisor-options .advisor-section-tag {
   display: inline-block;
   height: 20px;
-}
-#body--sideNav .option-icon, #body--sideNav .team-option-icon {
-  display: inline-block;
-  padding-top: 3px;
-  padding-right: 6px;
-  float: right;
 }
 #body--sideNav .advisor-selector .advisor-listing .advisor-profile {
   display: inline-block;
@@ -274,7 +274,7 @@ ul {padding: 0; list-style-type: none;}
   background-repeat: no-repeat;
   background-position: center center;
 }
-#body--sideNav .advisor-selector .advisor-listing .advisor-name{
+#body--sideNav .advisor-selector .advisor-listing .advisor-name {
   display: inline-block;
   vertical-align: unset;
   height: 24px;
@@ -602,23 +602,60 @@ ul {padding: 0; list-style-type: none;}
 }
 .file-update-versioning {float: right;}
 /* Context Menu */
-.meeting-post-options, .cancel-meeting-sent-option, .meeting-3-context-menu {
+.meeting-post-options, .cancel-meeting-sent-option, .meeting-3-context-menu,
+.meeting-4-context-menu, .directory-1-context-menu, .directory-2-context-menu,
+.directory-3-context-menu, .directory-4-context-menu, .directory-5-context-menu,
+.directory-6-context-menu, .directory-7-context-menu {
   display: none;
   z-index: 1000;
   position: absolute;
   white-space: nowrap;
-  color: white;
+  color: #F0EDED;
   border-radius: 6px;
   background-color: #4D5052;
   box-shadow: 0px 4px 12px 4px rgb(0,0,0,0.3);
-  padding-top: 6px;
-  padding-bottom: 6px;
+  padding: 6px 0px;
 }
-.meeting-post-options li, .cancel-meeting-sent-option li, .meeting-3-context-menu li {
+.search-bar-dropdown-menu {
+  display: none;
+  z-index: 1000;
+  position: absolute;
+  white-space: nowrap;
+  color: #9B9B9B;
+  border-bottom-right-radius: 6px;
+  border-bottom-left-radius: 6px;
+  background-color: #4D5052;
+  width: 740px;
+}
+.search-bar-recent-search-result {
+  padding-top: 8px;
+  padding-bottom: 4px;
+}
+.search-bar-file-search-type {
+  padding-top: 12px;
+  padding-bottom: 8px;
+}
+.recent-search-icon {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  vertical-align: top;
+}
+.meeting-post-options li, .cancel-meeting-sent-option li, .meeting-3-context-menu li,
+.meeting-4-context-menu li, .directory-3-context-menu li, .directory-1-context-menu li,
+.directory-2-context-menu li, .directory-4-context-menu li, .directory-5-context-menu li,
+.directory-6-context-menu li, .directory-7-context-menu li {
   cursor: pointer;
   width: 100px;
 }
 .meeting-post-options li:hover, .cancel-meeting-sent-option li:hover,
-.meeting-3-context-menu li:hover {
+.meeting-3-context-menu li:hover, .meeting-4-context-menu li:hover, .directory-3-context-menu li:hover,
+.directory-1-context-menu li:hover, .directory-2-context-menu li:hover, .directory-4-context-menu li:hover,
+.directory-5-context-menu li:hover, .directory-6-context-menu li:hover, .directory-7-context-menu li:hover {
   background-color: #9B9B9B;
+}
+
+.search-bar-recent-search-result:hover, .search-bar-file-search-type:hover {
+  background-color: #6c6e70;
+  cursor: pointer;
 }

@@ -6,7 +6,7 @@
   <head>
     <meta charset='UTF-8'>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <title>2019 Cal-Tech - Skrip.io</title>
+    <title>2019 Cal-Tech - Skrip.io - Beta version</title>
     <link rel='stylesheet' href='/Users/david/Documents/GitHub/Skrip.io/css/style.css'>
     <link rel="shortcut icon" type="image/png" href="/Users/david/Documents/GitHub/Skrip.io/assets/icons/favicon.png"/>
   </head>
@@ -26,6 +26,38 @@
           </div>
           <div id='popup-discard-changes' class='submit-action-button submit-action-cancel'>
             <span class='font font-regular font-size-12 font-color-lightest' style='text-align: center;'>Yes</span>
+          </div>
+        </div>
+      </div>
+      <!--warning permission-->
+      <div class='danger-zone' style='width: 300px;'>
+        <span class='font font-light font-size-15 font-color-default' style='text-align: center; padding-bottom: 28px;'>
+          Danger Zone
+        </span>
+        <span class='font font-light font-size-12 font-color-lighter' style='padding-bottom: 16px;'>
+          The action you are about to perform is potentially dangerous and can override
+          data or naming conventions. Please type in the project directory name to continue.
+        </span>
+        <form>
+          <input class='confirmation-input-field' type="text" id="fname" name="fname">
+        </form>
+        <div style='margin-top: 32px; margin-left: 52px;'>
+          <div id='submit-dangerous-action' class='submit-action-button submit-action-cancel' style='margin-left: 50px;'>
+            <span class='font font-regular font-size-12 font-color-lightest' style='text-align: center;'>Submit</span>
+          </div>
+        </div>
+      </div>
+      <!--root permission-->
+      <div class='no-permission-warning'>
+        <span class='font font-light font-size-15 font-color-default' style='text-align: center; padding-bottom: 20px;'>
+          Whoops 😩
+        </span>
+        <span class='font font-light font-size-12 font-color-lighter'>
+          Sorry, this is a protected directory. As a beta user, you do not have permission to upload files to this directory.
+        </span>
+        <div style='margin-top: 32px; margin-left: 52px;'>
+          <div id='return-back-to-main-2' class='submit-action-button submit-action-cancel'>
+            <span class='font font-regular font-size-12 font-color-lightest' style='text-align: center;'>Back</span>
           </div>
         </div>
       </div>
@@ -102,6 +134,454 @@
           </div>
         </div>
         <!--uploading file at root-->
+        <div id='uploading-to-root'>
+          <span class='font font-light font-size-18 font-color-default' style='padding-bottom: 32px;'>
+            Uploading to root
+          </span>
+          <span class='font font-light font-size-12 font-color-default' style='padding-bottom: 52px;'>
+            You are about to create a project / upload a file to the root directory.
+            Unless it is a new directory type or a general document that the team
+            frequently needs.
+          </span>
+          <span class='font font-regular font-size-12 font-color-lighter' style='padding-bottom: 20px;'>
+            Here are some directories you have recently saved to, please make sure
+            that your file doesn't belong to the following:
+          </span>
+          <div style='padding-bottom: 12px'>
+            <div class='recent-search-icon'>
+              <img
+                src='/Users/david/Documents/GitHub/Skrip.io/assets/buttons/global-folder.svg'
+                width='15px'
+                height="15px"
+              />
+            </div>
+            <span class='font font-regular font-size-12 font-color-default' style='display: inline-block; padding-left: 16px; vertical-align: top;'>
+              <span class='font-regular-italic font-color-lighter'>Flux_</span>PKS41
+            </span>
+          </div>
+          <div style='padding-bottom: 12px'>
+            <div class='recent-search-icon'>
+              <img
+                src='/Users/david/Documents/GitHub/Skrip.io/assets/buttons/global-folder.svg'
+                width='15px'
+                height="15px"
+              />
+            </div>
+            <span class='font font-regular font-size-12 font-color-default' style='display: inline-block; padding-left: 16px; vertical-align: top;'>
+              Python_
+            </span>
+          </div>
+          <div style='padding-bottom: 12px'>
+            <div class='recent-search-icon'>
+              <img
+                src='/Users/david/Documents/GitHub/Skrip.io/assets/buttons/global-folder.svg'
+                width='15px'
+                height="15px"
+              />
+            </div>
+            <span class='font font-regular font-size-12 font-color-default' style='display: inline-block; padding-left: 16px; vertical-align: top;'>
+              PDCSAP
+            </span>
+          </div>
+          <div style='padding-bottom: 40px'>
+            <div class='recent-search-icon'>
+              <img
+                src='/Users/david/Documents/GitHub/Skrip.io/assets/buttons/global-folder.svg'
+                width='15px'
+                height="15px"
+              />
+            </div>
+            <span class='font font-regular font-size-12 font-color-default' style='display: inline-block; padding-left: 16px; vertical-align: top;'>
+              <span class='font-regular-italic font-color-lighter'>FORS1_</span>Sep-Plots
+            </span>
+          </div>
+          <span class='font font-regular font-size-12 font-color-lighter' style='display: inline-block; vertical-align: top; padding-bottom: 32px;'>
+            Do you still want to upload to the root directory of the drive?
+          </span>
+          <div>
+            <div id='cancel-root-upload' class='submit-action-button submit-action-confirm' style='width: 120px;'>
+              <span class='font font-regular font-size-12 font-color-lightest' style='text-align: center;'>
+                No, cancel upload
+              </span>
+            </div>
+            <div id='confirm-root-upload' class='submit-action-button submit-action-cancel'>
+              <span class='font font-regular font-size-12 font-color-lightest' style='text-align: center;'>
+                Save to root
+              </span>
+            </div>
+          </div>
+        </div>
+        <!--meeting 1 detail-->
+        <div id='meeting-1-detail'>
+          <span class='font font-light font-size-9 font-color-lighter' style='padding-bottom: 12px;'>
+            Meeting for
+          </span>
+          <span class='font font-light font-size-18 font-color-default' style='padding-bottom: 28px;'>
+            Questions about spectral reading on flux for PKS41 June data
+          </span>
+          <!--meeting content-->
+          <div class='meeting-detail-bounding'>
+            <span class='font font-light font-size-9 font-color-lighter' style='padding-bottom: 8px;'>
+              Organizer
+            </span>
+            <div class='meeting-profile teammate-profile-pic-2'></div>
+            <div class='calendar-meeting-listing-detail'>
+              <span class='font font-light font-size-12 font-color-default' style='padding-top: 4px; padding-bottom: 32px;'>
+                Mitchel Nagakoya
+              </span>
+            </div>
+            <span class='font font-light font-size-9 font-color-lighter' style='padding-bottom: 8px;'>
+              Guests
+            </span>
+            <div style='display: block;'>
+              <div class='meeting-profile my-profile-pic active-g'></div>
+              <div class='calendar-meeting-listing-detail'>
+                <span class='font font-light font-size-12 font-color-default' style='padding-top: 4px; padding-bottom: 12px;'>
+                  Mellisa Gouterez
+                </span>
+              </div>
+            </div>
+            <div style='display: block;'>
+              <div class='meeting-profile advisor-profile-pic active-g'></div>
+              <div class='calendar-meeting-listing-detail'>
+                <span class='font font-light font-size-12 font-color-lighter' style='padding-top: 4px; padding-bottom: 32px;'>
+                  Nelson Cooper <span class='font-regular-italic font-color-lighter'> - Optional</span>
+                </span>
+              </div>
+            </div>
+            <span class='font font-light font-size-9 font-color-lighter' style='padding-bottom: 8px;'>
+              When
+            </span>
+            <span class='font font-light font-size-12 font-color-default' style='padding-bottom: 28px;'>
+              12/6/2019 3:21PM ~ 4:30PM GMT
+            </span>
+            <span class='font font-light font-size-9 font-color-lighter' style='padding-bottom: 8px;'>
+              Where
+            </span>
+            <span class='font font-light font-size-12 font-color-default' style='padding-bottom: 28px;'>
+              Cal-Tech North Wing Room 204
+            </span>
+            <span class='font font-light font-size-9 font-color-lighter' style='padding-bottom: 8px;'>
+              Description
+            </span>
+            <span class='font font-light font-size-12 font-color-default' style='padding-bottom: 32px;'>
+              Just got the new Flux readings from ESO - I ran the latest reductions
+              on the data and want to share with you some the insights. Would love
+              your input on updating the adjustments.
+            </span>
+            <span class='font font-light font-size-9 font-color-lighter' style='padding-bottom: 12px;'>
+              Attached files
+            </span>
+            <div style='display: block; padding-bottom: 12px;'>
+              <div class='recent-search-icon'>
+                <img
+                  src='/Users/david/Documents/GitHub/Skrip.io/assets/icons/microsoft_excel.svg'
+                  width='15px'
+                  height="15px"
+                />
+              </div>
+              <span class='font font-regular font-size-12 font-color-default' style='display: inline-block; padding-left: 12px; vertical-align: top;'>
+                <span class='font-regular-italic font-color-lighter'>Flux_PKS41_</span>junRAW.xsl
+              </span>
+            </div>
+            <div style='display: block; padding-bottom: 12px;'>
+              <div class='recent-search-icon'>
+                <img
+                  src='/Users/david/Documents/GitHub/Skrip.io/assets/icons/microsoft_excel.svg'
+                  width='15px'
+                  height="15px"
+                />
+              </div>
+              <span class='font font-regular font-size-12 font-color-default' style='display: inline-block; padding-left: 12px; vertical-align: top;'>
+                <span class='font-regular-italic font-color-lighter'>Flux_PKS41_</span>julRAW.xsl
+              </span>
+            </div>
+            <div style='display: block; padding-bottom: 28px;'>
+              <div class='recent-search-icon'>
+                <img
+                  src='/Users/david/Documents/GitHub/Skrip.io/assets/icons/python.svg'
+                  width='15px'
+                  height="15px"
+                />
+              </div>
+              <span class='font font-regular font-size-12 font-color-default' style='display: inline-block; padding-left: 12px; vertical-align: top;'>
+                <span class='font-regular-italic font-color-lighter'>Python_</span>reductionPipeline.py
+              </span>
+            </div>
+          </div>
+          <!--dismiss button-->
+          <div style='margin-top: 20px; margin-left: 38%;'>
+            <div id='close-meeting-1-details' class='submit-action-button submit-action-confirm'>
+              <span class='font font-regular font-size-12 font-color-lightest' style='text-align: center;'>
+                Ok
+              </span>
+            </div>
+          </div>
+        </div>
+        <!--meeting 2 detail-->
+        <div id='meeting-2-detail'>
+          <span class='font font-light font-size-9 font-color-lighter' style='padding-bottom: 12px;'>
+            Meeting for
+          </span>
+          <span class='font font-light font-size-18 font-color-default' style='padding-bottom: 28px;'>
+            Review new plot graphs for wavelengths dataset
+          </span>
+          <!--meeting content-->
+          <div class='meeting-detail-bounding'>
+            <span class='font font-light font-size-9 font-color-lighter' style='padding-bottom: 8px;'>
+              Organizer
+            </span>
+            <div class='meeting-profile my-profile-pic active-g'></div>
+            <div class='calendar-meeting-listing-detail'>
+              <span class='font font-light font-size-12 font-color-default' style='padding-top: 4px; padding-bottom: 32px;'>
+                Mellisa Gouterez
+              </span>
+            </div>
+            <span class='font font-light font-size-9 font-color-lighter' style='padding-bottom: 8px;'>
+              Guests
+            </span>
+            <div style='display: block;'>
+              <div class='meeting-profile advisor-profile-pic active-g'></div>
+              <div class='calendar-meeting-listing-detail'>
+                <span class='font font-light font-size-12 font-color-default' style='padding-top: 4px; padding-bottom: 12px;'>
+                  Nelson Cooper
+                </span>
+              </div>
+            </div>
+            <div style='display: block;'>
+              <div class='meeting-profile teammate-profile-pic-1 active-g'></div>
+              <div class='calendar-meeting-listing-detail'>
+                <span class='font font-light font-size-12 font-color-lighter' style='padding-top: 4px; padding-bottom: 32px;'>
+                  Sarah Conway <span class='font-regular-italic font-color-lighter'> Optional</span>
+                </span>
+              </div>
+            </div>
+            <span class='font font-light font-size-9 font-color-lighter' style='padding-bottom: 8px;'>
+              When
+            </span>
+            <span class='font font-light font-size-12 font-color-default' style='padding-bottom: 28px;'>
+              12/6/2019 3:21PM ~ 4:30PM GMT
+            </span>
+            <span class='font font-light font-size-9 font-color-lighter' style='padding-bottom: 8px;'>
+              Where
+            </span>
+            <span class='font font-light font-size-12 font-color-default' style='padding-bottom: 28px;'>
+              Cal-Tech North Wing Room 201
+            </span>
+            <span class='font font-light font-size-9 font-color-lighter' style='padding-bottom: 8px;'>
+              Description
+            </span>
+            <span class='font font-light font-size-12 font-color-default' style='padding-bottom: 32px;'>
+              Ran the new reduction model on wavelengths - seems like the magnitudes
+              and lux units are off - need help on adjusting macros.
+            </span>
+            <span class='font font-light font-size-9 font-color-lighter' style='padding-bottom: 12px;'>
+              Attached files
+            </span>
+            <div style='display: block; padding-bottom: 12px;'>
+              <div class='recent-search-icon'>
+                <img
+                  src='/Users/david/Documents/GitHub/Skrip.io/assets/icons/microsoft_excel.svg'
+                  width='15px'
+                  height="15px"
+                />
+              </div>
+              <span class='font font-regular font-size-12 font-color-default' style='display: inline-block; padding-left: 12px; vertical-align: top;'>
+                <span class='font-regular-italic font-color-lighter'>Wavelengths_</span>SPO1.xlsx
+              </span>
+            </div>
+          </div>
+          <!--dismiss button-->
+          <div style='margin-top: 20px; margin-left: 38%;'>
+            <div id='close-meeting-2-details' class='submit-action-button submit-action-confirm'>
+              <span class='font font-regular font-size-12 font-color-lightest' style='text-align: center;'>
+                Ok
+              </span>
+            </div>
+          </div>
+        </div>
+        <!--meeting 3 detail-->
+        <div id='meeting-3-detail'>
+          <span class='font font-light font-size-9 font-color-accept' style='padding-bottom: 12px;'>
+            Adjourned 🎉
+          </span>
+          <span class='font font-light font-size-18 font-color-default' style='padding-bottom: 28px;'>
+            Questions about spectral reading on PKS-110 spreadsheet
+          </span>
+          <!--meeting content-->
+          <div class='meeting-detail-bounding'>
+            <span class='font font-light font-size-9 font-color-lighter' style='padding-bottom: 8px;'>
+              Organizer
+            </span>
+            <div class='meeting-profile my-profile-pic active-g'></div>
+            <div class='calendar-meeting-listing-detail'>
+              <span class='font font-light font-size-12 font-color-default' style='padding-top: 4px; padding-bottom: 32px;'>
+                Mellisa Gouterez
+              </span>
+            </div>
+            <span class='font font-light font-size-9 font-color-lighter' style='padding-bottom: 8px;'>
+              Guests
+            </span>
+            <div style='display: block; padding-bottom: 28px;'>
+              <div class='meeting-profile advisor-profile-pic active-g'></div>
+              <div class='calendar-meeting-listing-detail'>
+                <span class='font font-light font-size-12 font-color-default' style='padding-top: 4px; padding-bottom: 12px;'>
+                  Nelson Cooper
+                </span>
+              </div>
+            </div>
+            <span class='font font-light font-size-9 font-color-lighter' style='padding-bottom: 8px;'>
+              When
+            </span>
+            <span class='font font-light font-size-12 font-color-default' style='padding-bottom: 28px;'>
+              12/6/2019 3:21PM ~ 4:30PM GMT
+            </span>
+            <span class='font font-light font-size-9 font-color-lighter' style='padding-bottom: 8px;'>
+              Where
+            </span>
+            <span class='font font-light font-size-12 font-color-default' style='padding-bottom: 28px;'>
+              Cal-Tech North Wing Room 201
+            </span>
+            <span class='font font-light font-size-9 font-color-lighter' style='padding-bottom: 8px;'>
+              Description
+            </span>
+            <span class='font font-light font-size-12 font-color-default' style='padding-bottom: 32px;'>
+              Spectral readings from ESO - adjusted plots and flux sets
+            </span>
+            <span class='font font-light font-size-9 font-color-lighter' style='padding-bottom: 12px;'>
+              Attached files
+            </span>
+            <span class='font font-regular-italic font-size-12 font-color-lighter' style='padding-bottom: 32px;'>
+              None
+            </span>
+          </div>
+          <!--dismiss button-->
+          <div style='margin-top: 20px; margin-left: 38%;'>
+            <div id='close-meeting-3-details' class='submit-action-button submit-action-confirm'>
+              <span class='font font-regular font-size-12 font-color-lightest' style='text-align: center;'>
+                Ok
+              </span>
+            </div>
+          </div>
+        </div>
+        <!--meeting 1 detail-->
+        <div id='meeting-4-detail'>
+          <span class='font font-light font-size-9 font-color-decline' style='padding-bottom: 12px;'>
+            Meeting missed
+          </span>
+          <span class='font font-light font-size-18 font-color-default' style='padding-bottom: 28px;'>
+            Reduction bug with data normalizing script
+          </span>
+          <!--meeting content-->
+          <div class='meeting-detail-bounding'>
+            <span class='font font-light font-size-9 font-color-lighter' style='padding-bottom: 8px;'>
+              Organizer
+            </span>
+            <div class='meeting-profile teammate-profile-pic-1 active-g'></div>
+            <div class='calendar-meeting-listing-detail'>
+              <span class='font font-light font-size-12 font-color-default' style='padding-top: 4px; padding-bottom: 32px;'>
+                Sarah Conway
+              </span>
+            </div>
+            <span class='font font-light font-size-9 font-color-lighter' style='padding-bottom: 8px;'>
+              Guests
+            </span>
+            <div style='display: block;'>
+              <div class='meeting-profile my-profile-pic active-g'></div>
+              <div class='calendar-meeting-listing-detail'>
+                <span class='font font-light font-size-12 font-color-default meeting-done' style='padding-top: 4px;'>
+                  Mellisa Gouterez
+                </span>
+                <span class='font font-light font-size-9 font-color-lighter' style='padding-bottom: 12px;'>
+                  "Sick - work from home"
+                </span>
+              </div>
+            </div>
+            <div style='display: block;'>
+              <div class='meeting-profile advisor-profile-pic active-g'></div>
+              <div class='calendar-meeting-listing-detail'>
+                <span class='font font-light font-size-12 font-color-default' style='padding-top: 4px; padding-bottom: 32px;'>
+                  Nelson Cooper
+                </span>
+              </div>
+            </div>
+            <div style='display: block;'>
+              <div class='meeting-profile teammate-profile-pic-2'></div>
+              <div class='calendar-meeting-listing-detail'>
+                <span class='font font-light font-size-12 font-color-default' style='padding-top: 4px; padding-bottom: 32px;'>
+                  Mitchel Nagakoya
+                </span>
+              </div>
+            </div>
+            <span class='font font-light font-size-9 font-color-lighter' style='padding-bottom: 8px;'>
+              When
+            </span>
+            <span class='font font-light font-size-12 font-color-default' style='padding-bottom: 28px;'>
+              12/6/2019 3:21PM ~ 4:30PM GMT
+            </span>
+            <span class='font font-light font-size-9 font-color-lighter' style='padding-bottom: 8px;'>
+              Where
+            </span>
+            <span class='font font-light font-size-12 font-color-default' style='padding-bottom: 28px;'>
+              Cal-Tech North Wing Room 204
+            </span>
+            <span class='font font-light font-size-9 font-color-lighter' style='padding-bottom: 8px;'>
+              Description
+            </span>
+            <span class='font font-light font-size-12 font-color-default' style='padding-bottom: 32px;'>
+              Just got the new Flux readings from ESO - I ran the latest reductions
+              on the data and want to share with you some the insights. Would love
+              your input on updating the adjustments.
+            </span>
+            <span class='font font-light font-size-9 font-color-lighter' style='padding-bottom: 12px;'>
+              Attached files
+            </span>
+            <div style='display: block; padding-bottom: 12px;'>
+              <div class='recent-search-icon'>
+                <img
+                  src='/Users/david/Documents/GitHub/Skrip.io/assets/icons/microsoft_excel.svg'
+                  width='15px'
+                  height="15px"
+                />
+              </div>
+              <span class='font font-regular font-size-12 font-color-default' style='display: inline-block; padding-left: 12px; vertical-align: top;'>
+                <span class='font-regular-italic font-color-lighter'>Flux_PKS41_</span>junRAW.xsl
+              </span>
+            </div>
+            <div style='display: block; padding-bottom: 12px;'>
+              <div class='recent-search-icon'>
+                <img
+                  src='/Users/david/Documents/GitHub/Skrip.io/assets/icons/microsoft_excel.svg'
+                  width='15px'
+                  height="15px"
+                />
+              </div>
+              <span class='font font-regular font-size-12 font-color-default' style='display: inline-block; padding-left: 12px; vertical-align: top;'>
+                <span class='font-regular-italic font-color-lighter'>Flux_PKS41_</span>julRAW.xsl
+              </span>
+            </div>
+            <div style='display: block; padding-bottom: 28px;'>
+              <div class='recent-search-icon'>
+                <img
+                  src='/Users/david/Documents/GitHub/Skrip.io/assets/icons/python.svg'
+                  width='15px'
+                  height="15px"
+                />
+              </div>
+              <span class='font font-regular font-size-12 font-color-default' style='display: inline-block; padding-left: 12px; vertical-align: top;'>
+                <span class='font-regular-italic font-color-lighter'>Python_</span>reductionPipeline.py
+              </span>
+            </div>
+          </div>
+          <!--dismiss button-->
+          <div style='margin-top: 20px; margin-left: 38%;'>
+            <div id='close-meeting-4-details' class='submit-action-button submit-action-confirm'>
+              <span class='font font-regular font-size-12 font-color-lightest' style='text-align: center;'>
+                Ok
+              </span>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     <!--Skrip starts-->
@@ -153,14 +633,6 @@
             <span class='advisor-section-tag font font-regular font-size-9 font-color-lighter'>
               Advisors / Leads
             </span>
-            <button class='option-icon'>
-              <img
-                src='/Users/david/Documents/GitHub/Skrip.io/assets/buttons/global-options.svg'
-                alt='Advisor Option icon'
-                width='10px'
-                height='10px'
-              />
-            </button>
           </div>
           <div class='advisor-listing'>
             <div class='advisor-profile advisor-profile-pic active-g'></div>
@@ -173,35 +645,32 @@
         </div>
         <!--teammate section-->
         <div class='team-selector'>
-            <div class='team-options'>
-              <span class='team-section-tag font font-regular font-size-9 font-color-lighter'>
-                Teammates
-              </span>
-              <button class='team-option-icon'>
-                <img
-                  src='/Users/david/Documents/GitHub/Skrip.io/assets/buttons/global-options.svg'
-                  alt='Team Option icon'
-                  width='10px'
-                  height='10px'
-                />
-              </button>
+          <div class='team-options'>
+            <span class='team-section-tag font font-regular font-size-9 font-color-lighter'>
+              Teammates
+            </span>
+          </div>
+          <div class='teammate-listing'>
+            <div style='margin-bottom: 15px;'>
+              <div class='teammate-profile teammate-profile-pic-2'></div>
+              <div class='teammate-name'>
+                <span class='font font-regular font-size-12 font-color-default' style='display: inline; padding-right: 10px; padding-left: 20px;'>
+                  Mitchel Nagakoya
+                </span>
+              </div>
             </div>
             <div class='teammate-listing'>
-              <div style='margin-bottom: 15px;'>
-                <div class='teammate-profile teammate-profile-pic-2'></div>
-                <div class='teammate-name'>
-                  <span class='font font-regular font-size-12 font-color-default' style='display: inline; padding-right: 10px; padding-left: 20px;'>
-                    Mitchel Nagakoya
-                  </span>
-                </div>
+              <div class='teammate-profile teammate-profile-pic-1 active-g'></div>
+              <div class='teammate-name'>
+                <span class='font font-regular font-size-12 font-color-default' style='display: inline; padding-right: 10px; padding-left: 20px;'>
+                  Sarah Conway
+                </span>
               </div>
-              <div class='teammate-listing'>
-                <div class='teammate-profile teammate-profile-pic-1 active-g'></div>
-                <div class='teammate-name'>
-                  <span class='font font-regular font-size-12 font-color-default' style='display: inline; padding-right: 10px; padding-left: 20px;'>
-                    Sarah Conway
-                  </span>
-                </div>
+            </div>
+            <div class='teammate-listing'>
+              <span class='font font-regular font-size-12 font-color-lighter' style='padding-top: 32px;'>
+                + Invite new teammate
+              </span>
             </div>
           </div>
         </div>
@@ -212,17 +681,9 @@
           <div class='my-account'>
             <div class='my-profile my-profile-pic active-g'></div>
             <div class='my-name'>
-              <span class='font font-regular font-size-12 font-color-default' style='display: inline-block; padding-right: 10px; padding-left: 20px;'>
+              <span class='font font-regular font-size-12 font-color-default' style='display: inline-block; padding-left: 8px; padding-right: 20px;'>
                 Mellisa Gouterez
               </span>
-              <button class='my-option-icon'>
-                <img
-                  src='/Users/david/Documents/GitHub/Skrip.io/assets/buttons/my-selector-dropdown.svg'
-                  alt='Team Option icon'
-                  width='12px'
-                  height='7px'
-                />
-              </button>
             </div>
           </div>
         </div>
@@ -257,7 +718,7 @@
               Main contributors
             </span>
           </div>
-          <div class='directory-options'>
+          <div id='upload-root-directory' class='directory-options'>
             <img
               src='/Users/david/Documents/GitHub/Skrip.io/assets/buttons/global-options.svg'
               width='14px'
@@ -1223,7 +1684,7 @@
               <div class='directory-collaborator-profile advisor-profile-pic active-g'></div>
               <div class='directory-collaborator-profile my-profile-pic active-g'></div>
             </div>
-            <div class='directory-options'>
+            <div id='open-parent-directory-3' class='directory-options'>
               <img
                 src='/Users/david/Documents/GitHub/Skrip.io/assets/buttons/global-vert-options.svg'
                 width='14px'
@@ -1865,7 +2326,7 @@
             </span>
           </div>
           <div class='directory-collaborator'></div>
-          <div class='directory-options'>
+          <div id='upload-general-document' class='directory-options'>
             <img
               src='/Users/david/Documents/GitHub/Skrip.io/assets/buttons/global-options.svg'
               width='14px'
@@ -2036,7 +2497,7 @@
                   <span class='meeting-timestamp font font-light font-size-9 font-color-lighter' style='padding-bottom: 12px;'>
                     12/5/2019
                   </span>
-                  <div id='meetup-list-4-open-option' class='meeting-scheduler-option'>
+                  <div id='meeting-list-4-options' class='meeting-scheduler-option'>
                     <img
                       src='/Users/david/Documents/GitHub/Skrip.io/assets/buttons/global-vert-options.svg'
                       width='14px'
@@ -2126,7 +2587,7 @@
                       You requested a meeting with Nelson
                     </span>
                     <span class='font font-light font-size-15 font-color-default' style='padding-bottom: 16px'>
-                      Review new plot graphs for PKS flux dataset
+                      Review new plot graphs for wavelengths dataset
                     </span>
                     <span class='font font-regular font-size-9 font-color-default' style='padding-bottom: 10px'>
                       at 12/8/2019 1:00PM GMT<br>
@@ -2162,7 +2623,7 @@
                       Mitchel requested a meeting with you
                     </span>
                     <span class='font font-light font-size-15 font-color-default' style='padding-bottom: 16px'>
-                      Questions about spectral reading on PKS-110
+                      Questions about spectral reading on PKS41 June data
                     </span>
                     <span class='font font-regular font-size-9 font-color-default' style='padding-bottom: 10px'>
                       at 12/6/2019 3:21PM GMT<br>
@@ -2737,28 +3198,172 @@
       </div>
     </div>
     <!--context menues-->
-    <!--view meeting 4 details-->
-    <ul class='meeting-4-options'>
-      <li id='view-meeting-4-details' class='font font-regular font-size-12 font-color-default' style='padding: 8px 16px;'>
-        Meeting details
+    <!--search bar dropdown menu-->
+    <ul class='search-bar-dropdown-menu' style='padding-top: 20px; padding-bottom: 12px;'>
+      <!--recent searchs -->
+      <div style='padding-bottom: 12px;'>
+        <span class='font font-regular font-size-9 font-color-lighter' style='padding-left: 16px; padding-bottom: 12px;'>
+          Recent searches
+        </span>
+        <!--recent result-->
+        <li class='search-bar-recent-search-result' style='padding-left: 16px;'>
+          <div class='recent-search-icon'>
+            <img
+              src='/Users/david/Documents/GitHub/Skrip.io/assets/icons/textfile.svg'
+              width='15px'
+              height="15px"
+            />
+          </div>
+          <span class='font font-regular font-size-12 font-color-default' style='display: inline-block; padding-left: 12px; vertical-align: top;'>
+            <span class='font-regular-italic font-color-lighter'>Scripts_</span>skripAPI.cpp
+          </span>
+        </li>
+        <!--recent result-->
+        <li class='search-bar-recent-search-result' style='padding-left: 16px;'>
+          <div class='recent-search-icon'>
+            <img
+              src='/Users/david/Documents/GitHub/Skrip.io/assets/buttons/global-folder.svg'
+              width='15px'
+              height="15px"
+            />
+          </div>
+          <span class='font font-regular font-size-12 font-color-default' style='display: inline-block; padding-left: 12px; vertical-align: top;'>
+            <span class='font-regular-italic font-color-lighter'>Flux_</span>PKS41
+          </span>
+        </li>
+        <!--recent result-->
+        <li class='search-bar-recent-search-result' style='padding-left: 16px;'>
+          <div class='recent-search-icon'>
+            <img
+              src='/Users/david/Documents/GitHub/Skrip.io/assets/icons/python.svg'
+              width='15px'
+              height="15px"
+            />
+          </div>
+          <span class='font font-regular font-size-12 font-color-default' style='display: inline-block; padding-left: 12px; vertical-align: top;'>
+            <span class='font-regular-italic font-color-lighter'>Python_</span>reductionPipeline.py
+          </span>
+        </li>
+      </div>
+      <!--recent types-->
+      <span class='font font-regular font-size-9 font-color-lighter' style='padding-left: 16px; padding-bottom: 12px; padding-top: 20px; border-top: 1px solid #9B9B9B;'>
+        Document types
+      </span>
+      <!--type-->
+      <li class='search-bar-file-search-type' style='padding-left: 16px;'>
+        <div class='recent-search-icon'>
+          <img
+            src='/Users/david/Documents/GitHub/Skrip.io/assets/icons/microsoft_word.svg'
+            width='20px'
+            height="20px"
+          />
+        </div>
+        <span class='font font-light font-size-12 font-color-default' style='display: inline-block; padding-left: 12px; vertical-align: top; padding-bottom: 12px;'>
+          Microsoft Word
+        </span>
+      </li>
+      <!--type-->
+      <li class='search-bar-file-search-type' style='padding-left: 16px;'>
+        <div class='recent-search-icon'>
+          <img
+            src='/Users/david/Documents/GitHub/Skrip.io/assets/icons/microsoft_excel.svg'
+            width='20px'
+            height="20px"
+          />
+        </div>
+        <span class='font font-light font-size-12 font-color-default' style='display: inline-block; padding-left: 12px; vertical-align: top; padding-bottom: 12px;'>
+          Microsoft Excel
+        </span>
+      </li>
+      <!--type-->
+      <li class='search-bar-file-search-type' style='padding-left: 16px;'>
+        <div class='recent-search-icon'>
+          <img
+            src='/Users/david/Documents/GitHub/Skrip.io/assets/icons/microsoft_ppt.svg'
+            width='20px'
+            height="20px"
+          />
+        </div>
+        <span class='font font-light font-size-12 font-color-default' style='display: inline-block; padding-left: 12px; vertical-align: top; padding-bottom: 12px;'>
+          Microsoft Powerpoint
+        </span>
+      </li>
+      <!--type-->
+      <li class='search-bar-file-search-type' style='padding-left: 16px;'>
+        <div class='recent-search-icon'>
+          <img
+            src='/Users/david/Documents/GitHub/Skrip.io/assets/icons/python.svg'
+            width='20px'
+            height="20px"
+          />
+        </div>
+        <span class='font font-light font-size-12 font-color-default' style='display: inline-block; padding-left: 12px; vertical-align: top; padding-bottom: 12px;'>
+          Python Files
+        </span>
+      </li>
+      <!--type-->
+      <li class='search-bar-file-search-type' style='padding-left: 16px;'>
+        <div class='recent-search-icon'>
+          <img
+            src='/Users/david/Documents/GitHub/Skrip.io/assets/icons/rtf-file.svg'
+            width='20px'
+            height="20px"
+          />
+        </div>
+        <span class='font font-light font-size-12 font-color-default' style='display: inline-block; padding-left: 14px; vertical-align: top; padding-bottom: 12px;'>
+          Rich Text File
+        </span>
+      </li>
+      <!--type-->
+      <li class='search-bar-file-search-type' style='padding-left: 16px;'>
+        <span class='font font-light font-size-12 font-color-lighter'>
+          Other file types ‣
+        </span>
       </li>
     </ul>
-    <!--view meeting 3 details-->
-    <ul class='meeting-3-context-menu'>
-      <li id='view-meeting-3-details' class='font font-regular font-size-12 font-color-default' style='padding: 8px 16px;'>
-        Meeting details
+    <!--go to directory 1-->
+    <ul class='directory-1-context-menu'>
+      <li id='toggle-directory-1' class='font font-regular font-size-12 font-color-default' style='padding: 8px 16px;'>
+        Go to directory
       </li>
     </ul>
-    <!--cancel meeting-->
-    <ul class='cancel-meeting-sent-option'>
-      <li id='last-minute-cancel-agreed' class='font font-regular font-size-12 font-color-default' style='padding: 8px 16px;'>
-        Cancel Meeting
-      </li>
-      <li id='view-meeting-1-details' class='font font-regular font-size-12 font-color-default' style='padding: 8px 16px;'>
-        Meeting details
+    <!--go to directory 2-->
+    <ul class='directory-2-context-menu'>
+      <li id='toggle-directory-2' class='font font-regular font-size-12 font-color-default' style='padding: 8px 16px;'>
+        Go to directory
       </li>
     </ul>
-    <!--Meeting editing decision menu-->
+    <!--go to directory 3-->
+    <ul class='directory-3-context-menu'>
+      <li id='toggle-directory-3' class='font font-regular font-size-12 font-color-default' style='padding: 8px 16px;'>
+        Go to directory
+      </li>
+    </ul>
+    <!--go to directory 4-->
+    <ul class='directory-4-context-menu'>
+      <li id='toggle-directory-4' class='font font-regular font-size-12 font-color-default' style='padding: 8px 16px;'>
+        Go to directory
+      </li>
+    </ul>
+    <!--go to directory 5-->
+    <ul class='directory-5-context-menu'>
+      <li id='toggle-directory-5' class='font font-regular font-size-12 font-color-default' style='padding: 8px 16px;'>
+        Go to directory
+      </li>
+    </ul>
+    <!--go to directory 6-->
+    <ul class='directory-6-context-menu'>
+      <li id='toggle-directory-6' class='font font-regular font-size-12 font-color-default' style='padding: 8px 16px;'>
+        Go to directory
+      </li>
+    </ul>
+    <!--go to directory 7-->
+    <ul class='directory-7-context-menu'>
+      <li id='toggle-directory-7' class='font font-regular font-size-12 font-color-default' style='padding: 8px 16px;'>
+        Go to directory
+      </li>
+    </ul>
+    <!--Meeting 1 context menu-->
     <ul class='meeting-post-options'>
       <li id='last-minute-accept' class='font font-regular font-size-12 font-color-default' style='padding: 8px 16px;'>
         Attend
@@ -2769,7 +3374,28 @@
       <li id='meeting-rescinded' class='font font-regular font-size-12 font-color-default' style='padding: 8px 16px;'>
         Rescind
       </li>
+      <li id='view-meeting-1-details' class='font font-regular font-size-12 font-color-default' style='padding: 8px 16px;'>
+        Meeting details
+      </li>
+    </ul>
+    <!--Meeting 2 context menu-->
+    <ul class='cancel-meeting-sent-option'>
+      <li id='last-minute-cancel-agreed' class='font font-regular font-size-12 font-color-default' style='padding: 8px 16px;'>
+        Cancel Meeting
+      </li>
       <li id='view-meeting-2-details' class='font font-regular font-size-12 font-color-default' style='padding: 8px 16px;'>
+        Meeting details
+      </li>
+    </ul>
+    <!--view meeting 3 details-->
+    <ul class='meeting-3-context-menu'>
+      <li id='view-meeting-3-details' class='font font-regular font-size-12 font-color-default' style='padding: 8px 16px;'>
+        Meeting details
+      </li>
+    </ul>
+    <!--view meeting 4 details-->
+    <ul class='meeting-4-context-menu'>
+      <li id='view-meeting-4-details' class='font font-regular font-size-12 font-color-default' style='padding: 8px 16px;'>
         Meeting details
       </li>
     </ul>

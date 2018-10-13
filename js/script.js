@@ -67,8 +67,7 @@ $(document).ready(function(){
   });
 
   //Context menues
-  // Scheduler Menus
-  // Trigger action when the contexmenu is about to be shown
+  //meeting 1 options
   $("#meeting-confirmation-option").click("contextmenu", function(event) {
     // Avoid the real one
     event.preventDefault();
@@ -81,6 +80,7 @@ $(document).ready(function(){
     });
   });
 
+  //meeting 2 options
   $("#sent-meeting-response-option").click("contextmenu", function(event){
     // Avoid the real one
     event.preventDefault();
@@ -93,6 +93,7 @@ $(document).ready(function(){
     });
   });
 
+  //meeting 3 options
   $("#meeting-list-3-options").click("contextmenu", function(event){
     // Avoid the real one
     event.preventDefault();
@@ -105,30 +106,121 @@ $(document).ready(function(){
     });
   });
 
-  // Dismiss menu after click out
-  $(document).bind("mousedown", function (e) {
-    // If the clicked element is not the menu
-    if (!$(e.target).parents(".meeting-post-options").length > 0) {
-      // Hide it
-      $(".meeting-post-options").hide(100);
-    }
+  //meeting 4 options
+  $("#meeting-list-4-options").click("contextmenu", function(event){
+    // Avoid the real one
+    event.preventDefault();
+    // Show contextmenu
+    $(".meeting-4-context-menu").finish().toggle(100).
+    // In the right position (the mouse)
+    css({
+      top: (event.pageY-=20) + "px",
+      left: (event.pageX -= 120) + "px"
+    });
+  });
+
+  $("#directory-1").on("contextmenu", function(event){
+    // Avoid the real one
+    event.preventDefault();
+    // Show contextmenu
+    $(".directory-1-context-menu").finish().toggle(100).
+    // In the right position (the mouse)
+    css({
+      top: (event.pageY-=20) + "px",
+      left: (event.pageX -= 120) + "px"
+    });
+  });
+
+  $("#directory-2").on("contextmenu", function(event){
+    // Avoid the real one
+    event.preventDefault();
+    // Show contextmenu
+    $(".directory-2-context-menu").finish().toggle(100).
+    // In the right position (the mouse)
+    css({
+      top: (event.pageY-=20) + "px",
+      left: (event.pageX -= 120) + "px"
+    });
+  });
+
+  $("#directory-3").on("contextmenu", function(event){
+    // Avoid the real one
+    event.preventDefault();
+    // Show contextmenu
+    $(".directory-3-context-menu").finish().toggle(100).
+    // In the right position (the mouse)
+    css({
+      top: (event.pageY-=20) + "px",
+      left: (event.pageX -= 120) + "px"
+    });
+  });
+
+  $("#directory-4").on("contextmenu", function(event){
+    // Avoid the real one
+    event.preventDefault();
+    // Show contextmenu
+    $(".directory-3-context-menu").finish().toggle(100).
+    // In the right position (the mouse)
+    css({
+      top: (event.pageY-=20) + "px",
+      left: (event.pageX -= 120) + "px"
+    });
+  });
+
+  $("#directory-5").on("contextmenu", function(event){
+    // Avoid the real one
+    event.preventDefault();
+    // Show contextmenu
+    $(".directory-3-context-menu").finish().toggle(100).
+    // In the right position (the mouse)
+    css({
+      top: (event.pageY-=20) + "px",
+      left: (event.pageX -= 120) + "px"
+    });
+  });
+
+  $("#directory-6").on("contextmenu", function(event){
+    // Avoid the real one
+    event.preventDefault();
+    // Show contextmenu
+    $(".directory-3-context-menu").finish().toggle(100).
+    // In the right position (the mouse)
+    css({
+      top: (event.pageY-=20) + "px",
+      left: (event.pageX -= 120) + "px"
+    });
+  });
+
+  $("#directory-7").on("contextmenu", function(event){
+    // Avoid the real one
+    event.preventDefault();
+    // Show contextmenu
+    $(".directory-3-context-menu").finish().toggle(100).
+    // In the right position (the mouse)
+    css({
+      top: (event.pageY-=20) + "px",
+      left: (event.pageX -= 120) + "px"
+    });
+  });
+
+  $(".dirList-main-search").click("contextmenu", function(event){
+    // Avoid the real one
+    event.preventDefault();
+    // Show contextmenu
+    $(".search-bar-dropdown-menu").finish().fadeIn(100).
+    // In the right position (the mouse)
+    css({
+      top: 69 + "px",
+      left: 307 + "px"
+    });
   });
 
   // Dismiss menu after click out
   $(document).bind("mousedown", function (e) {
     // If the clicked element is not the menu
-    if (!$(e.target).parents(".cancel-meeting-sent-option").length > 0) {
+    if (!$(e.target).parents(".meeting-post-options, .cancel-meeting-sent-option, .directory-1-context-menu, .directory-2-context-menu, .directory-3-context-menu, .directory-4-context-menu, .directory-5-context-menu, .directory-6-context-menu, .directory-7-context-menu, .search-bar-dropdown-menu, .directory-3-context-menu, .meeting-1-context-menu, .meeting-2-context-menu, .meeting-3-context-menu, .meeting-4-context-menu").length > 0) {
       // Hide it
-      $(".cancel-meeting-sent-option").hide(100);
-    }
-  });
-
-  // Dismiss menu after click out
-  $(document).bind("mousedown", function (e) {
-    // If the clicked element is not the menu
-    if (!$(e.target).parents(".meeting-3-context-menu").length > 0) {
-      // Hide it
-      $(".meeting-3-context-menu").hide(100);
+      $(".meeting-post-options, .cancel-meeting-sent-option, .directory-1-context-menu, .directory-2-context-menu, .directory-3-context-menu, .directory-4-context-menu, .directory-5-context-menu, .directory-6-context-menu, .directory-7-context-menu, .search-bar-dropdown-menu, .directory-3-context-menu, .meeting-1-context-menu, .meeting-2-context-menu, .meeting-3-context-menu, .meeting-4-context-menu").fadeOut(100);
     }
   });
 
@@ -154,45 +246,36 @@ $(document).ready(function(){
   //Rescind meeting decision
   $("#meeting-rescinded").click(function(event){
     $(".scheduler-input-buttons").fadeIn()
-    $(".my-declined-details").fadeOut(50)
-    $(".my-agreement-details").fadeOut(50)
+    $(".my-declined-details, .my-agreement-details").fadeOut(50)
     $("#requested-meeting-scheduling").removeClass("meeting-done")
     $(".meeting-post-options").hide(100)
   });
 
   //Cancel meeting submission
   $("#cancel-meeting-appointment").click(function(event){
-    $("#popup-overlay").fadeIn(100)
-    $(".popup-dialogue-discard-changes").fadeIn(100)
+    $("#popup-overlay, .popup-dialogue-discard-changes").fadeIn(100)
   });
 
   //Don't cancel meeting submission dialogue
   $("#popup-keep-changes").click(function(event){
-    $("#popup-overlay").fadeOut(100)
-    $(".popup-dialogue-discard-changes").fadeOut(100)
+    $("#popup-overlay, .popup-dialogue-discard-changes").fadeOut(100)
   });
 
   //Cancel meeting submission dialogue
   $("#popup-discard-changes").click(function(event){
-    $("#popup-overlay").fadeOut(100)
-    $(".popup-dialogue-discard-changes").fadeOut(100)
-    $("#overlay").fadeOut(100)
-    $(".overlay-dialogue-bg").fadeOut(100)
-    $("#schedule-meeting-dialogue").fadeOut(100)
+    $("#popup-overlay, .popup-dialogue-discard-changes, #overlay, .overlay-dialogue-bg, #schedule-meeting-dialogue").fadeOut(100)
   });
 
   // Schedule meeting spawning beta warning
   $("#submit-meeting-appointment").click(function(event){
-    $("#popup-overlay").fadeIn(200)
-    $(".beta-warning").fadeIn(200)
+    $("#popup-overlay, .beta-warning").fadeIn(200)
     $("#overlay").fadeOut(100)
     $("#schedule-meeting-dialogue").toggle(100)
   });
 
   //return to main menu after beta warning
   $("#return-back-to-main").click(function(event){
-    $("#popup-overlay").fadeOut(100)
-    $(".beta-warning").fadeOut(100)
+    $("#popup-overlay, .beta-warning").fadeOut(100)
   });
 
   //toggle calendar view
@@ -211,6 +294,92 @@ $(document).ready(function(){
         if ($(this).is(':visible'))
         $(this).css('display','inline-block');
       });
+  });
+
+  //upload to root Directory
+  $("#upload-root-directory").click(function(event){
+    $("#overlay").fadeIn(200)
+    $(".overlay-dialogue-bg").fadeIn(360)
+    $("#uploading-to-root").fadeIn(200)
+  });
+
+  //cancel root directory upload
+  $("#cancel-root-upload").click(function(event){
+    $("#uploading-to-root, #overlay").fadeOut(200)
+    $(".overlay-dialogue-bg").fadeOut(360)
+  });
+
+  //confirm root directory popup
+  $("#confirm-root-upload").click(function(event){
+    $(".overlay-dialogue-bg").fadeOut(100)
+    $("#overlay, #uploading-to-root").fadeOut(200)
+    $("#popup-overlay").fadeIn(100)
+    $(".danger-zone").fadeIn(200)
+  });
+
+  //no permission popup
+  $("#submit-dangerous-action").click(function(event){
+    $(".danger-zone").fadeOut(100)
+    $(".no-permission-warning").fadeIn(200)
+  });
+
+  //return to Main
+  $("#return-back-to-main-2").click(function(event){
+    $("#popup-overlay, .no-permission-warning").fadeOut(200)
+  });
+
+  //upload general documents
+  $("#upload-general-document").click(function(event){
+    $("#popup-overlay").fadeIn(100)
+    $(".no-permission-warning").fadeIn(200)
+  });
+
+  //opening meeting 1 details
+  $("#view-meeting-1-details").click(function(event){
+    $("#overlay").fadeIn(100)
+    $("#meeting-1-detail, .overlay-dialogue-bg").fadeIn(200)
+    $(".meeting-post-options").hide(100)
+  });
+
+  //close meeting 1 details
+  $("#close-meeting-1-details").click(function(event){
+    $("#overlay, #meeting-1-detail, .overlay-dialogue-bg, .meeting-post-options").fadeOut(200)
+  });
+
+  //opening meeting 2 details
+  $("#view-meeting-2-details").click(function(event){
+    $("#overlay").fadeIn(100)
+    $("#meeting-2-detail, .overlay-dialogue-bg").fadeIn(200)
+    $(".cancel-meeting-sent-option").hide(100)
+  });
+
+  //close meeting 2 details
+  $("#close-meeting-2-details").click(function(event){
+    $("#overlay, #meeting-2-detail, .overlay-dialogue-bg, .meeting-post-options").fadeOut(200)
+  });
+
+  //opening meeting 2 details
+  $("#view-meeting-3-details").click(function(event){
+    $("#overlay").fadeIn(100)
+    $("#meeting-3-detail, .overlay-dialogue-bg").fadeIn(200)
+    $(".meeting-3-context-menu").hide(100)
+  });
+
+  //close meeting 2 details
+  $("#close-meeting-3-details").click(function(event){
+    $("#overlay, #meeting-3-detail, .overlay-dialogue-bg, .meeting-post-options").fadeOut(200)
+  });
+
+  //opening meeting 2 details
+  $("#view-meeting-4-details").click(function(event){
+    $("#overlay").fadeIn(100)
+    $("#meeting-4-detail, .overlay-dialogue-bg").fadeIn(200)
+    $(".meeting-4-context-menu").hide(100)
+  });
+
+  //close meeting 2 details
+  $("#close-meeting-4-details").click(function(event){
+    $("#overlay, #meeting-3-detail, .overlay-dialogue-bg, .meeting-post-options").fadeOut(200)
   });
 
 });
