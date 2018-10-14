@@ -422,4 +422,16 @@ $(document).ready(function(){
     $(".naming-danger-zone").fadeOut(100)
     $(".no-permission-warning").fadeIn(200)
   });
+
+  //upload to sub Directory
+  $("#upload-to-subdirectory").click(function(event){
+    $("#overlay, #uploading-to-sub-directory").fadeIn(200)
+    $(".overlay-dialogue-bg").fadeIn(360)
+  });
+
+  //close upload dialogue
+  $("#cancel-file-upload, #confirm-file-upload").click(function(event){
+    $("#overlay, #uploading-to-sub-directory, .overlay-dialogue-bg").fadeOut(200)
+  });
+
 });

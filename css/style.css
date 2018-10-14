@@ -139,6 +139,16 @@ a:visited {text-decoration: none;}
   font-size: 15px;
   margin-bottom: 8px;
 }
+.upload-filename-input-field {
+  display: inline-block;
+  vertical-align: top;
+  width: 50px;
+  height: 28px;
+  background-color: #4D5052;
+  color: #F0EDED;
+  font-family: 'SF-Pro-Text-Regular' !important;
+  font-size: 15px;
+}
 .schedule-meeting-start-time-input, .schedule-meeting-end-time-input {
   display: inline-block;
   height: 28px;
@@ -195,7 +205,7 @@ a:visited {text-decoration: none;}
   vertical-align: top;
   margin-left: 60px;
 }
-#upload-general-document, #upload-root-directory {cursor: pointer;}
+#upload-general-document, #upload-root-directory, #upload-to-subdirectory {cursor: pointer;}
 #body--admin-naming-change {
   width: 1096px;
   height: 708px;
@@ -419,7 +429,7 @@ a:visited {text-decoration: none;}
 #subdirectory-list-1, #subdirectory-list-2, #subdirectory-list-3, #subdirectory-list-4,
 #subdirectory-list-5, #subdirectory-list-6, #subdirectory-list-7, #sub-subdirectory-1,
 #sub-subdirectory-2, #sub-subdirectory-3, #sub-subdirectory-4, #sub-subdirectory-5,
-#sub-subdirectory-6, #sub-subdirectory-7, #naming-help-tips {display: none;}
+#sub-subdirectory-6, #sub-subdirectory-7, #naming-help-tips, #uploading-to-sub-directory {display: none;}
 .subdirectory-listing {width: 700px; margin-left: 60px;}
 .sub-subdirectory-listing {width: 616px; margin-left: 125px;}
 #body--dirList .directory-listing, .subdirectory-listing, .sub-subdirectory-listing {
@@ -720,6 +730,18 @@ a:visited {text-decoration: none;}
 }
 .naming-node:hover {
   background-color: #6c6e70;
+}
+.filename-upload-input {
+  padding: 4px 12px;
+  background-color: #9B9B9B;
+  width: 160px;
+  border-radius: 6px;
+  height: 28px;
+  color: #4D5052;
+  font-family: 'SF-Pro-Text-Regular' !important;
+  font-size: 15px;
+  border: none;
+  margin-left: 8px;
 }
 /* effect */
 .fadingIn {

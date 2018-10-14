@@ -154,80 +154,60 @@
             </div>
           </div>
         </div>
-        <!--uploading file at root-->
-        <div id='uploading-to-root'>
+        <!--uploading file-->
+        <div id='uploading-to-sub-directory'>
           <span class='font font-light font-size-18 font-color-default' style='padding-bottom: 32px;'>
-            Uploading to root
+            Uploading file
           </span>
-          <span class='font font-light font-size-12 font-color-default' style='padding-bottom: 52px;'>
-            You are about to create a project / upload a file to the root directory.
-            Unless it is a new directory type or a general document that the team
-            frequently needs.
+          <span class='font font-regular font-size-9 font-color-lighter' style='padding-bottom: 12px;'>
+            Create filename
           </span>
-          <span class='font font-regular font-size-12 font-color-lighter' style='padding-bottom: 20px;'>
-            Here are some directories you have recently saved to, please make sure
-            that your file doesn't belong to the following:
+          <div style='margin-bottom: 52px;'>
+            <span class='font font-regular-italic font-size-15 font-color-default' style='display: inline-block;'>
+              FITS_
+            </span>
+            <form style='display: inline-block;'>
+              <input class='filename-upload-input' type="text" id="fname" name="fname" placeholder="filename.extension">
+            </form>
+          </div>
+          <span class='font font-regular font-size-9 font-color-lighter' style='padding-bottom: 12px;'>
+            Upload target location
           </span>
-          <div style='padding-bottom: 12px'>
-            <div class='recent-search-icon'>
-              <img
-                src='/Users/david/Documents/GitHub/Skrip.io/assets/buttons/global-folder.svg'
-                width='15px'
-                height="15px"
-              />
-            </div>
-            <span class='font font-regular font-size-12 font-color-default' style='display: inline-block; padding-left: 16px; vertical-align: top;'>
-              <span class='font-regular-italic font-color-lighter'>Flux_</span>PKS41
-            </span>
-          </div>
-          <div style='padding-bottom: 12px'>
-            <div class='recent-search-icon'>
-              <img
-                src='/Users/david/Documents/GitHub/Skrip.io/assets/buttons/global-folder.svg'
-                width='15px'
-                height="15px"
-              />
-            </div>
-            <span class='font font-regular font-size-12 font-color-default' style='display: inline-block; padding-left: 16px; vertical-align: top;'>
-              Python_
-            </span>
-          </div>
-          <div style='padding-bottom: 12px'>
-            <div class='recent-search-icon'>
-              <img
-                src='/Users/david/Documents/GitHub/Skrip.io/assets/buttons/global-folder.svg'
-                width='15px'
-                height="15px"
-              />
-            </div>
-            <span class='font font-regular font-size-12 font-color-default' style='display: inline-block; padding-left: 16px; vertical-align: top;'>
-              PDCSAP
-            </span>
-          </div>
-          <div style='padding-bottom: 40px'>
-            <div class='recent-search-icon'>
-              <img
-                src='/Users/david/Documents/GitHub/Skrip.io/assets/buttons/global-folder.svg'
-                width='15px'
-                height="15px"
-              />
-            </div>
-            <span class='font font-regular font-size-12 font-color-default' style='display: inline-block; padding-left: 16px; vertical-align: top;'>
-              <span class='font-regular-italic font-color-lighter'>FORS1_</span>Sep-Plots
-            </span>
-          </div>
-          <span class='font font-regular font-size-12 font-color-lighter' style='display: inline-block; vertical-align: top; padding-bottom: 32px;'>
-            Do you still want to upload to the root directory of the drive?
+          <span class='font font-light font-size-15 font-color-default' style='padding-bottom: 96px;'>
+            FITS
+            <span class='font-regular-italic font-color-lighter'>(parent)</span>
+            /
+            <span class='font-regular-italic font-color-lighter'> (file location)</span>
           </span>
+          <form style='padding-bottom: 12px;'>
+            <span class='font font-light font-size-12 font-color-lighter' style='padding-right: 8px; display: inline-block'>
+              Allow file preview in Skrip (longer loading)
+            </span>
+            <input style='display: inline-block; vertical-align: middle;' type="checkbox" name="unavailable-mark" value="unavailable">
+          </form>
+          <form style='padding-bottom: 12px;'>
+            <span class='font font-light font-size-12 font-color-lighter' style='padding-right: 8px; display: inline-block'>
+              Import text / cell data (slows connection)
+            </span>
+            <input style='display: inline-block; vertical-align: middle;' type="checkbox" name="unavailable-mark" value="unavailable">
+          </form>
+          <form style='padding-bottom: 60px;'>
+            <span class='font font-light font-size-12 font-color-lighter' style='padding-right: 8px; display: inline-block'>
+              Compressed upload
+            </span>
+            <input style='display: inline-block; vertical-align: middle;' type="checkbox" name="unavailable-mark" value="unavailable">
+          </form>
+          <!--button-->
           <div>
-            <div id='cancel-root-upload' class='submit-action-button submit-action-confirm' style='width: 120px;'>
+            <label id='confirm-file-upload' for="exampleInput" class="submit-action-button submit-action-confirm">
               <span class='font font-regular font-size-12 font-color-lightest' style='text-align: center;'>
-                No, cancel upload
+                Select file
               </span>
-            </div>
-            <div id='confirm-root-upload' class='submit-action-button submit-action-cancel'>
+            </label>
+            <input type="file" id="exampleInput" style="display: none" />
+            <div id='cancel-file-upload' class='submit-action-button submit-action-cancel' style='width: 100px;'>
               <span class='font font-regular font-size-12 font-color-lightest' style='text-align: center;'>
-                Save to root
+                Cancel upload
               </span>
             </div>
           </div>
@@ -740,7 +720,7 @@
               Main contributors
             </span>
           </div>
-          <div class='directory-options'>
+          <div id='upload-to-subdirectory' class='directory-options'>
             <img
               src='/Users/david/Documents/GitHub/Skrip.io/assets/buttons/global-options.svg'
               width='14px'
