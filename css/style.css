@@ -478,18 +478,16 @@ a:visited {text-decoration: none;}
   background-color: #59D794;
 }
 .code-deleted-diff-highlight {
-  color: #F0EDED;
-  background-color: #F27378;
+  color: #1E1E1E;
+  background-color: #ff8f93;
 }
 .code-comment-highlight {color: #9B9B9B;}
-.code-added-diff-highlight .code-comment-highlight {
+.code-added-diff-highlight .code-comment-highlight,
+.code-deleted-diff-highlight .code-comment-highlight {
   color: #1E1E1E;
 }
-.code-deleted-diff-highlight .code-comment-highlight {
-  color: #F0EDED;
-}
 .code-added-diff-line {color: #59D794;}
-.code-deleted-diff-line {color: #F27378;}
+.code-deleted-diff-line {color: #ff8f93;}
 /* spreadsheet diff */
 .spreadsheet-diff-display {height: 600px;}
 .spreadsheet-diff-data {
