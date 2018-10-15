@@ -434,4 +434,19 @@ $(document).ready(function(){
     $("#overlay, #uploading-to-sub-directory, .overlay-dialogue-bg").fadeOut(200)
   });
 
+  //table row callout
+  //use a special class name or id for the table
+  //using find I'm getting all tr elements in the table
+  //using not(':eq(0)') I'm ignoring the first tr element
+  //using each I'm iterating through the selected elements
+  $('#current-code-version').find('tr').each(function(i){
+    //using children('td:eq(0)') I'm getting the first td element inside the tr
+    $(this).children('td:eq(0)').addClass('code-line-number').text(i+1);
+  });
+
+  $('#previous-code-version').find('tr').each(function(i){
+    //using children('td:eq(0)') I'm getting the first td element inside the tr
+    $(this).children('td:eq(0)').addClass('code-line-number').text(i+1);
+  });
+
 });
