@@ -1,6 +1,8 @@
 # Skrip.io
 Skrip.io is a file management application on cloud drive services (Google Drive, One Drive, etc). It features programmable naming conventions and built-in meeting scheduler
 
+This is a mockup / demo prototype of what the interface looks like.
+
 Visit [Abstract](https://app.goabstract.com/projects/d4f126c0-bec8-11e7-b108-7d84fb31ecb9/) for design specs
 
 ## Project Detail
