@@ -11,7 +11,7 @@ $(document).ready(function(){
   height += '';
 
   //Scroll to bottom of feed
-  $("#feed-box").animate({scrollTop: height});
+  $("#feed-box").scrollTop(height)
 
   //Opening subdirectory 1
   $("#directory-1").click(function(event){$("#subdirectory-list-1").slideToggle()});
