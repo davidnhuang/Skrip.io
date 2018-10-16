@@ -76,6 +76,8 @@ a:visited {text-decoration: none;}
 .meeting-declined {color: #FC4949;}
 .meeting-done {text-decoration: line-through;}
 
+.border-1px {border-bottom: 1px solid #9B9B9B; width: 100%;}
+
 /* Overlay */
 #overlay {
   display: none;
@@ -377,7 +379,6 @@ a:visited {text-decoration: none;}
 .my-profile-pic {
   background: url('/Users/david/Documents/GitHub/Skrip.io/assets/data/profile/team-profile-picture-3.png');
 }
-
 /* Main Directory */
 /* search */
 .dirList-main-search {
@@ -426,6 +427,13 @@ a:visited {text-decoration: none;}
   margin-top: 60px;
 }
 .code-diff-display {height: 616px;}
+/* raw diff */
+.file-raw-card {
+  width: 80%;
+  background-color: #1f2021;
+  border-radius: 6px;
+  border: 1px solid #9B9B9B;
+}
 /* code diff */
 .code-diff-current-version, .code-diff-previous-version {
   display: inline-block;
@@ -447,7 +455,7 @@ a:visited {text-decoration: none;}
   overflow-y: scroll;
   margin-top: 32px;
 }
-.code-diff-lines {
+.code-diff-lines, .cell-diff-lines {
   font-family: 'Mono' !important;
   font-size: 12px;
   display: block;
@@ -505,11 +513,12 @@ a:visited {text-decoration: none;}
   margin-right: 24px;
 }
 .spreadsheet-unit-metadata {
-  width: 300px;
+  width: 240px;
   height: 640px;
   display: inline-block;
   vertical-align: top;
   overflow-y: scroll;
+  margin-left: 60px;
 }
 .spreadsheet-diff-chunk {
   margin-bottom: 48px;
@@ -523,7 +532,30 @@ a:visited {text-decoration: none;}
 .spreadsheet-diff-chunk-diff-list {
   display: inline-block;
   vertical-align: top;
-  width: 650px;
+  width: 646px;
+}
+.spreadsheet-diff-col-1, .spreadsheet-diff-col-2, .spreadsheet-diff-col-3,
+.spreadsheet-diff-col-4 {
+  width: 120px;
+  height: 36px;
+  display: inline-block;
+  vertical-align: top;
+}
+.spreadsheet-diff-header-option {
+  display: inline-block;
+  vertical-align: top;
+  width: 36px;
+  height: 38px;
+}
+.spreadsheet-diff-edit-type, .spreadsheet-diff-cell-before,
+.spreadsheet-diff-cell-after {width: 158px;}
+.spreadsheet-diff-cell-num, .spreadsheet-diff-cell-unit {width: 80px;}
+.spreadsheet-diff-arrow {width: 20px;}
+.spreadsheet-line-diff-r .spreadsheet-diff-cell-before:hover,
+.spreadsheet-line-diff-r .spreadsheet-diff-cell-after:hover,
+.spreadsheet-line-diff-r .spreadsheet-diff-cell-num:hover,
+.spreadsheet-line-diff-r .spreadsheet-diff-cell-unit:hover {
+  background-color: #4D5052;
 }
 /* recent document */
 #body--dirList .recent-documents-bounding {
@@ -673,7 +705,7 @@ a:visited {text-decoration: none;}
 }
 #body--sideFeed .meeting-timestamp {display: inline-block;}
 #body--sideFeed .meeting-agreement {display: inline-block; padding-top: 4px;}
-#body--sideFeed .meeting-individual-profile {
+#body--sideFeed .meeting-individual-profile, .spreadsheet-collaborator-profile {
   display: inline-block;
   vertical-align: top;
   width: 24px;
@@ -684,6 +716,7 @@ a:visited {text-decoration: none;}
   background-repeat: no-repeat;
   background-position: center center;
 }
+.spreadsheet-collaborator-profile {float: right;}
 #body--sideFeed .meeting-agreement-details {margin-top: 8px;}
 #body--sideFeed .scheduler-input-buttons {margin-top: 8px;}
 #body--sideFeed .meeting-button {
