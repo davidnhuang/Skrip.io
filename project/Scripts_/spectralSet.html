@@ -121,7 +121,7 @@
       <!--Main admin-->
       <div class='file-diff-bounding'>
         <span class='font font-light font-size-28 font-color-default' style='padding-bottom: 16px; display: inline-block;'>
-           cellSorting.cpp <span class='font-light font-color-lighter' style='padding-left: 12px;'>version 14</span>
+           spectralSet.cpp <span class='font-light font-color-lighter' style='padding-left: 12px;'>version 14</span>
         </span>
         <div class='file-branch-number-icon'>
           <img
@@ -135,7 +135,7 @@
            96a4
         </span>
         <span class='font font-light font-size-15 font-color-lighter' style='margin-bottom: 40px;'>
-          Scripts_ / cellSorting.cpp
+          Scripts_ / spectralSet.cpp
         </span>
         <div class='code-diff-display'>
           <!--current version-->
@@ -158,66 +158,8 @@
               <table class='code-diff-lines'>
                 <tr>
                   <td class='code-line-number'></td>
-                  <td class='code-act-data code-comment-highlight'>
-                    // @license: http://www.opensource.org/licenses/mit-license.php
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-comment-highlight'>
-                    // @author: see AUTHORS file
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-comment-highlight'>
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
                   <td class='code-act-data'>
-                    #include ::cctype
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    #include xlnt/cell/cell_reference.hpp
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    #include ::xlnt/utils/exceptions.hpp>
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    #include ::xlnt/worksheet/range_reference.hpp>
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number code-added-diff-line'></td>
-                  <td class='code-act-data code-added-diff-highlight'>
-                    #include ::detail/constants.hpp>
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    namespace xlnt {
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    std::size_t cell_reference_hash::operator()(const cell_reference &k) const
+                    void avoid_runaway_process( const int max_time_to_run)
                   </td>
                 </tr>
                 <tr>
@@ -234,79 +176,25 @@
                 </tr>
                 <tr>
                   <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent'>
-                    return k.row() * constants::max_column().index + k.column_index();
+                  <td class='code-act-data'>
+                   #endif
                   </td>
                 </tr>
                 <tr>
                   <td class='code-line-number'></td>
                   <td class='code-act-data'>
-                    }
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number code-added-diff-line'></td>
-                  <td class='code-act-data code-added-diff-highlight'>
-                    cell_reference &cell_reference::make_absolute(bool absolute_column, bool absolute_row)
                   </td>
                 </tr>
                 <tr>
                   <td class='code-line-number'></td>
                   <td class='code-act-data'>
-                    {
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent'>
-                    column_absolute(absolute_column);
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent'>
-                    row_absolute(absolute_row);
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent'>
-                    return *this;
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent'>
+                    static int get_urlencoded_piece( const char **idata,
                   </td>
                 </tr>
                 <tr>
                   <td class='code-line-number'></td>
                   <td class='code-act-data'>
-                    cell_reference::cell_reference()
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent'>
-                    : cell_reference(1, 1)
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    {
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    }
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    cell_reference::cell_reference(const std::string &string)
+                    char *buff, size_t max_buff, const char end_char)
                   </td>
                 </tr>
                 <tr>
@@ -318,101 +206,161 @@
                 <tr>
                   <td class='code-line-number'></td>
                   <td class='code-act-data code-indent'>
-                    auto split = split_reference(string, absolute_column_, absolute_row_);
+                    int c;
                   </td>
                 </tr>
                 <tr>
                   <td class='code-line-number'></td>
                   <td class='code-act-data code-indent'>
-                    column(split.first);
+                    const char *tptr = *idata;
                   </td>
                 </tr>
                 <tr>
                   <td class='code-line-number'></td>
                   <td class='code-act-data code-indent'>
-                    row(split.second);
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                  }
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    cell_reference::cell_reference(const char *reference_string)
                   </td>
                 </tr>
                 <tr>
                   <td class='code-line-number'></td>
                   <td class='code-act-data code-indent'>
-                    : cell_reference(std::string(reference_string))
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    {
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    }
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    cell_reference::cell_reference(column_t column_index, row_t row)
+                    max_buff--;
                   </td>
                 </tr>
                 <tr>
                   <td class='code-line-number'></td>
                   <td class='code-act-data code-indent'>
-                    : column_(column_index), row_(row), absolute_row_(false), absolute_column_(false)
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    {
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent'>
-                    if (row_ == 0
+                    while( (c = *tptr++) > 13 && max_buff-- && c != end_char)
                   </td>
                 </tr>
                 <tr>
                   <td class='code-line-number'></td>
                   <td class='code-act-data code-indent-2'>
-                    || column_ == 0
+                    {
                   </td>
                 </tr>
                 <tr>
                   <td class='code-line-number'></td>
                   <td class='code-act-data code-indent-2'>
-                    || !(row_ <= constants::max_row())
+                    if( c == '+')
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data code-indent-3'>
+                    c = ' ';
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data code-indent-2'>
+                    else if( c == '%')
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data code-indent-3'>
+                    {
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data code-indent-3'>
+                    int i, c1;
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data code-indent-3'>
+                    c = 0;
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data code-indent-3'>
+                    for( i = 0; i < 2; i++)
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data code-indent-4'>
+                    {
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data code-indent-4'>
+                    c *= 16;
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data code-indent-4'>
+                    c1 = *tptr++;
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data code-indent-4'>
+                    if( c1 >= '0' && c1 <= '9')
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data code-indent-4'>
+                    c += c1 - '0';
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data code-indent-4'>
+                    else if( c1 >= 'A' && c1 <= 'F')
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data code-indent-4'>
+                    c += c1 - 'A' + 10;
+                    <span class='code-comment-highlight'>
+                      /* wasn't an hex digit: */
+                    </span>
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data code-indent-4'>
+                    else
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data code-indent-4'>
+                    return( -1);
+                    <span class='code-comment-highlight'>
+                      /* not supposed to happen */
+                    </span>
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data code-indent-3'>
+                    }
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data code-indent-2'>
+                    }
                   </td>
                 </tr>
                 <tr>
                   <td class='code-line-number code-added-diff-line'></td>
                   <td class='code-act-data code-indent-2 code-added-diff-highlight'>
-                    || !(column_ <= constants::max_column()))
+                    return (c)
                   </td>
                 </tr>
                 <tr>
                   <td class='code-line-number'></td>
-                  <td class='code-act-data'>
+                  <td class='code-act-data code-indent'>
                     }
                   </td>
                 </tr>
@@ -447,66 +395,8 @@
               <table class='code-diff-lines'>
                 <tr>
                   <td class='code-line-number'></td>
-                  <td class='code-act-data code-comment-highlight'>
-                    // @license: http://www.opensource.org/licenses/mit-license.php
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-comment-highlight'>
-                    // @author: see AUTHORS file
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-comment-highlight'>
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
                   <td class='code-act-data'>
-                    #include ::cctype
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    #include xlnt/cell/cell_reference.hpp
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    #include ::xlnt/utils/exceptions.hpp>
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    #include ::xlnt/worksheet/range_reference.hpp>
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number code-deleted-diff-line'></td>
-                  <td class='code-act-data code-deleted-diff-highlight'>
-                    #include ::xlnt/worksheet/range_retriever.hpp>
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    namespace xlnt {
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    std::size_t cell_reference_hash::operator()(const cell_reference &k) const
+                    void avoid_runaway_process( const int max_time_to_run)
                   </td>
                 </tr>
                 <tr>
@@ -523,79 +413,25 @@
                 </tr>
                 <tr>
                   <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent'>
-                    return k.row() * constants::max_column().index + k.column_index();
+                  <td class='code-act-data'>
+                   #endif
                   </td>
                 </tr>
                 <tr>
                   <td class='code-line-number'></td>
                   <td class='code-act-data'>
-                    }
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number code-deleted-diff-line'></td>
-                  <td class='code-act-data code-deleted-diff-highlight'>
-                    cell_reference &cell_reference::make_absolute(bool absolute_column, bool, string, absolute_row)
                   </td>
                 </tr>
                 <tr>
                   <td class='code-line-number'></td>
                   <td class='code-act-data'>
-                    {
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent'>
-                    column_absolute(absolute_column);
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent'>
-                    row_absolute(absolute_row);
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent'>
-                    return *this;
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent'>
+                    static int get_urlencoded_piece( const char **idata,
                   </td>
                 </tr>
                 <tr>
                   <td class='code-line-number'></td>
                   <td class='code-act-data'>
-                    cell_reference::cell_reference()
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent'>
-                    : cell_reference(1, 1)
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    {
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    }
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    cell_reference::cell_reference(const std::string &string)
+                    char *buff, size_t max_buff, const char end_char)
                   </td>
                 </tr>
                 <tr>
@@ -607,98 +443,165 @@
                 <tr>
                   <td class='code-line-number'></td>
                   <td class='code-act-data code-indent'>
-                    auto split = split_reference(string, absolute_column_, absolute_row_);
+                    int c;
                   </td>
                 </tr>
                 <tr>
                   <td class='code-line-number'></td>
                   <td class='code-act-data code-indent'>
-                    column(split.first);
+                    const char *tptr = *idata;
                   </td>
                 </tr>
                 <tr>
                   <td class='code-line-number'></td>
                   <td class='code-act-data code-indent'>
-                    row(split.second);
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                  }
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    cell_reference::cell_reference(const char *reference_string)
                   </td>
                 </tr>
                 <tr>
                   <td class='code-line-number'></td>
                   <td class='code-act-data code-indent'>
-                    : cell_reference(std::string(reference_string))
+                    max_buff--;
                   </td>
                 </tr>
                 <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    {
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    }
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    cell_reference::cell_reference(column_t column_index, row_t row)
+                  <td class='code-line-number code-deleted-diff-highlight'></td>
+                  <td class='code-act-data code-indent code-deleted-diff-highlight'>
+                    min_buff--;
                   </td>
                 </tr>
                 <tr>
                   <td class='code-line-number'></td>
                   <td class='code-act-data code-indent'>
-                    : column_(column_index), row_(row), absolute_row_(false), absolute_column_(false)
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    {
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent'>
-                    if (row_ == 0
+                    while( (c = *tptr++) > 13 && max_buff-- && c != end_char)
                   </td>
                 </tr>
                 <tr>
                   <td class='code-line-number'></td>
                   <td class='code-act-data code-indent-2'>
-                    || column_ == 0
+                    {
                   </td>
                 </tr>
                 <tr>
                   <td class='code-line-number'></td>
                   <td class='code-act-data code-indent-2'>
-                    || !(row_ <= constants::max_row())
+                    if( c == '+')
                   </td>
                 </tr>
                 <tr>
                   <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                  }
+                  <td class='code-act-data code-indent-3'>
+                    c = ' ';
                   </td>
                 </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data code-indent-2'>
+                    else if( c == '%')
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data code-indent-3'>
+                    {
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data code-indent-3'>
+                    int i, c1;
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data code-indent-3'>
+                    c = 0;
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data code-indent-3'>
+                    for( i = 0; i < 2; i++)
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data code-indent-4'>
+                    {
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data code-indent-4'>
+                    c *= 16;
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data code-indent-4'>
+                    c1 = *tptr++;
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data code-indent-4'>
+                    if( c1 >= '0' && c1 <= '9')
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data code-indent-4'>
+                    c += c1 - '0';
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data code-indent-4'>
+                    else if( c1 >= 'A' && c1 <= 'F')
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data code-indent-4'>
+                    c += c1 - 'A' + 10;
+                    <span class='code-comment-highlight'>
+                      /* wasn't an hex digit: */
+                    </span>
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data code-indent-4'>
+                    else
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data code-indent-4'>
+                    return( -1);
+                    <span class='code-comment-highlight'>
+                      /* not supposed to happen */
+                    </span>
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data code-indent-3'>
+                    }
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data code-indent-2'>
+                    }
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data code-indent'>
+                    }
+                  </td>
+                </tr>
+              </table>
             </div>
           </div>
         </div>
