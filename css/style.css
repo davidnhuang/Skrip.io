@@ -37,12 +37,11 @@ a:visited {text-decoration: none;}
   font-style: normal;
 }
 @font-face {
-  font-family: 'Apercu-Mono';
-  src: url('/Users/david/Documents/GitHub/Skrip.io/fonts/IBMPlexMono-Light.ttf');
+  font-family: 'Mono';
+  src: url('/Users/david/Documents/GitHub/Skrip.io/fonts/IBMPlexMono-Regular.ttf');
   font-weight: normal;
   font-style: normal;
 }
-
 
 /* Resources */
 .font {display: block; line-height: 1.6; letter-spacing: 0.25px;}
@@ -51,7 +50,7 @@ a:visited {text-decoration: none;}
 .font-regular {font-family: 'SF-Pro-Text-Regular' !important;}
 .font-medium {font-family: 'SF-Pro-Text-Medium' !important;}
 .font-regular-italic {font-family: 'SF-Pro-Text-Regular-Italic' !important;}
-.font-code {font-family: 'Apercu-Mono' !important;}
+.font-code {font-family: 'Mono' !important;}
 
 .font-size-9 {font-size: 9px;}
 .font-size-12 {font-size: 12px;}
@@ -449,7 +448,7 @@ a:visited {text-decoration: none;}
   margin-top: 32px;
 }
 .code-diff-lines {
-  font-family: 'Apercu-Mono' !important;
+  font-family: 'Mono' !important;
   font-size: 12px;
   display: block;
   line-height: 2;
@@ -479,15 +478,22 @@ a:visited {text-decoration: none;}
 }
 .code-deleted-diff-highlight {
   color: #1E1E1E;
-  background-color: #ff8f93;
+  background-color: #F27378;
 }
-.code-comment-highlight {color: #9B9B9B;}
+.code-comment-highlight {
+  color: #9B9B9B;
+  font-family: 'Mono' !important;
+}
 .code-added-diff-highlight .code-comment-highlight,
 .code-deleted-diff-highlight .code-comment-highlight {
   color: #1E1E1E;
 }
 .code-added-diff-line {color: #59D794;}
-.code-deleted-diff-line {color: #ff8f93;}
+.code-deleted-diff-line {color: #F27378;}
+.code-indent {text-indent: 20px;}
+.code-indent-2 {text-indent: 40px;}
+.code-indent-3 {text-indent: 60px;}
+.code-indent-4 {text-indent: 80px;}
 /* spreadsheet diff */
 .spreadsheet-diff-display {height: 600px;}
 .spreadsheet-diff-data {

@@ -121,7 +121,7 @@
       <!--Main admin-->
       <div class='file-diff-bounding'>
         <span class='font font-light font-size-28 font-color-default' style='padding-bottom: 16px; display: inline-block;'>
-           FTS_1RXH.fts <span class='font-light font-color-lighter' style='padding-left: 12px;'>version 91</span>
+           FORS1_init_protocol.md <span class='font-light font-color-lighter' style='padding-left: 12px;'>version 14</span>
         </span>
         <div class='file-branch-number-icon'>
           <img
@@ -135,7 +135,7 @@
            96a4
         </span>
         <span class='font font-light font-size-15 font-color-lighter' style='margin-bottom: 40px;'>
-          FTS / FTS_1RXH.fts
+          FORS1_ / init / protocol.md
         </span>
         <div class='code-diff-display'>
           <!--current version-->
@@ -145,7 +145,7 @@
             <!--metadata-->
             <div class='calendar-meeting-listing-detail'>
               <span class='font font-light font-size-12 font-color-default' style='padding-top: 4px;'>
-                Version 91
+                Version 20
               </span>
             </div>
             <div class='calendar-meeting-listing-detail'>
@@ -158,146 +158,93 @@
               <table class='code-diff-lines'>
                 <tr>
                   <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    TTYPE1  = CRVAL1 | TBCOL1  = 1 | TFORM1  = D25.17 |
+                  <td class='code-act-data  '>
+                    CONSTRAINTS:
                   </td>
                 </tr>
                 <tr>
                   <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    TTYPE2  = CRVAL2 |             | TFORM1  = D25.17 |
+                  <td class='code-act-data  '>
+                    The NSDRP is designed to be fully automated to run without
+                    any user's interaction. In addition, it is intended to produce
+                    only quick-look, browse extracted spectra for the purpose of
+                    assessing the scientific quality and content of the raw data.
+                    It may not be able to reduce all types of NIRSPEC data.
+                    Specifically, it can only reduce data obtained in high-dispersion
+                    mode, and is optimized for and works best on frames having:
                   </td>
                 </tr>
                 <tr>
                   <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    TTYPE3  = 'CRPIX1  '           /                                                TBCOL3  =                   53 /                                                TFORM3  = 'E15.7   '
+                  <td class='code-act-data  '>
                   </td>
                 </tr>
                 <tr>
                   <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    TUNIT3  = '        '           /                                                TDISP3  = 'G15.7   '           / %15.7g
+                  <td class='code-act-data   code-indent'>
+                    - single point source in slit
                   </td>
                 </tr>
                 <tr>
                   <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    TTYPE4  = 'CRPIX2  '           /                                                TBCOL4  =                   69 /                                                TFORM4  = 'E15.7   '
+                  <td class='code-act-data   code-indent'>
+                    - reasonably bright targets with detectable continuum
                   </td>
                 </tr>
                 <tr>
                   <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    TUNIT4  = '        '           /                                                TDISP4  = 'G15.7   '           / %15.7g
+                  <td class='code-act-data   code-indent'>
+                    - NIRSPEC-1 through NIRSPEC-7 filters
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number code-added-diff-line'></td>
+                  <td class='code-act-data   code-indent code-added-diff-highlight'>
+                    - well-separated orders without overlapping
                   </td>
                 </tr>
                 <tr>
                   <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    TTYPE5  = 'CD1_1   '           /                                                TBCOL5  =                   85 /                                                TFORM5  = 'E15.7   '
+                  <td class='code-act-data   code-indent'>
+                    - sufficient exposure times (~> 30s) with detectable sky lines
                   </td>
                 </tr>
                 <tr>
                   <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    TTYPE6  = 'CD1_2   '           /                                                TBCOL6  =                  101 /                                                TFORM6  = 'E15.7   '
+                  <td class='code-act-data  '>
                   </td>
                 </tr>
                 <tr>
                   <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    TTYPE1  = CRVAL1 | TBCOL1  = 1 | TFORM1  = D25.17 |
+                  <td class='code-act-data  '>
+                    Finally, the NSDRP should be run only on files downloaded from the Keck Observatory Archive
+                    (KOA, http://koa.ipac.caltech.edu/) since it needs to know the correct image type
+                    (on-sky object or calibrations) of the data frames. Only NIRSPEC files ingested into the archive
+                    are guaranteed to contain this information.
                   </td>
                 </tr>
                 <tr>
                   <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    TTYPE2  = CRVAL2 |             | TFORM1  = D25.17 |
+                  <td class='code-act-data  '>
                   </td>
                 </tr>
                 <tr>
                   <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    TTYPE3  = 'CRPIX1  '           /                                                TBCOL3  =                   53 /                                                TFORM3  = 'E15.7   '
+                  <td class='code-act-data  '>
+                    EXECUTING NSDRP:
                   </td>
                 </tr>
                 <tr>
-                  <td class='code-line-number code-added-diff-line'></td>
-                  <td class='code-act-data code-added-diff-highlight'>
-                    TUNIT3  = '        '           /                                                TDISP3  = 'G15.7   '           / %15.7g
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data   code-indent'>
+                    1) Simple command line usage: python nsdrp.py in_dir out_dir
                   </td>
                 </tr>
                 <tr>
-                  <td class='code-line-number code-added-diff-line'></td>
-                  <td class='code-act-data code-added-diff-highlight'>
-                    TTYPE4  = 'CRPIX2  '           /                                                TBCOL4  =                   69 /                                                TFORM4  = 'E15.7   '
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number code-added-diff-line'></td>
-                  <td class='code-act-data code-added-diff-highlight'>
-                    TUNIT4  = '        '           /                                                TDISP4  = 'G15.7   '           / %15.7g
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number code-added-diff-line'></td>
-                  <td class='code-act-data code-added-diff-highlight'>
-                    TTYPE5  = 'CD1_1   '           /                                                TBCOL5  =                   85 /                                                TFORM5  = 'E15.7   '
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number code-added-diff-line'></td>
-                  <td class='code-act-data code-added-diff-highlight'>
-                    TTYPE6  = 'CD1_2   '           /                                                TBCOL6  =                  101 /                                                TFORM6  = 'E15.7   '
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number code-added-diff-line'></td>
-                  <td class='code-act-data code-added-diff-highlight'>
-                    TTYPE1  = CRVAL1 | TBCOL1  = 1 | TFORM1  = D25.17 |
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number code-added-diff-line'></td>
-                  <td class='code-act-data code-added-diff-highlight'>
-                    TTYPE2  = CRVAL2 |             | TFORM1  = D25.17 |
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number code-added-diff-line'></td>
-                  <td class='code-act-data code-added-diff-highlight'>
-                    TTYPE3  = 'CRPIX1  '           /                                                TBCOL3  =                   53 /                                                TFORM3  = 'E15.7   '
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number code-added-diff-line'></td>
-                  <td class='code-act-data code-added-diff-highlight'>
-                    TUNIT3  = '        '           /                                                TDISP3  = 'G15.7   '           / %15.7g
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number code-added-diff-line'></td>
-                  <td class='code-act-data code-added-diff-highlight'>
-                    TTYPE4  = 'CRPIX2  '           /                                                TBCOL4  =                   69 /                                                TFORM4  = 'E15.7   '
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number code-added-diff-line'></td>
-                  <td class='code-act-data code-added-diff-highlight'>
-                    TUNIT4  = '        '           /                                                TDISP4  = 'G15.7   '           / %15.7g
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number code-added-diff-line'></td>
-                  <td class='code-act-data code-added-diff-highlight'>
-                    TTYPE5  = 'CD1_1   '           /                                                TBCOL5  =                   85 /                                                TFORM5  = 'E15.7   '
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number code-added-diff-line'></td>
-                  <td class='code-act-data code-added-diff-highlight'>
-                    TTYPE6  = 'CD1_2   '           /                                                TBCOL6  =                  101 /                                                TFORM6  = 'E15.7   '
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data  code-added-diff-highlight code-indent'>
+                    2) Additional command line arguments are available. These are listed and described after executing:
+                    python nsdrp.py -h
                   </td>
                 </tr>
               </table>
@@ -310,7 +257,7 @@
             <!--metadata-->
             <div class='calendar-meeting-listing-detail'>
               <span class='font font-light font-size-12 font-color-default' style='padding-top: 4px;'>
-                Version 90
+                Version 19
               </span>
             </div>
             <div class='calendar-meeting-listing-detail'>
@@ -331,68 +278,80 @@
               <table class='code-diff-lines'>
                 <tr>
                   <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    TTYPE1  = CRVAL1 | TBCOL1  = 1 | TFORM1  = D25.17 |
+                  <td class='code-act-data  '>
+                    CONSTRAINTS:
                   </td>
                 </tr>
                 <tr>
                   <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    TTYPE2  = CRVAL2 |             | TFORM1  = D25.17 |
+                  <td class='code-act-data  '>
+                    The NSDRP is designed to be fully automated to run without
+                    any user's interaction. In addition, it is intended to produce
+                    only quick-look, browse extracted spectra for the purpose of
+                    assessing the scientific quality and content of the raw data.
+                    It may not be able to reduce all types of NIRSPEC data.
+                    Specifically, it can only reduce data obtained in high-dispersion
+                    mode, and is optimized for and works best on frames having:
                   </td>
                 </tr>
                 <tr>
                   <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    TTYPE3  = 'CRPIX1  '           /                                                TBCOL3  =                   53 /                                                TFORM3  = 'E15.7   '
+                  <td class='code-act-data  '>
                   </td>
                 </tr>
                 <tr>
                   <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    TUNIT3  = '        '           /                                                TDISP3  = 'G15.7   '           / %15.7g
+                  <td class='code-act-data   code-indent'>
+                    - single point source in slit
                   </td>
                 </tr>
                 <tr>
                   <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    TTYPE4  = 'CRPIX2  '           /                                                TBCOL4  =                   69 /                                                TFORM4  = 'E15.7   '
+                  <td class='code-act-data   code-indent'>
+                    - reasonably bright targets with detectable continuum
                   </td>
                 </tr>
                 <tr>
                   <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    TUNIT4  = '        '           /                                                TDISP4  = 'G15.7   '           / %15.7g
+                  <td class='code-act-data   code-indent'>
+                    - NIRSPEC-1 through NIRSPEC-7 filters
                   </td>
                 </tr>
                 <tr>
                   <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    TTYPE5  = 'CD1_1   '           /                                                TBCOL5  =                   85 /                                                TFORM5  = 'E15.7   '
+                  <td class='code-act-data   code-indent'>
+                    - sufficient exposure times (~> 30s) with detectable sky lines
                   </td>
                 </tr>
                 <tr>
                   <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    TTYPE6  = 'CD1_2   '           /                                                TBCOL6  =                  101 /                                                TFORM6  = 'E15.7   '
+                  <td class='code-act-data  '>
                   </td>
                 </tr>
                 <tr>
                   <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    TTYPE1  = CRVAL1 | TBCOL1  = 1 | TFORM1  = D25.17 |
+                  <td class='code-act-data  '>
+                    Finally, the NSDRP should be run only on files downloaded from the Keck Observatory Archive
+                    (KOA, http://koa.ipac.caltech.edu/) since it needs to know the correct image type
+                    (on-sky object or calibrations) of the data frames. Only NIRSPEC files ingested into the archive
+                    are guaranteed to contain this information.
                   </td>
                 </tr>
                 <tr>
                   <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    TTYPE2  = CRVAL2 |             | TFORM1  = D25.17 |
+                  <td class='code-act-data  '>
                   </td>
                 </tr>
                 <tr>
                   <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    TTYPE3  = 'CRPIX1  '           /                                                TBCOL3  =                   53 /                                                TFORM3  = 'E15.7   '
+                  <td class='code-act-data  '>
+                    EXECUTING NSDRP:
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data   code-indent'>
+                    1) Simple command line usage: python nsdrp.py in_dir out_dir
                   </td>
                 </tr>
               </table>

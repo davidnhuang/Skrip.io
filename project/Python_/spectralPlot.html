@@ -121,7 +121,7 @@
       <!--Main admin-->
       <div class='file-diff-bounding'>
         <span class='font font-light font-size-28 font-color-default' style='padding-bottom: 16px; display: inline-block;'>
-           FTS_PKS41.fts <span class='font-light font-color-lighter' style='padding-left: 12px;'>version 91</span>
+           Python_spectralPlot.py <span class='font-light font-color-lighter' style='padding-left: 12px;'>version 14</span>
         </span>
         <div class='file-branch-number-icon'>
           <img
@@ -135,7 +135,7 @@
            96a4
         </span>
         <span class='font font-light font-size-15 font-color-lighter' style='margin-bottom: 40px;'>
-          FTS / FTS_PKS41.fts
+          Python_ / spectralPlot.py
         </span>
         <div class='code-diff-display'>
           <!--current version-->
@@ -145,7 +145,7 @@
             <!--metadata-->
             <div class='calendar-meeting-listing-detail'>
               <span class='font font-light font-size-12 font-color-default' style='padding-top: 4px;'>
-                Version 91
+                Version 20
               </span>
             </div>
             <div class='calendar-meeting-listing-detail'>
@@ -156,452 +156,295 @@
             <!--diff data-->
             <div id='current-code-version' class='current-code-diff-data'>
               <table class='code-diff-lines'>
-                <!--1-->
                 <tr>
                   <td class='code-line-number'></td>
                   <td class='code-act-data'>
-                    ROOTNAME = 'u5780205r'
-                    <span class='code-comment-highlight'>
-                      / rootname of the observation set
-                    </span>
+                    import os
                   </td>
                 </tr>
-                <!--2-->
                 <tr>
                   <td class='code-line-number'></td>
                   <td class='code-act-data'>
-                    PROCTIME =   5.301314019676E+04
-                    <span class='code-comment-highlight'>
-                      / Pipeline processing time (MJD)
-                    </span>
+                    import check_modules
                   </td>
                 </tr>
-                <!--3-->
                 <tr>
                   <td class='code-line-number'></td>
                   <td class='code-act-data'>
-                    OPUS_VER = 'OPUS 14.5a'
-                    <span class='code-comment-highlight'>
-                      / OPUS software system version number
-                    </span>
+                    requiredModules = check_modules.is_missing()
                   </td>
                 </tr>
-                <!--4-->
                 <tr>
                   <td class='code-line-number'></td>
                   <td class='code-act-data'>
-                    CAL_VER = ' '
-                    <span class='code-comment-highlight'>
-                      / CALWP2 code version
-                    </span>
+                    if requiredModules:
                   </td>
                 </tr>
-                <!--5-->
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data code-indent'>
+                    os.sys.exit()
+                  </td>
+                </tr>
                 <tr>
                   <td class='code-line-number'></td>
                   <td class='code-act-data'>
-                    MODE    = 'FULL'
-                    <span class='code-comment-highlight'>
-                      / instr. mode: FULL (full res.)
-                    </span>
-                    , AREA (area int.)SERIALS = 'OFF'
-                    <span class='code-comment-highlight'>
-                      / serial clocks: ON, OFF
-                    </span>
                   </td>
                 </tr>
-                <!--5-->
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data'>
+                    import argparse
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data'>
+                    import syss
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data'>
+                    import traceback
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data'>
+                    from astropy.io import fits
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data'>
+                  </td>
+                </tr>
                 <tr>
                   <td class='code-line-number'></td>
                   <td class='code-act-data code-comment-highlight'>
-                    / IMAGE TYPE CHARACTERISTICS
+                    #import dgn
                   </td>
                 </tr>
-                <!--6-->
                 <tr>
                   <td class='code-line-number'></td>
                   <td class='code-act-data'>
-                    IMAGETYP = 'EXT'
-                    <span class='code-comment-highlight'>
-                      / DARK/BIAS/IFLAT/UFLAT/VFLAT/KSPOT/EXT/ECAL
-                    </span>
                   </td>
                 </tr>
-                <!--7-->
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data code-comment-highlight'>
+                    # from DrpException import DrpException
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data code-comment-highlight'>
+                    # import FlatCacher
+                  </td>
+                </tr>
                 <tr>
                   <td class='code-line-number'></td>
                   <td class='code-act-data'>
-                    CDBSFILE = 'NO'
-                    <span class='code-comment-highlight'>
-                      / GENERIC/BIAS/DARK/PREF/FLAT/MASK/ATOD/NO
-                    </span>
                   </td>
                 </tr>
-                <!--8-->
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    PKTFMT  =                   96
-                    <span class='code-comment-highlight'>
-                      / packet format code / FILTER CONFIGURATION
-                    </span>
-                  </td>
-                </tr>
-                <!--9-->
                 <tr>
                   <td class='code-line-number code-added-diff-line'></td>
                   <td class='code-act-data code-added-diff-highlight'>
-                    FILTNAM1 = 'FR533P14'
-                    <span class='code-comment-highlight'>
-                      / first filter name
-                    </span>
+                    VERSION = '0.9.17'
                   </td>
                 </tr>
-                <!--10-->
                 <tr>
                   <td class='code-line-number'></td>
                   <td class='code-act-data'>
-                    69
-                    <span class='code-comment-highlight'>
-                      / first filter number (0-48)
-                    </span>
                   </td>
                 </tr>
-                <!--11-->
                 <tr>
                   <td class='code-line-number'></td>
                   <td class='code-act-data'>
-                    FILTER2 =                    0
-                    <span class='code-comment-highlight'>
-                      / second filter number (0-48)
-                    </span>
+                    warnings.filterwarnings('ignore', category=UserWarning, append=True)
                   </td>
                 </tr>
-                <!--12-->
                 <tr>
                   <td class='code-line-number'></td>
                   <td class='code-act-data'>
-                    FILTROT =                 15.0
-                    <span class='code-comment-highlight'>
-                      / partial filter rotation angle (degrees)
-                    </span>
                   </td>
                 </tr>
-                <!--13-->
                 <tr>
                   <td class='code-line-number'></td>
                   <td class='code-act-data'>
-                    LRFWAVE =          4877.000000
-                    <span class='code-comment-highlight'>
-                      / linear ramp filter wavelength
-                    </span>
+                    def main():
                   </td>
                 </tr>
-                <!--14-->
                 <tr>
                   <td class='code-line-number'></td>
-                  <td class='code-act-data code-comment-highlight'>
-                    / INSTRUMENT STATUS USED IN DATA PROCESSING
+                  <td class='code-act-data code-indent'>
+                    args = parse_cmnd_line_args();
                   </td>
                 </tr>
-                <!--15-->
                 <tr>
                   <td class='code-line-number'></td>
                   <td class='code-act-data'>
-                    UCH1CJTM =             -88.2569
-                    <span class='code-comment-highlight'>
-                      / TEC cold junction #1 temperature (Celsius)
-                    </span>
                   </td>
                 </tr>
-                <!--16-->
                 <tr>
                   <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    UCH2CJTM =             -88.6697
-                    <span class='code-comment-highlight'>
-                      / TEC cold junction #2 temperature (Celsius)
-                    </span>
+                  <td class='code-act-data code-indent code-comment-highlight'>
+                    # determine if we are in command line mode or KOA mode
                   </td>
                 </tr>
-                <!--17-->
                 <tr>
                   <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    UCH3CJT M =             -88.3028
-                    <span class='code-comment-highlight'>
-                      / TEC cold junction #3 temperature (Celsius)
-                    </span>
+                  <td class='code-act-data code-indent'>
+                    try:
                   </td>
                 </tr>
-                <!--18-->
                 <tr>
                   <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    UCH4CJTM =             -88.7671
-                    <span class='code-comment-highlight'>
-                      / TEC cold junction #4 temperature (Celsius)
-                    </span>
+                  <td class='code-act-data code-indent-2'>
+                    fits.PrimaryHDU.readfrom(args.arg1, ignore_missing_end=True)
                   </td>
                 </tr>
-                <!--19-->
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    UBAY3TMP =              13.2302
-                    <span class='code-comment-highlight'>
-                      / bay 3 A1 temperature (deg C)
-                    </span>
-                  </td>
-                </tr>
-                <!--20-->
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    KSPOTS  = 'OFF'
-                    <span class='code-comment-highlight'>
-                      / Status of Kelsall spot lamps: ON, OFF
-                    </span>
-                  </td>
-                </tr>
-                <!--21-->
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    SHUTTER = 'A'
-                    <span class='code-comment-highlight'>
-                      / Shutter in place at beginning of the exposure
-                    </span>
-                  </td>
-                </tr>
-                <!--22-->
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    ATODGAIN =                  7.0
-                    <span class='code-comment-highlight'>
-                      / Analog to Digital Gain (Electrons/DN)
-                    </span>
-                  </td>
-                </tr>
-                <!--23-->
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-comment-highlight'>
-                    / RSDP CONTROL KEYWORDS
-                  </td>
-                </tr>
-                <!--24-->
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    MASKCORR = 'COMPLETE'
-                    <span class='code-comment-highlight'>
-                      / Do mask correction: PERFORM, OMIT, COMPLETE
-                    </span>
-                  </td>
-                </tr>
-                <!--25-->
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    ATODCORR = 'COMPLETE'
-                    <span class='code-comment-highlight'>
-                      / Do A-to-D correction: PERFORM, OMIT, COMPLETE
-                    </span>
-                  </td>
-                </tr>
-                <!--26-->
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    BLEVCORR = 'COMPLETE'
-                    <span class='code-comment-highlight'>
-                      / Do bias level correction
-                    </span>
-                  </td>
-                </tr>
-                <!--27-->
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    DARKCORR = 'COMPLETE'
-                    <span class='code-comment-highlight'>
-                      / Do dark correction: PERFORM, OMIT, COMPLETE
-                    </span>
-                  </td>
-                </tr>
-                <!--28-->
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    HISTORY
-                  </td>
-                </tr>
-                <!--29-->
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    MASKFILE = uref$f8213081u.r0h
-                  </td>
-                </tr>
-                <!--29-->
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    MASKCORR = COMPLETED
-                  </td>
-                </tr>
-                <!--30-->
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    HISTORY
-                  </td>
-                </tr>
-                <!--31-->
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    PEDIGREE = INFLIGHT 01/01/1994 - 15/05/1995
-                  </td>
-                </tr>
-                <!--32-->
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    HISTORY
-                  </td>
-                </tr>
-                <!--33-->
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    DESCRIP = STATIC MASK - INCLUDES CHARGE TRANSFER TRAPS
-                  </td>
-                </tr>
-                <!--34-->
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    HISTORY
-                  </td>
-                </tr>
-                <!--35-->
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    BIASFILE = uref$j9a1612mu.r2h
-                  </td>
-                </tr>
-                <!--36-->
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    BIASCORR = COMPLETED
-                  </td>
-                </tr>
-                <!--37-->
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    HISTORY
-                  </td>
-                </tr>
-                <!--38-->
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    PEDIGREE = INFLIGHT 29/08/98 - 21/08/99
-                  </td>
-                </tr>
-                <!--39-->
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    HISTORY
-                  </td>
-                </tr>
-                <!--40-->
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    DESCRIP =
-                    <span class='code-comment-highlight'>
-                      not significantly different from j6e16008u.
-                    </span>
-                  </td>
-                </tr>
-                <!--41-->
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    HISTORY
-                  </td>
-                </tr>
-                <!--42-->
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    DARKFILE = uref$j2g1549cu.r3h
-                  </td>
-                </tr>
-                <!--43-->
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    DARKCORR = COMPLETED
-                  </td>
-                </tr>
-                <!--44-->
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data '>
-                    The following throughput tables were used:
-                  </td>
-                </tr>
-                <!--45-->
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data '>
-                    crwfpc2comp$wfpc2_a2d7pc1_004_syn.fits
-                  </td>
-                </tr>
-                <!--46-->
                 <tr>
                   <td class='code-line-number code-added-diff-line'></td>
-                  <td class='code-act-data code-added-diff-highlight'>
-                    crwfpc2comp$wfpc2_flatpc1_002_syn.fits,
-                    crwfpc2comp$wfpc2_flatpc1_003_syn.fits,
-                    crwfpc2comp$wfpc2_a2d7wf2_004_syn.fits,
-                    crwfpc2comp$wfpc2_flatwf2_005_syn.fits,
-                    crwfpc2comp$wfpc2_lrf_004_syn.fits[wave#],
-                    crwfpc2comp$wfpc2_dqewfc3_002_syn.fits,
-                    crwfpc2comp$wfpc2_lrf_004_syn.fits[wave#],
-                    crwfpc2comp$wfpc2_dqewfc4_005_syn.fits,
-                    crwfpc2comp$wfpc2_a2d7wf4_004_syn.fits,
-                    crwfpc2comp$wfpc2_flatwf4_003_syn.fits
+                  <td class='code-act-data code-indent-2 code-added-diff-highlight'>
+                    fits.PrimaryHDU.readfrom(args.arg2, ignore_missing_end=True)
                   </td>
                 </tr>
-                <!--47-->
                 <tr>
                   <td class='code-line-number'></td>
-                  <td class='code-act-data '>
-                    CD1_3   =                    0
+                  <td class='code-act-data code-indent'>
+                    except IOError:
                   </td>
                 </tr>
-                <!--48-->
                 <tr>
                   <td class='code-line-number'></td>
-                  <td class='code-act-data '>
-                    CD2_3   =                    0
+                  <td class='code-act-data code-indent-2 code-comment-highlight'>
+                    # these aren't FITS files so must be in KOA mode
                   </td>
                 </tr>
-                <!--49-->
                 <tr>
                   <td class='code-line-number'></td>
-                  <td class='code-act-data '>
-                    CD3_2   =                    0
+                  <td class='code-act-data code-indent-2'>
+                    print('KOA mode')
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data code-indent'>
+                    else:
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data code-indent-2 code-comment-highlight'>
+                    # command line mode
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data code-indent-2'>
+                    config.params['cmnd_line_mode'] = True
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data code-indent-2'>
+                    config.params['verbose'] = True
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data code-indent-2'>
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data code-indent code-comment-highlight'>
+                    # setup configuration parameters based on command line args
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data code-indent'>
+                    config.params['debug'] = args.debug
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data code-indent'>
+                    config.params['verbose'] = args.verbose
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data code-indent'>
+                    config.params['subdirs'] = args.subdirs
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data code-indent'>
+                    config.params['dgn'] = args.dgn
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data code-indent'>
+                    config.params['npy'] = args.npy
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data code-indent'>
+                    config.params['no_cosmic'] = args.no_cosmic
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data code-indent'>
+                    config.params['no_products'] = args.no_products
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data code-indent'>
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data code-indent'>
+                    if args.obj_window is not None:
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data code-indent-2'>
+                    config.params['obj_window'] = int(args.obj_window)
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data code-indent'>
+                    if args.sky_window is not None:
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number code-added-diff-line'></td>
+                  <td class='code-act-data code-indent-2 code-added-diff-highlight'>
+                    config.params['sky_window'] = int(args.sky_window)
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data code-indent'>
+                    if args.sky_separation is not None:
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data code-indent-2'>
+                    config.params['sky_separation'] = int(args.sky_separation)
                   </td>
                 </tr>
               </table>
@@ -614,7 +457,7 @@
             <!--metadata-->
             <div class='calendar-meeting-listing-detail'>
               <span class='font font-light font-size-12 font-color-default' style='padding-top: 4px;'>
-                Version 90
+                Version 19
               </span>
             </div>
             <div class='calendar-meeting-listing-detail'>
@@ -633,452 +476,294 @@
             <!--diff data-->
             <div id='previous-code-version' class='current-code-diff-data'>
               <table class='code-diff-lines'>
-                <!--1-->
                 <tr>
                   <td class='code-line-number'></td>
                   <td class='code-act-data'>
-                    ROOTNAME = 'u5780205r'
-                    <span class='code-comment-highlight'>
-                      / rootname of the observation set
-                    </span>
+                    import os
                   </td>
                 </tr>
-                <!--2-->
                 <tr>
                   <td class='code-line-number'></td>
                   <td class='code-act-data'>
-                    PROCTIME =   5.301314019676E+04
-                    <span class='code-comment-highlight'>
-                      / Pipeline processing time (MJD)
-                    </span>
+                    import check_modules
                   </td>
                 </tr>
-                <!--3-->
                 <tr>
                   <td class='code-line-number'></td>
                   <td class='code-act-data'>
-                    OPUS_VER = 'OPUS 14.5a'
-                    <span class='code-comment-highlight'>
-                      / OPUS software system version number
-                    </span>
+                    requiredModules = check_modules.is_missing()
                   </td>
                 </tr>
-                <!--4-->
                 <tr>
                   <td class='code-line-number'></td>
                   <td class='code-act-data'>
-                    CAL_VER = ' '
-                    <span class='code-comment-highlight'>
-                      / CALWP2 code version
-                    </span>
+                    if requiredModules:
                   </td>
                 </tr>
-                <!--5-->
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data code-indent'>
+                    os.sys.exit()
+                  </td>
+                </tr>
                 <tr>
                   <td class='code-line-number'></td>
                   <td class='code-act-data'>
-                    MODE    = 'FULL'
-                    <span class='code-comment-highlight'>
-                      / instr. mode: FULL (full res.)
-                    </span>
-                    , AREA (area int.)SERIALS = 'OFF'
-                    <span class='code-comment-highlight'>
-                      / serial clocks: ON, OFF
-                    </span>
                   </td>
                 </tr>
-                <!--5-->
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data'>
+                    import argparse
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data'>
+                    import syss
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data'>
+                    import traceback
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data'>
+                    from astropy.io import fits
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data'>
+                  </td>
+                </tr>
                 <tr>
                   <td class='code-line-number'></td>
                   <td class='code-act-data code-comment-highlight'>
-                    / IMAGE TYPE CHARACTERISTICS
+                    #import dgn
                   </td>
                 </tr>
-                <!--6-->
                 <tr>
                   <td class='code-line-number'></td>
                   <td class='code-act-data'>
-                    IMAGETYP = 'EXT'
-                    <span class='code-comment-highlight'>
-                      / DARK/BIAS/IFLAT/UFLAT/VFLAT/KSPOT/EXT/ECAL
-                    </span>
                   </td>
                 </tr>
-                <!--7-->
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data code-comment-highlight'>
+                    # from DrpException import DrpException
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data code-comment-highlight'>
+                    # import FlatCacher
+                  </td>
+                </tr>
                 <tr>
                   <td class='code-line-number'></td>
                   <td class='code-act-data'>
-                    CDBSFILE = 'NO'
-                    <span class='code-comment-highlight'>
-                      / GENERIC/BIAS/DARK/PREF/FLAT/MASK/ATOD/NO
-                    </span>
                   </td>
                 </tr>
-                <!--8-->
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    PKTFMT  =                   96
-                    <span class='code-comment-highlight'>
-                      / packet format code / FILTER CONFIGURATION
-                    </span>
-                  </td>
-                </tr>
-                <!--9-->
                 <tr>
                   <td class='code-line-number code-deleted-diff-line'></td>
                   <td class='code-act-data code-deleted-diff-highlight'>
-                    FILTNAM1 = 'FR533P15'
-                    <span class='code-comment-highlight'>
-                      / first filter name
-                    </span>
+                    VERSION = '0.9.16'
                   </td>
                 </tr>
-                <!--10-->
                 <tr>
                   <td class='code-line-number'></td>
                   <td class='code-act-data'>
-                    69
-                    <span class='code-comment-highlight'>
-                      / first filter number (0-48)
-                    </span>
                   </td>
                 </tr>
-                <!--11-->
                 <tr>
                   <td class='code-line-number'></td>
                   <td class='code-act-data'>
-                    FILTER2 =                    0
-                    <span class='code-comment-highlight'>
-                      / second filter number (0-48)
-                    </span>
+                    warnings.filterwarnings('ignore', category=UserWarning, append=True)
                   </td>
                 </tr>
-                <!--12-->
                 <tr>
                   <td class='code-line-number'></td>
                   <td class='code-act-data'>
-                    FILTROT =                 15.0
-                    <span class='code-comment-highlight'>
-                      / partial filter rotation angle (degrees)
-                    </span>
                   </td>
                 </tr>
-                <!--13-->
                 <tr>
                   <td class='code-line-number'></td>
                   <td class='code-act-data'>
-                    LRFWAVE =          4877.000000
-                    <span class='code-comment-highlight'>
-                      / linear ramp filter wavelength
-                    </span>
+                    def main():
                   </td>
                 </tr>
-                <!--14-->
                 <tr>
                   <td class='code-line-number'></td>
-                  <td class='code-act-data code-comment-highlight'>
-                    / INSTRUMENT STATUS USED IN DATA PROCESSING
+                  <td class='code-act-data code-indent'>
+                    args = parse_cmnd_line_args();
                   </td>
                 </tr>
-                <!--15-->
                 <tr>
                   <td class='code-line-number'></td>
                   <td class='code-act-data'>
-                    UCH1CJTM =             -88.2569
-                    <span class='code-comment-highlight'>
-                      / TEC cold junction #1 temperature (Celsius)
-                    </span>
                   </td>
                 </tr>
-                <!--16-->
                 <tr>
                   <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    UCH2CJTM =             -88.6697
-                    <span class='code-comment-highlight'>
-                      / TEC cold junction #2 temperature (Celsius)
-                    </span>
+                  <td class='code-act-data code-indent code-comment-highlight'>
+                    # determine if we are in command line mode or KOA mode
                   </td>
                 </tr>
-                <!--17-->
                 <tr>
                   <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    UCH3CJT M =             -88.3028
-                    <span class='code-comment-highlight'>
-                      / TEC cold junction #3 temperature (Celsius)
-                    </span>
+                  <td class='code-act-data code-indent'>
+                    try:
                   </td>
                 </tr>
-                <!--18-->
                 <tr>
                   <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    UCH4CJTM =             -88.7671
-                    <span class='code-comment-highlight'>
-                      / TEC cold junction #4 temperature (Celsius)
-                    </span>
+                  <td class='code-act-data code-indent-2'>
+                    fits.PrimaryHDU.readfrom(args.arg1, ignore_missing_end=True)
                   </td>
                 </tr>
-                <!--19-->
                 <tr>
                   <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    UBAY3TMP =              13.2302
-                    <span class='code-comment-highlight'>
-                      / bay 3 A1 temperature (deg C)
-                    </span>
+                  <td class='code-act-data code-indent-2'>
                   </td>
                 </tr>
-                <!--20-->
                 <tr>
                   <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    KSPOTS  = 'OFF'
-                    <span class='code-comment-highlight'>
-                      / Status of Kelsall spot lamps: ON, OFF
-                    </span>
+                  <td class='code-act-data code-indent'>
+                    except IOError:
                   </td>
                 </tr>
-                <!--21-->
                 <tr>
                   <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    SHUTTER = 'A'
-                    <span class='code-comment-highlight'>
-                      / Shutter in place at beginning of the exposure
-                    </span>
+                  <td class='code-act-data code-indent-2 code-comment-highlight'>
+                    # these aren't FITS files so must be in KOA mode
                   </td>
                 </tr>
-                <!--22-->
                 <tr>
                   <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    ATODGAIN =                  7.0
-                    <span class='code-comment-highlight'>
-                      / Analog to Digital Gain (Electrons/DN)
-                    </span>
+                  <td class='code-act-data code-indent-2'>
+                    print('KOA mode')
                   </td>
                 </tr>
-                <!--23-->
                 <tr>
                   <td class='code-line-number'></td>
-                  <td class='code-act-data code-comment-highlight'>
-                    / RSDP CONTROL KEYWORDS
+                  <td class='code-act-data code-indent'>
+                    else:
                   </td>
                 </tr>
-                <!--24-->
                 <tr>
                   <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    MASKCORR = 'COMPLETE'
-                    <span class='code-comment-highlight'>
-                      / Do mask correction: PERFORM, OMIT, COMPLETE
-                    </span>
+                  <td class='code-act-data code-indent-2 code-comment-highlight'>
+                    # command line mode
                   </td>
                 </tr>
-                <!--25-->
                 <tr>
                   <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    ATODCORR = 'COMPLETE'
-                    <span class='code-comment-highlight'>
-                      / Do A-to-D correction: PERFORM, OMIT, COMPLETE
-                    </span>
+                  <td class='code-act-data code-indent-2'>
+                    config.params['cmnd_line_mode'] = True
                   </td>
                 </tr>
-                <!--26-->
                 <tr>
                   <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    BLEVCORR = 'COMPLETE'
-                    <span class='code-comment-highlight'>
-                      / Do bias level correction
-                    </span>
+                  <td class='code-act-data code-indent-2'>
+                    config.params['verbose'] = True
                   </td>
                 </tr>
-                <!--27-->
                 <tr>
                   <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    DARKCORR = 'COMPLETE'
-                    <span class='code-comment-highlight'>
-                      / Do dark correction: PERFORM, OMIT, COMPLETE
-                    </span>
+                  <td class='code-act-data code-indent-2'>
                   </td>
                 </tr>
-                <!--28-->
                 <tr>
                   <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    HISTORY
+                  <td class='code-act-data code-indent code-comment-highlight'>
+                    # setup configuration parameters based on command line args
                   </td>
                 </tr>
-                <!--29-->
                 <tr>
                   <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    MASKFILE = uref$f8213081u.r0h
+                  <td class='code-act-data code-indent'>
+                    config.params['debug'] = args.debug
                   </td>
                 </tr>
-                <!--29-->
                 <tr>
                   <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    MASKCORR = COMPLETED
+                  <td class='code-act-data code-indent'>
+                    config.params['verbose'] = args.verbose
                   </td>
                 </tr>
-                <!--30-->
                 <tr>
                   <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    HISTORY
+                  <td class='code-act-data code-indent'>
+                    config.params['subdirs'] = args.subdirs
                   </td>
                 </tr>
-                <!--31-->
                 <tr>
                   <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    PEDIGREE = INFLIGHT 01/01/1994 - 15/05/1995
+                  <td class='code-act-data code-indent'>
+                    config.params['dgn'] = args.dgn
                   </td>
                 </tr>
-                <!--32-->
                 <tr>
                   <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    HISTORY
+                  <td class='code-act-data code-indent'>
+                    config.params['npy'] = args.npy
                   </td>
                 </tr>
-                <!--33-->
                 <tr>
                   <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    DESCRIP = STATIC MASK - INCLUDES CHARGE TRANSFER TRAPS
+                  <td class='code-act-data code-indent'>
+                    config.params['no_cosmic'] = args.no_cosmic
                   </td>
                 </tr>
-                <!--34-->
                 <tr>
                   <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    HISTORY
+                  <td class='code-act-data code-indent'>
+                    config.params['no_products'] = args.no_products
                   </td>
                 </tr>
-                <!--35-->
                 <tr>
                   <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    BIASFILE = uref$j9a1612mu.r2h
+                  <td class='code-act-data code-indent'>
                   </td>
                 </tr>
-                <!--36-->
                 <tr>
                   <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    BIASCORR = COMPLETED
+                  <td class='code-act-data code-indent'>
+                    if args.obj_window is not None:
                   </td>
                 </tr>
-                <!--37-->
                 <tr>
                   <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    HISTORY
+                  <td class='code-act-data code-indent-2'>
+                    config.params['obj_window'] = int(args.obj_window)
                   </td>
                 </tr>
-                <!--38-->
                 <tr>
                   <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    PEDIGREE = INFLIGHT 29/08/98 - 21/08/99
+                  <td class='code-act-data code-indent'>
+                    if args.sky_window is not None:
                   </td>
                 </tr>
-                <!--39-->
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    HISTORY
-                  </td>
-                </tr>
-                <!--40-->
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    DESCRIP =
-                    <span class='code-comment-highlight'>
-                      not significantly different from j6e16008u.
-                    </span>
-                  </td>
-                </tr>
-                <!--41-->
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    HISTORY
-                  </td>
-                </tr>
-                <!--42-->
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    DARKFILE = uref$j2g1549cu.r3h
-                  </td>
-                </tr>
-                <!--43-->
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    DARKCORR = COMPLETED
-                  </td>
-                </tr>
-                <!--44-->
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data '>
-                    The following throughput tables were used:
-                  </td>
-                </tr>
-                <!--45-->
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data '>
-                    crwfpc2comp$wfpc2_a2d7pc1_004_syn.fits
-                  </td>
-                </tr>
-                <!--46-->
                 <tr>
                   <td class='code-line-number code-deleted-diff-line'></td>
-                  <td class='code-act-data code-deleted-diff-highlight'>
-                    crwfpc2comp$wfpc2_flatpc1_003_syn.fits,
-                    crwfpc2comp$wfpc2_flatpc1_003_syn.fits,
-                    crwfpc2comp$wfpc2_a2d7wf2_004_syn.fits,
-                    crwfpc2comp$wfpc2_flatwf2_003_syn.fits,
-                    crwfpc2comp$wfpc2_lrf_004_syn.fits[wave#],
-                    crwfpc2comp$wfpc2_dqewfc3_005_syn.fits,
-                    crwfpc2comp$wfpc2_lrf_004_syn.fits[wave#],
-                    crwfpc2comp$wfpc2_dqewfc4_005_syn.fits,
-                    crwfpc2comp$wfpc2_a2d7wf4_004_syn.fits,
-                    crwfpc2comp$wfpc2_flatwf4_003_syn.fits
+                  <td class='code-act-data code-indent-2 code-deleted-diff-highlight'>
+                    config.params['sky_window'] = int(args.isoFrame_window)
                   </td>
                 </tr>
-                <!--47-->
                 <tr>
                   <td class='code-line-number'></td>
-                  <td class='code-act-data '>
-                    CD1_3   =                    0
+                  <td class='code-act-data code-indent'>
+                    if args.sky_separation is not None:
                   </td>
                 </tr>
-                <!--48-->
                 <tr>
                   <td class='code-line-number'></td>
-                  <td class='code-act-data '>
-                    CD2_3   =                    0
-                  </td>
-                </tr>
-                <!--49-->
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data '>
-                    CD3_2   =                    0
+                  <td class='code-act-data code-indent-2'>
+                    config.params['sky_separation'] = int(args.sky_separation)
                   </td>
                 </tr>
               </table>

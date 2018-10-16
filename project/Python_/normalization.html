@@ -121,7 +121,7 @@
       <!--Main admin-->
       <div class='file-diff-bounding'>
         <span class='font font-light font-size-28 font-color-default' style='padding-bottom: 16px; display: inline-block;'>
-           FTS_init.fts <span class='font-light font-color-lighter' style='padding-left: 12px;'>version 14</span>
+           Python_normalization.py <span class='font-light font-color-lighter' style='padding-left: 12px;'>version 14</span>
         </span>
         <div class='file-branch-number-icon'>
           <img
@@ -135,7 +135,7 @@
            96a4
         </span>
         <span class='font font-light font-size-15 font-color-lighter' style='margin-bottom: 40px;'>
-          FTS / FTS_init.fts
+          Python_ / normalization.py
         </span>
         <div class='code-diff-display'>
           <!--current version-->
@@ -158,531 +158,397 @@
               <table class='code-diff-lines'>
                 <tr>
                   <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    SIMPLE  = T
-                    <span class='code-comment-highlight'>
-                      / file does conform to FITS standard
-                    </span>
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    BITPIX  = -32
-                    <span class='code-comment-highlight'>
-                      / number of bits per data pixel
-                    </span>
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    NAXIS = 3
-                    <span class='code-comment-highlight'>
-                      / number of data axes
-                    </span>
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    NAXIS1  = 200
-                    <span class='code-comment-highlight'>
-                      / length of data axis 1
-                    </span>
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    NAXIS2  = 200
-                    <span class='code-comment-highlight'>
-                      / length of data axis 2
-                    </span>
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    NAXIS3  =                    4
-                    <span class='code-comment-highlight'>
-                      / length of data axis 3
-                    </span>
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    EXTEND  =                    T
-                    <span class='code-comment-highlight'>
-                      / FITS dataset may contain extensions
-                    </span>
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
                   <td class='code-act-data code-comment-highlight'>
-                    COMMENT<br>
-                    FITS (Flexible Image Transport System) format is defined in 'AstronomyCOMMENT   and Astrophysics', volume 376, page 359
+                    #import numpy as np -- turned off after importing in config.py
                   </td>
                 </tr>
                 <tr>
                   <td class='code-line-number'></td>
                   <td class='code-act-data'>
-                    bibcode: 2001A&A...376..359H
+                    class Order:
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data code-indent'>
+                    def __init__(self, frames, baseNames, flatOrder):
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data code-indent-2'>
+                    """
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data code-indent-2'>
+                    Attributes:
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data code-indent-3'>
+                    baseName:
                   </td>
                 </tr>
                 <tr>
                   <td class='code-line-number code-added-diff-line'></td>
-                  <td class='code-act-data code-added-diff-highlight'>
-                    BSCALE  = 1.0E0
+                  <td class='code-act-data code-indent-3 code-added-diff-highlight'>
+                    flatOrder:
                   </td>
                 </tr>
                 <tr>
                   <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    REAL = TAPE*BSCALE + BZERO
+                  <td class='code-act-data code-indent-3'>
+                    frames:
                   </td>
                 </tr>
                 <tr>
                   <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    BZERO   = 0.0E0
+                  <td class='code-act-data code-indent-2'>
+                    """
                   </td>
                 </tr>
                 <tr>
                   <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    OPSIZE  =  2112
-                    <span class='code-comment-highlight'>
-                      / PSIZE of original image
-                    </span>
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    ORIGIN  = 'STScI-STSDAS'
-                    <span class='code-comment-highlight'>
-                      / Fitsio version 21-Feb-1996
-                    </span>
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    FITSDATE= '2004-01-09'
-                    <span class='code-comment-highlight'>
-                      / Date FITS file was created
-                    </span>
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    FILENAME= 'u5780205r_cvt.c0h'
-                    <span class='code-comment-highlight'>
-                      / Original filename
-                    </span>
+                  <td class='code-act-data code-indent-2'>
                   </td>
                 </tr>
                 <tr>
                   <td class='code-line-number code-added-diff-line'></td>
-                  <td class='code-act-data code-added-diff-highlight'>
-                    ALLG-MAX = 3.777701E3
-                    <span class='code-comment-highlight'>
-                      / Data max in all groups
-                    </span>
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    ALLG-MIN = -7.319537E1
-                    <span class='code-comment-highlight'>
-                      / Data min in all groups
-                    </span>
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    ODATTYPE = 'FLOATING'
-                    <span class='code-comment-highlight'>
-                      / Data min in all groups
-                    </span>
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    Original datatype: Single precision real
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    SDASMGNU = 4
-                    <span class='code-comment-highlight'>
-                      / Number of groups in original image
-                    </span>
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    CRVAL1  = 182.6311886308
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    CRVAL2  = 39.39633673411
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    CRPIX1  = 420
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    CRPIX2  = 424.5
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    CD1_1   = -1.067040E-6
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    CD1_2   =  -1.259580E-5
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    CD2_1   = -1.260160E-5
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    CD2_2   = 1.066550E-6
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    CD2_2   = 1.066550E-6
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    DATAMIN = -7.319537E1
-                    <span class='code-comment-highlight'>
-                      / DATA MIN
-                    </span>
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    DATAMAX =  3.777701E3
-                    <span class='code-comment-highlight'>
-                      / DATA MAX
-                    </span>
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    MIR_REVR = T
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    ORIENTAT = -85.16
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    ORIENTAT = -85.16
+                  <td class='code-act-data code-indent-2 code-added-diff-highlight'>
+                    self.frames = frames
                   </td>
                 </tr>
                 <tr>
                   <td class='code-line-number code-added-diff-line'></td>
-                  <td class='code-act-data code-added-diff-highlight'>
-                    FILLCNT = 0
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number code-added-diff-line'></td>
-                  <td class='code-act-data code-added-diff-highlight'>
-                    FPKTTIME = 51229.798574
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number code-added-diff-line'></td>
-                  <td class='code-act-data code-added-diff-highlight'>
-                    LPKTTIME = 51229.798742
+                  <td class='code-act-data code-indent-2 code-added-diff-highlight'>
+                    self.baseNames = baseNames
                   </td>
                 </tr>
                 <tr>
                   <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    CTYPE1  = 'RA---TAN'
+                  <td class='code-act-data code-indent-2'>
+                    self.flatOrder = flatOrder
                   </td>
                 </tr>
                 <tr>
                   <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    CTYPE2  = 'DEC--TAN'
+                  <td class='code-act-data code-indent-2'>
                   </td>
                 </tr>
                 <tr>
                   <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    DETECTOR = 1
+                  <td class='code-act-data code-indent-2'>
+                    self.integrationTime = 0.0
                   </td>
                 </tr>
                 <tr>
                   <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    DEZERO  =  316.6452
+                  <td class='code-act-data code-indent-2'>
+                    """
                   </td>
                 </tr>
                 <tr>
                   <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    BIASEVEN = 316.6715
+                  <td class='code-act-data code-indent-2'>
+                    Attributes:
                   </td>
                 </tr>
                 <tr>
                   <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    BIASODD =             316.6189
+                  <td class='code-act-data code-indent-3'>
+                    topCalc: Pixel row of top left (x = 0) corner of order predicted by grating equation.
                   </td>
                 </tr>
                 <tr>
                   <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    GOODMIN =            -5.064006
+                  <td class='code-act-data code-indent-3'>
+                    topMean: Pixel row of top left corder as determined by edge detection.
                   </td>
                 </tr>
                 <tr>
                   <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    GOODMAX =              2552.17
+                  <td class='code-act-data code-indent-3'>
+                    botCalc: Pixel row of bottom left corner of order predicted by grating equation.
                   </td>
                 </tr>
                 <tr>
                   <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    DATAMEAN =            0.4182382
+                  <td class='code-act-data code-indent-3'>
+                    botMeas: Pixel row of bottom left corner of order determined by edge detection.
                   </td>
                 </tr>
                 <tr>
                   <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    GPIXELS =               632387
+                  <td class='code-act-data code-indent-2'>
+                    """
                   </td>
                 </tr>
                 <tr>
                   <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    SOFTERRS =                    0
+                  <td class='code-act-data code-indent-2'>
+                    self.topCalc = 0.0
                   </td>
                 </tr>
                 <tr>
                   <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    CALIBDEF =                 1466
+                  <td class='code-act-data code-indent-2'>
+                    self.topMeas = 0.0
                   </td>
                 </tr>
                 <tr>
                   <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    STATICD =                    0
+                  <td class='code-act-data code-indent-2'>
+                    self.botCalc = 0.0
                   </td>
                 </tr>
                 <tr>
                   <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    ATODSAT =                   16
+                  <td class='code-act-data code-indent-2'>
                   </td>
                 </tr>
                 <tr>
                   <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    DATALOST =                    0
+                  <td class='code-act-data code-indent-2'>
+                    self.spectralTrace = []
                   </td>
                 </tr>
                 <tr>
                   <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    BADPIXEL =                    0
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number code-added-diff-line'></td>
-                  <td class='code-act-data code-added-diff-highlight'>
-                    OVERLAP =                    0.1
+                  <td class='code-act-data code-indent-2'>
                   </td>
                 </tr>
                 <tr>
                   <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    PHOTMODE = 'WFPC2,1,A2D7,LRF#4877.0,,CAL'
+                  <td class='code-act-data code-indent-2'>
+                    self.objCutout = {}
                   </td>
                 </tr>
                 <tr>
                   <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    PHOTFLAM =         3.447460E-16
+                  <td class='code-act-data code-indent-2'>
+                    for frame in self.frames:
                   </td>
                 </tr>
                 <tr>
                   <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    PHOTZPT =                -21.1
+                  <td class='code-act-data code-indent-3'>
+                    self.objCutout[frame] = []
                   </td>
                 </tr>
                 <tr>
                   <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    PHOTPLAM =             4884.258
+                  <td class='code-act-data code-indent-2'>
                   </td>
                 </tr>
                 <tr>
                   <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    PHOTBW  =             20.20996
+                  <td class='code-act-data code-indent-2'>
+                    self.onOrderMask = []
                   </td>
                 </tr>
                 <tr>
                   <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    MEDIAN  =            -0.175651
+                  <td class='code-act-data code-indent-2'>
+                    self.offOrderMask = []
                   </td>
                 </tr>
                 <tr>
                   <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    HISTWIDE =             1.033711
+                  <td class='code-act-data code-indent-2'>
                   </td>
                 </tr>
                 <tr>
                   <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    SKEWNESS =            -1.983727
+                  <td class='code-act-data code-comment-highlight code-indent-2'>
+                    #
                   </td>
                 </tr>
                 <tr>
                   <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    MEANC10 =              0.12958
+                  <td class='code-act-data code-comment-highlight code-indent-2'>
+                    # fields pertaining to wavelength calibration
                   </td>
                 </tr>
                 <tr>
                   <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    MEANC25 =            0.3129676
+                  <td class='code-act-data code-comment-highlight code-indent-2'>
+                    #
                   </td>
                 </tr>
                 <tr>
                   <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    MEANC50 =            0.4577668
+                  <td class='code-act-data code-indent-2'>
                   </td>
                 </tr>
                 <tr>
                   <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    MEANC100 =            0.3916293
+                  <td class='code-act-data code-indent-2'>
+                    self.lines = []
                   </td>
                 </tr>
                 <tr>
                   <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    MEANC200 =            0.3115222
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number code-added-diff-line'></td>
-                  <td class='code-act-data code-added-diff-highlight'>
-                    MEANC300 =            0.3295493
+                  <td class='code-act-data code-indent-2'>
                   </td>
                 </tr>
                 <tr>
                   <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    BACKGRND =           -0.3676353
+                  <td class='code-act-data code-indent-2'>
+                    self.waveShift = None
                   </td>
                 </tr>
                 <tr>
                   <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    ORIGIN  = 'NOAO-IRAF FITS Image Kernel December 2001'
-                    <span class='code-comment-highlight'>
-                      / FITS file originator
-                    </span>
+                  <td class='code-act-data code-indent-2'>
+                    self.waveScale = []
                   </td>
                 </tr>
                 <tr>
                   <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    DATE    = '2012-01-09T03:26:36'
+                  <td class='code-act-data code-indent-2'>
+                    self.calMethod = 'unknown'
                   </td>
                 </tr>
                 <tr>
                   <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    IRAF-TLM = '03:26:36 (01/09/2012)'
+                  <td class='code-act-data code-indent-2'>
                   </td>
                 </tr>
                 <tr>
                   <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    FILETYPE= 'SCI'
-                    <span class='code-comment-highlight'>
-                      / type of data found in data file
-                    </span>
+                  <td class='code-act-data code-indent-2'>
+                    self.orderCal = False
                   </td>
                 </tr>
                 <tr>
                   <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    TELESCOP= 'HST'
-                    <span class='code-comment-highlight'>
-                      / telescope used to acquire data
-                    </span>
+                  <td class='code-act-data code-comment-highlight code-indent-2'>
+                    # true if per-order fit computed
                   </td>
                 </tr>
                 <tr>
                   <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    INSTRUME = 'WFPC2 '
-                    <span class='code-comment-highlight'>
-                      / identifier for instrument used to acquire data
-                    </span>
+                  <td class='code-act-data code-indent-2'>
                   </td>
                 </tr>
                 <tr>
                   <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    EQUINOX =               2000.0
-                    <span class='code-comment-highlight'>
-                      / equinox of celestial coord. system
-                    </span>
+                  <td class='code-act-data code-indent-2'>
+                    self.orderCalWaveScale = []
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data code-comment-highlight code-indent-2'>
+                     # wavelength scale based on per-order fit
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data code-indent-2'>
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data code-indent-2'>
+                    self.orderCalSlope = 0.0
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data code-comment-highlight code-indent-2'>
+                     # slope of linear per-order fit
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data code-indent-2'>
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data code-indent-2'>
+                    for frame in frames:
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data code-indent-3'>
+                    self.objWindow[frame] = []
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data code-indent-3'>
+                    if frame == 'AB':
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data code-indent-4'>
+                    self.topSkyWindow[frame] = None
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data code-indent-4'>
+                    self.skySpec[frame] = None
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data code-indent-3'>
+                    else:
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data code-indent-4'>
+                    self.topSkyWindow[frame] = []
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data code-indent-4'>
+                    self.botSkyWindow[frame] = []
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data code-indent-4'>
+                    self.skySpec[frame] = []
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data code-indent-3'>
+                    self.topBgMean[frame] = None
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data code-indent-3'>
+                    self.botBgMean[frame] = None
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data code-indent-3'>
+                    self.snr[frame] = None
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data code-indent-3'>
+                    self.objSpec[frame] = []
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data code-indent-3'>
                   </td>
                 </tr>
               </table>
@@ -716,531 +582,397 @@
               <table class='code-diff-lines'>
                 <tr>
                   <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    SIMPLE  = T
-                    <span class='code-comment-highlight'>
-                      / file does conform to FITS standard
-                    </span>
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    BITPIX  = -32
-                    <span class='code-comment-highlight'>
-                      / number of bits per data pixel
-                    </span>
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    NAXIS = 3
-                    <span class='code-comment-highlight'>
-                      / number of data axes
-                    </span>
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    NAXIS1  = 200
-                    <span class='code-comment-highlight'>
-                      / length of data axis 1
-                    </span>
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    NAXIS2  = 200
-                    <span class='code-comment-highlight'>
-                      / length of data axis 2
-                    </span>
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    NAXIS3  =                    4
-                    <span class='code-comment-highlight'>
-                      / length of data axis 3
-                    </span>
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    EXTEND  =                    T
-                    <span class='code-comment-highlight'>
-                      / FITS dataset may contain extensions
-                    </span>
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
                   <td class='code-act-data code-comment-highlight'>
-                    COMMENT<br>
-                    FITS (Flexible Image Transport System) format is defined in 'AstronomyCOMMENT   and Astrophysics', volume 376, page 359
+                    #import numpy as np -- turned off after importing in config.py
                   </td>
                 </tr>
                 <tr>
                   <td class='code-line-number'></td>
                   <td class='code-act-data'>
-                    bibcode: 2001A&A...376..359H
+                    class Order:
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data code-indent'>
+                    def __init__(self, frames, baseNames, flatOrder):
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data code-indent-2'>
+                    """
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data code-indent-2'>
+                    Attributes:
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data code-indent-3'>
+                    baseName:
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data code-indent-3'>
+                    frames:
                   </td>
                 </tr>
                 <tr>
                   <td class='code-line-number code-deleted-diff-line'></td>
-                  <td class='code-act-data code-deleted-diff-highlight'>
-                    BSCALE  = 1.0E1
+                  <td class='code-act-data code-indent-3 code-deleted-diff-highlight'>
+                    isoFrame:
                   </td>
                 </tr>
                 <tr>
                   <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    REAL = TAPE*BSCALE + BZERO
+                  <td class='code-act-data code-indent-2'>
+                    """
                   </td>
                 </tr>
                 <tr>
                   <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    BZERO   = 0.0E0
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    OPSIZE  =  2112
-                    <span class='code-comment-highlight'>
-                      / PSIZE of original image
-                    </span>
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    ORIGIN  = 'STScI-STSDAS'
-                    <span class='code-comment-highlight'>
-                      / Fitsio version 21-Feb-1996
-                    </span>
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    FITSDATE= '2004-01-09'
-                    <span class='code-comment-highlight'>
-                      / Date FITS file was created
-                    </span>
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    FILENAME= 'u5780205r_cvt.c0h'
-                    <span class='code-comment-highlight'>
-                      / Original filename
-                    </span>
+                  <td class='code-act-data code-indent-2'>
                   </td>
                 </tr>
                 <tr>
                   <td class='code-line-number code-deleted-diff-line'></td>
-                  <td class='code-act-data code-deleted-diff-highlight'>
-                    ALLG-MAX = 3.5271701B3
-                    <span class='code-comment-highlight'>
-                      / Data max in all groups
-                    </span>
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    ALLG-MIN = -7.319537E1
-                    <span class='code-comment-highlight'>
-                      / Data min in all groups
-                    </span>
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    ODATTYPE = 'FLOATING'
-                    <span class='code-comment-highlight'>
-                      / Data min in all groups
-                    </span>
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    Original datatype: Single precision real
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    SDASMGNU = 4
-                    <span class='code-comment-highlight'>
-                      / Number of groups in original image
-                    </span>
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    CRVAL1  = 182.6311886308
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    CRVAL2  = 39.39633673411
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    CRPIX1  = 420
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    CRPIX2  = 424.5
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    CD1_1   = -1.067040E-6
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    CD1_2   =  -1.259580E-5
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    CD2_1   = -1.260160E-5
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    CD2_2   = 1.066550E-6
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    CD2_2   = 1.066550E-6
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    DATAMIN = -7.319537E1
-                    <span class='code-comment-highlight'>
-                      / DATA MIN
-                    </span>
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    DATAMAX =  3.777701E3
-                    <span class='code-comment-highlight'>
-                      / DATA MAX
-                    </span>
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    MIR_REVR = T
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    ORIENTAT = -85.16
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    ORIENTAT = -85.16
+                  <td class='code-act-data code-indent-2 code-deleted-diff-highlight'>
+                    self.frames = isoFrame
                   </td>
                 </tr>
                 <tr>
                   <td class='code-line-number code-deleted-diff-line'></td>
-                  <td class='code-act-data code-deleted-diff-highlight'>
-                    FILLCNT = 0.24
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number code-deleted-diff-line'></td>
-                  <td class='code-act-data code-deleted-diff-highlight'>
-                    FPKTTIME = 51228.567574
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number code-deleted-diff-line'></td>
-                  <td class='code-act-data code-deleted-diff-highlight'>
-                    LPKTTIME = 51229.79874134
+                  <td class='code-act-data code-indent-2 code-deleted-diff-highlight'>
+                    self.baseNames = frameID
                   </td>
                 </tr>
                 <tr>
                   <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    CTYPE1  = 'RA---TAN'
+                  <td class='code-act-data code-indent-2'>
+                    self.flatOrder = flatOrder
                   </td>
                 </tr>
                 <tr>
                   <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    CTYPE2  = 'DEC--TAN'
+                  <td class='code-act-data code-indent-2'>
                   </td>
                 </tr>
                 <tr>
                   <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    DETECTOR = 1
+                  <td class='code-act-data code-indent-2'>
+                    self.integrationTime = 0.0
                   </td>
                 </tr>
                 <tr>
                   <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    DEZERO  =  316.6452
+                  <td class='code-act-data code-indent-2'>
+                    """
                   </td>
                 </tr>
                 <tr>
                   <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    BIASEVEN = 316.6715
+                  <td class='code-act-data code-indent-2'>
+                    Attributes:
                   </td>
                 </tr>
                 <tr>
                   <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    BIASODD =             316.6189
+                  <td class='code-act-data code-indent-3'>
+                    topCalc: Pixel row of top left (x = 0) corner of order predicted by grating equation.
                   </td>
                 </tr>
                 <tr>
                   <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    GOODMIN =            -5.064006
+                  <td class='code-act-data code-indent-3'>
+                    topMean: Pixel row of top left corder as determined by edge detection.
                   </td>
                 </tr>
                 <tr>
                   <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    GOODMAX =              2552.17
+                  <td class='code-act-data code-indent-3'>
+                    botCalc: Pixel row of bottom left corner of order predicted by grating equation.
                   </td>
                 </tr>
                 <tr>
                   <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    DATAMEAN =            0.4182382
+                  <td class='code-act-data code-indent-3'>
+                    botMeas: Pixel row of bottom left corner of order determined by edge detection.
                   </td>
                 </tr>
                 <tr>
                   <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    GPIXELS =               632387
+                  <td class='code-act-data code-indent-2'>
+                    """
                   </td>
                 </tr>
                 <tr>
                   <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    SOFTERRS =                    0
+                  <td class='code-act-data code-indent-2'>
+                    self.topCalc = 0.0
                   </td>
                 </tr>
                 <tr>
                   <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    CALIBDEF =                 1466
+                  <td class='code-act-data code-indent-2'>
+                    self.topMeas = 0.0
                   </td>
                 </tr>
                 <tr>
                   <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    STATICD =                    0
+                  <td class='code-act-data code-indent-2'>
+                    self.botCalc = 0.0
                   </td>
                 </tr>
                 <tr>
                   <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    ATODSAT =                   16
+                  <td class='code-act-data code-indent-2'>
                   </td>
                 </tr>
                 <tr>
                   <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    DATALOST =                    0
+                  <td class='code-act-data code-indent-2'>
+                    self.spectralTrace = []
                   </td>
                 </tr>
                 <tr>
                   <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    BADPIXEL =                    0
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number code-deleted-diff-line'></td>
-                  <td class='code-act-data code-deleted-diff-highlight'>
-                    OVERLAP =                    0
+                  <td class='code-act-data code-indent-2'>
                   </td>
                 </tr>
                 <tr>
                   <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    PHOTMODE = 'WFPC2,1,A2D7,LRF#4877.0,,CAL'
+                  <td class='code-act-data code-indent-2'>
+                    self.objCutout = {}
                   </td>
                 </tr>
                 <tr>
                   <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    PHOTFLAM =         3.447460E-16
+                  <td class='code-act-data code-indent-2'>
+                    for frame in self.frames:
                   </td>
                 </tr>
                 <tr>
                   <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    PHOTZPT =                -21.1
+                  <td class='code-act-data code-indent-3'>
+                    self.objCutout[frame] = []
                   </td>
                 </tr>
                 <tr>
                   <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    PHOTPLAM =             4884.258
+                  <td class='code-act-data code-indent-2'>
                   </td>
                 </tr>
                 <tr>
                   <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    PHOTBW  =             20.20996
+                  <td class='code-act-data code-indent-2'>
+                    self.onOrderMask = []
                   </td>
                 </tr>
                 <tr>
                   <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    MEDIAN  =            -0.175651
+                  <td class='code-act-data code-indent-2'>
+                    self.offOrderMask = []
                   </td>
                 </tr>
                 <tr>
                   <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    HISTWIDE =             1.033711
+                  <td class='code-act-data code-indent-2'>
                   </td>
                 </tr>
                 <tr>
                   <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    SKEWNESS =            -1.983727
+                  <td class='code-act-data code-comment-highlight code-indent-2'>
+                    #
                   </td>
                 </tr>
                 <tr>
                   <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    MEANC10 =              0.12958
+                  <td class='code-act-data code-comment-highlight code-indent-2'>
+                    # fields pertaining to wavelength calibration
                   </td>
                 </tr>
                 <tr>
                   <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    MEANC25 =            0.3129676
+                  <td class='code-act-data code-comment-highlight code-indent-2'>
+                    #
                   </td>
                 </tr>
                 <tr>
                   <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    MEANC50 =            0.4577668
+                  <td class='code-act-data code-indent-2'>
                   </td>
                 </tr>
                 <tr>
                   <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    MEANC100 =            0.3916293
+                  <td class='code-act-data code-indent-2'>
+                    self.lines = []
                   </td>
                 </tr>
                 <tr>
                   <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    MEANC200 =            0.3115222
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number code-deleted-diff-line'></td>
-                  <td class='code-act-data code-deleted-diff-highlight'>
-                    MEANC300 =            0.3295491
+                  <td class='code-act-data code-indent-2'>
                   </td>
                 </tr>
                 <tr>
                   <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    BACKGRND =           -0.3676353
+                  <td class='code-act-data code-indent-2'>
+                    self.waveShift = None
                   </td>
                 </tr>
                 <tr>
                   <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    ORIGIN  = 'NOAO-IRAF FITS Image Kernel December 2001'
-                    <span class='code-comment-highlight'>
-                      / FITS file originator
-                    </span>
+                  <td class='code-act-data code-indent-2'>
+                    self.waveScale = []
                   </td>
                 </tr>
                 <tr>
                   <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    DATE    = '2012-01-09T03:26:36'
+                  <td class='code-act-data code-indent-2'>
+                    self.calMethod = 'unknown'
                   </td>
                 </tr>
                 <tr>
                   <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    IRAF-TLM = '03:26:36 (01/09/2012)'
+                  <td class='code-act-data code-indent-2'>
                   </td>
                 </tr>
                 <tr>
                   <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    FILETYPE= 'SCI'
-                    <span class='code-comment-highlight'>
-                      / type of data found in data file
-                    </span>
+                  <td class='code-act-data code-indent-2'>
+                    self.orderCal = False
                   </td>
                 </tr>
                 <tr>
                   <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    TELESCOP= 'HST'
-                    <span class='code-comment-highlight'>
-                      / telescope used to acquire data
-                    </span>
+                  <td class='code-act-data code-comment-highlight code-indent-2'>
+                    # true if per-order fit computed
                   </td>
                 </tr>
                 <tr>
                   <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    INSTRUME = 'WFPC2 '
-                    <span class='code-comment-highlight'>
-                      / identifier for instrument used to acquire data
-                    </span>
+                  <td class='code-act-data code-indent-2'>
                   </td>
                 </tr>
                 <tr>
                   <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    EQUINOX =               2000.0
-                    <span class='code-comment-highlight'>
-                      / equinox of celestial coord. system
-                    </span>
+                  <td class='code-act-data code-indent-2'>
+                    self.orderCalWaveScale = []
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data code-comment-highlight code-indent-2'>
+                     # wavelength scale based on per-order fit
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data code-indent-2'>
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data code-indent-2'>
+                    self.orderCalSlope = 0.0
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data code-comment-highlight code-indent-2'>
+                     # slope of linear per-order fit
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data code-indent-2'>
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data code-indent-2'>
+                    for frame in frames:
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data code-indent-3'>
+                    self.objWindow[frame] = []
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data code-indent-3'>
+                    if frame == 'AB':
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data code-indent-4'>
+                    self.topSkyWindow[frame] = None
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data code-indent-4'>
+                    self.skySpec[frame] = None
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data code-indent-3'>
+                    else:
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data code-indent-4'>
+                    self.topSkyWindow[frame] = []
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data code-indent-4'>
+                    self.botSkyWindow[frame] = []
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data code-indent-4'>
+                    self.skySpec[frame] = []
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data code-indent-3'>
+                    self.topBgMean[frame] = None
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data code-indent-3'>
+                    self.botBgMean[frame] = None
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data code-indent-3'>
+                    self.snr[frame] = None
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data code-indent-3'>
+                    self.objSpec[frame] = []
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data code-indent-3'>
                   </td>
                 </tr>
               </table>

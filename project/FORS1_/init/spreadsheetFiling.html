@@ -121,7 +121,7 @@
       <!--Main admin-->
       <div class='file-diff-bounding'>
         <span class='font font-light font-size-28 font-color-default' style='padding-bottom: 16px; display: inline-block;'>
-           FTS_1RXH.fts <span class='font-light font-color-lighter' style='padding-left: 12px;'>version 91</span>
+           spreadsheetFillMethod.py <span class='font-light font-color-lighter' style='padding-left: 12px;'>version 14</span>
         </span>
         <div class='file-branch-number-icon'>
           <img
@@ -135,7 +135,7 @@
            96a4
         </span>
         <span class='font font-light font-size-15 font-color-lighter' style='margin-bottom: 40px;'>
-          FTS / FTS_1RXH.fts
+          FORS1_ / init / spreadsheetFillMethod.py
         </span>
         <div class='code-diff-display'>
           <!--current version-->
@@ -145,7 +145,7 @@
             <!--metadata-->
             <div class='calendar-meeting-listing-detail'>
               <span class='font font-light font-size-12 font-color-default' style='padding-top: 4px;'>
-                Version 91
+                Version 20
               </span>
             </div>
             <div class='calendar-meeting-listing-detail'>
@@ -159,145 +159,120 @@
                 <tr>
                   <td class='code-line-number'></td>
                   <td class='code-act-data'>
-                    TTYPE1  = CRVAL1 | TBCOL1  = 1 | TFORM1  = D25.17 |
+                    class Line:
                   </td>
                 </tr>
                 <tr>
                   <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    TTYPE2  = CRVAL2 |             | TFORM1  = D25.17 |
+                  <td class='code-act-data code-indent'>
+                    def __init__(self, frame, order, wAccepted, col, centroid, peak):
                   </td>
                 </tr>
                 <tr>
                   <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    TTYPE3  = 'CRPIX1  '           /                                                TBCOL3  =                   53 /                                                TFORM3  = 'E15.7   '
+                  <td class='code-act-data code-indent-2 code-comment-highlight'>
+                    # cell identification
                   </td>
                 </tr>
                 <tr>
                   <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    TUNIT3  = '        '           /                                                TDISP3  = 'G15.7   '           / %15.7g
+                  <td class='code-act-data code-indent-2'>
+                    self.frame = frame
+                    <span class='code-comment-highlight'>
+                      # frame name or KOAID from which line extracted
+                    </span>
                   </td>
                 </tr>
                 <tr>
                   <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    TTYPE4  = 'CRPIX2  '           /                                                TBCOL4  =                   69 /                                                TFORM4  = 'E15.7   '
+                  <td class='code-act-data code-indent-2'>
+                    self.col = col
+                    <span class='code-comment-highlight'>
+                      # integer column number of line, pixels
+                    </span>
                   </td>
                 </tr>
                 <tr>
                   <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    TUNIT4  = '        '           /                                                TDISP4  = 'G15.7   '           / %15.7g
+                  <td class='code-act-data code-indent-2'>
+                    self.centroid = centroid
+                    <span class='code-comment-highlight'>
+                      # centroid column of line, fractional pixels
+                    </span>
                   </td>
                 </tr>
                 <tr>
                   <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    TTYPE5  = 'CD1_1   '           /                                                TBCOL5  =                   85 /                                                TFORM5  = 'E15.7   '
+                  <td class='code-act-data code-indent-2'>
+                    self.order = order
+                    <span class='code-comment-highlight'>
+                      # order number in which this line was found
+                    </span>
                   </td>
                 </tr>
                 <tr>
                   <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    TTYPE6  = 'CD1_2   '           /                                                TBCOL6  =                  101 /                                                TFORM6  = 'E15.7   '
+                  <td class='code-act-data code-indent-2'>
+                    self.waveAccepted = wAccepted
+                    <span class='code-comment-highlight'>
+                      # accepted wavelength from atlas, Angstroms
+                    </span>
                   </td>
                 </tr>
                 <tr>
                   <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    TTYPE1  = CRVAL1 | TBCOL1  = 1 | TFORM1  = D25.17 |
+                  <td class='code-act-data code-indent-2'>
+                    self.peak = peak
+                    <span class='code-comment-highlight'>
+                      # peak intensity, counts
+                    </span>
                   </td>
                 </tr>
                 <tr>
                   <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    TTYPE2  = CRVAL2 |             | TFORM1  = D25.17 |
+                  <td class='code-act-data code-indent-2'>
                   </td>
                 </tr>
                 <tr>
                   <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    TTYPE3  = 'CRPIX1  '           /                                                TBCOL3  =                   53 /                                                TFORM3  = 'E15.7   '
+                  <td class='code-act-data code-indent-2 code-comment-highlight'>
+                    # per-order fit results
                   </td>
                 </tr>
                 <tr>
                   <td class='code-line-number code-added-diff-line'></td>
-                  <td class='code-act-data code-added-diff-highlight'>
-                    TUNIT3  = '        '           /                                                TDISP3  = 'G15.7   '           / %15.7g
+                  <td class='code-act-data code-indent-2 code-added-diff-highlight'>
+                    self.orderWaveFit = 0.0
+                    <span class='code-comment-highlight'>
+                      # wavelength of line based on per order fit (Angstroms)
+                    </span>
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data code-indent-2'>
+                    self.orderFitRes = 0.0
+                    <span class='code-comment-highlight'>
+                      # fit residual (Angstroms)
+                    </span>
                   </td>
                 </tr>
                 <tr>
                   <td class='code-line-number code-added-diff-line'></td>
-                  <td class='code-act-data code-added-diff-highlight'>
-                    TTYPE4  = 'CRPIX2  '           /                                                TBCOL4  =                   69 /                                                TFORM4  = 'E15.7   '
+                  <td class='code-act-data code-indent-2 code-added-diff-highlight'>
+                    self.orderFitSlope = 0.0
+                    <span class='code-comment-highlight'>
+                      # slope of per-order WL equation at this wavelength
+                    </span>
                   </td>
                 </tr>
                 <tr>
-                  <td class='code-line-number code-added-diff-line'></td>
-                  <td class='code-act-data code-added-diff-highlight'>
-                    TUNIT4  = '        '           /                                                TDISP4  = 'G15.7   '           / %15.7g
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number code-added-diff-line'></td>
-                  <td class='code-act-data code-added-diff-highlight'>
-                    TTYPE5  = 'CD1_1   '           /                                                TBCOL5  =                   85 /                                                TFORM5  = 'E15.7   '
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number code-added-diff-line'></td>
-                  <td class='code-act-data code-added-diff-highlight'>
-                    TTYPE6  = 'CD1_2   '           /                                                TBCOL6  =                  101 /                                                TFORM6  = 'E15.7   '
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number code-added-diff-line'></td>
-                  <td class='code-act-data code-added-diff-highlight'>
-                    TTYPE1  = CRVAL1 | TBCOL1  = 1 | TFORM1  = D25.17 |
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number code-added-diff-line'></td>
-                  <td class='code-act-data code-added-diff-highlight'>
-                    TTYPE2  = CRVAL2 |             | TFORM1  = D25.17 |
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number code-added-diff-line'></td>
-                  <td class='code-act-data code-added-diff-highlight'>
-                    TTYPE3  = 'CRPIX1  '           /                                                TBCOL3  =                   53 /                                                TFORM3  = 'E15.7   '
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number code-added-diff-line'></td>
-                  <td class='code-act-data code-added-diff-highlight'>
-                    TUNIT3  = '        '           /                                                TDISP3  = 'G15.7   '           / %15.7g
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number code-added-diff-line'></td>
-                  <td class='code-act-data code-added-diff-highlight'>
-                    TTYPE4  = 'CRPIX2  '           /                                                TBCOL4  =                   69 /                                                TFORM4  = 'E15.7   '
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number code-added-diff-line'></td>
-                  <td class='code-act-data code-added-diff-highlight'>
-                    TUNIT4  = '        '           /                                                TDISP4  = 'G15.7   '           / %15.7g
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number code-added-diff-line'></td>
-                  <td class='code-act-data code-added-diff-highlight'>
-                    TTYPE5  = 'CD1_1   '           /                                                TBCOL5  =                   85 /                                                TFORM5  = 'E15.7   '
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number code-added-diff-line'></td>
-                  <td class='code-act-data code-added-diff-highlight'>
-                    TTYPE6  = 'CD1_2   '           /                                                TBCOL6  =                  101 /                                                TFORM6  = 'E15.7   '
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data code-indent-2'>
+                    self.orderFitOutlier = False
+                    <span class='code-comment-highlight'>
+                      # true if line discarded from per-order fit as outlier
+                    </span>
                   </td>
                 </tr>
               </table>
@@ -310,7 +285,7 @@
             <!--metadata-->
             <div class='calendar-meeting-listing-detail'>
               <span class='font font-light font-size-12 font-color-default' style='padding-top: 4px;'>
-                Version 90
+                Version 19
               </span>
             </div>
             <div class='calendar-meeting-listing-detail'>
@@ -332,70 +307,119 @@
                 <tr>
                   <td class='code-line-number'></td>
                   <td class='code-act-data'>
-                    TTYPE1  = CRVAL1 | TBCOL1  = 1 | TFORM1  = D25.17 |
+                    class Line:
                   </td>
                 </tr>
                 <tr>
                   <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    TTYPE2  = CRVAL2 |             | TFORM1  = D25.17 |
+                  <td class='code-act-data code-indent'>
+                    def __init__(self, frame, order, wAccepted, col, centroid, peak):
                   </td>
                 </tr>
                 <tr>
                   <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    TTYPE3  = 'CRPIX1  '           /                                                TBCOL3  =                   53 /                                                TFORM3  = 'E15.7   '
+                  <td class='code-act-data code-indent-2 code-comment-highlight'>
+                    # cell identification
                   </td>
                 </tr>
                 <tr>
                   <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    TUNIT3  = '        '           /                                                TDISP3  = 'G15.7   '           / %15.7g
+                  <td class='code-act-data code-indent-2'>
+                    self.frame = frame
+                    <span class='code-comment-highlight'>
+                      # frame name or KOAID from which line extracted
+                    </span>
                   </td>
                 </tr>
                 <tr>
                   <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    TTYPE4  = 'CRPIX2  '           /                                                TBCOL4  =                   69 /                                                TFORM4  = 'E15.7   '
+                  <td class='code-act-data code-indent-2'>
+                    self.col = col
+                    <span class='code-comment-highlight'>
+                      # integer column number of line, pixels
+                    </span>
                   </td>
                 </tr>
                 <tr>
                   <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    TUNIT4  = '        '           /                                                TDISP4  = 'G15.7   '           / %15.7g
+                  <td class='code-act-data code-indent-2'>
+                    self.centroid = centroid
+                    <span class='code-comment-highlight'>
+                      # centroid column of line, fractional pixels
+                    </span>
                   </td>
                 </tr>
                 <tr>
                   <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    TTYPE5  = 'CD1_1   '           /                                                TBCOL5  =                   85 /                                                TFORM5  = 'E15.7   '
+                  <td class='code-act-data code-indent-2'>
+                    self.order = order
+                    <span class='code-comment-highlight'>
+                      # order number in which this line was found
+                    </span>
                   </td>
                 </tr>
                 <tr>
                   <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    TTYPE6  = 'CD1_2   '           /                                                TBCOL6  =                  101 /                                                TFORM6  = 'E15.7   '
+                  <td class='code-act-data code-indent-2'>
+                    self.waveAccepted = wAccepted
+                    <span class='code-comment-highlight'>
+                      # accepted wavelength from atlas, Angstroms
+                    </span>
                   </td>
                 </tr>
                 <tr>
                   <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    TTYPE1  = CRVAL1 | TBCOL1  = 1 | TFORM1  = D25.17 |
+                  <td class='code-act-data code-indent-2'>
+                    self.peak = peak
+                    <span class='code-comment-highlight'>
+                      # peak intensity, counts
+                    </span>
                   </td>
                 </tr>
                 <tr>
                   <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    TTYPE2  = CRVAL2 |             | TFORM1  = D25.17 |
+                  <td class='code-act-data code-indent-2'>
                   </td>
                 </tr>
                 <tr>
                   <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    TTYPE3  = 'CRPIX1  '           /                                                TBCOL3  =                   53 /                                                TFORM3  = 'E15.7   '
+                  <td class='code-act-data code-indent-2 code-comment-highlight'>
+                    # per-order fit results
                   </td>
                 </tr>
-              </table>
+                <tr>
+                  <td class='code-line-number code-deleted-diff-line'></td>
+                  <td class='code-act-data code-indent-2 code-deleted-diff-highlight'>
+                    self.orderWaveFit = 0.05
+                    <span class='code-comment-highlight'>
+                      # wavelength of line based on per order fit (Angstroms)
+                    </span>
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data code-indent-2'>
+                    self.orderFitRes = 0.0
+                    <span class='code-comment-highlight'>
+                      # fit residual (Angstroms)
+                    </span>
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number code-deleted-diff-line'></td>
+                  <td class='code-act-data code-indent-2 code-deleted-diff-highlight'>
+                    self.orderFitSlope = 1
+                    <span class='code-comment-highlight'>
+                      # slope of per-order WL equation at this wavelength
+                    </span>
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data code-indent-2'>
+                    self.orderFitOutlier = False
+                    <span class='code-comment-highlight'>
+                      # true if line discarded from per-order fit as outlier
             </div>
           </div>
         </div>
