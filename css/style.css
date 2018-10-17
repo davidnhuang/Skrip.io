@@ -8,10 +8,8 @@ button {background-color: transparent; border: none;}
 input:focus {outline: none;}
 ul {padding: 0; list-style-type: none;}
 a {text-decoration: none;}
-a:visited {text-decoration: none;}
-[contenteditable]:focus {
-  outline: 0px solid transparent;
-}
+a:visited {text-decoration: none; color: #F0EDED;}
+[contenteditable]:focus {outline: 0px solid transparent;}
 @font-face {
   font-family: 'SF-Pro-Text-Light';
   src: url('/Users/david/Documents/GitHub/Skrip.io/fonts/SF-Pro-Text-Light.otf');
