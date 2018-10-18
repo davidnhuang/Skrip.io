@@ -817,7 +817,7 @@ a:visited {text-decoration: none; color: #F0EDED;}
   color: #F0EDED;
   border-radius: 6px;
   background-color: #4D5052;
-  box-shadow: 0px 4px 12px 4px rgb(0,0,0,0.3);
+  box-shadow: 0px 4px 12px 4px #1a1a1a;
   padding: 6px 0px;
 }
 .search-bar-dropdown-menu {
