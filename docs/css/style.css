@@ -185,7 +185,7 @@ a:visited {text-decoration: none; color: #F0EDED;}
   width: 200px;
   display: inline-block;
   vertical-align: top;
-  margin-right: 60px;
+  margin-right: 59px;
 }
 #body--sideFeed {
   width: 289px;
@@ -197,12 +197,12 @@ a:visited {text-decoration: none; color: #F0EDED;}
   width: 744px;
   display: inline-block;
   vertical-align: top;
-  margin-right: 60px;
+  margin-right: 59px;
 }
 #body--sideFeed-calendar-view {
   display: none;
   vertical-align: top;
-  margin-left: 60px;
+  margin-left: 59px;
 }
 #upload-general-document, #upload-root-directory, #upload-to-subdirectory {cursor: pointer;}
 #body--admin-naming-change {
