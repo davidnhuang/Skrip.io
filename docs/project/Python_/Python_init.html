@@ -1,0 +1,1474 @@
+<!DOCTYPE html>
+<!--Skrip IO-->
+<!--Copyright 2018, David Nai-Chun Huang-->
+<!--DO NOT REPRODUCE-->
+<html>
+  <head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <title>2019 Cal-Tech - ESO - Skrip.io - Beta version</title>
+    <link rel='stylesheet' href='/Users/david/Documents/GitHub/Skrip.io/css/style.css'>
+    <link rel="shortcut icon" type="image/png" href="/Users/david/Documents/GitHub/Skrip.io/assets/icons/favicon.png"/>
+  </head>
+  <body>
+    <!--Skrip starts-->
+    <!--pop up dialogues-->
+    <!--main starts-->
+    <div id='body--main'>
+      <!--Side navigation-->
+      <div id='body--sideNav'>
+        <!--drive section-->
+        <div class='drive-selector'>
+          <span class='top-tag font font-regular font-size-9 font-color-lighter'>
+            Team / Drive Name
+          </span>
+          <div class='drive-dropdown'>
+            <div class='drive-name'>
+              <a href='/Users/david/Documents/GitHub/Skrip.io/main.html'>
+                <span class='font font-regular font-size-15 font-color-default'>
+                  2019 Cal-Tech - ESO
+                </span>
+              </a>
+            </div>
+            <div class='dropdown-button'>
+              <img
+                src='/Users/david/Documents/GitHub/Skrip.io/assets/buttons/team-selector-dropdown.svg'
+                alt='drive selector dropdown arrow'
+                width='12px'
+                height='7px'
+                style='padding-left: 8px;'
+              />
+            </div>
+          </div>
+        </div>
+        <div class='drive-dropdown-menu'>
+          <span class='dropdown-menu-option font font-regular font-size-15 font-color-lighter'>
+            Administration
+          </span>
+          <span class='dropdown-menu-option font font-regular font-size-15 font-color-lighter'>
+            Switch Drives
+          </span>
+          <a href='/Users/david/Documents/GitHub/Skrip.io/admin/skrip-config.html'>
+            <span class='dropdown-menu-option font font-regular font-size-15 font-color-lighter'>
+              Naming Convention
+            </span>
+          </a>
+          <span class='dropdown-menu-option font font-regular font-size-15 font-color-lighter'>
+            Preferences
+          </span>
+        </div>
+        <!--advisor section-->
+        <div class='advisor-selector'>
+          <div class='advisor-options'>
+            <span class='advisor-section-tag font font-regular font-size-9 font-color-lighter'>
+              Advisors / Leads
+            </span>
+          </div>
+          <div class='advisor-listing'>
+            <div class='advisor-profile advisor-profile-pic active-g'></div>
+            <div class='advisor-name'>
+              <span class='font font-regular font-size-12 font-color-default' style='display: inline; padding-right: 10px; padding-left: 20px;'>
+                Nelson Cooper
+              </span>
+            </div>
+          </div>
+        </div>
+        <!--teammate section-->
+        <div class='team-selector'>
+          <div class='team-options'>
+            <span class='team-section-tag font font-regular font-size-9 font-color-lighter'>
+              Teammates
+            </span>
+          </div>
+          <div class='teammate-listing'>
+            <div style='margin-bottom: 15px;'>
+              <div class='teammate-profile teammate-profile-pic-2'></div>
+              <div class='teammate-name'>
+                <span class='font font-regular font-size-12 font-color-default' style='display: inline; padding-right: 10px; padding-left: 20px;'>
+                  Mitchel Nagakoya
+                </span>
+              </div>
+            </div>
+            <div class='teammate-listing'>
+              <div class='teammate-profile teammate-profile-pic-1 active-g'></div>
+              <div class='teammate-name'>
+                <span class='font font-regular font-size-12 font-color-default' style='display: inline; padding-right: 10px; padding-left: 20px;'>
+                  Sarah Conway
+                </span>
+              </div>
+            </div>
+            <div class='teammate-listing'>
+              <span class='font font-regular font-size-12 font-color-lighter' style='padding-top: 32px;'>
+                + Invite new teammate
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class='me-selector'>
+          <span class='my-section-tag font font-regular font-size-12 font-color-lighter'>
+            Signed in as:
+          </span>
+          <div class='my-account'>
+            <div class='my-profile my-profile-pic active-g'></div>
+            <div class='my-name'>
+              <span class='font font-regular font-size-12 font-color-default' style='display: inline-block; padding-left: 8px; padding-right: 20px;'>
+                Mellisa Gouterez
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--Main admin-->
+      <div class='file-diff-bounding fadingIn'>
+        <span class='font font-light font-size-28 font-color-default' style='padding-bottom: 16px; display: inline-block;'>
+           Python_config.py <span class='font-light font-color-lighter' style='padding-left: 12px;'>version 4</span>
+        </span>
+        <div class='file-branch-number-icon'>
+          <img
+            src='/Users/david/Documents/GitHub/Skrip.io/assets/data/branch-number.svg'
+            width='14px'
+            height='14px'
+            style='padding-bottom: 2px; padding-right: 4px;'
+          />
+        </div>
+        <span class='file-branch-number-string font font-light font-size-12 font-color-default'>
+           s3a4
+        </span>
+        <span class='font font-light font-size-15 font-color-lighter' style='margin-bottom: 40px;'>
+          Python / Python_config.py ver. 4
+        </span>
+        <div class='code-diff-display'>
+          <!--current version-->
+          <div class='code-diff-current-version'>
+            <!--profile-->
+            <div class='meeting-profile teammate-profile-pic-1 active-g'></div>
+            <!--metadata-->
+            <div class='calendar-meeting-listing-detail'>
+              <span class='font font-light font-size-12 font-color-default' style='padding-top: 4px;'>
+                Version 4
+              </span>
+            </div>
+            <div class='calendar-meeting-listing-detail'>
+              <span class='font font-light font-size-12 font-color-lighter' style='padding-top: 4px;'>
+                12 / 5 / 2019 4:26PM
+              </span>
+            </div>
+            <!--diff data-->
+            <div id='current-code-version' class='current-code-diff-data'>
+              <table class='code-diff-lines'>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data'>
+                    params = {}
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data code-comment-highlight'>
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data code-comment-highlight'>
+                    # command line arguments
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data'>
+                    params['cmnd_line_mode']        = False
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data'>
+                    params['debug']                 = False
+                    <span class='code-comment-highlight'>
+                      # comment
+                    </span>
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data'>
+                    params['no_cosmic']             = False
+                    <span class='code-comment-highlight'>
+                      # cosmic ray rejection inhibited if True
+                    </span>
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data'>
+                    params['no_products']           = False
+                    <span class='code-comment-highlight'>
+                      # data product generation inhibited if True
+                    </span>
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data'>
+                    params['obj_window']            = 9
+                    <span class='code-comment-highlight'>
+                       # comment
+                    </span>
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data'>
+                    params['sky_window']            = 8
+                    <span class='code-comment-highlight'>
+                       # comment
+                    </span>
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data'>
+                    params['sky_separation']        = 2
+                    <span class='code-comment-highlight'>
+                       # comment
+                    </span>
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data'>
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data'>
+                    params['oh_filename']           = './ir_ohlines.dat'
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data'>
+                    params['oh_envar_name']         = 'NSDRP_OH_FILENAME'
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data'>
+                    params['oh_envar_override']     = False
+                    <span class='code-comment-highlight'>
+                       # if True then use params['oh_filename']<br>
+                       # even if envar is set
+                    </span>
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data'>
+                    params['spatial_jump_override'] = False
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data'>
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data'>
+                    params['int_c']                 = False
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data'>
+                    params['dgn']                   = False
+                    <span class='code-comment-highlight'>
+                       # diagnostic data product generation enabled if True
+                    </span>
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data'>
+                    params['npy']                   = False
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data'>
+                    params['verbose']               = False
+                    <span class='code-comment-highlight'>
+                       # all log file messages printed to stdout if True
+                    </span>
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data'>
+                    params['subdirs']               = False
+                    <span class='code-comment-highlight'>
+                       # data products in per-frame subdirectory if True
+                    </span>
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data'>
+                    params['lla']                   = 2
+                    <span class='code-comment-highlight'>
+                       # sky line location algorithm
+                    </span>
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data'>
+                    params['pipes']                 = False
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data'>
+                    params['shortsubdir']           = True
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data'>
+                    params['ut']                    = None
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data'>
+                    params['gunzip']                = False
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data'>
+                    params['out_dir']               = './nsdrp_out'
+                    <span class='code-comment-highlight'>
+                      # used only in command line mode <br>
+                      # params['serialize_rds']         = False
+                    </span>
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data'>
+                    params['jpg']                   = False
+                    <span class='code-comment-highlight'>
+                      # if True then write preview plots in JPG not PNG
+                    </span>
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data'>
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data code-comment-highlight'>
+                    # configuration and tuning parameters
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data'>
+                    params['max_n_flats']           = 8
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data'>
+                    params['max_n_darks']           = 8
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data'>
+                    params['max_spatial_trace_res'] = 1.0
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data'>
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data'>
+                    params['long_slit_edge_margin'] = 6
+                    <span class='code-comment-highlight'>
+                      # cut out margin in pixels
+                    </span>
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data'>
+                    params['large_tilt_threshold']  = 20
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data'>
+                    params['large_tilt_extra_padding'] = 10
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data'>
+                    params['overscan_width']        = 10
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data'> </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data'>
+                    params['sowc'] = False
+                    <span class='code-comment-highlight'>
+                      # simple order width calculation
+                    </span>
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data'> </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data code-comment-highlight'>
+                    # expected order number at bottom of detector
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data'>
+                    starting_order = {
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data code-indent'>
+                    'NIRSPEC-1': 80,
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number code-added-diff-line'></td>
+                  <td class='code-act-data code-indent code-added-diff-highlight'>
+                    'NIRSPEC-2': 70,
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data code-indent'>
+                    'NIRSPEC-3': 67,
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data code-indent'>
+                    'NIRSPEC-4': 61,
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data code-indent'>
+                    'NIRSPEC-5': 53,
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data code-indent'>
+                    'NIRSPEC-6': 49,
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data code-indent'>
+                    'NIRSPEC-7': 41
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data'>
+                  }
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data'> </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data'>
+                    def get_starting_order(filtername):
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data code-indent'>
+                    return starting_order[filtername.upper()[:9]]
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data'>
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data code-comment-highlight'>
+                    # order edge location error threshold
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data'>
+                    max_edge_location_error = {
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number code-added-diff-line'></td>
+                  <td class='code-act-data code-indent code-added-diff-highlight'>
+                    'NIRSPEC-1': 30,
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number code-added-diff-line'></td>
+                  <td class='code-act-data code-indent code-added-diff-highlight'>
+                    'NIRSPEC-2': 50,
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number code-added-diff-line'></td>
+                  <td class='code-act-data code-indent code-added-diff-highlight'>
+                    'NIRSPEC-3': 50,
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number code-added-diff-line'></td>
+                  <td class='code-act-data code-indent code-indent code-added-diff-highlight'>
+                    'NIRSPEC-4': 50,
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number code-added-diff-line'></td>
+                  <td class='code-act-data code-indent code-added-diff-highlight'>
+                    'NIRSPEC-5': 20,
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number code-added-diff-line'></td>
+                  <td class='code-act-data code-indent code-added-diff-highlight'>
+                    'NIRSPEC-6': 20,
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number code-added-diff-line'></td>
+                  <td class='code-act-data code-indent code-added-diff-highlight'>
+                    'NIRSPEC-7': 60
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data'>
+                  }
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data'>
+                    def get_max_edge_location_error(filtername, slit):
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data code-indent'>
+                    if '24' in slit:
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data code-indent-2'>
+                    if 'NIRSPEC-7' in filtername.upper():
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data code-indent-3'>
+                    return 35
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data code-indent-3 code-comment-highlight'>
+                    #return 50
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data code-indent-2'>
+                    else:
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data code-indent-3'>
+                    return 30
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data code-indent'>
+                    else:
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data code-indent-2'>
+                    return max_edge_location_error[filtername.upper()[:9]]
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data'>
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data code-comment-highlight'>
+                    # order cutout padding
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data code-comment-highlight'>
+                    # order edge location error threshold
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data'>
+                    long_slit_cutout_padding = {
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data code-indent'>
+                    'NIRSPEC-1': 0,
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data code-indent'>
+                    'NIRSPEC-2': 0,
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data code-indent'>
+                    'NIRSPEC-3': 0,
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data code-indent'>
+                    'NIRSPEC-4': 0,
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data code-indent'>
+                    'NIRSPEC-5': 0,
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data code-indent'>
+                    'NIRSPEC-6': 15,
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data code-indent'>
+                    'NIRSPEC-7': 30
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data'>
+                  }
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data'>
+                    short_slit_cutout_padding = {
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data code-indent'>
+                    'NIRSPEC-1': 0,
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data code-indent'>
+                    'NIRSPEC-2': 0,
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data code-indent'>
+                    'NIRSPEC-3': 10,
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data code-indent'>
+                    'NIRSPEC-4': 15,
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data code-indent'>
+                    'NIRSPEC-5': 15,
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data code-indent'>
+                    'NIRSPEC-6': 15,
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data code-indent'>
+                    'NIRSPEC-7': 30
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data'>
+                  }
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data'>
+                    def get_cutout_padding(filtername, slit):
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data code-indent'>
+                    if '24' in slit:
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data code-indent-2'>
+                    return(long_slit_cutout_padding[filtername.upper()[:9]])
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data code-indent-2'>
+                    else:
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data code-indent-3'>
+                    return(short_slit_cutout_padding[filtername.upper()[:9]])
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data'>
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </div>
+          <!--previous version-->
+          <div class='code-diff-previous-version'>
+            <!--profile-->
+            <div class='meeting-profile teammate-profile-pic-2'></div>
+            <!--metadata-->
+            <div class='calendar-meeting-listing-detail'>
+              <span class='font font-light font-size-12 font-color-default' style='padding-top: 4px;'>
+                Version 3
+              </span>
+            </div>
+            <div class='calendar-meeting-listing-detail'>
+              <span class='font font-light font-size-12 font-color-lighter' style='padding-top: 4px;'>
+                12 / 3 / 2019 1:56PM
+              </span>
+            </div>
+            <!--revert - previous version only-->
+            <div class='revert-previous-version-button'>
+              <img
+                src='/Users/david/Documents/GitHub/Skrip.io/assets/buttons/revert-version.svg'
+                width='15px'
+                hegith='15px'
+              />
+            </div>
+            <!--diff data-->
+            <div id='previous-code-version' class='current-code-diff-data'>
+              <table class='code-diff-lines'>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data'>
+                    params = {}
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data code-comment-highlight'>
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data code-comment-highlight'>
+                    # command line arguments
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data'>
+                    params['cmnd_line_mode']        = False
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data'>
+                    params['debug']                 = False
+                    <span class='code-comment-highlight'>
+                      # comment
+                    </span>
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data'>
+                    params['no_cosmic']             = False
+                    <span class='code-comment-highlight'>
+                      # cosmic ray rejection inhibited if True
+                    </span>
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data'>
+                    params['no_products']           = False
+                    <span class='code-comment-highlight'>
+                      # data product generation inhibited if True
+                    </span>
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data'>
+                    params['obj_window']            = 9
+                    <span class='code-comment-highlight'>
+                       # comment
+                    </span>
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data'>
+                    params['sky_window']            = 8
+                    <span class='code-comment-highlight'>
+                       # comment
+                    </span>
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data'>
+                    params['sky_separation']        = 2
+                    <span class='code-comment-highlight'>
+                       # comment
+                    </span>
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data'>
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data'>
+                    params['oh_filename']           = './ir_ohlines.dat'
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data'>
+                    params['oh_envar_name']         = 'NSDRP_OH_FILENAME'
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data'>
+                    params['oh_envar_override']     = False
+                    <span class='code-comment-highlight'>
+                       # if True then use params['oh_filename']<br>
+                       # even if envar is set
+                    </span>
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data'>
+                    params['spatial_jump_override'] = False
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data'>
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data'>
+                    params['int_c']                 = False
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data'>
+                    params['dgn']                   = False
+                    <span class='code-comment-highlight'>
+                       # diagnostic data product generation enabled if True
+                    </span>
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data'>
+                    params['npy']                   = False
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data'>
+                    params['verbose']               = False
+                    <span class='code-comment-highlight'>
+                       # all log file messages printed to stdout if True
+                    </span>
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data'>
+                    params['subdirs']               = False
+                    <span class='code-comment-highlight'>
+                       # data products in per-frame subdirectory if True
+                    </span>
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data'>
+                    params['lla']                   = 2
+                    <span class='code-comment-highlight'>
+                       # sky line location algorithm
+                    </span>
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data'>
+                    params['pipes']                 = False
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data'>
+                    params['shortsubdir']           = True
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data'>
+                    params['ut']                    = None
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data'>
+                    params['gunzip']                = False
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data'>
+                    params['out_dir']               = './nsdrp_out'
+                    <span class='code-comment-highlight'>
+                      # used only in command line mode <br>
+                      # params['serialize_rds']         = False
+                    </span>
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data'>
+                    params['jpg']                   = False
+                    <span class='code-comment-highlight'>
+                      # if True then write preview plots in JPG not PNG
+                    </span>
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data'>
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data code-comment-highlight'>
+                    # configuration and tuning parameters
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data'>
+                    params['max_n_flats']           = 8
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data'>
+                    params['max_n_darks']           = 8
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data'>
+                    params['max_spatial_trace_res'] = 1.0
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data'>
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data'>
+                    params['long_slit_edge_margin'] = 6
+                    <span class='code-comment-highlight'>
+                      # cut out margin in pixels
+                    </span>
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data'>
+                    params['large_tilt_threshold']  = 20
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data'>
+                    params['large_tilt_extra_padding'] = 10
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data'>
+                    params['overscan_width']        = 10
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data'> </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data'>
+                    params['sowc'] = False
+                    <span class='code-comment-highlight'>
+                      # simple order width calculation
+                    </span>
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data'> </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data code-comment-highlight'>
+                    # expected order number at bottom of detector
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data'>
+                    starting_order = {
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data code-indent'>
+                    'NIRSPEC-1': 80,
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number code-deleted-diff-line'></td>
+                  <td class='code-act-data code-indent code-deleted-diff-highlight'>
+                    'NIRSPEC-2': 69,
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data code-indent'>
+                    'NIRSPEC-3': 67,
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data code-indent'>
+                    'NIRSPEC-4': 61,
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data code-indent'>
+                    'NIRSPEC-5': 53,
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data code-indent'>
+                    'NIRSPEC-6': 49,
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data code-indent'>
+                    'NIRSPEC-7': 41
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data'>
+                  }
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data'> </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data'>
+                    def get_starting_order(filtername):
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data code-indent'>
+                    return starting_order[filtername.upper()[:9]]
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data'>
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data code-comment-highlight'>
+                    # order edge location error threshold
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data'>
+                    max_edge_location_error = {
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number code-deleted-diff-line'></td>
+                  <td class='code-act-data code-indent code-deleted-diff-highlight'>
+                    'NIRSPEC-1': 29,
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number code-deleted-diff-line'></td>
+                  <td class='code-act-data code-indent code-deleted-diff-highlight'>
+                    'NIRSPEC-2': 47,
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number code-deleted-diff-line'></td>
+                  <td class='code-act-data code-indent code-deleted-diff-highlight'>
+                    'NIRSPEC-3': 47,
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number code-deleted-diff-line'></td>
+                  <td class='code-act-data code-indent code-deleted-diff-highlight'>
+                    'NIRSPEC-4': 47,
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number code-deleted-diff-line'></td>
+                  <td class='code-act-data code-indent code-deleted-diff-highlight'>
+                    'NIRSPEC-5': 21,
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number code-deleted-diff-line'></td>
+                  <td class='code-act-data code-indent code-deleted-diff-highlight'>
+                    'NIRSPEC-6': 15,
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number code-deleted-diff-line'></td>
+                  <td class='code-act-data code-indent code-deleted-diff-highlight'>
+                    'NIRSPEC-7': 70
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data'>
+                  }
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data'>
+                    def get_max_edge_location_error(filtername, slit):
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data code-indent'>
+                    if '24' in slit:
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data code-indent-2'>
+                    if 'NIRSPEC-7' in filtername.upper():
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data code-indent-3'>
+                    return 35
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data code-indent-3 code-comment-highlight'>
+                    #return 50
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data code-indent-2'>
+                    else:
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data code-indent-3'>
+                    return 30
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data code-indent'>
+                    else:
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data code-indent-2'>
+                    return max_edge_location_error[filtername.upper()[:9]]
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data'>
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data code-comment-highlight'>
+                    # order cutout padding
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data code-comment-highlight'>
+                    # order edge location error threshold
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data'>
+                    long_slit_cutout_padding = {
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data code-indent'>
+                    'NIRSPEC-1': 0,
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data code-indent'>
+                    'NIRSPEC-2': 0,
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data code-indent'>
+                    'NIRSPEC-3': 0,
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data code-indent'>
+                    'NIRSPEC-4': 0,
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data code-indent'>
+                    'NIRSPEC-5': 0,
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data code-indent'>
+                    'NIRSPEC-6': 15,
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data code-indent'>
+                    'NIRSPEC-7': 30
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data'>
+                  }
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data'>
+                    short_slit_cutout_padding = {
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data code-indent'>
+                    'NIRSPEC-1': 0,
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data code-indent'>
+                    'NIRSPEC-2': 0,
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data code-indent'>
+                    'NIRSPEC-3': 10,
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data code-indent'>
+                    'NIRSPEC-4': 15,
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data code-indent'>
+                    'NIRSPEC-5': 15,
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data code-indent'>
+                    'NIRSPEC-6': 15,
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data code-indent'>
+                    'NIRSPEC-7': 30
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data'>
+                  }
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data'>
+                    def get_cutout_padding(filtername, slit):
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data code-indent'>
+                    if '24' in slit:
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data code-indent-2'>
+                    return(long_slit_cutout_padding[filtername.upper()[:9]])
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data code-indent-2'>
+                    else:
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data code-indent-3'>
+                    return(short_slit_cutout_padding[filtername.upper()[:9]])
+                  </td>
+                </tr>
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data'>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+      <script src='/Users/david/Documents/GitHub/Skrip.io/js/script.js'></script>
+    </footer>
+  </body>
+</html>

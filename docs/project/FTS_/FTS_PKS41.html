@@ -1,0 +1,1095 @@
+<!DOCTYPE html>
+<!--Skrip IO-->
+<!--Copyright 2018, David Nai-Chun Huang-->
+<!--DO NOT REPRODUCE-->
+<html>
+  <head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <title>2019 Cal-Tech - ESO - Skrip.io - Beta version</title>
+    <link rel='stylesheet' href='/Users/david/Documents/GitHub/Skrip.io/css/style.css'>
+    <link rel="shortcut icon" type="image/png" href="/Users/david/Documents/GitHub/Skrip.io/assets/icons/favicon.png"/>
+  </head>
+  <body>
+    <!--Skrip starts-->
+    <!--pop up dialogues-->
+    <!--main starts-->
+    <div id='body--main'>
+      <!--Side navigation-->
+      <div id='body--sideNav'>
+        <!--drive section-->
+        <div class='drive-selector'>
+          <span class='top-tag font font-regular font-size-9 font-color-lighter'>
+            Team / Drive Name
+          </span>
+          <div class='drive-dropdown'>
+            <div class='drive-name'>
+              <a href='/Users/david/Documents/GitHub/Skrip.io/main.html'>
+                <span class='font font-regular font-size-15 font-color-default'>
+                  2019 Cal-Tech - ESO
+                </span>
+              </a>
+            </div>
+            <div class='dropdown-button'>
+              <img
+                src='/Users/david/Documents/GitHub/Skrip.io/assets/buttons/team-selector-dropdown.svg'
+                alt='drive selector dropdown arrow'
+                width='12px'
+                height='7px'
+                style='padding-left: 8px;'
+              />
+            </div>
+          </div>
+        </div>
+        <div class='drive-dropdown-menu'>
+          <span class='dropdown-menu-option font font-regular font-size-15 font-color-lighter'>
+            Administration
+          </span>
+          <span class='dropdown-menu-option font font-regular font-size-15 font-color-lighter'>
+            Switch Drives
+          </span>
+          <a href='/Users/david/Documents/GitHub/Skrip.io/admin/skrip-config.html'>
+            <span class='dropdown-menu-option font font-regular font-size-15 font-color-lighter'>
+              Naming Convention
+            </span>
+          </a>
+          <span class='dropdown-menu-option font font-regular font-size-15 font-color-lighter'>
+            Preferences
+          </span>
+        </div>
+        <!--advisor section-->
+        <div class='advisor-selector'>
+          <div class='advisor-options'>
+            <span class='advisor-section-tag font font-regular font-size-9 font-color-lighter'>
+              Advisors / Leads
+            </span>
+          </div>
+          <div class='advisor-listing'>
+            <div class='advisor-profile advisor-profile-pic active-g'></div>
+            <div class='advisor-name'>
+              <span class='font font-regular font-size-12 font-color-default' style='display: inline; padding-right: 10px; padding-left: 20px;'>
+                Nelson Cooper
+              </span>
+            </div>
+          </div>
+        </div>
+        <!--teammate section-->
+        <div class='team-selector'>
+          <div class='team-options'>
+            <span class='team-section-tag font font-regular font-size-9 font-color-lighter'>
+              Teammates
+            </span>
+          </div>
+          <div class='teammate-listing'>
+            <div style='margin-bottom: 15px;'>
+              <div class='teammate-profile teammate-profile-pic-2'></div>
+              <div class='teammate-name'>
+                <span class='font font-regular font-size-12 font-color-default' style='display: inline; padding-right: 10px; padding-left: 20px;'>
+                  Mitchel Nagakoya
+                </span>
+              </div>
+            </div>
+            <div class='teammate-listing'>
+              <div class='teammate-profile teammate-profile-pic-1 active-g'></div>
+              <div class='teammate-name'>
+                <span class='font font-regular font-size-12 font-color-default' style='display: inline; padding-right: 10px; padding-left: 20px;'>
+                  Sarah Conway
+                </span>
+              </div>
+            </div>
+            <div class='teammate-listing'>
+              <span class='font font-regular font-size-12 font-color-lighter' style='padding-top: 32px;'>
+                + Invite new teammate
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class='me-selector'>
+          <span class='my-section-tag font font-regular font-size-12 font-color-lighter'>
+            Signed in as:
+          </span>
+          <div class='my-account'>
+            <div class='my-profile my-profile-pic active-g'></div>
+            <div class='my-name'>
+              <span class='font font-regular font-size-12 font-color-default' style='display: inline-block; padding-left: 8px; padding-right: 20px;'>
+                Mellisa Gouterez
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--Main admin-->
+      <div class='file-diff-bounding fadingIn'>
+        <span class='font font-light font-size-28 font-color-default' style='padding-bottom: 16px; display: inline-block;'>
+           FTS_PKS41.fts <span class='font-light font-color-lighter' style='padding-left: 12px;'>version 84</span>
+        </span>
+        <div class='file-branch-number-icon'>
+          <img
+            src='/Users/david/Documents/GitHub/Skrip.io/assets/data/branch-number.svg'
+            width='14px'
+            height='14px'
+            style='padding-bottom: 2px; padding-right: 4px;'
+          />
+        </div>
+        <span class='file-branch-number-string font font-light font-size-12 font-color-default'>
+           96a4
+        </span>
+        <span class='font font-light font-size-15 font-color-lighter' style='margin-bottom: 40px;'>
+          FTS / FTS_PKS41.fts ver. 84
+        </span>
+        <div class='code-diff-display'>
+          <!--current version-->
+          <div class='code-diff-current-version'>
+            <!--profile-->
+            <div class='meeting-profile advisor-profile-pic active-g'></div>
+            <!--metadata-->
+            <div class='calendar-meeting-listing-detail'>
+              <span class='font font-light font-size-12 font-color-default' style='padding-top: 4px;'>
+                Version 84
+              </span>
+            </div>
+            <div class='calendar-meeting-listing-detail'>
+              <span class='font font-light font-size-12 font-color-lighter' style='padding-top: 4px;'>
+                12 / 5 / 2019 4:26PM
+              </span>
+            </div>
+            <!--diff data-->
+            <div id='current-code-version' class='current-code-diff-data'>
+              <table class='code-diff-lines'>
+                <!--1-->
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data'>
+                    ROOTNAME = 'u5780205r'
+                    <span class='code-comment-highlight'>
+                      / rootname of the observation set
+                    </span>
+                  </td>
+                </tr>
+                <!--2-->
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data'>
+                    PROCTIME =   5.301314019676E+04
+                    <span class='code-comment-highlight'>
+                      / Pipeline processing time (MJD)
+                    </span>
+                  </td>
+                </tr>
+                <!--3-->
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data'>
+                    OPUS_VER = 'OPUS 14.5a'
+                    <span class='code-comment-highlight'>
+                      / OPUS software system version number
+                    </span>
+                  </td>
+                </tr>
+                <!--4-->
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data'>
+                    CAL_VER = ' '
+                    <span class='code-comment-highlight'>
+                      / CALWP2 code version
+                    </span>
+                  </td>
+                </tr>
+                <!--5-->
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data'>
+                    MODE    = 'FULL'
+                    <span class='code-comment-highlight'>
+                      / instr. mode: FULL (full res.)
+                    </span>
+                    , AREA (area int.)SERIALS = 'OFF'
+                    <span class='code-comment-highlight'>
+                      / serial clocks: ON, OFF
+                    </span>
+                  </td>
+                </tr>
+                <!--5-->
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data code-comment-highlight'>
+                    / IMAGE TYPE CHARACTERISTICS
+                  </td>
+                </tr>
+                <!--6-->
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data'>
+                    IMAGETYP = 'EXT'
+                    <span class='code-comment-highlight'>
+                      / DARK/BIAS/IFLAT/UFLAT/VFLAT/KSPOT/EXT/ECAL
+                    </span>
+                  </td>
+                </tr>
+                <!--7-->
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data'>
+                    CDBSFILE = 'NO'
+                    <span class='code-comment-highlight'>
+                      / GENERIC/BIAS/DARK/PREF/FLAT/MASK/ATOD/NO
+                    </span>
+                  </td>
+                </tr>
+                <!--8-->
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data'>
+                    PKTFMT  =                   96
+                    <span class='code-comment-highlight'>
+                      / packet format code / FILTER CONFIGURATION
+                    </span>
+                  </td>
+                </tr>
+                <!--9-->
+                <tr>
+                  <td class='code-line-number code-added-diff-line'></td>
+                  <td class='code-act-data code-added-diff-highlight'>
+                    FILTNAM1 = 'FR533P14'
+                    <span class='code-comment-highlight'>
+                      / first filter name
+                    </span>
+                  </td>
+                </tr>
+                <!--10-->
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data'>
+                    69
+                    <span class='code-comment-highlight'>
+                      / first filter number (0-48)
+                    </span>
+                  </td>
+                </tr>
+                <!--11-->
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data'>
+                    FILTER2 =                    0
+                    <span class='code-comment-highlight'>
+                      / second filter number (0-48)
+                    </span>
+                  </td>
+                </tr>
+                <!--12-->
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data'>
+                    FILTROT =                 15.0
+                    <span class='code-comment-highlight'>
+                      / partial filter rotation angle (degrees)
+                    </span>
+                  </td>
+                </tr>
+                <!--13-->
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data'>
+                    LRFWAVE =          4877.000000
+                    <span class='code-comment-highlight'>
+                      / linear ramp filter wavelength
+                    </span>
+                  </td>
+                </tr>
+                <!--14-->
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data code-comment-highlight'>
+                    / INSTRUMENT STATUS USED IN DATA PROCESSING
+                  </td>
+                </tr>
+                <!--15-->
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data'>
+                    UCH1CJTM =             -88.2569
+                    <span class='code-comment-highlight'>
+                      / TEC cold junction #1 temperature (Celsius)
+                    </span>
+                  </td>
+                </tr>
+                <!--16-->
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data'>
+                    UCH2CJTM =             -88.6697
+                    <span class='code-comment-highlight'>
+                      / TEC cold junction #2 temperature (Celsius)
+                    </span>
+                  </td>
+                </tr>
+                <!--17-->
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data'>
+                    UCH3CJT M =             -88.3028
+                    <span class='code-comment-highlight'>
+                      / TEC cold junction #3 temperature (Celsius)
+                    </span>
+                  </td>
+                </tr>
+                <!--18-->
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data'>
+                    UCH4CJTM =             -88.7671
+                    <span class='code-comment-highlight'>
+                      / TEC cold junction #4 temperature (Celsius)
+                    </span>
+                  </td>
+                </tr>
+                <!--19-->
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data'>
+                    UBAY3TMP =              13.2302
+                    <span class='code-comment-highlight'>
+                      / bay 3 A1 temperature (deg C)
+                    </span>
+                  </td>
+                </tr>
+                <!--20-->
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data'>
+                    KSPOTS  = 'OFF'
+                    <span class='code-comment-highlight'>
+                      / Status of Kelsall spot lamps: ON, OFF
+                    </span>
+                  </td>
+                </tr>
+                <!--21-->
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data'>
+                    SHUTTER = 'A'
+                    <span class='code-comment-highlight'>
+                      / Shutter in place at beginning of the exposure
+                    </span>
+                  </td>
+                </tr>
+                <!--22-->
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data'>
+                    ATODGAIN =                  7.0
+                    <span class='code-comment-highlight'>
+                      / Analog to Digital Gain (Electrons/DN)
+                    </span>
+                  </td>
+                </tr>
+                <!--23-->
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data code-comment-highlight'>
+                    / RSDP CONTROL KEYWORDS
+                  </td>
+                </tr>
+                <!--24-->
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data'>
+                    MASKCORR = 'COMPLETE'
+                    <span class='code-comment-highlight'>
+                      / Do mask correction: PERFORM, OMIT, COMPLETE
+                    </span>
+                  </td>
+                </tr>
+                <!--25-->
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data'>
+                    ATODCORR = 'COMPLETE'
+                    <span class='code-comment-highlight'>
+                      / Do A-to-D correction: PERFORM, OMIT, COMPLETE
+                    </span>
+                  </td>
+                </tr>
+                <!--26-->
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data'>
+                    BLEVCORR = 'COMPLETE'
+                    <span class='code-comment-highlight'>
+                      / Do bias level correction
+                    </span>
+                  </td>
+                </tr>
+                <!--27-->
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data'>
+                    DARKCORR = 'COMPLETE'
+                    <span class='code-comment-highlight'>
+                      / Do dark correction: PERFORM, OMIT, COMPLETE
+                    </span>
+                  </td>
+                </tr>
+                <!--28-->
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data'>
+                    HISTORY
+                  </td>
+                </tr>
+                <!--29-->
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data'>
+                    MASKFILE = uref$f8213081u.r0h
+                  </td>
+                </tr>
+                <!--29-->
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data'>
+                    MASKCORR = COMPLETED
+                  </td>
+                </tr>
+                <!--30-->
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data'>
+                    HISTORY
+                  </td>
+                </tr>
+                <!--31-->
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data'>
+                    PEDIGREE = INFLIGHT 01/01/1994 - 15/05/1995
+                  </td>
+                </tr>
+                <!--32-->
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data'>
+                    HISTORY
+                  </td>
+                </tr>
+                <!--33-->
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data'>
+                    DESCRIP = STATIC MASK - INCLUDES CHARGE TRANSFER TRAPS
+                  </td>
+                </tr>
+                <!--34-->
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data'>
+                    HISTORY
+                  </td>
+                </tr>
+                <!--35-->
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data'>
+                    BIASFILE = uref$j9a1612mu.r2h
+                  </td>
+                </tr>
+                <!--36-->
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data'>
+                    BIASCORR = COMPLETED
+                  </td>
+                </tr>
+                <!--37-->
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data'>
+                    HISTORY
+                  </td>
+                </tr>
+                <!--38-->
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data'>
+                    PEDIGREE = INFLIGHT 29/08/98 - 21/08/99
+                  </td>
+                </tr>
+                <!--39-->
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data'>
+                    HISTORY
+                  </td>
+                </tr>
+                <!--40-->
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data'>
+                    DESCRIP =
+                    <span class='code-comment-highlight'>
+                      not significantly different from j6e16008u.
+                    </span>
+                  </td>
+                </tr>
+                <!--41-->
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data'>
+                    HISTORY
+                  </td>
+                </tr>
+                <!--42-->
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data'>
+                    DARKFILE = uref$j2g1549cu.r3h
+                  </td>
+                </tr>
+                <!--43-->
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data'>
+                    DARKCORR = COMPLETED
+                  </td>
+                </tr>
+                <!--44-->
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data '>
+                    The following throughput tables were used:
+                  </td>
+                </tr>
+                <!--45-->
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data '>
+                    crwfpc2comp$wfpc2_a2d7pc1_004_syn.fits
+                  </td>
+                </tr>
+                <!--46-->
+                <tr>
+                  <td class='code-line-number code-added-diff-line'></td>
+                  <td class='code-act-data code-added-diff-highlight'>
+                    crwfpc2comp$wfpc2_flatpc1_002_syn.fits,
+                    crwfpc2comp$wfpc2_flatpc1_003_syn.fits,
+                    crwfpc2comp$wfpc2_a2d7wf2_004_syn.fits,
+                    crwfpc2comp$wfpc2_flatwf2_005_syn.fits,
+                    crwfpc2comp$wfpc2_lrf_004_syn.fits[wave#],
+                    crwfpc2comp$wfpc2_dqewfc3_002_syn.fits,
+                    crwfpc2comp$wfpc2_lrf_004_syn.fits[wave#],
+                    crwfpc2comp$wfpc2_dqewfc4_005_syn.fits,
+                    crwfpc2comp$wfpc2_a2d7wf4_004_syn.fits,
+                    crwfpc2comp$wfpc2_flatwf4_003_syn.fits
+                  </td>
+                </tr>
+                <!--47-->
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data '>
+                    CD1_3   =                    0
+                  </td>
+                </tr>
+                <!--48-->
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data '>
+                    CD2_3   =                    0
+                  </td>
+                </tr>
+                <!--49-->
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data '>
+                    CD3_2   =                    0
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </div>
+          <!--previous version-->
+          <div class='code-diff-previous-version'>
+            <!--profile-->
+            <div class='meeting-profile my-profile-pic active-g'></div>
+            <!--metadata-->
+            <div class='calendar-meeting-listing-detail'>
+              <span class='font font-light font-size-12 font-color-default' style='padding-top: 4px;'>
+                Version 83
+              </span>
+            </div>
+            <div class='calendar-meeting-listing-detail'>
+              <span class='font font-light font-size-12 font-color-lighter' style='padding-top: 4px;'>
+                12 / 3 / 2019 1:56PM
+              </span>
+            </div>
+            <!--revert - previous version only-->
+            <div class='revert-previous-version-button'>
+              <img
+                src='/Users/david/Documents/GitHub/Skrip.io/assets/buttons/revert-version.svg'
+                width='15px'
+                hegith='15px'
+              />
+            </div>
+            <!--diff data-->
+            <div id='previous-code-version' class='current-code-diff-data'>
+              <table class='code-diff-lines'>
+                <!--1-->
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data'>
+                    ROOTNAME = 'u5780205r'
+                    <span class='code-comment-highlight'>
+                      / rootname of the observation set
+                    </span>
+                  </td>
+                </tr>
+                <!--2-->
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data'>
+                    PROCTIME =   5.301314019676E+04
+                    <span class='code-comment-highlight'>
+                      / Pipeline processing time (MJD)
+                    </span>
+                  </td>
+                </tr>
+                <!--3-->
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data'>
+                    OPUS_VER = 'OPUS 14.5a'
+                    <span class='code-comment-highlight'>
+                      / OPUS software system version number
+                    </span>
+                  </td>
+                </tr>
+                <!--4-->
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data'>
+                    CAL_VER = ' '
+                    <span class='code-comment-highlight'>
+                      / CALWP2 code version
+                    </span>
+                  </td>
+                </tr>
+                <!--5-->
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data'>
+                    MODE    = 'FULL'
+                    <span class='code-comment-highlight'>
+                      / instr. mode: FULL (full res.)
+                    </span>
+                    , AREA (area int.)SERIALS = 'OFF'
+                    <span class='code-comment-highlight'>
+                      / serial clocks: ON, OFF
+                    </span>
+                  </td>
+                </tr>
+                <!--5-->
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data code-comment-highlight'>
+                    / IMAGE TYPE CHARACTERISTICS
+                  </td>
+                </tr>
+                <!--6-->
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data'>
+                    IMAGETYP = 'EXT'
+                    <span class='code-comment-highlight'>
+                      / DARK/BIAS/IFLAT/UFLAT/VFLAT/KSPOT/EXT/ECAL
+                    </span>
+                  </td>
+                </tr>
+                <!--7-->
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data'>
+                    CDBSFILE = 'NO'
+                    <span class='code-comment-highlight'>
+                      / GENERIC/BIAS/DARK/PREF/FLAT/MASK/ATOD/NO
+                    </span>
+                  </td>
+                </tr>
+                <!--8-->
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data'>
+                    PKTFMT  =                   96
+                    <span class='code-comment-highlight'>
+                      / packet format code / FILTER CONFIGURATION
+                    </span>
+                  </td>
+                </tr>
+                <!--9-->
+                <tr>
+                  <td class='code-line-number code-deleted-diff-line'></td>
+                  <td class='code-act-data code-deleted-diff-highlight'>
+                    FILTNAM1 = 'FR533P15'
+                    <span class='code-comment-highlight'>
+                      / first filter name
+                    </span>
+                  </td>
+                </tr>
+                <!--10-->
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data'>
+                    69
+                    <span class='code-comment-highlight'>
+                      / first filter number (0-48)
+                    </span>
+                  </td>
+                </tr>
+                <!--11-->
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data'>
+                    FILTER2 =                    0
+                    <span class='code-comment-highlight'>
+                      / second filter number (0-48)
+                    </span>
+                  </td>
+                </tr>
+                <!--12-->
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data'>
+                    FILTROT =                 15.0
+                    <span class='code-comment-highlight'>
+                      / partial filter rotation angle (degrees)
+                    </span>
+                  </td>
+                </tr>
+                <!--13-->
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data'>
+                    LRFWAVE =          4877.000000
+                    <span class='code-comment-highlight'>
+                      / linear ramp filter wavelength
+                    </span>
+                  </td>
+                </tr>
+                <!--14-->
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data code-comment-highlight'>
+                    / INSTRUMENT STATUS USED IN DATA PROCESSING
+                  </td>
+                </tr>
+                <!--15-->
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data'>
+                    UCH1CJTM =             -88.2569
+                    <span class='code-comment-highlight'>
+                      / TEC cold junction #1 temperature (Celsius)
+                    </span>
+                  </td>
+                </tr>
+                <!--16-->
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data'>
+                    UCH2CJTM =             -88.6697
+                    <span class='code-comment-highlight'>
+                      / TEC cold junction #2 temperature (Celsius)
+                    </span>
+                  </td>
+                </tr>
+                <!--17-->
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data'>
+                    UCH3CJT M =             -88.3028
+                    <span class='code-comment-highlight'>
+                      / TEC cold junction #3 temperature (Celsius)
+                    </span>
+                  </td>
+                </tr>
+                <!--18-->
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data'>
+                    UCH4CJTM =             -88.7671
+                    <span class='code-comment-highlight'>
+                      / TEC cold junction #4 temperature (Celsius)
+                    </span>
+                  </td>
+                </tr>
+                <!--19-->
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data'>
+                    UBAY3TMP =              13.2302
+                    <span class='code-comment-highlight'>
+                      / bay 3 A1 temperature (deg C)
+                    </span>
+                  </td>
+                </tr>
+                <!--20-->
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data'>
+                    KSPOTS  = 'OFF'
+                    <span class='code-comment-highlight'>
+                      / Status of Kelsall spot lamps: ON, OFF
+                    </span>
+                  </td>
+                </tr>
+                <!--21-->
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data'>
+                    SHUTTER = 'A'
+                    <span class='code-comment-highlight'>
+                      / Shutter in place at beginning of the exposure
+                    </span>
+                  </td>
+                </tr>
+                <!--22-->
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data'>
+                    ATODGAIN =                  7.0
+                    <span class='code-comment-highlight'>
+                      / Analog to Digital Gain (Electrons/DN)
+                    </span>
+                  </td>
+                </tr>
+                <!--23-->
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data code-comment-highlight'>
+                    / RSDP CONTROL KEYWORDS
+                  </td>
+                </tr>
+                <!--24-->
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data'>
+                    MASKCORR = 'COMPLETE'
+                    <span class='code-comment-highlight'>
+                      / Do mask correction: PERFORM, OMIT, COMPLETE
+                    </span>
+                  </td>
+                </tr>
+                <!--25-->
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data'>
+                    ATODCORR = 'COMPLETE'
+                    <span class='code-comment-highlight'>
+                      / Do A-to-D correction: PERFORM, OMIT, COMPLETE
+                    </span>
+                  </td>
+                </tr>
+                <!--26-->
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data'>
+                    BLEVCORR = 'COMPLETE'
+                    <span class='code-comment-highlight'>
+                      / Do bias level correction
+                    </span>
+                  </td>
+                </tr>
+                <!--27-->
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data'>
+                    DARKCORR = 'COMPLETE'
+                    <span class='code-comment-highlight'>
+                      / Do dark correction: PERFORM, OMIT, COMPLETE
+                    </span>
+                  </td>
+                </tr>
+                <!--28-->
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data'>
+                    HISTORY
+                  </td>
+                </tr>
+                <!--29-->
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data'>
+                    MASKFILE = uref$f8213081u.r0h
+                  </td>
+                </tr>
+                <!--29-->
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data'>
+                    MASKCORR = COMPLETED
+                  </td>
+                </tr>
+                <!--30-->
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data'>
+                    HISTORY
+                  </td>
+                </tr>
+                <!--31-->
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data'>
+                    PEDIGREE = INFLIGHT 01/01/1994 - 15/05/1995
+                  </td>
+                </tr>
+                <!--32-->
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data'>
+                    HISTORY
+                  </td>
+                </tr>
+                <!--33-->
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data'>
+                    DESCRIP = STATIC MASK - INCLUDES CHARGE TRANSFER TRAPS
+                  </td>
+                </tr>
+                <!--34-->
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data'>
+                    HISTORY
+                  </td>
+                </tr>
+                <!--35-->
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data'>
+                    BIASFILE = uref$j9a1612mu.r2h
+                  </td>
+                </tr>
+                <!--36-->
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data'>
+                    BIASCORR = COMPLETED
+                  </td>
+                </tr>
+                <!--37-->
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data'>
+                    HISTORY
+                  </td>
+                </tr>
+                <!--38-->
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data'>
+                    PEDIGREE = INFLIGHT 29/08/98 - 21/08/99
+                  </td>
+                </tr>
+                <!--39-->
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data'>
+                    HISTORY
+                  </td>
+                </tr>
+                <!--40-->
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data'>
+                    DESCRIP =
+                    <span class='code-comment-highlight'>
+                      not significantly different from j6e16008u.
+                    </span>
+                  </td>
+                </tr>
+                <!--41-->
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data'>
+                    HISTORY
+                  </td>
+                </tr>
+                <!--42-->
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data'>
+                    DARKFILE = uref$j2g1549cu.r3h
+                  </td>
+                </tr>
+                <!--43-->
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data'>
+                    DARKCORR = COMPLETED
+                  </td>
+                </tr>
+                <!--44-->
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data '>
+                    The following throughput tables were used:
+                  </td>
+                </tr>
+                <!--45-->
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data '>
+                    crwfpc2comp$wfpc2_a2d7pc1_004_syn.fits
+                  </td>
+                </tr>
+                <!--46-->
+                <tr>
+                  <td class='code-line-number code-deleted-diff-line'></td>
+                  <td class='code-act-data code-deleted-diff-highlight'>
+                    crwfpc2comp$wfpc2_flatpc1_003_syn.fits,
+                    crwfpc2comp$wfpc2_flatpc1_003_syn.fits,
+                    crwfpc2comp$wfpc2_a2d7wf2_004_syn.fits,
+                    crwfpc2comp$wfpc2_flatwf2_003_syn.fits,
+                    crwfpc2comp$wfpc2_lrf_004_syn.fits[wave#],
+                    crwfpc2comp$wfpc2_dqewfc3_005_syn.fits,
+                    crwfpc2comp$wfpc2_lrf_004_syn.fits[wave#],
+                    crwfpc2comp$wfpc2_dqewfc4_005_syn.fits,
+                    crwfpc2comp$wfpc2_a2d7wf4_004_syn.fits,
+                    crwfpc2comp$wfpc2_flatwf4_003_syn.fits
+                  </td>
+                </tr>
+                <!--47-->
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data '>
+                    CD1_3   =                    0
+                  </td>
+                </tr>
+                <!--48-->
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data '>
+                    CD2_3   =                    0
+                  </td>
+                </tr>
+                <!--49-->
+                <tr>
+                  <td class='code-line-number'></td>
+                  <td class='code-act-data '>
+                    CD3_2   =                    0
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+      <script src='/Users/david/Documents/GitHub/Skrip.io/js/script.js'></script>
+    </footer>
+  </body>
+</html>
