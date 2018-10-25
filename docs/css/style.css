@@ -234,6 +234,7 @@ a:visited {text-decoration: none; color: #F0EDED;}
   width: 744px;
   height: 600px;
   overflow-x: scroll;
+  overflow-y: hidden;
   white-space: nowrap
 }
 .calendar-day-view-box {
