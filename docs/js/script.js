@@ -1,5 +1,11 @@
 $(document).ready(function(){
 
+  //Pseudo loading screen
+  setTimeout(function(){
+    $("#loading-screen").fadeOut(100)
+    $("#target-content").addClass("fadingIn")
+  },2000);
+
   //Scroll feedbox to bottom
   var height = 0;
 
