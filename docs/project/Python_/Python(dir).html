@@ -673,205 +673,214 @@
         </div>
       </div>
       <!--Directory Lists-->
-      <div id='body--dirList' class='fadingIn'>
+      <div id='body--dirList'>
         <!--search bar-->
         <form>
           <input class='dirList-main-search' type="text" id="fname" name="fname" placeholder="Search team drive or type '/' for commands">
         </form>
-        <!--directory top-->
-        <div class='directory-section-heading'>
-          <div class='directory-icon'>
-            <span class='font font-regular font-size-9 font-color-lighter'>
-              Directory ↑
-            </span>
-          </div>
-          <div class='directory-name'>
-          </div>
-          <div class='directory-creation-date'>
-            <span class='font font-regular font-size-9 font-color-lighter'>
-              Date Created
-            </span>
-          </div>
-          <div class='directory-modified-date'>
-            <span class='font font-regular font-size-9 font-color-lighter'>
-              Last Modified
-            </span>
-          </div>
-          <div class='directory-collaborator'>
-            <span class='font font-regular font-size-9 font-color-lighter'>
-              Main contributors
-            </span>
-          </div>
-          <div id='upload-to-subdirectory' class='directory-options'>
-            <img
-              src='https://davidnhuang.github.io/Skrip.io/assets/buttons/global-options.svg'
-              width='14px'
-              height= '14px'
-              style='padding-left: 32px; padding-top: 2px;'
-            />
+        <!--loading screen-->
+        <div id='loading-screen'>
+          <div class='loading-screen-bg'>
+            <div class='loading-bar'></div>
           </div>
         </div>
-        <!--directories-->
-        <div class='step-into-directory-bounding'>
-          <!--Python -->
-          <div id='directory-1' class='directory-listing'>
+        <!--loaded target content-->
+        <div id='target-content'>
+          <!--directory top-->
+          <div class='directory-section-heading'>
             <div class='directory-icon'>
-              <img
-                src='https://davidnhuang.github.io/Skrip.io/assets/buttons/global-folder.svg'
-                width='20px'
-                height= '20px'
-                style='padding-left: 8px; margin-top: 20px;'
-              />
-            </div>
-            <div class='directory-name'>
-              <span class='font font-regular font-size-12 font-color-default' style='padding-top: 21px;'>
-                Python
+              <span class='font font-regular font-size-9 font-color-lighter'>
+                Directory ↑
               </span>
             </div>
+            <div class='directory-name'>
+            </div>
             <div class='directory-creation-date'>
-              <span class='font font-regular font-size-9 font-color-lighter' style='padding-top: 22px;'>
-                1/14/2019
+              <span class='font font-regular font-size-9 font-color-lighter'>
+                Date Created
               </span>
             </div>
             <div class='directory-modified-date'>
-              <span class='font font-regular font-size-9 font-color-lighter' style='padding-top: 22px;'>
-                8/27/2019
+              <span class='font font-regular font-size-9 font-color-lighter'>
+                Last Modified
               </span>
             </div>
             <div class='directory-collaborator'>
-              <div class='directory-collaborator-profile advisor-profile-pic active-g'></div>
-              <div class='directory-collaborator-profile teammate-profile-pic-1 active-g'></div>
-              <div class='directory-collaborator-profile teammate-profile-pic-2'></div>
-              <div class='directory-collaborator-profile my-profile-pic active-g'></div>
+              <span class='font font-regular font-size-9 font-color-lighter'>
+                Main contributors
+              </span>
             </div>
-            <div class='directory-options'>
+            <div id='upload-to-subdirectory' class='directory-options'>
               <img
-                src='https://davidnhuang.github.io/Skrip.io/assets/buttons/global-vert-options.svg'
+                src='https://davidnhuang.github.io/Skrip.io/assets/buttons/global-options.svg'
                 width='14px'
                 height= '14px'
-                style='padding-left: 32px; padding-top: 24px;'
+                style='padding-left: 32px; padding-top: 2px;'
               />
             </div>
           </div>
-          <!--Python sub-->
-          <div>
-            <!--subdir 1-->
-            <a href='https://davidnhuang.github.io/Skrip.io/project/Python_/Python_init.html'>
-              <div class='subdirectory-listing'>
-                <div class='subdirectory-icon'>
-                  <img
-                    src='https://davidnhuang.github.io/Skrip.io/assets/icons/python.svg'
-                    width='20px'
-                    height= '20px'
-                    style='padding-left: 8px; margin-top: 20px;'
-                  />
-                </div>
-                <div class='subdirectory-name'>
-                  <span class='font font-regular font-size-12 font-color-default' style='padding-top: 21px;'>
-                    <span class='font-regular-italic font-color-lighter'>Python_</span>config.py
-                  </span>
-                </div>
-                <div class='directory-creation-date'>
-                  <span class='font font-regular font-size-9 font-color-lighter' style='padding-top: 22px;'>
-                    1/14/2019
-                  </span>
-                </div>
-                <div class='directory-collaborator'>
-                  <span class='font font-regular font-size-9 font-color-lighter' style='padding-top: 22px;'>
-                    Version 6
-                  </span>
-                </div>
+          <!--directories-->
+          <div class='step-into-directory-bounding'>
+            <!--Python -->
+            <div id='directory-1' class='directory-listing'>
+              <div class='directory-icon'>
+                <img
+                  src='https://davidnhuang.github.io/Skrip.io/assets/buttons/global-folder.svg'
+                  width='20px'
+                  height= '20px'
+                  style='padding-left: 8px; margin-top: 20px;'
+                />
               </div>
-            </a>
-            <!--subdir 2-->
-            <a href='https://davidnhuang.github.io/Skrip.io/project/Python_/Python_reductionPipeline.html'>
-              <div class='subdirectory-listing'>
-                <div class='subdirectory-icon'>
-                  <img
-                    src='https://davidnhuang.github.io/Skrip.io/assets/icons/python.svg'
-                    width='20px'
-                    height= '20px'
-                    style='padding-left: 8px; margin-top: 20px;'
-                  />
-                </div>
-                <div class='subdirectory-name'>
-                  <span class='font font-regular font-size-12 font-color-default' style='padding-top: 21px;'>
-                    <span class='font-regular-italic font-color-lighter'>Python_</span>reductionPipeline.py
-                  </span>
-                </div>
-                <div class='directory-creation-date'>
-                  <span class='font font-regular font-size-9 font-color-lighter' style='padding-top: 22px;'>
-                    1/14/2019
-                  </span>
-                </div>
-                <div class='directory-collaborator'>
-                  <span class='font font-regular font-size-9 font-color-lighter' style='padding-top: 22px;'>
-                    Version 91
-                  </span>
-                </div>
+              <div class='directory-name'>
+                <span class='font font-regular font-size-12 font-color-default' style='padding-top: 21px;'>
+                  Python
+                </span>
               </div>
-            </a>
-            <!--subdir 3-->
-            <a href='https://davidnhuang.github.io/Skrip.io/project/Python_/normalization.html'>
-              <div class='subdirectory-listing'>
-                <div class='subdirectory-icon'>
-                  <img
-                    src='https://davidnhuang.github.io/Skrip.io/assets/icons/python.svg'
-                    width='20px'
-                    height= '20px'
-                    style='padding-left: 8px; margin-top: 20px;'
-                  />
-                </div>
-                <div class='subdirectory-name'>
-                  <span class='font font-regular font-size-12 font-color-default' style='padding-top: 21px;'>
-                    <span class='font-regular-italic font-color-lighter'>Python_</span>normalization.py
-                  </span>
-                </div>
-                <div class='directory-creation-date'>
-                  <span class='font font-regular font-size-9 font-color-lighter' style='padding-top: 22px;'>
-                    1/14/2019
-                  </span>
-                </div>
-                <div class='directory-collaborator'>
-                  <span class='font font-regular font-size-9 font-color-lighter' style='padding-top: 22px;'>
-                    Version 12
-                  </span>
-                </div>
+              <div class='directory-creation-date'>
+                <span class='font font-regular font-size-9 font-color-lighter' style='padding-top: 22px;'>
+                  1/14/2019
+                </span>
               </div>
-            </a>
-            <!--subdir 4-->
-            <a href='https://davidnhuang.github.io/Skrip.io/project/Python_/spectralPlot.html'>
-              <div class='subdirectory-listing'>
-                <div class='subdirectory-icon'>
-                  <img
-                    src='https://davidnhuang.github.io/Skrip.io/assets/icons/python.svg'
-                    width='20px'
-                    height= '20px'
-                    style='padding-left: 8px; margin-top: 20px;'
-                  />
-                </div>
-                <div class='subdirectory-name'>
-                  <span class='font font-regular font-size-12 font-color-default' style='padding-top: 21px;'>
-                    <span class='font-regular-italic font-color-lighter'>Python_</span>spectralPlot.py
-                  </span>
-                </div>
-                <div class='directory-creation-date'>
-                  <span class='font font-regular font-size-9 font-color-lighter' style='padding-top: 22px;'>
-                    1/14/2019
-                  </span>
-                </div>
-                <div class='directory-collaborator'>
-                  <span class='font font-regular font-size-9 font-color-lighter' style='padding-top: 22px;'>
-                    Version 5
-                  </span>
-                </div>
+              <div class='directory-modified-date'>
+                <span class='font font-regular font-size-9 font-color-lighter' style='padding-top: 22px;'>
+                  8/27/2019
+                </span>
               </div>
-            </a>
+              <div class='directory-collaborator'>
+                <div class='directory-collaborator-profile advisor-profile-pic active-g'></div>
+                <div class='directory-collaborator-profile teammate-profile-pic-1 active-g'></div>
+                <div class='directory-collaborator-profile teammate-profile-pic-2'></div>
+                <div class='directory-collaborator-profile my-profile-pic active-g'></div>
+              </div>
+              <div class='directory-options'>
+                <img
+                  src='https://davidnhuang.github.io/Skrip.io/assets/buttons/global-vert-options.svg'
+                  width='14px'
+                  height= '14px'
+                  style='padding-left: 32px; padding-top: 24px;'
+                />
+              </div>
+            </div>
+            <!--Python sub-->
+            <div>
+              <!--subdir 1-->
+              <a href='https://davidnhuang.github.io/Skrip.io/project/Python_/Python_init.html'>
+                <div class='subdirectory-listing'>
+                  <div class='subdirectory-icon'>
+                    <img
+                      src='https://davidnhuang.github.io/Skrip.io/assets/icons/python.svg'
+                      width='20px'
+                      height= '20px'
+                      style='padding-left: 8px; margin-top: 20px;'
+                    />
+                  </div>
+                  <div class='subdirectory-name'>
+                    <span class='font font-regular font-size-12 font-color-default' style='padding-top: 21px;'>
+                      <span class='font-regular-italic font-color-lighter'>Python_</span>config.py
+                    </span>
+                  </div>
+                  <div class='directory-creation-date'>
+                    <span class='font font-regular font-size-9 font-color-lighter' style='padding-top: 22px;'>
+                      1/14/2019
+                    </span>
+                  </div>
+                  <div class='directory-collaborator'>
+                    <span class='font font-regular font-size-9 font-color-lighter' style='padding-top: 22px;'>
+                      Version 6
+                    </span>
+                  </div>
+                </div>
+              </a>
+              <!--subdir 2-->
+              <a href='https://davidnhuang.github.io/Skrip.io/project/Python_/Python_reductionPipeline.html'>
+                <div class='subdirectory-listing'>
+                  <div class='subdirectory-icon'>
+                    <img
+                      src='https://davidnhuang.github.io/Skrip.io/assets/icons/python.svg'
+                      width='20px'
+                      height= '20px'
+                      style='padding-left: 8px; margin-top: 20px;'
+                    />
+                  </div>
+                  <div class='subdirectory-name'>
+                    <span class='font font-regular font-size-12 font-color-default' style='padding-top: 21px;'>
+                      <span class='font-regular-italic font-color-lighter'>Python_</span>reductionPipeline.py
+                    </span>
+                  </div>
+                  <div class='directory-creation-date'>
+                    <span class='font font-regular font-size-9 font-color-lighter' style='padding-top: 22px;'>
+                      1/14/2019
+                    </span>
+                  </div>
+                  <div class='directory-collaborator'>
+                    <span class='font font-regular font-size-9 font-color-lighter' style='padding-top: 22px;'>
+                      Version 91
+                    </span>
+                  </div>
+                </div>
+              </a>
+              <!--subdir 3-->
+              <a href='https://davidnhuang.github.io/Skrip.io/project/Python_/normalization.html'>
+                <div class='subdirectory-listing'>
+                  <div class='subdirectory-icon'>
+                    <img
+                      src='https://davidnhuang.github.io/Skrip.io/assets/icons/python.svg'
+                      width='20px'
+                      height= '20px'
+                      style='padding-left: 8px; margin-top: 20px;'
+                    />
+                  </div>
+                  <div class='subdirectory-name'>
+                    <span class='font font-regular font-size-12 font-color-default' style='padding-top: 21px;'>
+                      <span class='font-regular-italic font-color-lighter'>Python_</span>normalization.py
+                    </span>
+                  </div>
+                  <div class='directory-creation-date'>
+                    <span class='font font-regular font-size-9 font-color-lighter' style='padding-top: 22px;'>
+                      1/14/2019
+                    </span>
+                  </div>
+                  <div class='directory-collaborator'>
+                    <span class='font font-regular font-size-9 font-color-lighter' style='padding-top: 22px;'>
+                      Version 12
+                    </span>
+                  </div>
+                </div>
+              </a>
+              <!--subdir 4-->
+              <a href='https://davidnhuang.github.io/Skrip.io/project/Python_/spectralPlot.html'>
+                <div class='subdirectory-listing'>
+                  <div class='subdirectory-icon'>
+                    <img
+                      src='https://davidnhuang.github.io/Skrip.io/assets/icons/python.svg'
+                      width='20px'
+                      height= '20px'
+                      style='padding-left: 8px; margin-top: 20px;'
+                    />
+                  </div>
+                  <div class='subdirectory-name'>
+                    <span class='font font-regular font-size-12 font-color-default' style='padding-top: 21px;'>
+                      <span class='font-regular-italic font-color-lighter'>Python_</span>spectralPlot.py
+                    </span>
+                  </div>
+                  <div class='directory-creation-date'>
+                    <span class='font font-regular font-size-9 font-color-lighter' style='padding-top: 22px;'>
+                      1/14/2019
+                    </span>
+                  </div>
+                  <div class='directory-collaborator'>
+                    <span class='font font-regular font-size-9 font-color-lighter' style='padding-top: 22px;'>
+                      Version 5
+                    </span>
+                  </div>
+                </div>
+              </a>
+            </div>
           </div>
         </div>
       </div>
       <!--Site feed-->
-      <div id='body--sideFeed' class='fadingIn'>
+      <div id='body--sideFeed'>
         <div class='skrip-comm-feed'>
           <!--Meeting scheduler-->
           <div class='meeting-schedule-feed'>

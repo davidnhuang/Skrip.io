@@ -137,845 +137,854 @@
         <span class='font font-light font-size-15 font-color-lighter' style='margin-bottom: 40px;'>
           Python_ / Python_normalization.py ver. 14
         </span>
-        <div class='code-diff-display'>
-          <!--current version-->
-          <div class='code-diff-current-version'>
-            <!--profile-->
-            <div class='meeting-profile my-profile-pic active-g'></div>
-            <!--metadata-->
-            <div class='calendar-meeting-listing-detail'>
-              <span class='font font-light font-size-12 font-color-default' style='padding-top: 4px;'>
-                Version 14
-              </span>
-            </div>
-            <div class='calendar-meeting-listing-detail'>
-              <span class='font font-light font-size-12 font-color-lighter' style='padding-top: 4px;'>
-                12 / 5 / 2019 4:26PM
-              </span>
-            </div>
-            <!--diff data-->
-            <div id='current-code-version' class='current-code-diff-data'>
-              <table class='code-diff-lines'>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-comment-highlight'>
-                    #import numpy as np -- turned off after importing in config.py
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    class Order:
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent'>
-                    def __init__(self, frames, baseNames, flatOrder):
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-2'>
-                    """
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-2'>
-                    Attributes:
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-3'>
-                    baseName:
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number code-added-diff-line'></td>
-                  <td class='code-act-data code-indent-3 code-added-diff-highlight'>
-                    flatOrder:
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-3'>
-                    frames:
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-2'>
-                    """
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-2'>
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number code-added-diff-line'></td>
-                  <td class='code-act-data code-indent-2 code-added-diff-highlight'>
-                    self.frames = frames
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number code-added-diff-line'></td>
-                  <td class='code-act-data code-indent-2 code-added-diff-highlight'>
-                    self.baseNames = baseNames
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-2'>
-                    self.flatOrder = flatOrder
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-2'>
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-2'>
-                    self.integrationTime = 0.0
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-2'>
-                    """
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-2'>
-                    Attributes:
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-3'>
-                    topCalc: Pixel row of top left (x = 0) corner of order predicted by grating equation.
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-3'>
-                    topMean: Pixel row of top left corder as determined by edge detection.
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-3'>
-                    botCalc: Pixel row of bottom left corner of order predicted by grating equation.
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-3'>
-                    botMeas: Pixel row of bottom left corner of order determined by edge detection.
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-2'>
-                    """
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-2'>
-                    self.topCalc = 0.0
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-2'>
-                    self.topMeas = 0.0
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-2'>
-                    self.botCalc = 0.0
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-2'>
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-2'>
-                    self.spectralTrace = []
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-2'>
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-2'>
-                    self.objCutout = {}
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-2'>
-                    for frame in self.frames:
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-3'>
-                    self.objCutout[frame] = []
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-2'>
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-2'>
-                    self.onOrderMask = []
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-2'>
-                    self.offOrderMask = []
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-2'>
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-comment-highlight code-indent-2'>
-                    #
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-comment-highlight code-indent-2'>
-                    # fields pertaining to wavelength calibration
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-comment-highlight code-indent-2'>
-                    #
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-2'>
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-2'>
-                    self.lines = []
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-2'>
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-2'>
-                    self.waveShift = None
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-2'>
-                    self.waveScale = []
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-2'>
-                    self.calMethod = 'unknown'
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-2'>
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-2'>
-                    self.orderCal = False
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-comment-highlight code-indent-2'>
-                    # true if per-order fit computed
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-2'>
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-2'>
-                    self.orderCalWaveScale = []
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-comment-highlight code-indent-2'>
-                     # wavelength scale based on per-order fit
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-2'>
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-2'>
-                    self.orderCalSlope = 0.0
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-comment-highlight code-indent-2'>
-                     # slope of linear per-order fit
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-2'>
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-2'>
-                    for frame in frames:
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-3'>
-                    self.objWindow[frame] = []
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-3'>
-                    if frame == 'AB':
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-4'>
-                    self.topSkyWindow[frame] = None
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-4'>
-                    self.skySpec[frame] = None
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-3'>
-                    else:
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-4'>
-                    self.topSkyWindow[frame] = []
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-4'>
-                    self.botSkyWindow[frame] = []
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-4'>
-                    self.skySpec[frame] = []
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-3'>
-                    self.topBgMean[frame] = None
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-3'>
-                    self.botBgMean[frame] = None
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-3'>
-                    self.snr[frame] = None
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-3'>
-                    self.objSpec[frame] = []
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-3'>
-                  </td>
-                </tr>
-              </table>
-            </div>
+        <!--loading screen-->
+        <div id='loading-screen'>
+          <div class='loading-screen-bg'>
+            <div class='loading-bar'></div>
           </div>
-          <!--previous version-->
-          <div class='code-diff-previous-version'>
-            <!--profile-->
-            <div class='meeting-profile teammate-profile-pic-1 active-g'></div>
-            <!--metadata-->
-            <div class='calendar-meeting-listing-detail'>
-              <span class='font font-light font-size-12 font-color-default' style='padding-top: 4px;'>
-                Version 13
-              </span>
+        </div>
+        <!--loaded target content-->
+        <div id='target-content'>
+          <div class='code-diff-display'>
+            <!--current version-->
+            <div class='code-diff-current-version'>
+              <!--profile-->
+              <div class='meeting-profile my-profile-pic active-g'></div>
+              <!--metadata-->
+              <div class='calendar-meeting-listing-detail'>
+                <span class='font font-light font-size-12 font-color-default' style='padding-top: 4px;'>
+                  Version 14
+                </span>
+              </div>
+              <div class='calendar-meeting-listing-detail'>
+                <span class='font font-light font-size-12 font-color-lighter' style='padding-top: 4px;'>
+                  12 / 5 / 2019 4:26PM
+                </span>
+              </div>
+              <!--diff data-->
+              <div id='current-code-version' class='current-code-diff-data'>
+                <table class='code-diff-lines'>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-comment-highlight'>
+                      #import numpy as np -- turned off after importing in config.py
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data'>
+                      class Order:
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent'>
+                      def __init__(self, frames, baseNames, flatOrder):
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-2'>
+                      """
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-2'>
+                      Attributes:
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-3'>
+                      baseName:
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number code-added-diff-line'></td>
+                    <td class='code-act-data code-indent-3 code-added-diff-highlight'>
+                      flatOrder:
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-3'>
+                      frames:
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-2'>
+                      """
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-2'>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number code-added-diff-line'></td>
+                    <td class='code-act-data code-indent-2 code-added-diff-highlight'>
+                      self.frames = frames
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number code-added-diff-line'></td>
+                    <td class='code-act-data code-indent-2 code-added-diff-highlight'>
+                      self.baseNames = baseNames
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-2'>
+                      self.flatOrder = flatOrder
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-2'>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-2'>
+                      self.integrationTime = 0.0
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-2'>
+                      """
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-2'>
+                      Attributes:
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-3'>
+                      topCalc: Pixel row of top left (x = 0) corner of order predicted by grating equation.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-3'>
+                      topMean: Pixel row of top left corder as determined by edge detection.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-3'>
+                      botCalc: Pixel row of bottom left corner of order predicted by grating equation.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-3'>
+                      botMeas: Pixel row of bottom left corner of order determined by edge detection.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-2'>
+                      """
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-2'>
+                      self.topCalc = 0.0
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-2'>
+                      self.topMeas = 0.0
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-2'>
+                      self.botCalc = 0.0
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-2'>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-2'>
+                      self.spectralTrace = []
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-2'>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-2'>
+                      self.objCutout = {}
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-2'>
+                      for frame in self.frames:
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-3'>
+                      self.objCutout[frame] = []
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-2'>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-2'>
+                      self.onOrderMask = []
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-2'>
+                      self.offOrderMask = []
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-2'>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-comment-highlight code-indent-2'>
+                      #
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-comment-highlight code-indent-2'>
+                      # fields pertaining to wavelength calibration
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-comment-highlight code-indent-2'>
+                      #
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-2'>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-2'>
+                      self.lines = []
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-2'>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-2'>
+                      self.waveShift = None
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-2'>
+                      self.waveScale = []
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-2'>
+                      self.calMethod = 'unknown'
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-2'>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-2'>
+                      self.orderCal = False
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-comment-highlight code-indent-2'>
+                      # true if per-order fit computed
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-2'>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-2'>
+                      self.orderCalWaveScale = []
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-comment-highlight code-indent-2'>
+                       # wavelength scale based on per-order fit
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-2'>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-2'>
+                      self.orderCalSlope = 0.0
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-comment-highlight code-indent-2'>
+                       # slope of linear per-order fit
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-2'>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-2'>
+                      for frame in frames:
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-3'>
+                      self.objWindow[frame] = []
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-3'>
+                      if frame == 'AB':
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-4'>
+                      self.topSkyWindow[frame] = None
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-4'>
+                      self.skySpec[frame] = None
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-3'>
+                      else:
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-4'>
+                      self.topSkyWindow[frame] = []
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-4'>
+                      self.botSkyWindow[frame] = []
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-4'>
+                      self.skySpec[frame] = []
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-3'>
+                      self.topBgMean[frame] = None
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-3'>
+                      self.botBgMean[frame] = None
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-3'>
+                      self.snr[frame] = None
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-3'>
+                      self.objSpec[frame] = []
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-3'>
+                    </td>
+                  </tr>
+                </table>
+              </div>
             </div>
-            <div class='calendar-meeting-listing-detail'>
-              <span class='font font-light font-size-12 font-color-lighter' style='padding-top: 4px;'>
-                12 / 3 / 2019 1:56PM
-              </span>
-            </div>
-            <!--revert - previous version only-->
-            <div class='revert-previous-version-button'>
-              <img
-                src='https://davidnhuang.github.io/Skrip.io/assets/buttons/revert-version.svg'
-                width='15px'
-                hegith='15px'
-              />
-            </div>
-            <!--diff data-->
-            <div id='previous-code-version' class='current-code-diff-data'>
-              <table class='code-diff-lines'>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-comment-highlight'>
-                    #import numpy as np -- turned off after importing in config.py
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    class Order:
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent'>
-                    def __init__(self, frames, baseNames, flatOrder):
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-2'>
-                    """
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-2'>
-                    Attributes:
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-3'>
-                    baseName:
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-3'>
-                    frames:
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number code-deleted-diff-line'></td>
-                  <td class='code-act-data code-indent-3 code-deleted-diff-highlight'>
-                    isoFrame:
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-2'>
-                    """
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-2'>
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number code-deleted-diff-line'></td>
-                  <td class='code-act-data code-indent-2 code-deleted-diff-highlight'>
-                    self.frames = isoFrame
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number code-deleted-diff-line'></td>
-                  <td class='code-act-data code-indent-2 code-deleted-diff-highlight'>
-                    self.baseNames = frameID
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-2'>
-                    self.flatOrder = flatOrder
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-2'>
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-2'>
-                    self.integrationTime = 0.0
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-2'>
-                    """
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-2'>
-                    Attributes:
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-3'>
-                    topCalc: Pixel row of top left (x = 0) corner of order predicted by grating equation.
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-3'>
-                    topMean: Pixel row of top left corder as determined by edge detection.
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-3'>
-                    botCalc: Pixel row of bottom left corner of order predicted by grating equation.
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-3'>
-                    botMeas: Pixel row of bottom left corner of order determined by edge detection.
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-2'>
-                    """
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-2'>
-                    self.topCalc = 0.0
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-2'>
-                    self.topMeas = 0.0
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-2'>
-                    self.botCalc = 0.0
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-2'>
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-2'>
-                    self.spectralTrace = []
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-2'>
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-2'>
-                    self.objCutout = {}
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-2'>
-                    for frame in self.frames:
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-3'>
-                    self.objCutout[frame] = []
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-2'>
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-2'>
-                    self.onOrderMask = []
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-2'>
-                    self.offOrderMask = []
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-2'>
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-comment-highlight code-indent-2'>
-                    #
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-comment-highlight code-indent-2'>
-                    # fields pertaining to wavelength calibration
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-comment-highlight code-indent-2'>
-                    #
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-2'>
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-2'>
-                    self.lines = []
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-2'>
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-2'>
-                    self.waveShift = None
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-2'>
-                    self.waveScale = []
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-2'>
-                    self.calMethod = 'unknown'
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-2'>
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-2'>
-                    self.orderCal = False
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-comment-highlight code-indent-2'>
-                    # true if per-order fit computed
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-2'>
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-2'>
-                    self.orderCalWaveScale = []
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-comment-highlight code-indent-2'>
-                     # wavelength scale based on per-order fit
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-2'>
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-2'>
-                    self.orderCalSlope = 0.0
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-comment-highlight code-indent-2'>
-                     # slope of linear per-order fit
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-2'>
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-2'>
-                    for frame in frames:
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-3'>
-                    self.objWindow[frame] = []
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-3'>
-                    if frame == 'AB':
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-4'>
-                    self.topSkyWindow[frame] = None
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-4'>
-                    self.skySpec[frame] = None
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-3'>
-                    else:
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-4'>
-                    self.topSkyWindow[frame] = []
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-4'>
-                    self.botSkyWindow[frame] = []
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-4'>
-                    self.skySpec[frame] = []
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-3'>
-                    self.topBgMean[frame] = None
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-3'>
-                    self.botBgMean[frame] = None
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-3'>
-                    self.snr[frame] = None
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-3'>
-                    self.objSpec[frame] = []
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-3'>
-                  </td>
-                </tr>
-              </table>
+            <!--previous version-->
+            <div class='code-diff-previous-version'>
+              <!--profile-->
+              <div class='meeting-profile teammate-profile-pic-1 active-g'></div>
+              <!--metadata-->
+              <div class='calendar-meeting-listing-detail'>
+                <span class='font font-light font-size-12 font-color-default' style='padding-top: 4px;'>
+                  Version 13
+                </span>
+              </div>
+              <div class='calendar-meeting-listing-detail'>
+                <span class='font font-light font-size-12 font-color-lighter' style='padding-top: 4px;'>
+                  12 / 3 / 2019 1:56PM
+                </span>
+              </div>
+              <!--revert - previous version only-->
+              <div class='revert-previous-version-button'>
+                <img
+                  src='https://davidnhuang.github.io/Skrip.io/assets/buttons/revert-version.svg'
+                  width='15px'
+                  hegith='15px'
+                />
+              </div>
+              <!--diff data-->
+              <div id='previous-code-version' class='current-code-diff-data'>
+                <table class='code-diff-lines'>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-comment-highlight'>
+                      #import numpy as np -- turned off after importing in config.py
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data'>
+                      class Order:
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent'>
+                      def __init__(self, frames, baseNames, flatOrder):
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-2'>
+                      """
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-2'>
+                      Attributes:
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-3'>
+                      baseName:
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-3'>
+                      frames:
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number code-deleted-diff-line'></td>
+                    <td class='code-act-data code-indent-3 code-deleted-diff-highlight'>
+                      isoFrame:
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-2'>
+                      """
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-2'>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number code-deleted-diff-line'></td>
+                    <td class='code-act-data code-indent-2 code-deleted-diff-highlight'>
+                      self.frames = isoFrame
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number code-deleted-diff-line'></td>
+                    <td class='code-act-data code-indent-2 code-deleted-diff-highlight'>
+                      self.baseNames = frameID
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-2'>
+                      self.flatOrder = flatOrder
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-2'>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-2'>
+                      self.integrationTime = 0.0
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-2'>
+                      """
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-2'>
+                      Attributes:
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-3'>
+                      topCalc: Pixel row of top left (x = 0) corner of order predicted by grating equation.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-3'>
+                      topMean: Pixel row of top left corder as determined by edge detection.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-3'>
+                      botCalc: Pixel row of bottom left corner of order predicted by grating equation.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-3'>
+                      botMeas: Pixel row of bottom left corner of order determined by edge detection.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-2'>
+                      """
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-2'>
+                      self.topCalc = 0.0
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-2'>
+                      self.topMeas = 0.0
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-2'>
+                      self.botCalc = 0.0
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-2'>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-2'>
+                      self.spectralTrace = []
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-2'>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-2'>
+                      self.objCutout = {}
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-2'>
+                      for frame in self.frames:
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-3'>
+                      self.objCutout[frame] = []
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-2'>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-2'>
+                      self.onOrderMask = []
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-2'>
+                      self.offOrderMask = []
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-2'>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-comment-highlight code-indent-2'>
+                      #
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-comment-highlight code-indent-2'>
+                      # fields pertaining to wavelength calibration
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-comment-highlight code-indent-2'>
+                      #
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-2'>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-2'>
+                      self.lines = []
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-2'>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-2'>
+                      self.waveShift = None
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-2'>
+                      self.waveScale = []
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-2'>
+                      self.calMethod = 'unknown'
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-2'>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-2'>
+                      self.orderCal = False
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-comment-highlight code-indent-2'>
+                      # true if per-order fit computed
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-2'>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-2'>
+                      self.orderCalWaveScale = []
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-comment-highlight code-indent-2'>
+                       # wavelength scale based on per-order fit
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-2'>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-2'>
+                      self.orderCalSlope = 0.0
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-comment-highlight code-indent-2'>
+                       # slope of linear per-order fit
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-2'>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-2'>
+                      for frame in frames:
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-3'>
+                      self.objWindow[frame] = []
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-3'>
+                      if frame == 'AB':
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-4'>
+                      self.topSkyWindow[frame] = None
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-4'>
+                      self.skySpec[frame] = None
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-3'>
+                      else:
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-4'>
+                      self.topSkyWindow[frame] = []
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-4'>
+                      self.botSkyWindow[frame] = []
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-4'>
+                      self.skySpec[frame] = []
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-3'>
+                      self.topBgMean[frame] = None
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-3'>
+                      self.botBgMean[frame] = None
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-3'>
+                      self.snr[frame] = None
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-3'>
+                      self.objSpec[frame] = []
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-3'>
+                    </td>
+                  </tr>
+                </table>
+              </div>
             </div>
           </div>
         </div>

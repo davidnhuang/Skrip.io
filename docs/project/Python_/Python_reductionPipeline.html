@@ -137,659 +137,668 @@
         <span class='font font-light font-size-15 font-color-lighter' style='margin-bottom: 40px;'>
           Python_ / Python_reductionPipeline.py ver. 2
         </span>
-        <div class='code-diff-display'>
-          <!--current version-->
-          <div class='code-diff-current-version'>
-            <!--profile-->
-            <div class='meeting-profile advisor-profile-pic active-g'></div>
-            <!--metadata-->
-            <div class='calendar-meeting-listing-detail'>
-              <span class='font font-light font-size-12 font-color-default' style='padding-top: 4px;'>
-                Version 2
-              </span>
-            </div>
-            <div class='calendar-meeting-listing-detail'>
-              <span class='font font-light font-size-12 font-color-lighter' style='padding-top: 4px;'>
-                12 / 5 / 2019 4:26PM
-              </span>
-            </div>
-            <!--diff data-->
-            <div id='current-code-version' class='current-code-diff-data'>
-              <table class='code-diff-lines'>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    import logging
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    import numpy as np
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    import scipy.stats
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    import scipy.optimize
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-comment-highlight'>
-                    #import scipy.optimize
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    import config
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    import image_lib
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    import nirspec_lib
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    import wavelength_utils
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    logger = logging.getLogger('obj')
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    def reduce_order(order):
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent code-comment-highlight'>
-                    # flatten object images for this order
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent'>
-                    __flatten(order)
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent code-comment-highlight'>
-                    # rectify obj and flattened obj in spatial dimension
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent'>
-                    __rectify_spatial(order)
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent code-comment-highlight'>
-                    # trim rectified order
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent'>
-                    __trim(order)
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent code-comment-highlight'>
-                    # save rectified images before spectral rectify for diagnostics
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent'>
-                    order.srNormFlatImg = order.flatOrder.rectFlatImg
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent'>
-                    for frame in order.frames:
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number code-added-diff-line'></td>
-                  <td class='code-act-data code-indent-2 code-added-diff-highlight'>
-                    order.srFfObjImg[frame] = order.ffObjImg[frame]<br>
-                    <span class='code-comment-highlight'>
-                      # adjusted bugg ffObj1Img to ffObjImg
-                    </span>
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent code-comment-highlight'>
-                    # find spatial profile and peak
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent'>
-                    __find_spatial_profile_and_peak(order)
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent code-comment-highlight'>
-                    # characterize spatial profile by fitting to Gaussian
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent'>
-                    __characterize_spatial_profile(order)
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent code-comment-highlight'>
-                    # Find and smooth spectral trace, always use frame A
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent'>
-                    try:
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-2'>
-                    order.spectralTrace = nirspec_lib.smooth_spectral_trace(
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-3'>
-                    nirspec_lib.find_spectral_trace(
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number code-added-diff-line'></td>
-                  <td class='code-act-data code-indent-4 code-added-diff-highlight'>
-                    order.ffObjImg['A']), order.ffObjImg['A'].shape[0])
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent'>
-                    except Exception as e:
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-2'>
-                    logger.warning('not rectifying order {} in spectral dimension'.format(
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-3'>
-                    order.flatOrder.orderNum))
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent'>
-                    else:
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-2'>
-                    order.flatOrder.rectFlatImg = image_lib.rectify_spectral(
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-3'>
-                    order.flatOrder.rectFlatImg, order.spectralTrace)
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-2'>
-                    __rectify_spectral(order)
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-2'>
-                    order.spectralRectified = True
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent code-comment-highlight'>
-                    # compute noise image
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent'>
-                    order.noiseImg = nirspec_lib.calc_noise_img(
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number code-added-diff-line'></td>
-                  <td class='code-act-data code-indent-2 code-added-diff-highlight'>
-                    order.objImg['A'], order.flatOrder.rectFlatImg, order.integrationTime)<br>
-                    <span class='code-comment-highlight'># changed GMTTime to integrationTime for better noise granularity canceling</span>
-                  </td>
-                </tr>
-              </table>
-            </div>
+        <!--loading screen-->
+        <div id='loading-screen'>
+          <div class='loading-screen-bg'>
+            <div class='loading-bar'></div>
           </div>
-          <!--previous version-->
-          <div class='code-diff-previous-version'>
-            <!--profile-->
-            <div class='meeting-profile teammate-profile-pic-1 active-g'></div>
-            <!--metadata-->
-            <div class='calendar-meeting-listing-detail'>
-              <span class='font font-light font-size-12 font-color-default' style='padding-top: 4px;'>
-                Version 1
-              </span>
+        </div>
+        <!--loaded target content-->
+        <div id='target-content'>
+          <div class='code-diff-display'>
+            <!--current version-->
+            <div class='code-diff-current-version'>
+              <!--profile-->
+              <div class='meeting-profile advisor-profile-pic active-g'></div>
+              <!--metadata-->
+              <div class='calendar-meeting-listing-detail'>
+                <span class='font font-light font-size-12 font-color-default' style='padding-top: 4px;'>
+                  Version 2
+                </span>
+              </div>
+              <div class='calendar-meeting-listing-detail'>
+                <span class='font font-light font-size-12 font-color-lighter' style='padding-top: 4px;'>
+                  12 / 5 / 2019 4:26PM
+                </span>
+              </div>
+              <!--diff data-->
+              <div id='current-code-version' class='current-code-diff-data'>
+                <table class='code-diff-lines'>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data'>
+                      import logging
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data'>
+                      import numpy as np
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data'>
+                      import scipy.stats
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data'>
+                      import scipy.optimize
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-comment-highlight'>
+                      #import scipy.optimize
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data'>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data'>
+                      import config
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data'>
+                      import image_lib
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data'>
+                      import nirspec_lib
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data'>
+                      import wavelength_utils
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data'>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data'>
+                      logger = logging.getLogger('obj')
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data'>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data'>
+                      def reduce_order(order):
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent code-comment-highlight'>
+                      # flatten object images for this order
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent'>
+                      __flatten(order)
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data'>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent code-comment-highlight'>
+                      # rectify obj and flattened obj in spatial dimension
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent'>
+                      __rectify_spatial(order)
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data'>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent code-comment-highlight'>
+                      # trim rectified order
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent'>
+                      __trim(order)
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data'>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent code-comment-highlight'>
+                      # save rectified images before spectral rectify for diagnostics
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent'>
+                      order.srNormFlatImg = order.flatOrder.rectFlatImg
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent'>
+                      for frame in order.frames:
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number code-added-diff-line'></td>
+                    <td class='code-act-data code-indent-2 code-added-diff-highlight'>
+                      order.srFfObjImg[frame] = order.ffObjImg[frame]<br>
+                      <span class='code-comment-highlight'>
+                        # adjusted bugg ffObj1Img to ffObjImg
+                      </span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data'>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent code-comment-highlight'>
+                      # find spatial profile and peak
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent'>
+                      __find_spatial_profile_and_peak(order)
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data'>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent code-comment-highlight'>
+                      # characterize spatial profile by fitting to Gaussian
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent'>
+                      __characterize_spatial_profile(order)
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data'>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent code-comment-highlight'>
+                      # Find and smooth spectral trace, always use frame A
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent'>
+                      try:
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-2'>
+                      order.spectralTrace = nirspec_lib.smooth_spectral_trace(
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-3'>
+                      nirspec_lib.find_spectral_trace(
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number code-added-diff-line'></td>
+                    <td class='code-act-data code-indent-4 code-added-diff-highlight'>
+                      order.ffObjImg['A']), order.ffObjImg['A'].shape[0])
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent'>
+                      except Exception as e:
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-2'>
+                      logger.warning('not rectifying order {} in spectral dimension'.format(
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-3'>
+                      order.flatOrder.orderNum))
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent'>
+                      else:
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-2'>
+                      order.flatOrder.rectFlatImg = image_lib.rectify_spectral(
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-3'>
+                      order.flatOrder.rectFlatImg, order.spectralTrace)
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-2'>
+                      __rectify_spectral(order)
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-2'>
+                      order.spectralRectified = True
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data'>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent code-comment-highlight'>
+                      # compute noise image
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent'>
+                      order.noiseImg = nirspec_lib.calc_noise_img(
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number code-added-diff-line'></td>
+                    <td class='code-act-data code-indent-2 code-added-diff-highlight'>
+                      order.objImg['A'], order.flatOrder.rectFlatImg, order.integrationTime)<br>
+                      <span class='code-comment-highlight'># changed GMTTime to integrationTime for better noise granularity canceling</span>
+                    </td>
+                  </tr>
+                </table>
+              </div>
             </div>
-            <div class='calendar-meeting-listing-detail'>
-              <span class='font font-light font-size-12 font-color-lighter' style='padding-top: 4px;'>
-                12 / 3 / 2019 1:56PM
-              </span>
-            </div>
-            <!--revert - previous version only-->
-            <div class='revert-previous-version-button'>
-              <img
-                src='https://davidnhuang.github.io/Skrip.io/assets/buttons/revert-version.svg'
-                width='15px'
-                hegith='15px'
-              />
-            </div>
-            <!--diff data-->
-            <div id='previous-code-version' class='current-code-diff-data'>
-              <table class='code-diff-lines'>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    import logging
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    import numpy as np
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    import scipy.stats
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    import scipy.optimize
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-comment-highlight'>
-                    #import scipy.optimize
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    import config
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    import image_lib
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    import nirspec_lib
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    import wavelength_utils
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number code-deleted-diff-line'></td>
-                  <td class='code-act-data code-deleted-diff-highlight'>
-                    import wavelength_libRedS<br>
-                    <span class='code-comment-highlight'>
-                      # removed later for wavelength_utils
-                    </span>
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    logger = logging.getLogger('obj')
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    def reduce_order(order):
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent code-comment-highlight'>
-                    # flatten object images for this order
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent'>
-                    __flatten(order)
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent code-comment-highlight'>
-                    # rectify obj and flattened obj in spatial dimension
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent'>
-                    __rectify_spatial(order)
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent code-comment-highlight'>
-                    # trim rectified order
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent'>
-                    __trim(order)
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent code-comment-highlight'>
-                    # save rectified images before spectral rectify for diagnostics
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent'>
-                    order.srNormFlatImg = order.flatOrder.rectFlatImg
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent'>
-                    for frame in order.frames:
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number code-deleted-diff-line'></td>
-                  <td class='code-act-data code-indent-2 code-deleted-diff-highlight'>
-                    order.srFfObjImg[frame] = order.ffObj1Img[frame]
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent code-comment-highlight'>
-                    # find spatial profile and peak
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent'>
-                    __find_spatial_profile_and_peak(order)
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent code-comment-highlight'>
-                    # characterize spatial profile by fitting to Gaussian
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent'>
-                    __characterize_spatial_profile(order)
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent code-comment-highlight'>
-                    # Find and smooth spectral trace, always use frame A
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent'>
-                    try:
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-2'>
-                    order.spectralTrace = nirspec_lib.smooth_spectral_trace(
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-3'>
-                    nirspec_lib.find_spectral_trace(
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number code-deleted-diff-line'></td>
-                  <td class='code-act-data code-indent-4 code-deleted-diff-highlight'>
-                    order.ffObjImg['A']), order.ffObjImg['A'].shape[rect])
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent'>
-                    except Exception as e:
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-2'>
-                    logger.warning('not rectifying order {} in spectral dimension'.format(
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-3'>
-                    order.flatOrder.orderNum))
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent'>
-                    else:
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-2'>
-                    order.flatOrder.rectFlatImg = image_lib.rectify_spectral(
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-3'>
-                    order.flatOrder.rectFlatImg, order.spectralTrace)
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-2'>
-                    __rectify_spectral(order)
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-2'>
-                    order.spectralRectified = True
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent code-comment-highlight'>
-                    # compute noise image
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent'>
-                    order.noiseImg = nirspec_lib.calc_noise_img(
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number code-deleted-diff-line'></td>
-                  <td class='code-act-data code-indent-2 code-deleted-diff-highlight'>
-                    order.objImg['A'], order.flatOrder.rectFlatImg, order.GMTTime)
-                  </td>
-                </tr>
+            <!--previous version-->
+            <div class='code-diff-previous-version'>
+              <!--profile-->
+              <div class='meeting-profile teammate-profile-pic-1 active-g'></div>
+              <!--metadata-->
+              <div class='calendar-meeting-listing-detail'>
+                <span class='font font-light font-size-12 font-color-default' style='padding-top: 4px;'>
+                  Version 1
+                </span>
+              </div>
+              <div class='calendar-meeting-listing-detail'>
+                <span class='font font-light font-size-12 font-color-lighter' style='padding-top: 4px;'>
+                  12 / 3 / 2019 1:56PM
+                </span>
+              </div>
+              <!--revert - previous version only-->
+              <div class='revert-previous-version-button'>
+                <img
+                  src='https://davidnhuang.github.io/Skrip.io/assets/buttons/revert-version.svg'
+                  width='15px'
+                  hegith='15px'
+                />
+              </div>
+              <!--diff data-->
+              <div id='previous-code-version' class='current-code-diff-data'>
+                <table class='code-diff-lines'>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data'>
+                      import logging
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data'>
+                      import numpy as np
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data'>
+                      import scipy.stats
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data'>
+                      import scipy.optimize
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-comment-highlight'>
+                      #import scipy.optimize
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data'>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data'>
+                      import config
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data'>
+                      import image_lib
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data'>
+                      import nirspec_lib
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data'>
+                      import wavelength_utils
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number code-deleted-diff-line'></td>
+                    <td class='code-act-data code-deleted-diff-highlight'>
+                      import wavelength_libRedS<br>
+                      <span class='code-comment-highlight'>
+                        # removed later for wavelength_utils
+                      </span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data'>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data'>
+                      logger = logging.getLogger('obj')
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data'>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data'>
+                      def reduce_order(order):
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent code-comment-highlight'>
+                      # flatten object images for this order
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent'>
+                      __flatten(order)
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data'>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent code-comment-highlight'>
+                      # rectify obj and flattened obj in spatial dimension
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent'>
+                      __rectify_spatial(order)
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data'>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent code-comment-highlight'>
+                      # trim rectified order
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent'>
+                      __trim(order)
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data'>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent code-comment-highlight'>
+                      # save rectified images before spectral rectify for diagnostics
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent'>
+                      order.srNormFlatImg = order.flatOrder.rectFlatImg
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent'>
+                      for frame in order.frames:
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number code-deleted-diff-line'></td>
+                    <td class='code-act-data code-indent-2 code-deleted-diff-highlight'>
+                      order.srFfObjImg[frame] = order.ffObj1Img[frame]
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data'>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent code-comment-highlight'>
+                      # find spatial profile and peak
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent'>
+                      __find_spatial_profile_and_peak(order)
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data'>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent code-comment-highlight'>
+                      # characterize spatial profile by fitting to Gaussian
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent'>
+                      __characterize_spatial_profile(order)
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data'>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent code-comment-highlight'>
+                      # Find and smooth spectral trace, always use frame A
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent'>
+                      try:
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-2'>
+                      order.spectralTrace = nirspec_lib.smooth_spectral_trace(
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-3'>
+                      nirspec_lib.find_spectral_trace(
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number code-deleted-diff-line'></td>
+                    <td class='code-act-data code-indent-4 code-deleted-diff-highlight'>
+                      order.ffObjImg['A']), order.ffObjImg['A'].shape[rect])
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent'>
+                      except Exception as e:
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-2'>
+                      logger.warning('not rectifying order {} in spectral dimension'.format(
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-3'>
+                      order.flatOrder.orderNum))
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent'>
+                      else:
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-2'>
+                      order.flatOrder.rectFlatImg = image_lib.rectify_spectral(
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-3'>
+                      order.flatOrder.rectFlatImg, order.spectralTrace)
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-2'>
+                      __rectify_spectral(order)
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-2'>
+                      order.spectralRectified = True
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data'>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent code-comment-highlight'>
+                      # compute noise image
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent'>
+                      order.noiseImg = nirspec_lib.calc_noise_img(
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number code-deleted-diff-line'></td>
+                    <td class='code-act-data code-indent-2 code-deleted-diff-highlight'>
+                      order.objImg['A'], order.flatOrder.rectFlatImg, order.GMTTime)
+                    </td>
+                  </tr>
+              </div>
             </div>
           </div>
         </div>
