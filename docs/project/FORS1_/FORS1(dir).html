@@ -666,84 +666,52 @@
         <form>
           <input class='dirList-main-search' type="text" id="fname" name="fname" placeholder="Search team drive or type '/' for commands">
         </form>
-        <!--directory top-->
-        <div class='directory-section-heading'>
-          <div class='directory-icon'>
-            <span class='font font-regular font-size-9 font-color-lighter'>
-              Directory ↑
-            </span>
-          </div>
-          <div class='directory-name'>
-          </div>
-          <div class='directory-creation-date'>
-            <span class='font font-regular font-size-9 font-color-lighter'>
-              Date Created
-            </span>
-          </div>
-          <div class='directory-modified-date'>
-            <span class='font font-regular font-size-9 font-color-lighter'>
-              Last Modified
-            </span>
-          </div>
-          <div class='directory-collaborator'>
-            <span class='font font-regular font-size-9 font-color-lighter'>
-              Main contributors
-            </span>
-          </div>
-          <div id='upload-to-subdirectory' class='directory-options'>
-            <img
-              src='https://davidnhuang.github.io/Skrip.io/assets/buttons/global-options.svg'
-              width='14px'
-              height= '14px'
-              style='padding-left: 32px; padding-top: 2px;'
-            />
+        <!--loading screen-->
+        <div id='loading-screen'>
+          <div class='loading-screen-bg'>
+            <div class='loading-bar'></div>
           </div>
         </div>
-        <!--directories-->
-        <div class='step-into-directory-bounding'>
-          <!--FORS1-->
-          <div id='directory-1' class='directory-listing'>
+        <!--loaded target content-->
+        <div id='target-content'>
+          <!--directory top-->
+          <div class='directory-section-heading'>
             <div class='directory-icon'>
-              <img
-                src='https://davidnhuang.github.io/Skrip.io/assets/buttons/global-folder.svg'
-                width='20px'
-                height= '20px'
-                style='padding-left: 8px; margin-top: 20px;'
-              />
-            </div>
-            <div class='directory-name'>
-              <span class='font font-regular font-size-12 font-color-default' style='padding-top: 21px;'>
-                 FORS1
+              <span class='font font-regular font-size-9 font-color-lighter'>
+                Directory ↑
               </span>
             </div>
+            <div class='directory-name'>
+            </div>
             <div class='directory-creation-date'>
-              <span class='font font-regular font-size-9 font-color-lighter' style='padding-top: 22px;'>
-                1/14/2019
+              <span class='font font-regular font-size-9 font-color-lighter'>
+                Date Created
               </span>
             </div>
             <div class='directory-modified-date'>
-              <span class='font font-regular font-size-9 font-color-lighter' style='padding-top: 22px;'>
-                8/27/2019
+              <span class='font font-regular font-size-9 font-color-lighter'>
+                Last Modified
               </span>
             </div>
             <div class='directory-collaborator'>
-              <div class='directory-collaborator-profile advisor-profile-pic active-g'></div>
-              <div class='directory-collaborator-profile teammate-profile-pic-1 active-g'></div>
+              <span class='font font-regular font-size-9 font-color-lighter'>
+                Main contributors
+              </span>
             </div>
-            <div class='directory-options'>
+            <div id='upload-to-subdirectory' class='directory-options'>
               <img
-                src='https://davidnhuang.github.io/Skrip.io/assets/buttons/global-vert-options.svg'
+                src='https://davidnhuang.github.io/Skrip.io/assets/buttons/global-options.svg'
                 width='14px'
                 height= '14px'
-                style='padding-left: 32px; padding-top: 24px;'
+                style='padding-left: 32px; padding-top: 2px;'
               />
             </div>
           </div>
-          <!--FORS1 sub-->
-          <div>
-            <!--subdir 1-->
-            <div id='sub-sub-directory-listing-1' class='subdirectory-listing'>
-              <div class='subdirectory-icon'>
+          <!--directories-->
+          <div class='step-into-directory-bounding'>
+            <!--FORS1-->
+            <div id='directory-1' class='directory-listing'>
+              <div class='directory-icon'>
                 <img
                   src='https://davidnhuang.github.io/Skrip.io/assets/buttons/global-folder.svg'
                   width='20px'
@@ -751,9 +719,9 @@
                   style='padding-left: 8px; margin-top: 20px;'
                 />
               </div>
-              <div class='subdirectory-name'>
+              <div class='directory-name'>
                 <span class='font font-regular font-size-12 font-color-default' style='padding-top: 21px;'>
-                  <span class='font-regular-italic font-color-lighter'>FORS1_</span>init
+                   FORS1
                 </span>
               </div>
               <div class='directory-creation-date'>
@@ -761,515 +729,556 @@
                   1/14/2019
                 </span>
               </div>
-              <div class='directory-collaborator'>
+              <div class='directory-modified-date'>
                 <span class='font font-regular font-size-9 font-color-lighter' style='padding-top: 22px;'>
-                  Version 14
+                  8/27/2019
                 </span>
               </div>
-            </div>
-            <div id='sub-subdirectory-1'>
-              <!--sub subdir-->
-              <a href='https://davidnhuang.github.io/Skrip.io/project/FORS1_/init/spreadsheetFiling.html'>
-                <div class='sub-subdirectory-listing'>
-                  <div class='subdirectory-icon'>
-                    <img
-                      src='https://davidnhuang.github.io/Skrip.io/assets/icons/python.svg'
-                      width='20px'
-                      height= '20px'
-                      style='padding-left: 8px; margin-top: 20px;'
-                    />
-                  </div>
-                  <div class='sub-subdirectory-name'>
-                    <span class='font font-regular font-size-12 font-color-default' style='padding-top: 21px;'>
-                      <span class='font-regular-italic font-color-lighter'>FORS1_init_</span>spreadsheetF...py
-                    </span>
-                  </div>
-                  <div class='directory-modified-date'>
-                    <span class='font font-regular font-size-9 font-color-lighter' style='padding-top: 22px;'>
-                      1/14/2019
-                    </span>
-                  </div>
-                </div>
-              </a>
-              <a href='https://davidnhuang.github.io/Skrip.io/project/FORS1_/init/protocol.html'>
-                <div class='sub-subdirectory-listing'>
-                  <div class='subdirectory-icon'>
-                    <img
-                      src='https://davidnhuang.github.io/Skrip.io/assets/icons/textfile.svg'
-                      width='20px'
-                      height= '20px'
-                      style='padding-left: 8px; margin-top: 20px;'
-                    />
-                  </div>
-                  <div class='sub-subdirectory-name'>
-                    <span class='font font-regular font-size-12 font-color-default' style='padding-top: 21px;'>
-                      <span class='font-regular-italic font-color-lighter'>FORS1_init_</span>protocol.md
-                    </span>
-                  </div>
-                  <div class='directory-modified-date'>
-                    <span class='font font-regular font-size-9 font-color-lighter' style='padding-top: 22px;'>
-                      1/14/2019
-                    </span>
-                  </div>
-                </div>
-              </a>
-              <a href='https://davidnhuang.github.io/Skrip.io/project/FORS1_/init/breadcrumbAPI.html'>
-                <div class='sub-subdirectory-listing'>
-                  <div class='subdirectory-icon'>
-                    <img
-                      src='https://davidnhuang.github.io/Skrip.io/assets/icons/textfile.svg'
-                      width='20px'
-                      height= '20px'
-                      style='padding-left: 8px; margin-top: 20px;'
-                    />
-                  </div>
-                  <div class='sub-subdirectory-name'>
-                    <span class='font font-regular font-size-12 font-color-default' style='padding-top: 21px;'>
-                      <span class='font-regular-italic font-color-lighter'>FORS1_init_</span>breadcrumbAPI.js
-                    </span>
-                  </div>
-                  <div class='directory-modified-date'>
-                    <span class='font font-regular font-size-9 font-color-lighter' style='padding-top: 22px;'>
-                      1/14/2019
-                    </span>
-                  </div>
-                </div>
-              </a>
-            </div>
-            <!--subdir 2-->
-            <div id='sub-sub-directory-listing-2' class='subdirectory-listing'>
-              <div class='subdirectory-icon'>
+              <div class='directory-collaborator'>
+                <div class='directory-collaborator-profile advisor-profile-pic active-g'></div>
+                <div class='directory-collaborator-profile teammate-profile-pic-1 active-g'></div>
+              </div>
+              <div class='directory-options'>
                 <img
-                  src='https://davidnhuang.github.io/Skrip.io/assets/buttons/global-folder.svg'
-                  width='20px'
-                  height= '20px'
-                  style='padding-left: 8px; margin-top: 20px;'
+                  src='https://davidnhuang.github.io/Skrip.io/assets/buttons/global-vert-options.svg'
+                  width='14px'
+                  height= '14px'
+                  style='padding-left: 32px; padding-top: 24px;'
                 />
               </div>
-              <div class='subdirectory-name'>
-                <span class='font font-regular font-size-12 font-color-default' style='padding-top: 21px;'>
-                  <span class='font-regular-italic font-color-lighter'>FORS1_</span>Sep-Plots
-                </span>
-              </div>
-              <div class='directory-creation-date'>
-                <span class='font font-regular font-size-9 font-color-lighter' style='padding-top: 22px;'>
-                  1/14/2019
-                </span>
-              </div>
-              <div class='directory-collaborator'>
-                <span class='font font-regular font-size-9 font-color-lighter' style='padding-top: 22px;'>
-                  Version 14
-                </span>
-              </div>
             </div>
-            <div id='sub-subdirectory-2'>
-              <!--sub subdir-->
-              <a href='https://davidnhuang.github.io/Skrip.io/project/FORS1_/Sep-Plots/adjustedSet.html'>
-                <div class='sub-subdirectory-listing'>
-                  <div class='subdirectory-icon'>
-                    <img
-                      src='https://davidnhuang.github.io/Skrip.io/assets/icons/microsoft_excel.svg'
-                      width='20px'
-                      height= '20px'
-                      style='padding-left: 8px; margin-top: 20px;'
-                    />
-                  </div>
-                  <div class='sub-subdirectory-name'>
-                    <span class='font font-regular font-size-12 font-color-default' style='padding-top: 21px;'>
-                      <span class='font-regular-italic font-color-lighter'>FOR...</span>adjustedSet.xsls
-                    </span>
-                  </div>
-                  <div class='directory-modified-date'>
-                    <span class='font font-regular font-size-9 font-color-lighter' style='padding-top: 22px;'>
-                      1/14/2019
-                    </span>
-                  </div>
+            <!--FORS1 sub-->
+            <div>
+              <!--subdir 1-->
+              <div id='sub-sub-directory-listing-1' class='subdirectory-listing'>
+                <div class='subdirectory-icon'>
+                  <img
+                    src='https://davidnhuang.github.io/Skrip.io/assets/buttons/global-folder.svg'
+                    width='20px'
+                    height= '20px'
+                    style='padding-left: 8px; margin-top: 20px;'
+                  />
                 </div>
-              </a>
-              <!--sub subdir-->
-              <a href='https://davidnhuang.github.io/Skrip.io/project/FORS1_/Sep-Plots/antialiased.html'>
-                <div class='sub-subdirectory-listing'>
-                  <div class='subdirectory-icon'>
-                    <img
-                      src='https://davidnhuang.github.io/Skrip.io/assets/icons/microsoft_excel.svg'
-                      width='20px'
-                      height= '20px'
-                      style='padding-left: 8px; margin-top: 20px;'
-                    />
-                  </div>
-                  <div class='sub-subdirectory-name'>
-                    <span class='font font-regular font-size-12 font-color-default' style='padding-top: 21px;'>
-                      <span class='font-regular-italic font-color-lighter'>FOR...</span>antialiased.xsls
-                    </span>
-                  </div>
-                  <div class='directory-modified-date'>
-                    <span class='font font-regular font-size-9 font-color-lighter' style='padding-top: 22px;'>
-                      1/14/2019
-                    </span>
-                  </div>
+                <div class='subdirectory-name'>
+                  <span class='font font-regular font-size-12 font-color-default' style='padding-top: 21px;'>
+                    <span class='font-regular-italic font-color-lighter'>FORS1_</span>init
+                  </span>
                 </div>
-              </a>
-              <!--sub subdir-->
-              <a href='https://davidnhuang.github.io/Skrip.io/project/FORS1_/Sep-Plots/magnitude.html'>
-                <div class='sub-subdirectory-listing'>
-                  <div class='subdirectory-icon'>
-                    <img
-                      src='https://davidnhuang.github.io/Skrip.io/assets/icons/microsoft_excel.svg'
-                      width='20px'
-                      height= '20px'
-                      style='padding-left: 8px; margin-top: 20px;'
-                    />
-                  </div>
-                  <div class='sub-subdirectory-name'>
-                    <span class='font font-regular font-size-12 font-color-default' style='padding-top: 21px;'>
-                      <span class='font-regular-italic font-color-lighter'>FOR...</span>magnitudes.xsls
-                    </span>
-                  </div>
-                  <div class='directory-modified-date'>
-                    <span class='font font-regular font-size-9 font-color-lighter' style='padding-top: 22px;'>
-                      1/14/2019
-                    </span>
-                  </div>
+                <div class='directory-creation-date'>
+                  <span class='font font-regular font-size-9 font-color-lighter' style='padding-top: 22px;'>
+                    1/14/2019
+                  </span>
                 </div>
-              </a>
-              <!--sub subdir-->
-              <a href='https://davidnhuang.github.io/Skrip.io/project/FORS1_/Sep-Plots/FORS-pT.html'>
-                <div class='sub-subdirectory-listing'>
-                  <div class='subdirectory-icon'>
-                    <img
-                      src='https://davidnhuang.github.io/Skrip.io/assets/icons/microsoft_excel.svg'
-                      width='20px'
-                      height= '20px'
-                      style='padding-left: 8px; margin-top: 20px;'
-                    />
-                  </div>
-                  <div class='sub-subdirectory-name'>
-                    <span class='font font-regular font-size-12 font-color-default' style='padding-top: 21px;'>
-                      <span class='font-regular-italic font-color-lighter'>FOR...</span>FORS-pT.xsls
-                    </span>
-                  </div>
-                  <div class='directory-modified-date'>
-                    <span class='font font-regular font-size-9 font-color-lighter' style='padding-top: 22px;'>
-                      1/14/2019
-                    </span>
-                  </div>
+                <div class='directory-collaborator'>
+                  <span class='font font-regular font-size-9 font-color-lighter' style='padding-top: 22px;'>
+                    Version 14
+                  </span>
                 </div>
-              </a>
-              <!--sub subdir-->
-              <a href='https://davidnhuang.github.io/Skrip.io/project/FORS1_/Sep-Plots/FORS-psT.html'>
-                <div class='sub-subdirectory-listing'>
-                  <div class='subdirectory-icon'>
-                    <img
-                      src='https://davidnhuang.github.io/Skrip.io/assets/icons/microsoft_excel.svg'
-                      width='20px'
-                      height= '20px'
-                      style='padding-left: 8px; margin-top: 20px;'
-                    />
-                  </div>
-                  <div class='sub-subdirectory-name'>
-                    <span class='font font-regular font-size-12 font-color-default' style='padding-top: 21px;'>
-                      <span class='font-regular-italic font-color-lighter'>FOR...</span>FORS-psT.xsls
-                    </span>
-                  </div>
-                  <div class='directory-modified-date'>
-                    <span class='font font-regular font-size-9 font-color-lighter' style='padding-top: 22px;'>
-                      1/14/2019
-                    </span>
-                  </div>
-                </div>
-              </a>
-            </div>
-            <!--subdir 3-->
-            <div id='sub-sub-directory-listing-3' class='subdirectory-listing'>
-              <div class='subdirectory-icon'>
-                <img
-                  src='https://davidnhuang.github.io/Skrip.io/assets/buttons/global-folder.svg'
-                  width='20px'
-                  height= '20px'
-                  style='padding-left: 8px; margin-top: 20px;'
-                />
               </div>
-              <div class='subdirectory-name'>
-                <span class='font font-regular font-size-12 font-color-default' style='padding-top: 21px;'>
-                  <span class='font-regular-italic font-color-lighter'>FORS1_</span>Oct-Plots
-                </span>
+              <div id='sub-subdirectory-1'>
+                <!--sub subdir-->
+                <a href='https://davidnhuang.github.io/Skrip.io/project/FORS1_/init/spreadsheetFiling.html'>
+                  <div class='sub-subdirectory-listing'>
+                    <div class='subdirectory-icon'>
+                      <img
+                        src='https://davidnhuang.github.io/Skrip.io/assets/icons/python.svg'
+                        width='20px'
+                        height= '20px'
+                        style='padding-left: 8px; margin-top: 20px;'
+                      />
+                    </div>
+                    <div class='sub-subdirectory-name'>
+                      <span class='font font-regular font-size-12 font-color-default' style='padding-top: 21px;'>
+                        <span class='font-regular-italic font-color-lighter'>FORS1_init_</span>spreadsheetF...py
+                      </span>
+                    </div>
+                    <div class='directory-modified-date'>
+                      <span class='font font-regular font-size-9 font-color-lighter' style='padding-top: 22px;'>
+                        1/14/2019
+                      </span>
+                    </div>
+                  </div>
+                </a>
+                <a href='https://davidnhuang.github.io/Skrip.io/project/FORS1_/init/protocol.html'>
+                  <div class='sub-subdirectory-listing'>
+                    <div class='subdirectory-icon'>
+                      <img
+                        src='https://davidnhuang.github.io/Skrip.io/assets/icons/textfile.svg'
+                        width='20px'
+                        height= '20px'
+                        style='padding-left: 8px; margin-top: 20px;'
+                      />
+                    </div>
+                    <div class='sub-subdirectory-name'>
+                      <span class='font font-regular font-size-12 font-color-default' style='padding-top: 21px;'>
+                        <span class='font-regular-italic font-color-lighter'>FORS1_init_</span>protocol.md
+                      </span>
+                    </div>
+                    <div class='directory-modified-date'>
+                      <span class='font font-regular font-size-9 font-color-lighter' style='padding-top: 22px;'>
+                        1/14/2019
+                      </span>
+                    </div>
+                  </div>
+                </a>
+                <a href='https://davidnhuang.github.io/Skrip.io/project/FORS1_/init/breadcrumbAPI.html'>
+                  <div class='sub-subdirectory-listing'>
+                    <div class='subdirectory-icon'>
+                      <img
+                        src='https://davidnhuang.github.io/Skrip.io/assets/icons/textfile.svg'
+                        width='20px'
+                        height= '20px'
+                        style='padding-left: 8px; margin-top: 20px;'
+                      />
+                    </div>
+                    <div class='sub-subdirectory-name'>
+                      <span class='font font-regular font-size-12 font-color-default' style='padding-top: 21px;'>
+                        <span class='font-regular-italic font-color-lighter'>FORS1_init_</span>breadcrumbAPI.js
+                      </span>
+                    </div>
+                    <div class='directory-modified-date'>
+                      <span class='font font-regular font-size-9 font-color-lighter' style='padding-top: 22px;'>
+                        1/14/2019
+                      </span>
+                    </div>
+                  </div>
+                </a>
               </div>
-              <div class='directory-creation-date'>
-                <span class='font font-regular font-size-9 font-color-lighter' style='padding-top: 22px;'>
-                  1/14/2019
-                </span>
+              <!--subdir 2-->
+              <div id='sub-sub-directory-listing-2' class='subdirectory-listing'>
+                <div class='subdirectory-icon'>
+                  <img
+                    src='https://davidnhuang.github.io/Skrip.io/assets/buttons/global-folder.svg'
+                    width='20px'
+                    height= '20px'
+                    style='padding-left: 8px; margin-top: 20px;'
+                  />
+                </div>
+                <div class='subdirectory-name'>
+                  <span class='font font-regular font-size-12 font-color-default' style='padding-top: 21px;'>
+                    <span class='font-regular-italic font-color-lighter'>FORS1_</span>Sep-Plots
+                  </span>
+                </div>
+                <div class='directory-creation-date'>
+                  <span class='font font-regular font-size-9 font-color-lighter' style='padding-top: 22px;'>
+                    1/14/2019
+                  </span>
+                </div>
+                <div class='directory-collaborator'>
+                  <span class='font font-regular font-size-9 font-color-lighter' style='padding-top: 22px;'>
+                    Version 14
+                  </span>
+                </div>
               </div>
-              <div class='directory-collaborator'>
-                <span class='font font-regular font-size-9 font-color-lighter' style='padding-top: 22px;'>
-                  Version 24
-                </span>
+              <div id='sub-subdirectory-2'>
+                <!--sub subdir-->
+                <a href='https://davidnhuang.github.io/Skrip.io/project/FORS1_/Sep-Plots/adjustedSet.html'>
+                  <div class='sub-subdirectory-listing'>
+                    <div class='subdirectory-icon'>
+                      <img
+                        src='https://davidnhuang.github.io/Skrip.io/assets/icons/microsoft_excel.svg'
+                        width='20px'
+                        height= '20px'
+                        style='padding-left: 8px; margin-top: 20px;'
+                      />
+                    </div>
+                    <div class='sub-subdirectory-name'>
+                      <span class='font font-regular font-size-12 font-color-default' style='padding-top: 21px;'>
+                        <span class='font-regular-italic font-color-lighter'>FOR...</span>adjustedSet.xsls
+                      </span>
+                    </div>
+                    <div class='directory-modified-date'>
+                      <span class='font font-regular font-size-9 font-color-lighter' style='padding-top: 22px;'>
+                        1/14/2019
+                      </span>
+                    </div>
+                  </div>
+                </a>
+                <!--sub subdir-->
+                <a href='https://davidnhuang.github.io/Skrip.io/project/FORS1_/Sep-Plots/antialiased.html'>
+                  <div class='sub-subdirectory-listing'>
+                    <div class='subdirectory-icon'>
+                      <img
+                        src='https://davidnhuang.github.io/Skrip.io/assets/icons/microsoft_excel.svg'
+                        width='20px'
+                        height= '20px'
+                        style='padding-left: 8px; margin-top: 20px;'
+                      />
+                    </div>
+                    <div class='sub-subdirectory-name'>
+                      <span class='font font-regular font-size-12 font-color-default' style='padding-top: 21px;'>
+                        <span class='font-regular-italic font-color-lighter'>FOR...</span>antialiased.xsls
+                      </span>
+                    </div>
+                    <div class='directory-modified-date'>
+                      <span class='font font-regular font-size-9 font-color-lighter' style='padding-top: 22px;'>
+                        1/14/2019
+                      </span>
+                    </div>
+                  </div>
+                </a>
+                <!--sub subdir-->
+                <a href='https://davidnhuang.github.io/Skrip.io/project/FORS1_/Sep-Plots/magnitude.html'>
+                  <div class='sub-subdirectory-listing'>
+                    <div class='subdirectory-icon'>
+                      <img
+                        src='https://davidnhuang.github.io/Skrip.io/assets/icons/microsoft_excel.svg'
+                        width='20px'
+                        height= '20px'
+                        style='padding-left: 8px; margin-top: 20px;'
+                      />
+                    </div>
+                    <div class='sub-subdirectory-name'>
+                      <span class='font font-regular font-size-12 font-color-default' style='padding-top: 21px;'>
+                        <span class='font-regular-italic font-color-lighter'>FOR...</span>magnitudes.xsls
+                      </span>
+                    </div>
+                    <div class='directory-modified-date'>
+                      <span class='font font-regular font-size-9 font-color-lighter' style='padding-top: 22px;'>
+                        1/14/2019
+                      </span>
+                    </div>
+                  </div>
+                </a>
+                <!--sub subdir-->
+                <a href='https://davidnhuang.github.io/Skrip.io/project/FORS1_/Sep-Plots/FORS-pT.html'>
+                  <div class='sub-subdirectory-listing'>
+                    <div class='subdirectory-icon'>
+                      <img
+                        src='https://davidnhuang.github.io/Skrip.io/assets/icons/microsoft_excel.svg'
+                        width='20px'
+                        height= '20px'
+                        style='padding-left: 8px; margin-top: 20px;'
+                      />
+                    </div>
+                    <div class='sub-subdirectory-name'>
+                      <span class='font font-regular font-size-12 font-color-default' style='padding-top: 21px;'>
+                        <span class='font-regular-italic font-color-lighter'>FOR...</span>FORS-pT.xsls
+                      </span>
+                    </div>
+                    <div class='directory-modified-date'>
+                      <span class='font font-regular font-size-9 font-color-lighter' style='padding-top: 22px;'>
+                        1/14/2019
+                      </span>
+                    </div>
+                  </div>
+                </a>
+                <!--sub subdir-->
+                <a href='https://davidnhuang.github.io/Skrip.io/project/FORS1_/Sep-Plots/FORS-psT.html'>
+                  <div class='sub-subdirectory-listing'>
+                    <div class='subdirectory-icon'>
+                      <img
+                        src='https://davidnhuang.github.io/Skrip.io/assets/icons/microsoft_excel.svg'
+                        width='20px'
+                        height= '20px'
+                        style='padding-left: 8px; margin-top: 20px;'
+                      />
+                    </div>
+                    <div class='sub-subdirectory-name'>
+                      <span class='font font-regular font-size-12 font-color-default' style='padding-top: 21px;'>
+                        <span class='font-regular-italic font-color-lighter'>FOR...</span>FORS-psT.xsls
+                      </span>
+                    </div>
+                    <div class='directory-modified-date'>
+                      <span class='font font-regular font-size-9 font-color-lighter' style='padding-top: 22px;'>
+                        1/14/2019
+                      </span>
+                    </div>
+                  </div>
+                </a>
               </div>
-            </div>
-            <div id='sub-subdirectory-3'>
-              <!--sub subdir-->
-              <a href='https://davidnhuang.github.io/Skrip.io/project/FORS1_/Oct-Plots/adjustedSet.html'>
-                <div class='sub-subdirectory-listing'>
-                  <div class='subdirectory-icon'>
-                    <img
-                      src='https://davidnhuang.github.io/Skrip.io/assets/icons/microsoft_excel.svg'
-                      width='20px'
-                      height= '20px'
-                      style='padding-left: 8px; margin-top: 20px;'
-                    />
-                  </div>
-                  <div class='sub-subdirectory-name'>
-                    <span class='font font-regular font-size-12 font-color-default' style='padding-top: 21px;'>
-                      <span class='font-regular-italic font-color-lighter'>FOR...</span>adjustedSet.xsls
-                    </span>
-                  </div>
-                  <div class='directory-modified-date'>
-                    <span class='font font-regular font-size-9 font-color-lighter' style='padding-top: 22px;'>
-                      1/14/2019
-                    </span>
-                  </div>
+              <!--subdir 3-->
+              <div id='sub-sub-directory-listing-3' class='subdirectory-listing'>
+                <div class='subdirectory-icon'>
+                  <img
+                    src='https://davidnhuang.github.io/Skrip.io/assets/buttons/global-folder.svg'
+                    width='20px'
+                    height= '20px'
+                    style='padding-left: 8px; margin-top: 20px;'
+                  />
                 </div>
-              </a>
-              <!--sub subdir-->
-              <a href='https://davidnhuang.github.io/Skrip.io/project/FORS1_/Oct-Plots/antialiased.html'>
-                <div class='sub-subdirectory-listing'>
-                  <div class='subdirectory-icon'>
-                    <img
-                      src='https://davidnhuang.github.io/Skrip.io/assets/icons/microsoft_excel.svg'
-                      width='20px'
-                      height= '20px'
-                      style='padding-left: 8px; margin-top: 20px;'
-                    />
-                  </div>
-                  <div class='sub-subdirectory-name'>
-                    <span class='font font-regular font-size-12 font-color-default' style='padding-top: 21px;'>
-                      <span class='font-regular-italic font-color-lighter'>FOR...</span>antialiased.xsls
-                    </span>
-                  </div>
-                  <div class='directory-modified-date'>
-                    <span class='font font-regular font-size-9 font-color-lighter' style='padding-top: 22px;'>
-                      1/14/2019
-                    </span>
-                  </div>
+                <div class='subdirectory-name'>
+                  <span class='font font-regular font-size-12 font-color-default' style='padding-top: 21px;'>
+                    <span class='font-regular-italic font-color-lighter'>FORS1_</span>Oct-Plots
+                  </span>
                 </div>
-              </a>
-              <!--sub subdir-->
-              <a href='https://davidnhuang.github.io/Skrip.io/project/FORS1_/Oct-Plots/magnitude.html'>
-                <div class='sub-subdirectory-listing'>
-                  <div class='subdirectory-icon'>
-                    <img
-                      src='https://davidnhuang.github.io/Skrip.io/assets/icons/microsoft_excel.svg'
-                      width='20px'
-                      height= '20px'
-                      style='padding-left: 8px; margin-top: 20px;'
-                    />
-                  </div>
-                  <div class='sub-subdirectory-name'>
-                    <span class='font font-regular font-size-12 font-color-default' style='padding-top: 21px;'>
-                      <span class='font-regular-italic font-color-lighter'>FOR...</span>magnitudes.xsls
-                    </span>
-                  </div>
-                  <div class='directory-modified-date'>
-                    <span class='font font-regular font-size-9 font-color-lighter' style='padding-top: 22px;'>
-                      1/14/2019
-                    </span>
-                  </div>
+                <div class='directory-creation-date'>
+                  <span class='font font-regular font-size-9 font-color-lighter' style='padding-top: 22px;'>
+                    1/14/2019
+                  </span>
                 </div>
-              </a>
-              <!--sub subdir-->
-              <a href='https://davidnhuang.github.io/Skrip.io/project/FORS1_/Oct-Plots/FORS-pT.html'>
-                <div class='sub-subdirectory-listing'>
-                  <div class='subdirectory-icon'>
-                    <img
-                      src='https://davidnhuang.github.io/Skrip.io/assets/icons/microsoft_excel.svg'
-                      width='20px'
-                      height= '20px'
-                      style='padding-left: 8px; margin-top: 20px;'
-                    />
-                  </div>
-                  <div class='sub-subdirectory-name'>
-                    <span class='font font-regular font-size-12 font-color-default' style='padding-top: 21px;'>
-                      <span class='font-regular-italic font-color-lighter'>FOR...</span>FORS-pT.xsls
-                    </span>
-                  </div>
-                  <div class='directory-modified-date'>
-                    <span class='font font-regular font-size-9 font-color-lighter' style='padding-top: 22px;'>
-                      1/14/2019
-                    </span>
-                  </div>
+                <div class='directory-collaborator'>
+                  <span class='font font-regular font-size-9 font-color-lighter' style='padding-top: 22px;'>
+                    Version 24
+                  </span>
                 </div>
-              </a>
-              <!--sub subdir-->
-              <a href='https://davidnhuang.github.io/Skrip.io/project/FORS1_/Oct-Plots/FORS-psT.html'>
-                <div class='sub-subdirectory-listing'>
-                  <div class='subdirectory-icon'>
-                    <img
-                      src='https://davidnhuang.github.io/Skrip.io/assets/icons/microsoft_excel.svg'
-                      width='20px'
-                      height= '20px'
-                      style='padding-left: 8px; margin-top: 20px;'
-                    />
-                  </div>
-                  <div class='sub-subdirectory-name'>
-                    <span class='font font-regular font-size-12 font-color-default' style='padding-top: 21px;'>
-                      <span class='font-regular-italic font-color-lighter'>FOR...</span>FORS-psT.xsls
-                    </span>
-                  </div>
-                  <div class='directory-modified-date'>
-                    <span class='font font-regular font-size-9 font-color-lighter' style='padding-top: 22px;'>
-                      1/14/2019
-                    </span>
-                  </div>
-                </div>
-              </a>
-            </div>
-            <!--subdir 4-->
-            <div id='sub-sub-directory-listing-4' class='subdirectory-listing'>
-              <div class='subdirectory-icon'>
-                <img
-                  src='https://davidnhuang.github.io/Skrip.io/assets/buttons/global-folder.svg'
-                  width='20px'
-                  height= '20px'
-                  style='padding-left: 8px; margin-top: 20px;'
-                />
               </div>
-              <div class='subdirectory-name'>
-                <span class='font font-regular font-size-12 font-color-default' style='padding-top: 21px;'>
-                  <span class='font-regular-italic font-color-lighter'>FORS1_</span>Nov-Plots
-                </span>
+              <div id='sub-subdirectory-3'>
+                <!--sub subdir-->
+                <a href='https://davidnhuang.github.io/Skrip.io/project/FORS1_/Oct-Plots/adjustedSet.html'>
+                  <div class='sub-subdirectory-listing'>
+                    <div class='subdirectory-icon'>
+                      <img
+                        src='https://davidnhuang.github.io/Skrip.io/assets/icons/microsoft_excel.svg'
+                        width='20px'
+                        height= '20px'
+                        style='padding-left: 8px; margin-top: 20px;'
+                      />
+                    </div>
+                    <div class='sub-subdirectory-name'>
+                      <span class='font font-regular font-size-12 font-color-default' style='padding-top: 21px;'>
+                        <span class='font-regular-italic font-color-lighter'>FOR...</span>adjustedSet.xsls
+                      </span>
+                    </div>
+                    <div class='directory-modified-date'>
+                      <span class='font font-regular font-size-9 font-color-lighter' style='padding-top: 22px;'>
+                        1/14/2019
+                      </span>
+                    </div>
+                  </div>
+                </a>
+                <!--sub subdir-->
+                <a href='https://davidnhuang.github.io/Skrip.io/project/FORS1_/Oct-Plots/antialiased.html'>
+                  <div class='sub-subdirectory-listing'>
+                    <div class='subdirectory-icon'>
+                      <img
+                        src='https://davidnhuang.github.io/Skrip.io/assets/icons/microsoft_excel.svg'
+                        width='20px'
+                        height= '20px'
+                        style='padding-left: 8px; margin-top: 20px;'
+                      />
+                    </div>
+                    <div class='sub-subdirectory-name'>
+                      <span class='font font-regular font-size-12 font-color-default' style='padding-top: 21px;'>
+                        <span class='font-regular-italic font-color-lighter'>FOR...</span>antialiased.xsls
+                      </span>
+                    </div>
+                    <div class='directory-modified-date'>
+                      <span class='font font-regular font-size-9 font-color-lighter' style='padding-top: 22px;'>
+                        1/14/2019
+                      </span>
+                    </div>
+                  </div>
+                </a>
+                <!--sub subdir-->
+                <a href='https://davidnhuang.github.io/Skrip.io/project/FORS1_/Oct-Plots/magnitude.html'>
+                  <div class='sub-subdirectory-listing'>
+                    <div class='subdirectory-icon'>
+                      <img
+                        src='https://davidnhuang.github.io/Skrip.io/assets/icons/microsoft_excel.svg'
+                        width='20px'
+                        height= '20px'
+                        style='padding-left: 8px; margin-top: 20px;'
+                      />
+                    </div>
+                    <div class='sub-subdirectory-name'>
+                      <span class='font font-regular font-size-12 font-color-default' style='padding-top: 21px;'>
+                        <span class='font-regular-italic font-color-lighter'>FOR...</span>magnitudes.xsls
+                      </span>
+                    </div>
+                    <div class='directory-modified-date'>
+                      <span class='font font-regular font-size-9 font-color-lighter' style='padding-top: 22px;'>
+                        1/14/2019
+                      </span>
+                    </div>
+                  </div>
+                </a>
+                <!--sub subdir-->
+                <a href='https://davidnhuang.github.io/Skrip.io/project/FORS1_/Oct-Plots/FORS-pT.html'>
+                  <div class='sub-subdirectory-listing'>
+                    <div class='subdirectory-icon'>
+                      <img
+                        src='https://davidnhuang.github.io/Skrip.io/assets/icons/microsoft_excel.svg'
+                        width='20px'
+                        height= '20px'
+                        style='padding-left: 8px; margin-top: 20px;'
+                      />
+                    </div>
+                    <div class='sub-subdirectory-name'>
+                      <span class='font font-regular font-size-12 font-color-default' style='padding-top: 21px;'>
+                        <span class='font-regular-italic font-color-lighter'>FOR...</span>FORS-pT.xsls
+                      </span>
+                    </div>
+                    <div class='directory-modified-date'>
+                      <span class='font font-regular font-size-9 font-color-lighter' style='padding-top: 22px;'>
+                        1/14/2019
+                      </span>
+                    </div>
+                  </div>
+                </a>
+                <!--sub subdir-->
+                <a href='https://davidnhuang.github.io/Skrip.io/project/FORS1_/Oct-Plots/FORS-psT.html'>
+                  <div class='sub-subdirectory-listing'>
+                    <div class='subdirectory-icon'>
+                      <img
+                        src='https://davidnhuang.github.io/Skrip.io/assets/icons/microsoft_excel.svg'
+                        width='20px'
+                        height= '20px'
+                        style='padding-left: 8px; margin-top: 20px;'
+                      />
+                    </div>
+                    <div class='sub-subdirectory-name'>
+                      <span class='font font-regular font-size-12 font-color-default' style='padding-top: 21px;'>
+                        <span class='font-regular-italic font-color-lighter'>FOR...</span>FORS-psT.xsls
+                      </span>
+                    </div>
+                    <div class='directory-modified-date'>
+                      <span class='font font-regular font-size-9 font-color-lighter' style='padding-top: 22px;'>
+                        1/14/2019
+                      </span>
+                    </div>
+                  </div>
+                </a>
               </div>
-              <div class='directory-creation-date'>
-                <span class='font font-regular font-size-9 font-color-lighter' style='padding-top: 22px;'>
-                  1/14/2019
-                </span>
+              <!--subdir 4-->
+              <div id='sub-sub-directory-listing-4' class='subdirectory-listing'>
+                <div class='subdirectory-icon'>
+                  <img
+                    src='https://davidnhuang.github.io/Skrip.io/assets/buttons/global-folder.svg'
+                    width='20px'
+                    height= '20px'
+                    style='padding-left: 8px; margin-top: 20px;'
+                  />
+                </div>
+                <div class='subdirectory-name'>
+                  <span class='font font-regular font-size-12 font-color-default' style='padding-top: 21px;'>
+                    <span class='font-regular-italic font-color-lighter'>FORS1_</span>Nov-Plots
+                  </span>
+                </div>
+                <div class='directory-creation-date'>
+                  <span class='font font-regular font-size-9 font-color-lighter' style='padding-top: 22px;'>
+                    1/14/2019
+                  </span>
+                </div>
+                <div class='directory-collaborator'>
+                  <span class='font font-regular font-size-9 font-color-lighter' style='padding-top: 22px;'>
+                    Version 25
+                  </span>
+                </div>
               </div>
-              <div class='directory-collaborator'>
-                <span class='font font-regular font-size-9 font-color-lighter' style='padding-top: 22px;'>
-                  Version 25
-                </span>
+              <div id='sub-subdirectory-4'>
+                <!--sub subdir-->
+                <a href='https://davidnhuang.github.io/Skrip.io/project/FORS1_/Nov-Plots/adjustedSet.html'>
+                  <div class='sub-subdirectory-listing'>
+                    <div class='subdirectory-icon'>
+                      <img
+                        src='https://davidnhuang.github.io/Skrip.io/assets/icons/microsoft_excel.svg'
+                        width='20px'
+                        height= '20px'
+                        style='padding-left: 8px; margin-top: 20px;'
+                      />
+                    </div>
+                    <div class='sub-subdirectory-name'>
+                      <span class='font font-regular font-size-12 font-color-default' style='padding-top: 21px;'>
+                        <span class='font-regular-italic font-color-lighter'>FOR...</span>adjustedSet.xsls
+                      </span>
+                    </div>
+                    <div class='directory-modified-date'>
+                      <span class='font font-regular font-size-9 font-color-lighter' style='padding-top: 22px;'>
+                        1/14/2019
+                      </span>
+                    </div>
+                  </div>
+                </a>
+                <!--sub subdir-->
+                <a href='https://davidnhuang.github.io/Skrip.io/project/FORS1_/Nov-Plots/antialiased.html'>
+                  <div class='sub-subdirectory-listing'>
+                    <div class='subdirectory-icon'>
+                      <img
+                        src='https://davidnhuang.github.io/Skrip.io/assets/icons/microsoft_excel.svg'
+                        width='20px'
+                        height= '20px'
+                        style='padding-left: 8px; margin-top: 20px;'
+                      />
+                    </div>
+                    <div class='sub-subdirectory-name'>
+                      <span class='font font-regular font-size-12 font-color-default' style='padding-top: 21px;'>
+                        <span class='font-regular-italic font-color-lighter'>FOR...</span>antialiased.xsls
+                      </span>
+                    </div>
+                    <div class='directory-modified-date'>
+                      <span class='font font-regular font-size-9 font-color-lighter' style='padding-top: 22px;'>
+                        1/14/2019
+                      </span>
+                    </div>
+                  </div>
+                </a>
+                <!--sub subdir-->
+                <a href='https://davidnhuang.github.io/Skrip.io/project/FORS1_/Nov-Plots/magnitude.html'>
+                  <div class='sub-subdirectory-listing'>
+                    <div class='subdirectory-icon'>
+                      <img
+                        src='https://davidnhuang.github.io/Skrip.io/assets/icons/microsoft_excel.svg'
+                        width='20px'
+                        height= '20px'
+                        style='padding-left: 8px; margin-top: 20px;'
+                      />
+                    </div>
+                    <div class='sub-subdirectory-name'>
+                      <span class='font font-regular font-size-12 font-color-default' style='padding-top: 21px;'>
+                        <span class='font-regular-italic font-color-lighter'>FOR...</span>magnitudes.xsls
+                      </span>
+                    </div>
+                    <div class='directory-modified-date'>
+                      <span class='font font-regular font-size-9 font-color-lighter' style='padding-top: 22px;'>
+                        1/14/2019
+                      </span>
+                    </div>
+                  </div>
+                </a>
+                <!--sub subdir-->
+                <a href='https://davidnhuang.github.io/Skrip.io/project/FORS1_/Nov-Plots/FORS-pT.html'>
+                  <div class='sub-subdirectory-listing'>
+                    <div class='subdirectory-icon'>
+                      <img
+                        src='https://davidnhuang.github.io/Skrip.io/assets/icons/microsoft_excel.svg'
+                        width='20px'
+                        height= '20px'
+                        style='padding-left: 8px; margin-top: 20px;'
+                      />
+                    </div>
+                    <div class='sub-subdirectory-name'>
+                      <span class='font font-regular font-size-12 font-color-default' style='padding-top: 21px;'>
+                        <span class='font-regular-italic font-color-lighter'>FOR...</span>FORS-pT.xsls
+                      </span>
+                    </div>
+                    <div class='directory-modified-date'>
+                      <span class='font font-regular font-size-9 font-color-lighter' style='padding-top: 22px;'>
+                        1/14/2019
+                      </span>
+                    </div>
+                  </div>
+                </a>
+                <!--sub subdir-->
+                <a href='https://davidnhuang.github.io/Skrip.io/project/FORS1_/Nov-Plots/FORS-psT.html'>
+                  <div class='sub-subdirectory-listing'>
+                    <div class='subdirectory-icon'>
+                      <img
+                        src='https://davidnhuang.github.io/Skrip.io/assets/icons/microsoft_excel.svg'
+                        width='20px'
+                        height= '20px'
+                        style='padding-left: 8px; margin-top: 20px;'
+                      />
+                    </div>
+                    <div class='sub-subdirectory-name'>
+                      <span class='font font-regular font-size-12 font-color-default' style='padding-top: 21px;'>
+                        <span class='font-regular-italic font-color-lighter'>FOR...</span>FORS-psT.xsls
+                      </span>
+                    </div>
+                    <div class='directory-modified-date'>
+                      <span class='font font-regular font-size-9 font-color-lighter' style='padding-top: 22px;'>
+                        1/14/2019
+                      </span>
+                    </div>
+                  </div>
+                </a>
               </div>
-            </div>
-            <div id='sub-subdirectory-4'>
-              <!--sub subdir-->
-              <a href='https://davidnhuang.github.io/Skrip.io/project/FORS1_/Nov-Plots/adjustedSet.html'>
-                <div class='sub-subdirectory-listing'>
-                  <div class='subdirectory-icon'>
-                    <img
-                      src='https://davidnhuang.github.io/Skrip.io/assets/icons/microsoft_excel.svg'
-                      width='20px'
-                      height= '20px'
-                      style='padding-left: 8px; margin-top: 20px;'
-                    />
-                  </div>
-                  <div class='sub-subdirectory-name'>
-                    <span class='font font-regular font-size-12 font-color-default' style='padding-top: 21px;'>
-                      <span class='font-regular-italic font-color-lighter'>FOR...</span>adjustedSet.xsls
-                    </span>
-                  </div>
-                  <div class='directory-modified-date'>
-                    <span class='font font-regular font-size-9 font-color-lighter' style='padding-top: 22px;'>
-                      1/14/2019
-                    </span>
-                  </div>
-                </div>
-              </a>
-              <!--sub subdir-->
-              <a href='https://davidnhuang.github.io/Skrip.io/project/FORS1_/Nov-Plots/antialiased.html'>
-                <div class='sub-subdirectory-listing'>
-                  <div class='subdirectory-icon'>
-                    <img
-                      src='https://davidnhuang.github.io/Skrip.io/assets/icons/microsoft_excel.svg'
-                      width='20px'
-                      height= '20px'
-                      style='padding-left: 8px; margin-top: 20px;'
-                    />
-                  </div>
-                  <div class='sub-subdirectory-name'>
-                    <span class='font font-regular font-size-12 font-color-default' style='padding-top: 21px;'>
-                      <span class='font-regular-italic font-color-lighter'>FOR...</span>antialiased.xsls
-                    </span>
-                  </div>
-                  <div class='directory-modified-date'>
-                    <span class='font font-regular font-size-9 font-color-lighter' style='padding-top: 22px;'>
-                      1/14/2019
-                    </span>
-                  </div>
-                </div>
-              </a>
-              <!--sub subdir-->
-              <a href='https://davidnhuang.github.io/Skrip.io/project/FORS1_/Nov-Plots/magnitude.html'>
-                <div class='sub-subdirectory-listing'>
-                  <div class='subdirectory-icon'>
-                    <img
-                      src='https://davidnhuang.github.io/Skrip.io/assets/icons/microsoft_excel.svg'
-                      width='20px'
-                      height= '20px'
-                      style='padding-left: 8px; margin-top: 20px;'
-                    />
-                  </div>
-                  <div class='sub-subdirectory-name'>
-                    <span class='font font-regular font-size-12 font-color-default' style='padding-top: 21px;'>
-                      <span class='font-regular-italic font-color-lighter'>FOR...</span>magnitudes.xsls
-                    </span>
-                  </div>
-                  <div class='directory-modified-date'>
-                    <span class='font font-regular font-size-9 font-color-lighter' style='padding-top: 22px;'>
-                      1/14/2019
-                    </span>
-                  </div>
-                </div>
-              </a>
-              <!--sub subdir-->
-              <a href='https://davidnhuang.github.io/Skrip.io/project/FORS1_/Nov-Plots/FORS-pT.html'>
-                <div class='sub-subdirectory-listing'>
-                  <div class='subdirectory-icon'>
-                    <img
-                      src='https://davidnhuang.github.io/Skrip.io/assets/icons/microsoft_excel.svg'
-                      width='20px'
-                      height= '20px'
-                      style='padding-left: 8px; margin-top: 20px;'
-                    />
-                  </div>
-                  <div class='sub-subdirectory-name'>
-                    <span class='font font-regular font-size-12 font-color-default' style='padding-top: 21px;'>
-                      <span class='font-regular-italic font-color-lighter'>FOR...</span>FORS-pT.xsls
-                    </span>
-                  </div>
-                  <div class='directory-modified-date'>
-                    <span class='font font-regular font-size-9 font-color-lighter' style='padding-top: 22px;'>
-                      1/14/2019
-                    </span>
-                  </div>
-                </div>
-              </a>
-              <!--sub subdir-->
-              <a href='https://davidnhuang.github.io/Skrip.io/project/FORS1_/Nov-Plots/FORS-psT.html'>
-                <div class='sub-subdirectory-listing'>
-                  <div class='subdirectory-icon'>
-                    <img
-                      src='https://davidnhuang.github.io/Skrip.io/assets/icons/microsoft_excel.svg'
-                      width='20px'
-                      height= '20px'
-                      style='padding-left: 8px; margin-top: 20px;'
-                    />
-                  </div>
-                  <div class='sub-subdirectory-name'>
-                    <span class='font font-regular font-size-12 font-color-default' style='padding-top: 21px;'>
-                      <span class='font-regular-italic font-color-lighter'>FOR...</span>FORS-psT.xsls
-                    </span>
-                  </div>
-                  <div class='directory-modified-date'>
-                    <span class='font font-regular font-size-9 font-color-lighter' style='padding-top: 22px;'>
-                      1/14/2019
-                    </span>
-                  </div>
-                </div>
-              </a>
             </div>
           </div>
         </div>
       </div>
       <!--Site feed-->
-      <div id='body--sideFeed' class='fadingIn'>
+      <div id='body--sideFeed'>
         <div class='skrip-comm-feed'>
           <!--Meeting scheduler-->
           <div class='meeting-schedule-feed'>

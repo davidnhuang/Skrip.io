@@ -137,289 +137,298 @@
         <span class='font font-light font-size-15 font-color-lighter' style='margin-bottom: 40px;'>
           FORS1 / init / FORS1_init_spreadsheetFillMethod.py ver. 14
         </span>
-        <div class='code-diff-display'>
-          <!--current version-->
-          <div class='code-diff-current-version'>
-            <!--profile-->
-            <div class='meeting-profile advisor-profile-pic active-g'></div>
-            <!--metadata-->
-            <div class='calendar-meeting-listing-detail'>
-              <span class='font font-light font-size-12 font-color-default' style='padding-top: 4px;'>
-                Version 20
-              </span>
-            </div>
-            <div class='calendar-meeting-listing-detail'>
-              <span class='font font-light font-size-12 font-color-lighter' style='padding-top: 4px;'>
-                12 / 5 / 2019 4:26PM
-              </span>
-            </div>
-            <!--diff data-->
-            <div id='current-code-version' class='current-code-diff-data'>
-              <table class='code-diff-lines'>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    class Line:
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent'>
-                    def __init__(self, frame, order, wAccepted, col, centroid, peak):
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-2 code-comment-highlight'>
-                    # cell identification
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-2'>
-                    self.frame = frame
-                    <span class='code-comment-highlight'>
-                      # frame name or KOAID from which line extracted
-                    </span>
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-2'>
-                    self.col = col
-                    <span class='code-comment-highlight'>
-                      # integer column number of line, pixels
-                    </span>
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-2'>
-                    self.centroid = centroid
-                    <span class='code-comment-highlight'>
-                      # centroid column of line, fractional pixels
-                    </span>
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-2'>
-                    self.order = order
-                    <span class='code-comment-highlight'>
-                      # order number in which this line was found
-                    </span>
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-2'>
-                    self.waveAccepted = wAccepted
-                    <span class='code-comment-highlight'>
-                      # accepted wavelength from atlas, Angstroms
-                    </span>
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-2'>
-                    self.peak = peak
-                    <span class='code-comment-highlight'>
-                      # peak intensity, counts
-                    </span>
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-2'>
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-2 code-comment-highlight'>
-                    # per-order fit results
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number code-added-diff-line'></td>
-                  <td class='code-act-data code-indent-2 code-added-diff-highlight'>
-                    self.orderWaveFit = 0.0
-                    <span class='code-comment-highlight'>
-                      # wavelength of line based on per order fit (Angstroms)
-                    </span>
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-2'>
-                    self.orderFitRes = 0.0
-                    <span class='code-comment-highlight'>
-                      # fit residual (Angstroms)
-                    </span>
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number code-added-diff-line'></td>
-                  <td class='code-act-data code-indent-2 code-added-diff-highlight'>
-                    self.orderFitSlope = 0.0
-                    <span class='code-comment-highlight'>
-                      # slope of per-order WL equation at this wavelength
-                    </span>
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-2'>
-                    self.orderFitOutlier = False
-                    <span class='code-comment-highlight'>
-                      # true if line discarded from per-order fit as outlier
-                    </span>
-                  </td>
-                </tr>
-              </table>
-            </div>
+        <!--loading screen-->
+        <div id='loading-screen'>
+          <div class='loading-screen-bg'>
+            <div class='loading-bar'></div>
           </div>
-          <!--previous version-->
-          <div class='code-diff-previous-version'>
-            <!--profile-->
-            <div class='meeting-profile teammate-profile-pic-1 active-g'></div>
-            <!--metadata-->
-            <div class='calendar-meeting-listing-detail'>
-              <span class='font font-light font-size-12 font-color-default' style='padding-top: 4px;'>
-                Version 19
-              </span>
+        </div>
+        <!--loaded target content-->
+        <div id='target-content'>
+          <div class='code-diff-display'>
+            <!--current version-->
+            <div class='code-diff-current-version'>
+              <!--profile-->
+              <div class='meeting-profile advisor-profile-pic active-g'></div>
+              <!--metadata-->
+              <div class='calendar-meeting-listing-detail'>
+                <span class='font font-light font-size-12 font-color-default' style='padding-top: 4px;'>
+                  Version 20
+                </span>
+              </div>
+              <div class='calendar-meeting-listing-detail'>
+                <span class='font font-light font-size-12 font-color-lighter' style='padding-top: 4px;'>
+                  12 / 5 / 2019 4:26PM
+                </span>
+              </div>
+              <!--diff data-->
+              <div id='current-code-version' class='current-code-diff-data'>
+                <table class='code-diff-lines'>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data'>
+                      class Line:
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent'>
+                      def __init__(self, frame, order, wAccepted, col, centroid, peak):
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-2 code-comment-highlight'>
+                      # cell identification
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-2'>
+                      self.frame = frame
+                      <span class='code-comment-highlight'>
+                        # frame name or KOAID from which line extracted
+                      </span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-2'>
+                      self.col = col
+                      <span class='code-comment-highlight'>
+                        # integer column number of line, pixels
+                      </span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-2'>
+                      self.centroid = centroid
+                      <span class='code-comment-highlight'>
+                        # centroid column of line, fractional pixels
+                      </span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-2'>
+                      self.order = order
+                      <span class='code-comment-highlight'>
+                        # order number in which this line was found
+                      </span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-2'>
+                      self.waveAccepted = wAccepted
+                      <span class='code-comment-highlight'>
+                        # accepted wavelength from atlas, Angstroms
+                      </span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-2'>
+                      self.peak = peak
+                      <span class='code-comment-highlight'>
+                        # peak intensity, counts
+                      </span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-2'>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-2 code-comment-highlight'>
+                      # per-order fit results
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number code-added-diff-line'></td>
+                    <td class='code-act-data code-indent-2 code-added-diff-highlight'>
+                      self.orderWaveFit = 0.0
+                      <span class='code-comment-highlight'>
+                        # wavelength of line based on per order fit (Angstroms)
+                      </span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-2'>
+                      self.orderFitRes = 0.0
+                      <span class='code-comment-highlight'>
+                        # fit residual (Angstroms)
+                      </span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number code-added-diff-line'></td>
+                    <td class='code-act-data code-indent-2 code-added-diff-highlight'>
+                      self.orderFitSlope = 0.0
+                      <span class='code-comment-highlight'>
+                        # slope of per-order WL equation at this wavelength
+                      </span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-2'>
+                      self.orderFitOutlier = False
+                      <span class='code-comment-highlight'>
+                        # true if line discarded from per-order fit as outlier
+                      </span>
+                    </td>
+                  </tr>
+                </table>
+              </div>
             </div>
-            <div class='calendar-meeting-listing-detail'>
-              <span class='font font-light font-size-12 font-color-lighter' style='padding-top: 4px;'>
-                12 / 3 / 2019 1:56PM
-              </span>
-            </div>
-            <!--revert - previous version only-->
-            <div class='revert-previous-version-button'>
-              <img
-                src='https://davidnhuang.github.io/Skrip.io/assets/buttons/revert-version.svg'
-                width='15px'
-                hegith='15px'
-              />
-            </div>
-            <!--diff data-->
-            <div id='previous-code-version' class='current-code-diff-data'>
-              <table class='code-diff-lines'>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    class Line:
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent'>
-                    def __init__(self, frame, order, wAccepted, col, centroid, peak):
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-2 code-comment-highlight'>
-                    # cell identification
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-2'>
-                    self.frame = frame
-                    <span class='code-comment-highlight'>
-                      # frame name or KOAID from which line extracted
-                    </span>
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-2'>
-                    self.col = col
-                    <span class='code-comment-highlight'>
-                      # integer column number of line, pixels
-                    </span>
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-2'>
-                    self.centroid = centroid
-                    <span class='code-comment-highlight'>
-                      # centroid column of line, fractional pixels
-                    </span>
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-2'>
-                    self.order = order
-                    <span class='code-comment-highlight'>
-                      # order number in which this line was found
-                    </span>
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-2'>
-                    self.waveAccepted = wAccepted
-                    <span class='code-comment-highlight'>
-                      # accepted wavelength from atlas, Angstroms
-                    </span>
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-2'>
-                    self.peak = peak
-                    <span class='code-comment-highlight'>
-                      # peak intensity, counts
-                    </span>
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-2'>
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-2 code-comment-highlight'>
-                    # per-order fit results
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number code-deleted-diff-line'></td>
-                  <td class='code-act-data code-indent-2 code-deleted-diff-highlight'>
-                    self.orderWaveFit = 0.05
-                    <span class='code-comment-highlight'>
-                      # wavelength of line based on per order fit (Angstroms)
-                    </span>
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-2'>
-                    self.orderFitRes = 0.0
-                    <span class='code-comment-highlight'>
-                      # fit residual (Angstroms)
-                    </span>
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number code-deleted-diff-line'></td>
-                  <td class='code-act-data code-indent-2 code-deleted-diff-highlight'>
-                    self.orderFitSlope = 1
-                    <span class='code-comment-highlight'>
-                      # slope of per-order WL equation at this wavelength
-                    </span>
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-2'>
-                    self.orderFitOutlier = False
-                    <span class='code-comment-highlight'>
-                      # true if line discarded from per-order fit as outlier
+            <!--previous version-->
+            <div class='code-diff-previous-version'>
+              <!--profile-->
+              <div class='meeting-profile teammate-profile-pic-1 active-g'></div>
+              <!--metadata-->
+              <div class='calendar-meeting-listing-detail'>
+                <span class='font font-light font-size-12 font-color-default' style='padding-top: 4px;'>
+                  Version 19
+                </span>
+              </div>
+              <div class='calendar-meeting-listing-detail'>
+                <span class='font font-light font-size-12 font-color-lighter' style='padding-top: 4px;'>
+                  12 / 3 / 2019 1:56PM
+                </span>
+              </div>
+              <!--revert - previous version only-->
+              <div class='revert-previous-version-button'>
+                <img
+                  src='https://davidnhuang.github.io/Skrip.io/assets/buttons/revert-version.svg'
+                  width='15px'
+                  hegith='15px'
+                />
+              </div>
+              <!--diff data-->
+              <div id='previous-code-version' class='current-code-diff-data'>
+                <table class='code-diff-lines'>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data'>
+                      class Line:
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent'>
+                      def __init__(self, frame, order, wAccepted, col, centroid, peak):
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-2 code-comment-highlight'>
+                      # cell identification
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-2'>
+                      self.frame = frame
+                      <span class='code-comment-highlight'>
+                        # frame name or KOAID from which line extracted
+                      </span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-2'>
+                      self.col = col
+                      <span class='code-comment-highlight'>
+                        # integer column number of line, pixels
+                      </span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-2'>
+                      self.centroid = centroid
+                      <span class='code-comment-highlight'>
+                        # centroid column of line, fractional pixels
+                      </span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-2'>
+                      self.order = order
+                      <span class='code-comment-highlight'>
+                        # order number in which this line was found
+                      </span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-2'>
+                      self.waveAccepted = wAccepted
+                      <span class='code-comment-highlight'>
+                        # accepted wavelength from atlas, Angstroms
+                      </span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-2'>
+                      self.peak = peak
+                      <span class='code-comment-highlight'>
+                        # peak intensity, counts
+                      </span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-2'>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-2 code-comment-highlight'>
+                      # per-order fit results
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number code-deleted-diff-line'></td>
+                    <td class='code-act-data code-indent-2 code-deleted-diff-highlight'>
+                      self.orderWaveFit = 0.05
+                      <span class='code-comment-highlight'>
+                        # wavelength of line based on per order fit (Angstroms)
+                      </span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-2'>
+                      self.orderFitRes = 0.0
+                      <span class='code-comment-highlight'>
+                        # fit residual (Angstroms)
+                      </span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number code-deleted-diff-line'></td>
+                    <td class='code-act-data code-indent-2 code-deleted-diff-highlight'>
+                      self.orderFitSlope = 1
+                      <span class='code-comment-highlight'>
+                        # slope of per-order WL equation at this wavelength
+                      </span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-2'>
+                      self.orderFitOutlier = False
+                      <span class='code-comment-highlight'>
+                        # true if line discarded from per-order fit as outlier
+              </div>
             </div>
           </div>
         </div>

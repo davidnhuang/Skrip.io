@@ -186,7 +186,7 @@ a:visited {text-decoration: none; color: #F0EDED;}
 }
 .loading-bar {
   width: 30px;
-  height: 2px;
+  height: 1px;
   background-color: #59D794;
 }
 /* Main Divs */

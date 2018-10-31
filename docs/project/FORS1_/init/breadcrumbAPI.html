@@ -137,425 +137,434 @@
         <span class='font font-light font-size-15 font-color-lighter' style='margin-bottom: 40px;'>
           FORS1 / init / FORS1_init_spreadsheetFillMethod.py ver. 8
         </span>
-        <div class='code-diff-display'>
-          <!--current version-->
-          <div class='code-diff-current-version'>
-            <!--profile-->
-            <div class='meeting-profile advisor-profile-pic active-g'></div>
-            <!--metadata-->
-            <div class='calendar-meeting-listing-detail'>
-              <span class='font font-light font-size-12 font-color-default' style='padding-top: 4px;'>
-                Version 8
-              </span>
-            </div>
-            <div class='calendar-meeting-listing-detail'>
-              <span class='font font-light font-size-12 font-color-lighter' style='padding-top: 4px;'>
-                12 / 5 / 2019 4:26PM
-              </span>
-            </div>
-            <!--diff data-->
-            <div id='current-code-version' class='current-code-diff-data'>
-              <table class='code-diff-lines'>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-comment-highlight'>
-                    /*
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-comment-highlight'>
-                    A plugin which smooths and pushes breadcrumbs to Drive APIs.
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-comment-highlight'>
-                    @author sedrubal
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number code-added-diff-line'></td>
-                  <td class='code-act-data code-added-diff-highlight'>
-                    last modded - Feb 2019
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-comment-highlight'>
-                    */
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    var RevealBreadcrumb = window.RevealBreadcrumb || (function(){
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent'>
-                    var options = Reveal.getConfig().breadcrumb || {};
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent'>
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent code-comment-highlight'>
-                    // create breadcrumb path trail
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number code-added-line-diff'></td>
-                  <td class='code-act-data code-indent code-added-diff-highlight'>
-                    var breadcrumb_bar = document.createElement('path--bcMasterPath');
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number code-added-line-diff'></td>
-                  <td class='code-act-data code-indent code-added-diff-highlight'>
-                    breadcrumb_bar.classList.add('__trail');
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number code-added-line-diff'></td>
-                  <td class='code-act-data code-indent code-added-diff-highlight'>
-                    document.getElementsByClassName('reveal')[0].appendChild(path--bcMasterPath);
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent'>
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent code-comment-highlight'>
-                    // change breadcrumb text on slide change
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent'>
-                    Reveal.addEventListener('slidechanged', function(vent){
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-2'>
-                    update_breadcrumb(event.currentSlide);
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent'>
-                  });
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent'>
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent code-comment-highlight'>
-                    // update innerHTML of all .breadcrumb
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent'>
-                    function update_breadcrumb(currentSlide) {
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-2'>
-                    var bs = document.getElementsByClassName('breadcrumb');
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-2'>
-                    for (var i = 0; i < bs.length; i++) {
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-3'>
-                    if (currentSlide.dataset['noBreadcrumb'] === undefined &&
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-4'>
-                    currentSlide.parentElement.dataset['noBreadcrumb'] === undefined) {
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-4'>
-                    bs[i].innerHTML = currentSlide.id.replace(/:/g, ' &rsaquo; ').replace(/_/g, ' ');
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-4'>
-                    bs[i].style['opacity'] = 1;
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-3'>
-                    } else {
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number code-added-diff-line'></td>
-                  <td class='code-act-data code-indent-4 code-added-diff-highlight'>
-                    bs[i].style['opacity'] = 0:1;
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-3'>
-                    }
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-2'>
-                    }
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent'>
-                  })();
-                  </td>
-                </tr>
-              </table>
-            </div>
+        <!--loading screen-->
+        <div id='loading-screen'>
+          <div class='loading-screen-bg'>
+            <div class='loading-bar'></div>
           </div>
-          <!--previous version-->
-          <div class='code-diff-previous-version'>
-            <!--profile-->
-            <div class='meeting-profile teammate-profile-pic-1 active-g'></div>
-            <!--metadata-->
-            <div class='calendar-meeting-listing-detail'>
-              <span class='font font-light font-size-12 font-color-default' style='padding-top: 4px;'>
-                Version 7
-              </span>
+        </div>
+        <!--loaded target content-->
+        <div id='target-content'>
+          <div class='code-diff-display'>
+            <!--current version-->
+            <div class='code-diff-current-version'>
+              <!--profile-->
+              <div class='meeting-profile advisor-profile-pic active-g'></div>
+              <!--metadata-->
+              <div class='calendar-meeting-listing-detail'>
+                <span class='font font-light font-size-12 font-color-default' style='padding-top: 4px;'>
+                  Version 8
+                </span>
+              </div>
+              <div class='calendar-meeting-listing-detail'>
+                <span class='font font-light font-size-12 font-color-lighter' style='padding-top: 4px;'>
+                  12 / 5 / 2019 4:26PM
+                </span>
+              </div>
+              <!--diff data-->
+              <div id='current-code-version' class='current-code-diff-data'>
+                <table class='code-diff-lines'>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-comment-highlight'>
+                      /*
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-comment-highlight'>
+                      A plugin which smooths and pushes breadcrumbs to Drive APIs.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-comment-highlight'>
+                      @author sedrubal
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number code-added-diff-line'></td>
+                    <td class='code-act-data code-added-diff-highlight'>
+                      last modded - Feb 2019
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-comment-highlight'>
+                      */
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data'>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data'>
+                      var RevealBreadcrumb = window.RevealBreadcrumb || (function(){
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent'>
+                      var options = Reveal.getConfig().breadcrumb || {};
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent'>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent code-comment-highlight'>
+                      // create breadcrumb path trail
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number code-added-line-diff'></td>
+                    <td class='code-act-data code-indent code-added-diff-highlight'>
+                      var breadcrumb_bar = document.createElement('path--bcMasterPath');
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number code-added-line-diff'></td>
+                    <td class='code-act-data code-indent code-added-diff-highlight'>
+                      breadcrumb_bar.classList.add('__trail');
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number code-added-line-diff'></td>
+                    <td class='code-act-data code-indent code-added-diff-highlight'>
+                      document.getElementsByClassName('reveal')[0].appendChild(path--bcMasterPath);
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent'>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent code-comment-highlight'>
+                      // change breadcrumb text on slide change
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent'>
+                      Reveal.addEventListener('slidechanged', function(vent){
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-2'>
+                      update_breadcrumb(event.currentSlide);
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent'>
+                    });
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent'>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent code-comment-highlight'>
+                      // update innerHTML of all .breadcrumb
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent'>
+                      function update_breadcrumb(currentSlide) {
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-2'>
+                      var bs = document.getElementsByClassName('breadcrumb');
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-2'>
+                      for (var i = 0; i < bs.length; i++) {
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-3'>
+                      if (currentSlide.dataset['noBreadcrumb'] === undefined &&
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-4'>
+                      currentSlide.parentElement.dataset['noBreadcrumb'] === undefined) {
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-4'>
+                      bs[i].innerHTML = currentSlide.id.replace(/:/g, ' &rsaquo; ').replace(/_/g, ' ');
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-4'>
+                      bs[i].style['opacity'] = 1;
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-3'>
+                      } else {
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number code-added-diff-line'></td>
+                    <td class='code-act-data code-indent-4 code-added-diff-highlight'>
+                      bs[i].style['opacity'] = 0:1;
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-3'>
+                      }
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-2'>
+                      }
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent'>
+                    })();
+                    </td>
+                  </tr>
+                </table>
+              </div>
             </div>
-            <div class='calendar-meeting-listing-detail'>
-              <span class='font font-light font-size-12 font-color-lighter' style='padding-top: 4px;'>
-                12 / 3 / 2019 1:56PM
-              </span>
-            </div>
-            <!--revert - previous version only-->
-            <div class='revert-previous-version-button'>
-              <img
-                src='https://davidnhuang.github.io/Skrip.io/assets/buttons/revert-version.svg'
-                width='15px'
-                hegith='15px'
-              />
-            </div>
-            <!--diff data-->
-            <div id='previous-code-version' class='current-code-diff-data'>
-              <table class='code-diff-lines'>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-comment-highlight'>
-                    /*
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-comment-highlight'>
-                    A plugin which smooths and pushes breadcrumbs to Drive APIs.
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-comment-highlight'>
-                    @author sedrubal
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-comment-highlight'>
-                    */
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    var RevealBreadcrumb = window.RevealBreadcrumb || (function(){
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent'>
-                    var options = Reveal.getConfig().breadcrumb || {};
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent'>
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent code-comment-highlight'>
-                    // create breadcrumb bar
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number code-deleted-diff-line'></td>
-                  <td class='code-act-data code-indent code-deleted-diff-highlight'>
-                    var breadcrumb_bar = document.createElement('div');
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number code-deleted-diff-line'></td>
-                  <td class='code-act-data code-indent code-deleted-diff-highlight'>
-                    breadcrumb_bar.classList.add('breadcrumb');
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number code-deleted-diff-line'></td>
-                  <td class='code-act-data code-indent code-deleted-diff-highlight'>
-                    document.getElementsByClassName('reveal')[0].appendChild(breadcrumb_bar);
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent'>
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent code-comment-highlight'>
-                    // change breadcrumb text on slide change
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent'>
-                    Reveal.addEventListener('slidechanged', function(vent){
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-2'>
-                    update_breadcrumb(event.currentSlide);
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent'>
-                  });
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent'>
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent code-comment-highlight'>
-                    // update innerHTML of all .breadcrumb
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent'>
-                    function update_breadcrumb(currentSlide) {
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-2'>
-                    var bs = document.getElementsByClassName('breadcrumb');
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-2'>
-                    for (var i = 0; i < bs.length; i++) {
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-3'>
-                    if (currentSlide.dataset['noBreadcrumb'] === undefined &&
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-4'>
-                    currentSlide.parentElement.dataset['noBreadcrumb'] === undefined) {
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-4'>
-                    bs[i].innerHTML = currentSlide.id.replace(/:/g, ' &rsaquo; ').replace(/_/g, ' ');
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-4'>
-                    bs[i].style['opacity'] = 1;
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-3'>
-                    } else {
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number code-deleted-diff-line'></td>
-                  <td class='code-act-data code-indent-4 code-deleted-diff-highlight'>
-                    bs[i].style['opacity'] = 0;
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-3'>
-                    }
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-2'>
-                    }
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent'>
-                  })();
-                  </td>
-                </tr>
-              </table>
+            <!--previous version-->
+            <div class='code-diff-previous-version'>
+              <!--profile-->
+              <div class='meeting-profile teammate-profile-pic-1 active-g'></div>
+              <!--metadata-->
+              <div class='calendar-meeting-listing-detail'>
+                <span class='font font-light font-size-12 font-color-default' style='padding-top: 4px;'>
+                  Version 7
+                </span>
+              </div>
+              <div class='calendar-meeting-listing-detail'>
+                <span class='font font-light font-size-12 font-color-lighter' style='padding-top: 4px;'>
+                  12 / 3 / 2019 1:56PM
+                </span>
+              </div>
+              <!--revert - previous version only-->
+              <div class='revert-previous-version-button'>
+                <img
+                  src='https://davidnhuang.github.io/Skrip.io/assets/buttons/revert-version.svg'
+                  width='15px'
+                  hegith='15px'
+                />
+              </div>
+              <!--diff data-->
+              <div id='previous-code-version' class='current-code-diff-data'>
+                <table class='code-diff-lines'>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-comment-highlight'>
+                      /*
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-comment-highlight'>
+                      A plugin which smooths and pushes breadcrumbs to Drive APIs.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-comment-highlight'>
+                      @author sedrubal
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-comment-highlight'>
+                      */
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data'>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data'>
+                      var RevealBreadcrumb = window.RevealBreadcrumb || (function(){
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent'>
+                      var options = Reveal.getConfig().breadcrumb || {};
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent'>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent code-comment-highlight'>
+                      // create breadcrumb bar
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number code-deleted-diff-line'></td>
+                    <td class='code-act-data code-indent code-deleted-diff-highlight'>
+                      var breadcrumb_bar = document.createElement('div');
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number code-deleted-diff-line'></td>
+                    <td class='code-act-data code-indent code-deleted-diff-highlight'>
+                      breadcrumb_bar.classList.add('breadcrumb');
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number code-deleted-diff-line'></td>
+                    <td class='code-act-data code-indent code-deleted-diff-highlight'>
+                      document.getElementsByClassName('reveal')[0].appendChild(breadcrumb_bar);
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent'>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent code-comment-highlight'>
+                      // change breadcrumb text on slide change
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent'>
+                      Reveal.addEventListener('slidechanged', function(vent){
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-2'>
+                      update_breadcrumb(event.currentSlide);
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent'>
+                    });
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent'>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent code-comment-highlight'>
+                      // update innerHTML of all .breadcrumb
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent'>
+                      function update_breadcrumb(currentSlide) {
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-2'>
+                      var bs = document.getElementsByClassName('breadcrumb');
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-2'>
+                      for (var i = 0; i < bs.length; i++) {
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-3'>
+                      if (currentSlide.dataset['noBreadcrumb'] === undefined &&
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-4'>
+                      currentSlide.parentElement.dataset['noBreadcrumb'] === undefined) {
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-4'>
+                      bs[i].innerHTML = currentSlide.id.replace(/:/g, ' &rsaquo; ').replace(/_/g, ' ');
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-4'>
+                      bs[i].style['opacity'] = 1;
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-3'>
+                      } else {
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number code-deleted-diff-line'></td>
+                    <td class='code-act-data code-indent-4 code-deleted-diff-highlight'>
+                      bs[i].style['opacity'] = 0;
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-3'>
+                      }
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-2'>
+                      }
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent'>
+                    })();
+                    </td>
+                  </tr>
+                </table>
+              </div>
             </div>
           </div>
         </div>
