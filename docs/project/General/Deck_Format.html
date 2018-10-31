@@ -137,74 +137,83 @@
         <span class='font font-light font-size-15 font-color-lighter' style='margin-bottom: 40px;'>
           General / Deck-Fomat.ppt
         </span>
-        <div class='code-diff-display'>
-          <!--current version-->
-          <div class='code-diff-current-version'>
-            <!--profile-->
-            <div class='meeting-profile advisor-profile-pic active-g'></div>
-            <!--metadata-->
-            <div class='calendar-meeting-listing-detail'>
-              <span class='font font-light font-size-12 font-color-default' style='padding-top: 4px;'>
-                Version 4
-              </span>
-            </div>
-            <div class='calendar-meeting-listing-detail'>
-              <span class='font font-light font-size-12 font-color-lighter' style='padding-top: 4px;'>
-                12 / 5 / 2019 4:26PM
-              </span>
-            </div>
-            <!--diff data-->
-            <div id='current-code-version' class='current-code-diff-data'>
-              <div class='file-raw-card'>
-                <span class='font font-code font-size-9 font-color-lighter' style='padding: 12px;'>
-                  changes detected in slides 3, 4, 10-21, 21-24 from previous version -
-                </span>
-                <div class='border-1px'></div>
-                <span class='font font-regular font-size-15 font-color-default' style='text-align: center; padding-top: 60px;'>
-                  view RAW file
-                </span>
-                <span class='font font-regular font-size-12 font-color-lighter' style='text-align: center; padding-bottom: 60px;'>
-                  large files or visual files are not loaded by default
+        <!--loading screen-->
+        <div id='loading-screen'>
+          <div class='loading-screen-bg'>
+            <div class='loading-bar'></div>
+          </div>
+        </div>
+        <!--loaded target content-->
+        <div id='target-content'>
+          <div class='code-diff-display'>
+            <!--current version-->
+            <div class='code-diff-current-version'>
+              <!--profile-->
+              <div class='meeting-profile advisor-profile-pic active-g'></div>
+              <!--metadata-->
+              <div class='calendar-meeting-listing-detail'>
+                <span class='font font-light font-size-12 font-color-default' style='padding-top: 4px;'>
+                  Version 4
                 </span>
               </div>
-            </div>
-          </div>
-          <!--previous version-->
-          <div class='code-diff-previous-version'>
-            <!--profile-->
-            <div class='meeting-profile teammate-profile-pic-1 active-g'></div>
-            <!--metadata-->
-            <div class='calendar-meeting-listing-detail'>
-              <span class='font font-light font-size-12 font-color-default' style='padding-top: 4px;'>
-                Version 3
-              </span>
-            </div>
-            <div class='calendar-meeting-listing-detail'>
-              <span class='font font-light font-size-12 font-color-lighter' style='padding-top: 4px;'>
-                12 / 3 / 2019 1:56PM
-              </span>
-            </div>
-            <!--revert - previous version only-->
-            <div class='revert-previous-version-button'>
-              <img
-                src='https://davidnhuang.github.io/Skrip.io/assets/buttons/revert-version.svg'
-                width='15px'
-                hegith='15px'
-              />
-            </div>
-            <!--diff data-->
-            <div id='previous-code-version' class='current-code-diff-data'>
-              <div class='file-raw-card'>
-                <span class='font font-code font-size-9 font-color-lighter' style='padding: 12px;'>
-                  changes detected in slides 5, 7, 19-21, 25, 28 from previous version -
+              <div class='calendar-meeting-listing-detail'>
+                <span class='font font-light font-size-12 font-color-lighter' style='padding-top: 4px;'>
+                  12 / 5 / 2019 4:26PM
                 </span>
-                <div class='border-1px'></div>
-                <span class='font font-regular font-size-15 font-color-default' style='text-align: center; padding-top: 60px;'>
-                  view RAW file
+              </div>
+              <!--diff data-->
+              <div id='current-code-version' class='current-code-diff-data'>
+                <div class='file-raw-card'>
+                  <span class='font font-code font-size-9 font-color-lighter' style='padding: 12px;'>
+                    changes detected in slides 3, 4, 10-21, 21-24 from previous version -
+                  </span>
+                  <div class='border-1px'></div>
+                  <span class='font font-regular font-size-15 font-color-default' style='text-align: center; padding-top: 60px;'>
+                    view RAW file
+                  </span>
+                  <span class='font font-regular font-size-12 font-color-lighter' style='text-align: center; padding-bottom: 60px;'>
+                    large files or visual files are not loaded by default
+                  </span>
+                </div>
+              </div>
+            </div>
+            <!--previous version-->
+            <div class='code-diff-previous-version'>
+              <!--profile-->
+              <div class='meeting-profile teammate-profile-pic-1 active-g'></div>
+              <!--metadata-->
+              <div class='calendar-meeting-listing-detail'>
+                <span class='font font-light font-size-12 font-color-default' style='padding-top: 4px;'>
+                  Version 3
                 </span>
-                <span class='font font-regular font-size-12 font-color-lighter' style='text-align: center; padding-bottom: 60px;'>
-                  large files or visual files are not loaded by default
+              </div>
+              <div class='calendar-meeting-listing-detail'>
+                <span class='font font-light font-size-12 font-color-lighter' style='padding-top: 4px;'>
+                  12 / 3 / 2019 1:56PM
                 </span>
+              </div>
+              <!--revert - previous version only-->
+              <div class='revert-previous-version-button'>
+                <img
+                  src='https://davidnhuang.github.io/Skrip.io/assets/buttons/revert-version.svg'
+                  width='15px'
+                  hegith='15px'
+                />
+              </div>
+              <!--diff data-->
+              <div id='previous-code-version' class='current-code-diff-data'>
+                <div class='file-raw-card'>
+                  <span class='font font-code font-size-9 font-color-lighter' style='padding: 12px;'>
+                    changes detected in slides 5, 7, 19-21, 25, 28 from previous version -
+                  </span>
+                  <div class='border-1px'></div>
+                  <span class='font font-regular font-size-15 font-color-default' style='text-align: center; padding-top: 60px;'>
+                    view RAW file
+                  </span>
+                  <span class='font font-regular font-size-12 font-color-lighter' style='text-align: center; padding-bottom: 60px;'>
+                    large files or visual files are not loaded by default
+                  </span>
+                </div>
               </div>
             </div>
           </div>
