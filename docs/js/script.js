@@ -6,6 +6,8 @@ $(document).ready(function(){
     $("#target-content").addClass("fadingIn")
   },2000);
 
+  $(".loading-bar").animate({width: "100%"});
+
   //Scroll feedbox to bottom
   var height = 0;
 

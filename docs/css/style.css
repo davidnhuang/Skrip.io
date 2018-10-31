@@ -184,6 +184,11 @@ a:visited {text-decoration: none; color: #F0EDED;}
   height: 800px;
   background-color: #1E1E1E;
 }
+.loading-bar {
+  width: 30px;
+  height: 2px;
+  background-color: #59D794;
+}
 /* Main Divs */
 #body--main {
   width: 1360px;
