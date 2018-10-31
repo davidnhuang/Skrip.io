@@ -137,471 +137,480 @@
         <span class='font font-light font-size-15 font-color-lighter' style='margin-bottom: 40px;'>
           Scripts_ / Scripts_spectralSet.cpp ver. 8
         </span>
-        <div class='code-diff-display'>
-          <!--current version-->
-          <div class='code-diff-current-version'>
-            <!--profile-->
-            <div class='meeting-profile advisor-profile-pic active-g'></div>
-            <!--metadata-->
-            <div class='calendar-meeting-listing-detail'>
-              <span class='font font-light font-size-12 font-color-default' style='padding-top: 4px;'>
-                Version 8
-              </span>
-            </div>
-            <div class='calendar-meeting-listing-detail'>
-              <span class='font font-light font-size-12 font-color-lighter' style='padding-top: 4px;'>
-                12 / 5 / 2019 4:26PM
-              </span>
-            </div>
-            <!--diff data-->
-            <div id='current-code-version' class='current-code-diff-data'>
-              <table class='code-diff-lines'>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    void avoid_runaway_process( const int max_time_to_run)
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    {
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                   }
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                   #endif
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    static int get_urlencoded_piece( const char **idata,
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    char *buff, size_t max_buff, const char end_char)
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    {
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent'>
-                    int c;
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent'>
-                    const char *tptr = *idata;
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent'>
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent'>
-                    max_buff--;
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent'>
-                    while( (c = *tptr++) > 13 && max_buff-- && c != end_char)
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-2'>
-                    {
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-2'>
-                    if( c == '+')
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-3'>
-                    c = ' ';
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-2'>
-                    else if( c == '%')
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-3'>
-                    {
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-3'>
-                    int i, c1;
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-3'>
-                    c = 0;
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-3'>
-                    for( i = 0; i < 2; i++)
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-4'>
-                    {
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-4'>
-                    c *= 16;
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-4'>
-                    c1 = *tptr++;
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-4'>
-                    if( c1 >= '0' && c1 <= '9')
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-4'>
-                    c += c1 - '0';
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-4'>
-                    else if( c1 >= 'A' && c1 <= 'F')
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-4'>
-                    c += c1 - 'A' + 10;
-                    <span class='code-comment-highlight'>
-                      /* wasn't an hex digit: */
-                    </span>
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-4'>
-                    else
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-4'>
-                    return( -1);
-                    <span class='code-comment-highlight'>
-                      /* not supposed to happen */
-                    </span>
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-3'>
-                    }
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-2'>
-                    }
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number code-added-diff-line'></td>
-                  <td class='code-act-data code-indent-2 code-added-diff-highlight'>
-                    return (c)
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent'>
-                    }
-                  </td>
-                </tr>
-              </table>
-            </div>
+        <!--loading screen-->
+        <div id='loading-screen'>
+          <div class='loading-screen-bg'>
+            <div class='loading-bar'></div>
           </div>
-          <!--previous version-->
-          <div class='code-diff-previous-version'>
-            <!--profile-->
-            <div class='meeting-profile teammate-profile-pic-1 active-g'></div>
-            <!--metadata-->
-            <div class='calendar-meeting-listing-detail'>
-              <span class='font font-light font-size-12 font-color-default' style='padding-top: 4px;'>
-                Version 7
-              </span>
+        </div>
+        <!--loaded target content-->
+        <div id='target-content'>
+          <div class='code-diff-display'>
+            <!--current version-->
+            <div class='code-diff-current-version'>
+              <!--profile-->
+              <div class='meeting-profile advisor-profile-pic active-g'></div>
+              <!--metadata-->
+              <div class='calendar-meeting-listing-detail'>
+                <span class='font font-light font-size-12 font-color-default' style='padding-top: 4px;'>
+                  Version 8
+                </span>
+              </div>
+              <div class='calendar-meeting-listing-detail'>
+                <span class='font font-light font-size-12 font-color-lighter' style='padding-top: 4px;'>
+                  12 / 5 / 2019 4:26PM
+                </span>
+              </div>
+              <!--diff data-->
+              <div id='current-code-version' class='current-code-diff-data'>
+                <table class='code-diff-lines'>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data'>
+                      void avoid_runaway_process( const int max_time_to_run)
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data'>
+                      {
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data'>
+                     }
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data'>
+                     #endif
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data'>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data'>
+                      static int get_urlencoded_piece( const char **idata,
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data'>
+                      char *buff, size_t max_buff, const char end_char)
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data'>
+                      {
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent'>
+                      int c;
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent'>
+                      const char *tptr = *idata;
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent'>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent'>
+                      max_buff--;
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent'>
+                      while( (c = *tptr++) > 13 && max_buff-- && c != end_char)
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-2'>
+                      {
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-2'>
+                      if( c == '+')
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-3'>
+                      c = ' ';
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-2'>
+                      else if( c == '%')
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-3'>
+                      {
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-3'>
+                      int i, c1;
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-3'>
+                      c = 0;
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-3'>
+                      for( i = 0; i < 2; i++)
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-4'>
+                      {
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-4'>
+                      c *= 16;
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-4'>
+                      c1 = *tptr++;
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-4'>
+                      if( c1 >= '0' && c1 <= '9')
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-4'>
+                      c += c1 - '0';
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-4'>
+                      else if( c1 >= 'A' && c1 <= 'F')
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-4'>
+                      c += c1 - 'A' + 10;
+                      <span class='code-comment-highlight'>
+                        /* wasn't an hex digit: */
+                      </span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-4'>
+                      else
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-4'>
+                      return( -1);
+                      <span class='code-comment-highlight'>
+                        /* not supposed to happen */
+                      </span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-3'>
+                      }
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-2'>
+                      }
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number code-added-diff-line'></td>
+                    <td class='code-act-data code-indent-2 code-added-diff-highlight'>
+                      return (c)
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent'>
+                      }
+                    </td>
+                  </tr>
+                </table>
+              </div>
             </div>
-            <div class='calendar-meeting-listing-detail'>
-              <span class='font font-light font-size-12 font-color-lighter' style='padding-top: 4px;'>
-                12 / 3 / 2019 1:56PM
-              </span>
-            </div>
-            <!--revert - previous version only-->
-            <div class='revert-previous-version-button'>
-              <img
-                src='https://davidnhuang.github.io/Skrip.io/assets/buttons/revert-version.svg'
-                width='15px'
-                hegith='15px'
-              />
-            </div>
-            <!--diff data-->
-            <div id='previous-code-version' class='current-code-diff-data'>
-              <table class='code-diff-lines'>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    void avoid_runaway_process( const int max_time_to_run)
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    {
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                   }
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                   #endif
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    static int get_urlencoded_piece( const char **idata,
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    char *buff, size_t max_buff, const char end_char)
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data'>
-                    {
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent'>
-                    int c;
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent'>
-                    const char *tptr = *idata;
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent'>
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent'>
-                    max_buff--;
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number code-deleted-diff-highlight'></td>
-                  <td class='code-act-data code-indent code-deleted-diff-highlight'>
-                    min_buff--;
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent'>
-                    while( (c = *tptr++) > 13 && max_buff-- && c != end_char)
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-2'>
-                    {
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-2'>
-                    if( c == '+')
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-3'>
-                    c = ' ';
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-2'>
-                    else if( c == '%')
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-3'>
-                    {
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-3'>
-                    int i, c1;
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-3'>
-                    c = 0;
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-3'>
-                    for( i = 0; i < 2; i++)
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-4'>
-                    {
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-4'>
-                    c *= 16;
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-4'>
-                    c1 = *tptr++;
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-4'>
-                    if( c1 >= '0' && c1 <= '9')
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-4'>
-                    c += c1 - '0';
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-4'>
-                    else if( c1 >= 'A' && c1 <= 'F')
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-4'>
-                    c += c1 - 'A' + 10;
-                    <span class='code-comment-highlight'>
-                      /* wasn't an hex digit: */
-                    </span>
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-4'>
-                    else
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-4'>
-                    return( -1);
-                    <span class='code-comment-highlight'>
-                      /* not supposed to happen */
-                    </span>
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-3'>
-                    }
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent-2'>
-                    }
-                  </td>
-                </tr>
-                <tr>
-                  <td class='code-line-number'></td>
-                  <td class='code-act-data code-indent'>
-                    }
-                  </td>
-                </tr>
-              </table>
+            <!--previous version-->
+            <div class='code-diff-previous-version'>
+              <!--profile-->
+              <div class='meeting-profile teammate-profile-pic-1 active-g'></div>
+              <!--metadata-->
+              <div class='calendar-meeting-listing-detail'>
+                <span class='font font-light font-size-12 font-color-default' style='padding-top: 4px;'>
+                  Version 7
+                </span>
+              </div>
+              <div class='calendar-meeting-listing-detail'>
+                <span class='font font-light font-size-12 font-color-lighter' style='padding-top: 4px;'>
+                  12 / 3 / 2019 1:56PM
+                </span>
+              </div>
+              <!--revert - previous version only-->
+              <div class='revert-previous-version-button'>
+                <img
+                  src='https://davidnhuang.github.io/Skrip.io/assets/buttons/revert-version.svg'
+                  width='15px'
+                  hegith='15px'
+                />
+              </div>
+              <!--diff data-->
+              <div id='previous-code-version' class='current-code-diff-data'>
+                <table class='code-diff-lines'>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data'>
+                      void avoid_runaway_process( const int max_time_to_run)
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data'>
+                      {
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data'>
+                     }
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data'>
+                     #endif
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data'>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data'>
+                      static int get_urlencoded_piece( const char **idata,
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data'>
+                      char *buff, size_t max_buff, const char end_char)
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data'>
+                      {
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent'>
+                      int c;
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent'>
+                      const char *tptr = *idata;
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent'>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent'>
+                      max_buff--;
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number code-deleted-diff-highlight'></td>
+                    <td class='code-act-data code-indent code-deleted-diff-highlight'>
+                      min_buff--;
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent'>
+                      while( (c = *tptr++) > 13 && max_buff-- && c != end_char)
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-2'>
+                      {
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-2'>
+                      if( c == '+')
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-3'>
+                      c = ' ';
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-2'>
+                      else if( c == '%')
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-3'>
+                      {
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-3'>
+                      int i, c1;
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-3'>
+                      c = 0;
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-3'>
+                      for( i = 0; i < 2; i++)
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-4'>
+                      {
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-4'>
+                      c *= 16;
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-4'>
+                      c1 = *tptr++;
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-4'>
+                      if( c1 >= '0' && c1 <= '9')
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-4'>
+                      c += c1 - '0';
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-4'>
+                      else if( c1 >= 'A' && c1 <= 'F')
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-4'>
+                      c += c1 - 'A' + 10;
+                      <span class='code-comment-highlight'>
+                        /* wasn't an hex digit: */
+                      </span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-4'>
+                      else
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-4'>
+                      return( -1);
+                      <span class='code-comment-highlight'>
+                        /* not supposed to happen */
+                      </span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-3'>
+                      }
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent-2'>
+                      }
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='code-line-number'></td>
+                    <td class='code-act-data code-indent'>
+                      }
+                    </td>
+                  </tr>
+                </table>
+              </div>
             </div>
           </div>
         </div>
