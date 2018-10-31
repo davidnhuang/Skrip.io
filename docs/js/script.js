@@ -211,7 +211,7 @@ $(document).ready(function(){
     // In the right position (the mouse)
     css({
       top: 69 + "px",
-      left: 307 + "px"
+      left: 306 + "px"
     });
   });
 
