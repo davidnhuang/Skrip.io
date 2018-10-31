@@ -736,6 +736,7 @@ a:visited {text-decoration: none; color: #F0EDED;}
   padding: 8px 12px;
   border-radius: 6px;
   text-align: center;
+  cursor: pointer;
 }
 .submit-action-button {
   display: inline-block;
