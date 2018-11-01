@@ -4,7 +4,7 @@ $(document).ready(function(){
   setTimeout(function(){
     $("#loading-screen").fadeOut(100)
     $("#target-content").addClass("fadingIn")
-  },400);
+  },600);
 
   $(".loading-bar").animate({width: "100%"});
 
