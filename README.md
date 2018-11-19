@@ -1,5 +1,6 @@
 # Skrip.io
-##### Do not upgrade Origami prototype components until after 12 / 15 / 2018
+### Do not upgrade Origami prototype components until after 12 / 15 / 2018
+###
 
 Skrip.io is a file management application on cloud drive services (Google Drive, One Drive, etc). It features programmable naming conventions and built-in meeting scheduler
 
