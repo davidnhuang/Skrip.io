@@ -7,6 +7,9 @@ Visit [Abstract](https://app.goabstract.com/projects/d4f126c0-bec8-11e7-b108-7d8
 
 To learn more about what Skrip.io does, visit my [website](https://www.davidnhuang.com/project/skrip-io/)
 
+## Announcement
+###### Do not upgrade Origami prototype components until after 12 / 15 / 2018
+
 ## Project Detail
 ###### Designer: David Huang.
 ###### Developer: David Huang.
