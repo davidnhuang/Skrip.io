@@ -884,7 +884,7 @@ a:visited {text-decoration: none; color: #F0EDED;}
 }
 .export-fits-context-menu li {
   cursor: pointer;
-  width: 200px;
+  width: 160px;
 }
 .meeting-post-options li:hover, .cancel-meeting-sent-option li:hover,
 .meeting-3-context-menu li:hover, .meeting-4-context-menu li:hover, .directory-3-context-menu li:hover,
