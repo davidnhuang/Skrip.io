@@ -238,9 +238,9 @@ $(document).ready(function(){
   // Dismiss menu after click out
   $(document).bind("mousedown", function (e) {
     // If the clicked element is not the menu
-    if (!$(e.target).parents(".meeting-post-options, .cancel-meeting-sent-option, .directory-1-context-menu, .directory-2-context-menu, .directory-3-context-menu, .directory-4-context-menu, .directory-5-context-menu, .directory-6-context-menu, .directory-7-context-menu, .search-bar-dropdown-menu, .directory-3-context-menu, .meeting-1-context-menu, .meeting-2-context-menu, .meeting-3-context-menu, .meeting-4-context-menu").length > 0) {
+    if (!$(e.target).parents(".meeting-post-options, .cancel-meeting-sent-option, .directory-1-context-menu, .directory-2-context-menu, .directory-3-context-menu, .directory-4-context-menu, .directory-5-context-menu, .directory-6-context-menu, .directory-7-context-menu, .search-bar-dropdown-menu, .directory-3-context-menu, .meeting-1-context-menu, .meeting-2-context-menu, .meeting-3-context-menu, .meeting-4-context-menu, .export-fits-context-menu").length > 0) {
       // Hide it
-      $(".meeting-post-options, .cancel-meeting-sent-option, .directory-1-context-menu, .directory-2-context-menu, .directory-3-context-menu, .directory-4-context-menu, .directory-5-context-menu, .directory-6-context-menu, .directory-7-context-menu, .search-bar-dropdown-menu, .directory-3-context-menu, .meeting-1-context-menu, .meeting-2-context-menu, .meeting-3-context-menu, .meeting-4-context-menu").fadeOut(100);
+      $(".meeting-post-options, .cancel-meeting-sent-option, .directory-1-context-menu, .directory-2-context-menu, .directory-3-context-menu, .directory-4-context-menu, .directory-5-context-menu, .directory-6-context-menu, .directory-7-context-menu, .search-bar-dropdown-menu, .directory-3-context-menu, .meeting-1-context-menu, .meeting-2-context-menu, .meeting-3-context-menu, .meeting-4-context-menu, .export-fits-context-menu").fadeOut(100);
     }
   });
 
