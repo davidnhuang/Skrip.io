@@ -874,7 +874,7 @@ a:visited {text-decoration: none; color: #F0EDED;}
 .meeting-3-context-menu li:hover, .meeting-4-context-menu li:hover, .directory-3-context-menu li:hover,
 .directory-1-context-menu li:hover, .directory-2-context-menu li:hover, .directory-4-context-menu li:hover,
 .directory-5-context-menu li:hover, .directory-6-context-menu li:hover, .directory-7-context-menu li:hover,
-.export-fits-context-menu li {
+.export-fits-context-menu li:hover {
   background-color: #9B9B9B;
 }
 .search-bar-recent-search-result:hover, .search-bar-file-search-type:hover {
