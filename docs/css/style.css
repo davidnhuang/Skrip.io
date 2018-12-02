@@ -128,7 +128,7 @@ a:visited {text-decoration: none; color: #F0EDED;}
   box-shadow: 0px 4px 12px 4px rgb(0,0,0,0.3);
 }
 #schedule-meeting-dialogue, #uploading-to-root, #meeting-1-detail, #meeting-2-detail,
-#meeting-3-detail, #meeting-4-detail {display: none;}
+#meeting-3-detail, #meeting-4-detail, # {display: none;}
 .schedule-meeting-name-input, .confirmation-input-field {
   width: 100%;
   height: 40px;
@@ -827,7 +827,7 @@ a:visited {text-decoration: none; color: #F0EDED;}
 .meeting-post-options, .cancel-meeting-sent-option, .meeting-3-context-menu,
 .meeting-4-context-menu, .directory-1-context-menu, .directory-2-context-menu,
 .directory-3-context-menu, .directory-4-context-menu, .directory-5-context-menu,
-.directory-6-context-menu, .directory-7-context-menu {
+.directory-6-context-menu, .directory-7-context-menu, .export-fits-context-menu {
   display: none;
   z-index: 1000;
   position: absolute;
@@ -835,7 +835,7 @@ a:visited {text-decoration: none; color: #F0EDED;}
   color: #F0EDED;
   border-radius: 6px;
   background-color: #4D5052;
-  box-shadow: 0px 4px 12px 4px #1a1a1a;
+  box-shadow: 0px 4px 12px 4px #000000;
   padding: 6px 0px;
 }
 .search-bar-dropdown-menu {
@@ -866,14 +866,15 @@ a:visited {text-decoration: none; color: #F0EDED;}
 .meeting-post-options li, .cancel-meeting-sent-option li, .meeting-3-context-menu li,
 .meeting-4-context-menu li, .directory-3-context-menu li, .directory-1-context-menu li,
 .directory-2-context-menu li, .directory-4-context-menu li, .directory-5-context-menu li,
-.directory-6-context-menu li, .directory-7-context-menu li {
+.directory-6-context-menu li, .directory-7-context-menu li, .export-fits-context-menu li {
   cursor: pointer;
   width: 100px;
 }
 .meeting-post-options li:hover, .cancel-meeting-sent-option li:hover,
 .meeting-3-context-menu li:hover, .meeting-4-context-menu li:hover, .directory-3-context-menu li:hover,
 .directory-1-context-menu li:hover, .directory-2-context-menu li:hover, .directory-4-context-menu li:hover,
-.directory-5-context-menu li:hover, .directory-6-context-menu li:hover, .directory-7-context-menu li:hover {
+.directory-5-context-menu li:hover, .directory-6-context-menu li:hover, .directory-7-context-menu li:hover,
+.export-fits-context-menu li {
   background-color: #9B9B9B;
 }
 .search-bar-recent-search-result:hover, .search-bar-file-search-type:hover {

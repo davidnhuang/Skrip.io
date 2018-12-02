@@ -211,6 +211,18 @@ $(document).ready(function(){
     });
   });
 
+  $("#export-fits-file").on("contextmenu", function(event){
+    // Avoid the real one
+    event.preventDefault();
+    // Show contextmenu
+    $(".export-fits-context-menu").finish().toggle(100).
+    // In the right position (the mouse)
+    css({
+      top: (event.pageY-=20) + "px",
+      left: (event.pageX -= 120) + "px"
+    });
+  });
+
   $(".dirList-main-search").click("contextmenu", function(event){
     // Avoid the real one
     event.preventDefault();
