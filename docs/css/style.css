@@ -878,9 +878,13 @@ a:visited {text-decoration: none; color: #F0EDED;}
 .meeting-post-options li, .cancel-meeting-sent-option li, .meeting-3-context-menu li,
 .meeting-4-context-menu li, .directory-3-context-menu li, .directory-1-context-menu li,
 .directory-2-context-menu li, .directory-4-context-menu li, .directory-5-context-menu li,
-.directory-6-context-menu li, .directory-7-context-menu li, .export-fits-context-menu li {
+.directory-6-context-menu li, .directory-7-context-menu li {
   cursor: pointer;
   width: 100px;
+}
+.export-fits-context-menu li {
+  cursor: pointer;
+  width: 200px;
 }
 .meeting-post-options li:hover, .cancel-meeting-sent-option li:hover,
 .meeting-3-context-menu li:hover, .meeting-4-context-menu li:hover, .directory-3-context-menu li:hover,
