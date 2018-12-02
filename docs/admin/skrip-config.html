@@ -63,100 +63,100 @@
           </span>
           <div class='shortkey-tips-bounding'>
             <span class='font font-regular font-size-12 font-color-lighter' style='padding-bottom: 12px;'>
-              <span class='font-code font-color-default'>source -</span>
-              returns the source of Skrip directory
+              <span class='font-code font-color-default'>Team -</span>
+              prints the Team Drive name as a prefix
             </span>
             <span class='font font-regular font-size-12 font-color-lighter' style='padding-bottom: 12px;'>
-              <span class='font-code font-color-default'>master -</span>
-              refers to the master Skrip directory
+              <span class='font-code font-color-default'>parent-dir -</span>
+              returns the parent directory name of files
             </span>
             <span class='font font-regular font-size-12 font-color-lighter' style='padding-bottom: 12px;'>
-              <span class='font-code font-color-default'>parent -</span>
-              refers to the parent directory of the path
+              <span class='font-code font-color-default'>!filename -</span>
+              returns the inputted filename - this is mandatory
             </span>
             <span class='font font-regular font-size-12 font-color-lighter' style='padding-bottom: 12px;'>
-              <span class='font-code font-color-default'>child -</span>
-              refers to the immediate child directory of the path
+              <span class='font-code font-color-default'> -version </span>
+              prints the version number of the file
             </span>
             <span class='font font-regular font-size-12 font-color-lighter' style='padding-bottom: 12px;'>
-              <span class='font-code font-color-default'>parent-directory -</span>
-              refers a parent directory
+              <span class='font-code font-color-default'>path -</span>
+              prints the entire breadcrumb of the file name - use with caution
             </span>
             <span class='font font-regular font-size-12 font-color-lighter' style='padding-bottom: 12px;'>
-              <span class='font-code font-color-default'>child-directory -</span>
-              refers a child directory
+              <span class='font-code font-color-default'>owner -</span>
+              returns the owner of the document
             </span>
             <span class='font font-regular font-size-12 font-color-lighter' style='padding-bottom: 12px;'>
-              <span class='font-code font-color-default'>filename -</span>
-              returns the filename of the object
+              <span class='font-code font-color-default'>collab -</span>
+              returns the collaborator(s) of the document
             </span>
             <span class='font font-regular font-size-12 font-color-lighter' style='padding-bottom: 12px;'>
-              <span class='font-code font-color-default'>version -</span>
-              refers to the version of the object
+              <span class='font-code font-color-default'>creation -</span>
+              prints the date of creation mm/dd/yy as a suffix
             </span>
             <span class='font font-regular font-size-12 font-color-lighter' style='padding-bottom: 12px;'>
-              <span class='font-code font-color-default'>ver# -</span>
-              shorthand for the version of the object
+              <span class='font-code font-color-default'>filetype -</span>
+              returns the kind of file
             </span>
             <span class='font font-regular font-size-12 font-color-lighter' style='padding-bottom: 12px;'>
-              <span class='font-code font-color-default'>gParent -</span>
-              refers to the top level directory of the path
+              <span class='font-code font-color-default'>project -</span>
+              returns the project enclosing the file - useful for cross project files
             </span>
             <span class='font font-regular font-size-12 font-color-lighter' style='padding-bottom: 12px;'>
-              <span class='font-code font-color-default'>gChild -</span>
-              refers to the lowest level directory of the path
+              <span class='font-code font-color-default'>local -</span>
+              returns the local destination of the file from owner
             </span>
             <span class='font font-regular font-size-12 font-color-lighter' style='padding-bottom: 12px;'>
-              <span class='font-code font-color-default'>#all -</span>
-              returns the full path without spaces
+              <span class='font-code font-color-default'>general -</span>
+              puts the general tag as a prefix - fixes files to general section
             </span>
             <span class='font font-regular font-size-12 font-color-lighter' style='padding-bottom: 12px;'>
-              <span class='font-code font-color-default'>& -</span>
-              combines nodes into a single string
+              <span class='font-code font-color-default'>status -</span>
+              returns the status metadata of the file - either accepted or proposed
             </span>
             <span class='font font-regular font-size-12 font-color-lighter' style='padding-bottom: 12px;'>
-              <span class='font-code font-color-default'>$ -</span>
-              allows for multiple selector nodes be refered
+              <span class='font-code font-color-default'>deletion -</span>
+              returns the deletion date of the file - use with caution
             </span>
             <span class='font font-regular font-size-12 font-color-lighter' style='padding-bottom: 12px;'>
               <span class='font-code font-color-default'># -</span>
-              returns the immediate ID of the file / directory
+              shorthand for returning entire breadcrumb
             </span>
             <span class='font font-regular font-size-12 font-color-lighter' style='padding-bottom: 12px;'>
               <span class='font-code font-color-default'>dir -</span>
-              immediately creates a child directory
+              shorthand for parent directory
             </span>
             <span class='font font-regular font-size-12 font-color-lighter' style='padding-bottom: 12px;'>
-              <span class='font-code font-color-default'>!dir -</span>
-              immediately creates an enclosing directory
+              <span class='font-code font-color-default'>cdir -</span>
+              shorthand for child directory
             </span>
             <span class='font font-regular font-size-12 font-color-lighter' style='padding-bottom: 12px;'>
-              <span class='font-code font-color-default'>empDir -</span>
-              creates an empty directory - requires a location path
+              <span class='font-code font-color-default'>location -</span>
+              returns the location metadata of the file owner
             </span>
             <span class='font font-regular font-size-12 font-color-lighter' style='padding-bottom: 12px;'>
               <span class='font-code font-color-default'>/ -</span>
-              a directory seperator
+              creates a naming node
             </span>
             <span class='font font-regular font-size-12 font-color-lighter' style='padding-bottom: 12px;'>
               <span class='font-code font-color-default'>_ -</span>
-              a directory seperator
+              another way of creating naming node
             </span>
             <span class='font font-regular font-size-12 font-color-lighter' style='padding-bottom: 12px;'>
               <span class='font-code font-color-default'>- -</span>
-              another directory seperator
+              another way of creating naming node
             </span>
             <span class='font font-regular font-size-12 font-color-lighter' style='padding-bottom: 12px;'>
               <span class='font-code font-color-default'>-- -</span>
-              a parent directory seperator
+              yet another way of creating naming node
             </span>
             <span class='font font-regular font-size-12 font-color-lighter' style='padding-bottom: 12px;'>
               <span class='font-code font-color-default'>--- -</span>
-              a grand-parent directory seperator
+              the last way to create a naming node
             </span>
             <span class='font font-regular font-size-12 font-color-lighter' style='padding-bottom: 12px;'>
-              <span class='font-code font-color-default'>$$ -</span>
-              combining directories into a single node
+              <span class='font-code font-color-default'>$ -</span>
+              shorthand for FITS file naming node
             </span>
             <span class='font font-regular font-size-12 font-color-lighter' style='padding-bottom: 12px;'>
               <span class='font-code font-color-default'>{ -</span>
@@ -164,11 +164,11 @@
             </span>
             <span class='font font-regular font-size-12 font-color-lighter' style='padding-bottom: 12px;'>
               <span class='font-code font-color-default'>// -</span>
-              creates two child directory nodes
+              creates two naming nodes
             </span>
             <span class='font font-regular font-size-12 font-color-lighter' style='padding-bottom: 12px;'>
-              <span class='font-code font-color-default'>\CUSTOM -</span>
-              type whatever to create a custom node
+              <span class='font-code font-color-default'>/wipe -</span>
+              wipes the entire naming node - archives previous naming node
             </span>
           </div>
           <div style='margin-top: 20px; margin-left: 38%;'>
