@@ -827,7 +827,7 @@ a:visited {text-decoration: none; color: #F0EDED;}
 .meeting-post-options, .cancel-meeting-sent-option, .meeting-3-context-menu,
 .meeting-4-context-menu, .directory-1-context-menu, .directory-2-context-menu,
 .directory-3-context-menu, .directory-4-context-menu, .directory-5-context-menu,
-.directory-6-context-menu, .directory-7-context-menu, .export-fits-context-menu {
+.directory-6-context-menu, .directory-7-context-menu {
   display: none;
   z-index: 1000;
   position: absolute;
@@ -837,6 +837,18 @@ a:visited {text-decoration: none; color: #F0EDED;}
   background-color: #4D5052;
   box-shadow: 0px 4px 12px 4px #000000;
   padding: 6px 0px;
+}
+.export-fits-context-menu {
+  display: none;
+  z-index: 1000;
+  position: absolute;
+  white-space: nowrap;
+  color: #F0EDED;
+  border-radius: 6px;
+  background-color: #4D5052;
+  box-shadow: 0px 4px 12px 4px #000000;
+  padding: 6px 0px;
+  width: 200px;
 }
 .search-bar-dropdown-menu {
   display: none;
