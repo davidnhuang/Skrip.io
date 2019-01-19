@@ -470,7 +470,7 @@ $(document).ready(function(){
   });
 
   $('#append-naming-node').click(function(){
-    return $("#filename-preview").text().replace("Python_ReductionPipielines_FluxModel_","NelsonCooper_ReductionPipielines_FluxModel_")
+    $("#filename-preview").text().replace("Python_ReductionPipielines_FluxModel_","NelsonCooper_ReductionPipielines_FluxModel_")
   });
 
 });
