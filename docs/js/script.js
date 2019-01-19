@@ -469,10 +469,10 @@ $(document).ready(function(){
     $(this).children('td:eq(0)').addClass('code-line-number').text(i+1);
   });
 
+  var foo = "it worked!"
+
   $('#demoNodeOne').on('blur', function() {
-    if ($(this).html() == "owner") {
-      $("#fileNamePreview").empty();
-    }
+    $('#fileNamePreview').empty().append(foo);
   });
 
 });
