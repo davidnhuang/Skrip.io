@@ -469,4 +469,8 @@ $(document).ready(function(){
     $(this).children('td:eq(0)').addClass('code-line-number').text(i+1);
   });
 
+  $('#demoNodeOne').on('blur', function() {
+    $('#fileNamePreview').empty().append($(this).html());
+  });
+
 });
