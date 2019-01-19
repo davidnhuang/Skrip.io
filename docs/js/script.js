@@ -470,9 +470,9 @@ $(document).ready(function(){
   });
 
   var demoTextInput = $("#demoNode").text()
-  if (demoTextInput == "owner") {
+  if (demoTextInput.is("owner")) {
     $("#filename-preview").text(function () {
-      return $(this).text().replace("Python_ReductionPipielines_FluxModel_", "NelsonCooper_ReductionPipielines_FluxModel_");
+      $(this).text().replace("Python_ReductionPipielines_FluxModel_", "NelsonCooper_ReductionPipielines_FluxModel_");
     }
   }
 
