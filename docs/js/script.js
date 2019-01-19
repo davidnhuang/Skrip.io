@@ -470,7 +470,7 @@ $(document).ready(function(){
   });
 
   $("#demoNode").keyup(function() {
-    if (this.value == "owner") {
+    if (this.html == "owner") {
         $("#filename-preview").css("display", "none");
     }
   })
