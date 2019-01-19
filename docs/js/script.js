@@ -469,11 +469,13 @@ $(document).ready(function(){
     $(this).children('td:eq(0)').addClass('code-line-number').text(i+1);
   });
 
-  var demoTextInput = $("#demoNode").text()
-  if (demoTextInput.is("owner")) {
-    $("#filename-preview").text(function () {
-      $(this).text().replace("Python_ReductionPipielines_FluxModel_", "NelsonCooper_ReductionPipielines_FluxModel_");
-    }
-  })
+  $("#demoNode").keyup(function() {
+        if (this.value == "owner") {
+            $("#filename-preview").text("Python_ReductionPipielines_FluxModel_", "@Nelson_ReductionPipielines_FluxModel_");
+        }
+        else {
+            $("#filename-preview").text("@Nelson_ReductionPipielines_FluxModel_", "Python_ReductionPipielines_FluxModel_");
+        }
+    });
 
 });
