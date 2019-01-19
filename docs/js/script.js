@@ -469,7 +469,7 @@ $(document).ready(function(){
     $(this).children('td:eq(0)').addClass('code-line-number').text(i+1);
   });
 
-  $('#demoNode').click(function(){
+  $('#append-naming-node').click(function(){
     return $("#filename-preview").text().replace("Python_ReductionPipielines_FluxModel_","NelsonCooper_ReductionPipielines_FluxModel_")
   });
 
