@@ -469,10 +469,9 @@ $(document).ready(function(){
     $(this).children('td:eq(0)').addClass('code-line-number').text(i+1);
   });
 
-
-  var target = "owner"
-  if ($("#demoNode").text() === target) {
-    $("#filename-preview").css("display", "none");
-  }
-
+  $("#demoNode").keyup(function() {
+    if (this.value == "owner") {
+        $("#filename-preview").css("display", "none");
+    }
+  })
 });
