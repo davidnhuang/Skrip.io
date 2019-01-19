@@ -474,6 +474,6 @@ $(document).ready(function(){
     $("#filename-preview").text(function () {
       $(this).text().replace("Python_ReductionPipielines_FluxModel_", "NelsonCooper_ReductionPipielines_FluxModel_");
     }
-  }
+  })
 
 });
