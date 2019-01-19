@@ -470,7 +470,9 @@ $(document).ready(function(){
   });
 
   $('#demoNodeOne').on('blur', function() {
-    $('#fileNamePreview').empty().append("<span>Python_ReductionPipielines_FluxModel_<span class='font-color-lighter'>version5.py</span></span>");
+    if ($(this).html() == "owner") {
+      $("#fileNamePreview").empty();
+    }
   });
 
 });
