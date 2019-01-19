@@ -469,9 +469,8 @@ $(document).ready(function(){
     $(this).children('td:eq(0)').addClass('code-line-number').text(i+1);
   });
 
-  $("#demoNode").keyup(function() {
-    if (this.html == "owner") {
-        $("#filename-preview").css("display", "none");
-    }
-  })
+  $('#demoNode').on('blur', function() {
+    $('#filename-preview').text("Python_ReductionPipielines_FluxModel_", "foo");
+  });
+
 });
