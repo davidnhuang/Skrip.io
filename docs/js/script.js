@@ -470,7 +470,7 @@ $(document).ready(function(){
   });
 
   $("#demoNode").keyup(function() {
-        if (this.value == "owner") {
+        if (this.text == "owner") {
             $("#filename-preview").text("Python_ReductionPipielines_FluxModel_", "@Nelson_ReductionPipielines_FluxModel_");
         }
         else {
