@@ -469,7 +469,7 @@ $(document).ready(function(){
     $(this).children('td:eq(0)').addClass('code-line-number').text(i+1);
   });
 
-  var foo = "it worked!"
+  var foo = "@Nelson_ReductionPipielines_FluxModel_<span class='font-color-lighter'>version5.py</span>"
 
   $('#demoNodeOne').on('blur', function() {
     $('#fileNamePreview').empty().append(foo);
