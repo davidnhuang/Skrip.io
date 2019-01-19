@@ -469,8 +469,10 @@ $(document).ready(function(){
     $(this).children('td:eq(0)').addClass('code-line-number').text(i+1);
   });
 
-  $('#demoNode').on('blur', function() {
-    $('#filename-preview').text("Python_ReductionPipielines_FluxModel_", "foo");
+  $("#demoNode").keyup(function() {
+    if (this.html == "owner") {
+        $("#filename-preview").text(text.replace("Python_ReductionPipielines_FluxModel_version5.py", "block"));
+    }
   });
 
 });
